@@ -8,6 +8,20 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -17,6 +31,13 @@
 			"type": "plugin",
 			"id": "TiledBg",
 			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -39,7 +60,11 @@
 	"objectTypes": {
 		"items": [
 			"TiledBackground",
-			"Sprite"
+			"Sprite",
+			"ControlForceByCharge",
+			"Mouse",
+			"Keyboard",
+			"ControlForceByPosition"
 		],
 		"subfolders": []
 	},

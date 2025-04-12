@@ -1,55 +1,32 @@
 {
-	"name": "Sprite",
+	"name": "ControlForceByCharge",
 	"plugin-id": "Sprite",
-	"sid": 252247452752128,
+	"sid": 564359653472274,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Platform",
-			"name": "Platform",
-			"sid": 978645252947420
-		},
-		{
-			"behaviorId": "Bullet",
-			"name": "Bullet",
-			"sid": 841195564817147
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 16,
-						"height": 16,
-						"originX": 0.5,
-						"originY": 1,
+						"width": 32,
+						"height": 32,
+						"originX": 0,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5265404,
-						"collisionPoly": {
-							"points": [
-								0.375,
-								0,
-								0.625,
-								0,
-								0.625,
-								1,
-								0.375,
-								1
-							]
-						},
+						"imageSpriteId": 4537258,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 562230482158032,
+				"sid": 144066339171184,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
