@@ -318,6 +318,236 @@
 				}
 			],
 			"sid": 405299155045251
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Inimigo1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "Sprite2",
+							"sid": 692593838856061,
+							"behaviorType": "CampoDeVisão",
+							"parameters": {
+								"object": "Sprite",
+								"image-point": "0"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Sprite2",
+							"sid": 900632534893286,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-cone-of-view",
+							"objectClass": "Sprite2",
+							"sid": 452221864858281,
+							"behaviorType": "CampoDeVisão",
+							"parameters": {
+								"cone-of-view": "360"
+							}
+						}
+					],
+					"sid": 861761809755716,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Sprite2",
+									"sid": 691277661363470,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "Sprite.x"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sprite2",
+									"sid": 353016315487151,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 815172776450246
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Sprite2",
+									"sid": 804274768488830,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "Sprite.x"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sprite2",
+									"sid": 697908505227788,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 518582124324654
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "Sprite2",
+									"sid": 587817352614184,
+									"behaviorType": "CampoDeVisão",
+									"parameters": {
+										"object": "Sprite",
+										"image-point": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 716561078746370,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-mirrored",
+											"objectClass": "Sprite2",
+											"sid": 370561609119107
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Sprite2",
+											"sid": 665655532982760,
+											"behaviorType": "Plataforma",
+											"parameters": {
+												"control": "right"
+											}
+										}
+									],
+									"sid": 756366195917571
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-mirrored",
+											"objectClass": "Sprite2",
+											"sid": 485909581567835,
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Sprite2",
+											"sid": 936686831343660,
+											"behaviorType": "Plataforma",
+											"parameters": {
+												"control": "left"
+											}
+										}
+									],
+									"sid": 471335360022091
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "Sprite2",
+							"sid": 911950636908517,
+							"behaviorType": "CampoDeVisão",
+							"parameters": {
+								"object": "Sprite",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Sprite2",
+							"sid": 966853690862187,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-cone-of-view",
+							"objectClass": "Sprite2",
+							"sid": 448288180225475,
+							"behaviorType": "CampoDeVisão",
+							"parameters": {
+								"cone-of-view": "170"
+							}
+						}
+					],
+					"sid": 495237793600303
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Sprite2",
+							"sid": 636021310967012,
+							"parameters": {
+								"object": "Sprite"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Sprite2",
+							"sid": 803327720876261,
+							"parameters": {
+								"object": "PartículasMorte",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Sprite2",
+							"sid": 602474853760864
+						}
+					],
+					"sid": 297322837174225
+				}
+			],
+			"sid": 601178822568089
 		}
 	],
 	"sid": 194953318407231
