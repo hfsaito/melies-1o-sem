@@ -90,17 +90,6 @@
 								"default-controls": true,
 								"enabled": true
 							}
-						},
-						"Bullet": {
-							"properties": {
-								"speed": 400,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
 						}
 					},
 					"instanceFolderItem": {
@@ -113,12 +102,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 32,
-						"y": 128,
+						"x": 48,
+						"y": 112,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
-						"originY": 1,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -294,6 +283,98 @@
 						"y": 406.2267937680355,
 						"width": 100,
 						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite3",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 17,
+					"sid": 936802054067186,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 0,
+								"acceleration": 0,
+								"gravity": 1000,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 936802054067186,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 48,
+						"y": 112,
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ControlForceByCharge",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 18,
+					"sid": 570493086720168,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 570493086720168,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 48,
+						"y": 112,
+						"width": 3.3035663712083903,
+						"height": 3.3035663712083903,
 						"originX": 0,
 						"originY": 0.5,
 						"color": [

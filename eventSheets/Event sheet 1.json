@@ -5,16 +5,126 @@
 			"eventType": "variable",
 			"name": "charge",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "25",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 180693511250757
 		},
 		{
+			"eventType": "variable",
+			"name": "gauntletLaunch",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 776615454433556
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "Gauntlet Lauch - Mouse Position (Deprecated)",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "mouse-button-is-down",
+							"objectClass": "Mouse",
+							"sid": 971092028692526,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "ControlForceByPosition",
+							"sid": 621525954669913,
+							"parameters": {
+								"width": "min(max(distance(Self.X, Self.Y, Mouse.X, Mouse.Y), 8), 33)",
+								"height": "2"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ControlForceByPosition",
+							"sid": 665757412865861,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 359060863122014,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Mouse",
+							"sid": 489773743326664,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ControlForceByPosition",
+							"sid": 598053088962450,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 581301524583809,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 219235517274291
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "ControlForceByPosition",
+							"sid": 261809023589460,
+							"parameters": {
+								"angle": "atan((Mouse.Y - Self.Y)/(Mouse.X - Self.X)) + (Mouse.X >= Self.X ? 0 : 180)"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ControlForceByPosition",
+							"sid": 394462726285170,
+							"parameters": {
+								"x": "Sprite.X",
+								"y": "Sprite.Y - 8"
+							}
+						}
+					],
+					"sid": 608080974368230,
+					"disabled": true
+				}
+			],
+			"sid": 831294798479781
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Charge",
+			"title": "Gauntlet Launch - Charge",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -73,24 +183,6 @@
 					],
 					"actions": [
 						{
-							"id": "set-enabled",
-							"objectClass": "Sprite",
-							"sid": 761467988130951,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-speed",
-							"objectClass": "Sprite",
-							"sid": 609550719631087,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"speed": "25 * charge"
-							}
-						},
-						{
 							"id": "reset-eventvar",
 							"objectClass": "System",
 							"sid": 764313563695060,
@@ -104,6 +196,33 @@
 							"sid": 850039150172632,
 							"parameters": {
 								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 668740795301127,
+							"parameters": {
+								"variable": "gauntletLaunch",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Sprite3",
+							"sid": 340074429856631,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Sprite3",
+							"sid": 331197414589524,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "charge * 15"
 							}
 						}
 					],
@@ -139,148 +258,91 @@
 						{
 							"id": "set-position",
 							"objectClass": "ControlForceByCharge",
-							"sid": 884959116554920,
+							"sid": 979179709315377,
 							"parameters": {
 								"x": "Sprite.X",
-								"y": "Sprite.Y - 8"
+								"y": "Sprite.Y"
 							}
 						}
 					],
 					"sid": 820331871568468
-				}
-			],
-			"sid": 428159471674619
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Mouse Position",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "mouse-button-is-down",
-							"objectClass": "Mouse",
-							"sid": 614461648292181,
-							"parameters": {
-								"mouse-button": "left"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-size",
-							"objectClass": "ControlForceByPosition",
-							"sid": 158252820096311,
-							"parameters": {
-								"width": "min(max(distance(Self.X, Self.Y, Mouse.X, Mouse.Y), 8), 33)",
-								"height": "2"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "ControlForceByPosition",
-							"sid": 547051590758544,
-							"parameters": {
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 415821376606932
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-button-released",
-							"objectClass": "Mouse",
-							"sid": 785296758385161,
-							"parameters": {
-								"mouse-button": "left"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "ControlForceByPosition",
-							"sid": 630236815560399,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 729322104281167
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
+							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 784449926072239
+							"sid": 902183799350500,
+							"parameters": {
+								"variable": "gauntletLaunch"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"id": "set-angle",
-							"objectClass": "ControlForceByPosition",
-							"sid": 295804036627969,
+							"objectClass": "Sprite3",
+							"sid": 471390775047225,
 							"parameters": {
-								"angle": "atan((Mouse.Y - Self.Y)/(Mouse.X - Self.X)) + (Mouse.X >= Self.X ? 0 : 180)"
+								"angle": "ControlForceByCharge.Angle"
 							}
 						},
 						{
 							"id": "set-position",
-							"objectClass": "ControlForceByPosition",
-							"sid": 563676419053840,
+							"objectClass": "Sprite3",
+							"sid": 270674613437421,
 							"parameters": {
 								"x": "Sprite.X",
-								"y": "Sprite.Y - 8"
+								"y": "Sprite.Y"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Sprite",
+							"sid": 977357700368120,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
 							}
 						}
 					],
-					"sid": 830605471970410
-				}
-			],
-			"sid": 834005252359387
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Bullet Character",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
+					"sid": 442546936723050
+				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-speed",
-							"objectClass": "Sprite",
-							"sid": 752208381539050,
-							"behaviorType": "Bullet",
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 954194685030854,
 							"parameters": {
-								"comparison": 4,
-								"speed": "0"
+								"variable": "gauntletLaunch"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-speed",
+							"id": "set-position",
 							"objectClass": "Sprite",
-							"sid": 306435206955054,
-							"behaviorType": "Bullet",
+							"sid": 804921872664421,
 							"parameters": {
-								"speed": "Sprite.Bullet.Speed - 5"
+								"x": "Sprite3.X",
+								"y": "Sprite3.Y"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Sprite",
+							"sid": 898957747686654,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
 							}
 						}
 					],
-					"sid": 428706977959287
+					"sid": 111714675252330
 				},
 				{
 					"eventType": "block",
@@ -288,36 +350,120 @@
 						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Sprite",
-							"sid": 684989145182158,
+							"sid": 417783569441036,
 							"parameters": {
 								"object": "TiledBackground"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 227661971565973,
+							"parameters": {
+								"variable": "gauntletLaunch"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-speed",
-							"objectClass": "Sprite",
-							"sid": 306428416142620,
-							"behaviorType": "Bullet",
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 260763184642779,
 							"parameters": {
-								"speed": "0"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Sprite",
-							"sid": 982449703493314,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "disabled"
+								"variable": "gauntletLaunch",
+								"value": "false"
 							}
 						}
 					],
-					"sid": 845003684561121
+					"sid": 887261866331038
 				}
 			],
-			"sid": 405299155045251
+			"sid": 428159471674619
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player Controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 979720924898627,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 453171096158924,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 174294205550980
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 794275027767844,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 123927697699133,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 741825985628606
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 295930717300343,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 225628053275623,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 409294728241423
+				}
+			],
+			"sid": 733080570770404
 		},
 		{
 			"eventType": "group",

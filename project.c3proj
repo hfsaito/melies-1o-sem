@@ -9,7 +9,7 @@
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Teclado",
+			"name": "Keyboard",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -23,7 +23,7 @@
 		{
 			"type": "plugin",
 			"id": "Particles",
-			"name": "Partículas",
+			"name": "Particles",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -37,35 +37,35 @@
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Plano de Fundo em Blocos",
+			"name": "Tiled Background",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Projétil",
+			"name": "Bullet",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "LOS",
-			"name": "Campo de visão",
+			"name": "Line of sight",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Platform",
-			"name": "Plataforma",
+			"name": "Platform",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Sólido",
+			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -80,7 +80,8 @@
 			"Keyboard",
 			"ControlForceByPosition",
 			"Sprite2",
-			"PartículasMorte"
+			"PartículasMorte",
+			"Sprite3"
 		],
 		"subfolders": []
 	},
