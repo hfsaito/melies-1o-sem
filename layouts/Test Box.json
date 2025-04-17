@@ -1,5 +1,5 @@
 {
-	"name": "Layout 2",
+	"name": "Test Box",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "TiledBackground",
+					"type": "Platform",
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",
@@ -64,7 +64,7 @@
 					}
 				},
 				{
-					"type": "TiledBackground",
+					"type": "Platform",
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",
@@ -121,7 +121,7 @@
 					}
 				},
 				{
-					"type": "TiledBackground",
+					"type": "Platform",
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",
@@ -178,7 +178,7 @@
 					}
 				},
 				{
-					"type": "TiledBackground",
+					"type": "Platform",
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",
@@ -235,10 +235,10 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "Player",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -260,6 +260,17 @@
 								"jump-sustain": 0,
 								"default-controls": true,
 								"enabled": true
+							}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 0,
+								"acceleration": 0,
+								"gravity": 1000,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": true,
+								"enabled": false
 							}
 						}
 					},
@@ -330,21 +341,44 @@
 					}
 				},
 				{
-					"type": "ControlForceByPosition",
+					"type": "EnemyCreeperBot",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 12,
-					"sid": 866099377853310,
+					"uid": 16,
+					"sid": 935012897746437,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Plataforma": {
+							"properties": {
+								"max-speed": 100,
+								"acceleration": 200,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"CampoDeVisão": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 60,
+								"cone-of-view": 40,
+								"use-collision-cells": true
+							}
+						}
+					},
 					"instanceFolderItem": {
-						"sid": 866099377853310,
+						"sid": 935012897746437,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -353,11 +387,11 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 68,
-						"y": 156,
-						"width": 3.3035663712083903,
-						"height": 3.3035663712083903,
-						"originX": 0,
+						"x": 172,
+						"y": 140,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -370,33 +404,25 @@
 					}
 				},
 				{
-					"type": "Sprite3",
+					"type": "SliderBar",
 					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
+						"value": 0,
+						"minimum": 0,
+						"maximum": 100,
+						"step": 1,
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"id": "",
+						"class": ""
 					},
-					"uid": 16,
-					"sid": 955363955125307,
+					"uid": 17,
+					"sid": 431281361477066,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": 0,
-								"acceleration": 0,
-								"gravity": 1000,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": false
-							}
-						}
-					},
+					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 955363955125307,
+						"sid": 431281361477066,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -405,20 +431,18 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 70.72,
-						"y": 134.72,
-						"width": 8,
-						"height": 8,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 48,
+						"y": 48,
+						"width": 200,
+						"height": 25,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
 							1,
 							1
-						],
-						"angle": 0,
-						"zElevation": 0
+						]
 					}
 				}
 			],
@@ -465,5 +489,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet 1"
+	"eventSheet": "Main Sheet"
 }

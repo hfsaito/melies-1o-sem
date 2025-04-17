@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet 1",
+	"name": "Main Sheet",
 	"events": [
 		{
 			"eventType": "variable",
@@ -13,113 +13,13 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "gauntletLaunch",
-			"type": "boolean",
-			"initialValue": "false",
+			"name": "masterVolume",
+			"type": "number",
+			"initialValue": "100",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 776615454433556
-		},
-		{
-			"eventType": "group",
-			"disabled": true,
-			"title": "Gauntlet Lauch - Mouse Position (Deprecated)",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "mouse-button-is-down",
-							"objectClass": "Mouse",
-							"sid": 971092028692526,
-							"parameters": {
-								"mouse-button": "left"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-size",
-							"objectClass": "ControlForceByPosition",
-							"sid": 621525954669913,
-							"parameters": {
-								"width": "min(max(distance(Self.X, Self.Y, Mouse.X, Mouse.Y), 8), 33)",
-								"height": "2"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "ControlForceByPosition",
-							"sid": 665757412865861,
-							"parameters": {
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 359060863122014,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-button-released",
-							"objectClass": "Mouse",
-							"sid": 489773743326664,
-							"parameters": {
-								"mouse-button": "left"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "ControlForceByPosition",
-							"sid": 598053088962450,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 581301524583809,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 219235517274291
-						}
-					],
-					"actions": [
-						{
-							"id": "set-angle",
-							"objectClass": "ControlForceByPosition",
-							"sid": 261809023589460,
-							"parameters": {
-								"angle": "atan((Mouse.Y - Self.Y)/(Mouse.X - Self.X)) + (Mouse.X >= Self.X ? 0 : 180)"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "ControlForceByPosition",
-							"sid": 394462726285170,
-							"parameters": {
-								"x": "Sprite.X",
-								"y": "Sprite.Y - 8"
-							}
-						}
-					],
-					"sid": 608080974368230,
-					"disabled": true
-				}
-			],
-			"sid": 831294798479781
+			"sid": 255411893018504
 		},
 		{
 			"eventType": "group",
@@ -183,14 +83,6 @@
 					],
 					"actions": [
 						{
-							"id": "reset-eventvar",
-							"objectClass": "System",
-							"sid": 764313563695060,
-							"parameters": {
-								"variable": "charge"
-							}
-						},
-						{
 							"id": "set-visible",
 							"objectClass": "ControlForceByCharge",
 							"sid": 850039150172632,
@@ -199,30 +91,56 @@
 							}
 						},
 						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 668740795301127,
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 163697239464185,
 							"parameters": {
-								"variable": "gauntletLaunch",
-								"value": "true"
+								"animation": "\"Launch\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "Player",
+							"sid": 137842192265182,
+							"parameters": {
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Player",
+							"sid": 221588217184613,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "charge * 15"
 							}
 						},
 						{
 							"id": "set-enabled",
-							"objectClass": "Sprite3",
-							"sid": 340074429856631,
+							"objectClass": "Player",
+							"sid": 723819883120994,
 							"behaviorType": "Bullet",
 							"parameters": {
 								"state": "enabled"
 							}
 						},
 						{
-							"id": "set-speed",
-							"objectClass": "Sprite3",
-							"sid": 331197414589524,
-							"behaviorType": "Bullet",
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 406504792730720,
+							"behaviorType": "Platform",
 							"parameters": {
-								"speed": "charge * 15"
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 198883779920386,
+							"parameters": {
+								"variable": "charge"
 							}
 						}
 					],
@@ -248,11 +166,12 @@
 							}
 						},
 						{
-							"id": "set-angle",
+							"id": "set-angle-toward-position",
 							"objectClass": "ControlForceByCharge",
-							"sid": 368024524248321,
+							"sid": 364479293009719,
 							"parameters": {
-								"angle": "atan((Mouse.Y - Self.Y)/(Mouse.X - Self.X)) + (Mouse.X >= Self.X ? 0 : 180)\r\n"
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
 							}
 						},
 						{
@@ -260,8 +179,8 @@
 							"objectClass": "ControlForceByCharge",
 							"sid": 979179709315377,
 							"parameters": {
-								"x": "Sprite.X",
-								"y": "Sprite.Y"
+								"x": "Player.X",
+								"y": "Player.Y"
 							}
 						}
 					],
@@ -271,111 +190,53 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 902183799350500,
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 417783569441036,
 							"parameters": {
-								"variable": "gauntletLaunch"
-							},
-							"isInverted": true
+								"object": "Platform"
+							}
 						}
 					],
 					"actions": [
 						{
 							"id": "set-angle",
-							"objectClass": "Sprite3",
-							"sid": 471390775047225,
+							"objectClass": "Player",
+							"sid": 849880876353708,
 							"parameters": {
-								"angle": "ControlForceByCharge.Angle"
+								"angle": "0"
 							}
 						},
 						{
-							"id": "set-position",
-							"objectClass": "Sprite3",
-							"sid": 270674613437421,
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 270112603820947,
 							"parameters": {
-								"x": "Sprite.X",
-								"y": "Sprite.Y"
+								"animation": "\"Idle\"",
+								"from": "beginning"
 							}
 						},
 						{
 							"id": "set-enabled",
-							"objectClass": "Sprite",
-							"sid": 977357700368120,
+							"objectClass": "Player",
+							"sid": 984727162486375,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 294444069831145,
 							"behaviorType": "Platform",
 							"parameters": {
 								"state": "enabled"
 							}
 						}
 					],
-					"sid": 442546936723050
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 954194685030854,
-							"parameters": {
-								"variable": "gauntletLaunch"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position",
-							"objectClass": "Sprite",
-							"sid": 804921872664421,
-							"parameters": {
-								"x": "Sprite3.X",
-								"y": "Sprite3.Y"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Sprite",
-							"sid": 898957747686654,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "disabled"
-							}
-						}
-					],
-					"sid": 111714675252330
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Sprite",
-							"sid": 417783569441036,
-							"parameters": {
-								"object": "TiledBackground"
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 227661971565973,
-							"parameters": {
-								"variable": "gauntletLaunch"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 260763184642779,
-							"parameters": {
-								"variable": "gauntletLaunch",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 887261866331038
+					"sid": 887261866331038,
+					"isOrBlock": true
 				}
 			],
 			"sid": 428159471674619
@@ -402,7 +263,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "Sprite",
+							"objectClass": "Player",
 							"sid": 453171096158924,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -427,7 +288,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "Sprite",
+							"objectClass": "Player",
 							"sid": 123927697699133,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -452,7 +313,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "Sprite",
+							"objectClass": "Player",
 							"sid": 225628053275623,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -477,11 +338,11 @@
 					"conditions": [
 						{
 							"id": "has-los-to-object",
-							"objectClass": "Sprite2",
+							"objectClass": "EnemyCreeperBot",
 							"sid": 692593838856061,
 							"behaviorType": "CampoDeVisão",
 							"parameters": {
-								"object": "Sprite",
+								"object": "Player",
 								"image-point": "0"
 							},
 							"isInverted": true
@@ -490,7 +351,7 @@
 					"actions": [
 						{
 							"id": "set-animation-frame",
-							"objectClass": "Sprite2",
+							"objectClass": "EnemyCreeperBot",
 							"sid": 900632534893286,
 							"parameters": {
 								"frame-number": "0"
@@ -498,7 +359,7 @@
 						},
 						{
 							"id": "set-cone-of-view",
-							"objectClass": "Sprite2",
+							"objectClass": "EnemyCreeperBot",
 							"sid": 452221864858281,
 							"behaviorType": "CampoDeVisão",
 							"parameters": {
@@ -513,18 +374,18 @@
 							"conditions": [
 								{
 									"id": "compare-x",
-									"objectClass": "Sprite2",
+									"objectClass": "EnemyCreeperBot",
 									"sid": 691277661363470,
 									"parameters": {
 										"comparison": 2,
-										"x-co-ordinate": "Sprite.x"
+										"x-co-ordinate": "Player.x"
 									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-mirrored",
-									"objectClass": "Sprite2",
+									"objectClass": "EnemyCreeperBot",
 									"sid": 353016315487151,
 									"parameters": {
 										"state": "mirrored"
@@ -538,18 +399,18 @@
 							"conditions": [
 								{
 									"id": "compare-x",
-									"objectClass": "Sprite2",
+									"objectClass": "EnemyCreeperBot",
 									"sid": 804274768488830,
 									"parameters": {
 										"comparison": 4,
-										"x-co-ordinate": "Sprite.x"
+										"x-co-ordinate": "Player.x"
 									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-mirrored",
-									"objectClass": "Sprite2",
+									"objectClass": "EnemyCreeperBot",
 									"sid": 697908505227788,
 									"parameters": {
 										"state": "not-mirrored"
@@ -563,11 +424,11 @@
 							"conditions": [
 								{
 									"id": "has-los-to-object",
-									"objectClass": "Sprite2",
+									"objectClass": "EnemyCreeperBot",
 									"sid": 587817352614184,
 									"behaviorType": "CampoDeVisão",
 									"parameters": {
-										"object": "Sprite",
+										"object": "Player",
 										"image-point": "0"
 									}
 								}
@@ -580,14 +441,14 @@
 									"conditions": [
 										{
 											"id": "is-mirrored",
-											"objectClass": "Sprite2",
+											"objectClass": "EnemyCreeperBot",
 											"sid": 370561609119107
 										}
 									],
 									"actions": [
 										{
 											"id": "simulate-control",
-											"objectClass": "Sprite2",
+											"objectClass": "EnemyCreeperBot",
 											"sid": 665655532982760,
 											"behaviorType": "Plataforma",
 											"parameters": {
@@ -602,7 +463,7 @@
 									"conditions": [
 										{
 											"id": "is-mirrored",
-											"objectClass": "Sprite2",
+											"objectClass": "EnemyCreeperBot",
 											"sid": 485909581567835,
 											"isInverted": true
 										}
@@ -610,7 +471,7 @@
 									"actions": [
 										{
 											"id": "simulate-control",
-											"objectClass": "Sprite2",
+											"objectClass": "EnemyCreeperBot",
 											"sid": 936686831343660,
 											"behaviorType": "Plataforma",
 											"parameters": {
@@ -629,11 +490,11 @@
 					"conditions": [
 						{
 							"id": "has-los-to-object",
-							"objectClass": "Sprite2",
+							"objectClass": "EnemyCreeperBot",
 							"sid": 911950636908517,
 							"behaviorType": "CampoDeVisão",
 							"parameters": {
-								"object": "Sprite",
+								"object": "Player",
 								"image-point": "0"
 							}
 						}
@@ -641,7 +502,7 @@
 					"actions": [
 						{
 							"id": "set-animation-frame",
-							"objectClass": "Sprite2",
+							"objectClass": "EnemyCreeperBot",
 							"sid": 966853690862187,
 							"parameters": {
 								"frame-number": "1"
@@ -649,7 +510,7 @@
 						},
 						{
 							"id": "set-cone-of-view",
-							"objectClass": "Sprite2",
+							"objectClass": "EnemyCreeperBot",
 							"sid": 448288180225475,
 							"behaviorType": "CampoDeVisão",
 							"parameters": {
@@ -664,17 +525,17 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Sprite2",
+							"objectClass": "EnemyCreeperBot",
 							"sid": 636021310967012,
 							"parameters": {
-								"object": "Sprite"
+								"object": "Player"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "Sprite2",
+							"objectClass": "EnemyCreeperBot",
 							"sid": 803327720876261,
 							"parameters": {
 								"object": "PartículasMorte",
@@ -686,7 +547,7 @@
 						},
 						{
 							"id": "destroy",
-							"objectClass": "Sprite2",
+							"objectClass": "EnemyCreeperBot",
 							"sid": 602474853760864
 						}
 					],
@@ -694,6 +555,62 @@
 				}
 			],
 			"sid": 601178822568089
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Audio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 252783389810427
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 100824184821849,
+							"parameters": {
+								"audio-file": "battleThemeA",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"bg\""
+							}
+						}
+					],
+					"sid": 250996960000854
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 280262828575883
+						}
+					],
+					"actions": [
+						{
+							"id": "set-master-volume",
+							"objectClass": "Audio",
+							"sid": 234060235921718,
+							"parameters": {
+								"db": "33 * log10(SliderBar.Value/100)"
+							}
+						}
+					],
+					"sid": 127562464222657
+				}
+			],
+			"sid": 841719955751123
 		}
 	],
 	"sid": 194953318407231

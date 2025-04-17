@@ -1,5 +1,5 @@
 {
-	"name": "Sprite",
+	"name": "Player",
 	"plugin-id": "Sprite",
 	"sid": 252247452752128,
 	"isGlobal": false,
@@ -10,6 +10,11 @@
 			"behaviorId": "Platform",
 			"name": "Platform",
 			"sid": 978645252947420
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 568656135087350
 		}
 	],
 	"effectTypes": [],
@@ -45,7 +50,46 @@
 					}
 				],
 				"sid": 562230482158032,
-				"name": "Animation 1",
+				"name": "Idle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7120104,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.1875,
+								1,
+								0.625,
+								0,
+								0.625,
+								0,
+								0.375,
+								0.8125,
+								0.1875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 494092003437986,
+				"name": "Launch",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

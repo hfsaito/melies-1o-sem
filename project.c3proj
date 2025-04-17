@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -38,6 +45,13 @@
 			"type": "plugin",
 			"id": "TiledBg",
 			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "sliderbar",
+			"name": "Slider bar",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -73,15 +87,15 @@
 	"uniqueId": "cd3ubb1liqo",
 	"objectTypes": {
 		"items": [
-			"TiledBackground",
-			"Sprite",
+			"Platform",
+			"Player",
 			"ControlForceByCharge",
 			"Mouse",
 			"Keyboard",
-			"ControlForceByPosition",
-			"Sprite2",
+			"EnemyCreeperBot",
 			"PartículasMorte",
-			"Sprite3"
+			"Audio",
+			"SliderBar"
 		],
 		"subfolders": []
 	},
@@ -94,13 +108,13 @@
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"Layout 2"
+			"Test Box"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Main Sheet"
 		],
 		"subfolders": []
 	},
@@ -114,7 +128,16 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "battleThemeA.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 989184019083319,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
