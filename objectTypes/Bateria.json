@@ -1,0 +1,62 @@
+{
+	"name": "Bateria",
+	"plugin-id": "Sprite",
+	"sid": 937289630891536,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Senóide",
+			"sid": 160267368345818
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 22,
+						"height": 37,
+						"originX": 0.5,
+						"originY": 0.5675675675675675,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5421799,
+						"collisionPoly": {
+							"points": [
+								0.2727272727272727,
+								0.02702702702702703,
+								0.7272727272727273,
+								0.02702702702702703,
+								0.9545454545454546,
+								0.16216216216216217,
+								0.9545454545454546,
+								0.972972972972973,
+								0.045454545454545456,
+								0.972972972972973,
+								0.045454545454545456,
+								0.16216216216216217
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 220977332395876,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -15,6 +15,11 @@
 			"behaviorId": "LOS",
 			"name": "CampoDeVisão",
 			"sid": 788938645370456
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "CampoDeVisão2",
+			"sid": 383040328545965
 		}
 	],
 	"effectTypes": [],

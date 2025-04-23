@@ -22,6 +22,16 @@
 			"sid": 255411893018504
 		},
 		{
+			"eventType": "variable",
+			"name": "Bateria",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 758585950143466
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Gauntlet Launch - Charge",
@@ -45,6 +55,16 @@
 							"sid": 940545761987595,
 							"parameters": {
 								"mouse-button": "left"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 723173460214276,
+							"parameters": {
+								"variable": "Bateria",
+								"comparison": 4,
+								"value": "0"
 							}
 						}
 					],
@@ -78,6 +98,16 @@
 							"sid": 263242457493501,
 							"parameters": {
 								"mouse-button": "left"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 589903977377203,
+							"parameters": {
+								"variable": "Bateria",
+								"comparison": 4,
+								"value": "0"
 							}
 						}
 					],
@@ -524,11 +554,13 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "EnemyCreeperBot",
-							"sid": 636021310967012,
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 178629695720549,
 							"parameters": {
-								"object": "Player"
+								"first-value": "distance(Player.X, Player.Y, EnemyCreeperBot.X, EnemyCreeperBot.Y)",
+								"comparison": 2,
+								"second-value": "10"
 							}
 						}
 					],
@@ -536,7 +568,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "EnemyCreeperBot",
-							"sid": 803327720876261,
+							"sid": 568296040704592,
 							"parameters": {
 								"object": "PartículasMorte",
 								"layer": "0",
@@ -548,7 +580,7 @@
 						{
 							"id": "destroy",
 							"objectClass": "EnemyCreeperBot",
-							"sid": 602474853760864
+							"sid": 287261407311193
 						}
 					],
 					"sid": 297322837174225
@@ -675,6 +707,92 @@
 				}
 			],
 			"sid": 859102604258051
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Baterias",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Mouse",
+							"sid": 247022049791908,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 173444775709309,
+							"parameters": {
+								"variable": "Bateria",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 472846448606644
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 590210871398683
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BateriaHud",
+							"sid": 957681197396319,
+							"parameters": {
+								"frame-number": "Bateria"
+							}
+						}
+					],
+					"sid": 402500805910926
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 235920440983189,
+							"parameters": {
+								"object": "Bateria"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 132843550163985,
+							"parameters": {
+								"variable": "Bateria",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Bateria",
+							"sid": 215066750314450
+						}
+					],
+					"sid": 165709341650660
+				}
+			],
+			"sid": 722245596213576
 		}
 	],
 	"sid": 194953318407231

@@ -78,6 +78,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Sin",
+			"name": "Senóide",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Sólido",
 			"author": "Scirra",
@@ -96,7 +103,9 @@
 			"PartículasMorte",
 			"Audio",
 			"SliderBar",
-			"ParedeQuebravel"
+			"ParedeQuebravel",
+			"BateriaHud",
+			"Bateria"
 		],
 		"subfolders": []
 	},

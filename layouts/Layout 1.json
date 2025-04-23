@@ -2,6 +2,40 @@
 	"name": "Layout 1",
 	"layers": [
 		{
+			"name": "Bateria",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 202563666206630,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "Layer 0",
 			"overriden": 0,
 			"subLayers": [],
@@ -162,6 +196,14 @@
 								"obstacles": "solids",
 								"range": 60,
 								"cone-of-view": 40,
+								"use-collision-cells": true
+							}
+						},
+						"CampoDeVisão2": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 200,
+								"cone-of-view": 60,
 								"use-collision-cells": true
 							}
 						}
@@ -379,12 +421,217 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 302.2167252644088,
-						"y": 100.84047425776241,
-						"width": 20.522738878527804,
-						"height": 33.76321557435219,
+						"x": 306.1996104857883,
+						"y": 109.00304608793067,
+						"width": 14.468753342031079,
+						"height": 23.885660225331122,
 						"originX": 0.5,
 						"originY": 0.20588235294117646,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BateriaHud",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 3,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 20,
+					"sid": 800227378101887,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 800227378101887,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 30.164897883205725,
+						"y": 23.159899753687426,
+						"width": 29.519432882897448,
+						"height": 15.169708564822294,
+						"originX": 0.5,
+						"originY": 0.5675675675675675,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Bateria",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 21,
+					"sid": 405427950400291,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 405427950400291,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 144.9435942634496,
+						"y": 123.45704410100575,
+						"width": 6.2744279009099575,
+						"height": 10.552446924257659,
+						"originX": 0.5,
+						"originY": 0.5675675675675675,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Bateria",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 22,
+					"sid": 987866677788635,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 987866677788635,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 104.05586733880648,
+						"y": 123.49216782730917,
+						"width": 6.2744279009099575,
+						"height": 10.552446924257659,
+						"originX": 0.5,
+						"originY": 0.5675675675675675,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Bateria",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 23,
+					"sid": 434369056605588,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 434369056605588,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 141.9729314308462,
+						"y": 85.25646970206637,
+						"width": 6.2744279009099575,
+						"height": 10.552446924257659,
+						"originX": 0.5,
+						"originY": 0.5675675675675675,
 						"color": [
 							1,
 							1,

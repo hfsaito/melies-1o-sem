@@ -375,6 +375,14 @@
 								"cone-of-view": 40,
 								"use-collision-cells": true
 							}
+						},
+						"CampoDeVisão2": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
 						}
 					},
 					"instanceFolderItem": {
