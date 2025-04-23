@@ -611,6 +611,70 @@
 				}
 			],
 			"sid": 841719955751123
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ParedeQuebravel",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "ParedeQuebravel",
+							"sid": 977648708887244,
+							"parameters": {
+								"object": "Player"
+							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "Player",
+							"sid": 927472327756721,
+							"behaviorType": "Bullet"
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "ParedeQuebravel",
+							"sid": 193221512972172,
+							"parameters": {
+								"instance-variable": "HP",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 340966708744351
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "ParedeQuebravel",
+							"sid": 489054454247728,
+							"parameters": {
+								"instance-variable": "HP",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "ParedeQuebravel",
+							"sid": 332551687919477
+						}
+					],
+					"sid": 446262956666718
+				}
+			],
+			"sid": 859102604258051
 		}
 	],
 	"sid": 194953318407231
