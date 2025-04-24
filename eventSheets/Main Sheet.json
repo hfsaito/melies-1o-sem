@@ -32,6 +32,37 @@
 			"sid": 758585950143466
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 336497992575409
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 959175220429493,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-gravity",
+					"objectClass": "Player",
+					"sid": 141898347757341,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"gravity": "1000"
+					}
+				}
+			],
+			"sid": 191043834343812
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Gauntlet Launch - Charge",
@@ -230,39 +261,8 @@
 					],
 					"actions": [
 						{
-							"id": "set-angle",
-							"objectClass": "Player",
-							"sid": 849880876353708,
-							"parameters": {
-								"angle": "0"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "Player",
-							"sid": 270112603820947,
-							"parameters": {
-								"animation": "\"Idle\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Player",
-							"sid": 984727162486375,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Player",
-							"sid": 294444069831145,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "enabled"
-							}
+							"callFunction": "stop player gaunlet launch",
+							"sid": 223679418959792
 						}
 					],
 					"sid": 887261866331038,
@@ -678,6 +678,10 @@
 								"instance-variable": "HP",
 								"value": "1"
 							}
+						},
+						{
+							"callFunction": "stop player gaunlet launch",
+							"sid": 380986711169563
 						}
 					],
 					"sid": 340966708744351
@@ -793,6 +797,55 @@
 				}
 			],
 			"sid": 722245596213576
+		},
+		{
+			"functionName": "stop player gaunlet launch",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Player",
+					"sid": 849880876353708,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 270112603820947,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 984727162486375,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 294444069831145,
+					"behaviorType": "Platform",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 879367652114589
 		}
 	],
 	"sid": 194953318407231
