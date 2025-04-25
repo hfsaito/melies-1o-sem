@@ -284,10 +284,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 64,
-						"y": 152,
-						"width": 16,
-						"height": 16,
+						"x": 60,
+						"y": 116,
+						"width": 68,
+						"height": 68,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

@@ -233,6 +233,12 @@
 									"parameters": {
 										"object": "Platform"
 									}
+								},
+								{
+									"id": "is-enabled",
+									"objectClass": "Player",
+									"sid": 811055745192013,
+									"behaviorType": "Bullet"
 								}
 							],
 							"actions": [
@@ -241,8 +247,7 @@
 									"sid": 531749320620560
 								}
 							],
-							"sid": 477568850091385,
-							"isOrBlock": true
+							"sid": 477568850091385
 						}
 					],
 					"sid": 391047679777191
