@@ -25,7 +25,7 @@
 			"eventType": "variable",
 			"name": "Bateria",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -361,14 +361,6 @@
 							],
 							"actions": [
 								{
-									"id": "set-animation-frame",
-									"objectClass": "EnemyCreeperBot",
-									"sid": 733947776354298,
-									"parameters": {
-										"frame-number": "0"
-									}
-								},
-								{
 									"id": "set-cone-of-view",
 									"objectClass": "EnemyCreeperBot",
 									"sid": 528313342506447,
@@ -511,14 +503,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "set-animation-frame",
-									"objectClass": "EnemyCreeperBot",
-									"sid": 729551061167784,
-									"parameters": {
-										"frame-number": "1"
-									}
-								},
 								{
 									"id": "set-cone-of-view",
 									"objectClass": "EnemyCreeperBot",
@@ -722,6 +706,55 @@
 						}
 					],
 					"sid": 459544107338940
+				},
+				{
+					"functionName": "stop player gaunlet launch",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "Player",
+							"sid": 638196666207236,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 593323206646939,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 353458698454110,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 988045587217742,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 137982507260280
 				}
 			],
 			"sid": 180204563145536
@@ -783,55 +816,6 @@
 			"sid": 382465345868511
 		},
 		{
-			"functionName": "stop player gaunlet launch",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "Player",
-					"sid": 520298773882846,
-					"parameters": {
-						"angle": "0"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "Player",
-					"sid": 405734590175604,
-					"parameters": {
-						"animation": "\"Idle\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "set-enabled",
-					"objectClass": "Player",
-					"sid": 796470435281492,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"state": "disabled"
-					}
-				},
-				{
-					"id": "set-enabled",
-					"objectClass": "Player",
-					"sid": 637785394393289,
-					"behaviorType": "Platform",
-					"parameters": {
-						"state": "enabled"
-					}
-				}
-			],
-			"sid": 312262466094893
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Pause",
@@ -844,9 +828,9 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 930125134621374,
+							"sid": 797294094290897,
 							"parameters": {
-								"key": 9
+								"key": 81
 							}
 						}
 					],
