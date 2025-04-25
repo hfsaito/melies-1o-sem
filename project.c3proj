@@ -317,5 +317,5 @@
 	},
 	"viewportWidth": 320,
 	"viewportHeight": 180,
-	"firstLayout": null
+	"firstLayout": "menuMain"
 }
