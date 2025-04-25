@@ -1,0 +1,48 @@
+{
+	"name": "menu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "btnStart",
+					"sid": 156326024224459
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 852206308983306,
+					"parameters": {
+						"layout": "level1"
+					}
+				}
+			],
+			"sid": 312146951964340
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "btnTestBox",
+					"sid": 956205866682902
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 287811295023235,
+					"parameters": {
+						"layout": "testbox"
+					}
+				}
+			],
+			"sid": 725664390220478
+		}
+	],
+	"sid": 229297571637859
+}

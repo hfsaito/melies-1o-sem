@@ -1,0 +1,922 @@
+{
+	"name": "game",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "charge",
+			"type": "number",
+			"initialValue": "25",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 180693511250757
+		},
+		{
+			"eventType": "variable",
+			"name": "masterVolume",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 255411893018504
+		},
+		{
+			"eventType": "variable",
+			"name": "Bateria",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 758585950143466
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Gameplay",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Gauntlet Launch - Charge",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 893373030402936,
+									"parameters": {
+										"interval-seconds": "0.1"
+									}
+								},
+								{
+									"id": "mouse-button-is-down",
+									"objectClass": "Mouse",
+									"sid": 363449153078078,
+									"parameters": {
+										"mouse-button": "left"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 577033223368833,
+									"parameters": {
+										"variable": "Bateria",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 217142857409000,
+									"parameters": {
+										"variable": "charge",
+										"value": "min(charge + 1, 25)"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ControlForceByCharge",
+									"sid": 206741867437895,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 703229866331206
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-released",
+									"objectClass": "Mouse",
+									"sid": 778228945753903,
+									"parameters": {
+										"mouse-button": "left"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 929671730529404,
+									"parameters": {
+										"variable": "Bateria",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "ControlForceByCharge",
+									"sid": 991314087346594,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 457550885721884,
+									"parameters": {
+										"animation": "\"Launch\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-angle-toward-position",
+									"objectClass": "Player",
+									"sid": 723748918095572,
+									"parameters": {
+										"x": "Mouse.X",
+										"y": "Mouse.Y"
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "Player",
+									"sid": 399483182048379,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "charge * 15"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Player",
+									"sid": 737885073653206,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "enabled"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Player",
+									"sid": 527169414879923,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "reset-eventvar",
+									"objectClass": "System",
+									"sid": 277684271346307,
+									"parameters": {
+										"variable": "charge"
+									}
+								}
+							],
+							"sid": 515932404500034
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 599634245340495
+								}
+							],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "ControlForceByCharge",
+									"sid": 907618349095629,
+									"parameters": {
+										"width": "8 + charge",
+										"height": "2"
+									}
+								},
+								{
+									"id": "set-angle-toward-position",
+									"objectClass": "ControlForceByCharge",
+									"sid": 114273431442103,
+									"parameters": {
+										"x": "Mouse.X",
+										"y": "Mouse.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "ControlForceByCharge",
+									"sid": 686607620029451,
+									"parameters": {
+										"x": "Player.X",
+										"y": "Player.Y"
+									}
+								}
+							],
+							"sid": 641674193814240
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 448469357367152,
+									"parameters": {
+										"object": "Platform"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "stop player gaunlet launch",
+									"sid": 531749320620560
+								}
+							],
+							"sid": 477568850091385,
+							"isOrBlock": true
+						}
+					],
+					"sid": 391047679777191
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Player Controls",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 430797900269288,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 208246556343817,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 198914337489963
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 391726684452257,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 658448876102752,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 909982115869743
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 709872691754141,
+									"parameters": {
+										"key": 32
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 724761470720853,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 784202664090730
+						}
+					],
+					"sid": 561802851925785
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Inimigo1",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 859508063352463,
+									"behaviorType": "CampoDeVisão",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 733947776354298,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-cone-of-view",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 528313342506447,
+									"behaviorType": "CampoDeVisão",
+									"parameters": {
+										"cone-of-view": "360"
+									}
+								}
+							],
+							"sid": 406479090707151,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 589519843556620,
+											"parameters": {
+												"comparison": 2,
+												"x-co-ordinate": "Player.x"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 516618407466446,
+											"parameters": {
+												"state": "mirrored"
+											}
+										}
+									],
+									"sid": 262490908084971
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 883484048102487,
+											"parameters": {
+												"comparison": 4,
+												"x-co-ordinate": "Player.x"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 818215770141005,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										}
+									],
+									"sid": 241562220347902
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-los-to-object",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 730758996379373,
+											"behaviorType": "CampoDeVisão",
+											"parameters": {
+												"object": "Player",
+												"image-point": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 921638593966883,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "EnemyCreeperBot",
+													"sid": 151046688876867
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "EnemyCreeperBot",
+													"sid": 872834784194951,
+													"behaviorType": "Plataforma",
+													"parameters": {
+														"control": "right"
+													}
+												}
+											],
+											"sid": 758651720863315
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "EnemyCreeperBot",
+													"sid": 348214470357286,
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "EnemyCreeperBot",
+													"sid": 994999862376085,
+													"behaviorType": "Plataforma",
+													"parameters": {
+														"control": "left"
+													}
+												}
+											],
+											"sid": 353449825844366
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 202440642919669,
+									"behaviorType": "CampoDeVisão",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 729551061167784,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-cone-of-view",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 668244480727119,
+									"behaviorType": "CampoDeVisão",
+									"parameters": {
+										"cone-of-view": "170"
+									}
+								}
+							],
+							"sid": 950367018218311
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 320848948454263,
+									"parameters": {
+										"first-value": "distance(Player.X, Player.Y, EnemyCreeperBot.X, EnemyCreeperBot.Y)",
+										"comparison": 2,
+										"second-value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 937660734695933,
+									"parameters": {
+										"object": "PartículasMorte",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 118023363350197
+								}
+							],
+							"sid": 933073062275441
+						}
+					],
+					"sid": 504914733787594
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "ParedeQuebravel",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "ParedeQuebravel",
+									"sid": 702333910986493,
+									"parameters": {
+										"object": "Player"
+									}
+								},
+								{
+									"id": "is-enabled",
+									"objectClass": "Player",
+									"sid": 642139921189632,
+									"behaviorType": "Bullet"
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "ParedeQuebravel",
+									"sid": 276909830470319,
+									"parameters": {
+										"instance-variable": "HP",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "stop player gaunlet launch",
+									"sid": 234214333816543
+								}
+							],
+							"sid": 339090657163110
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "ParedeQuebravel",
+									"sid": 747893688104098,
+									"parameters": {
+										"instance-variable": "HP",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "ParedeQuebravel",
+									"sid": 206825694644624
+								}
+							],
+							"sid": 505541523660543
+						}
+					],
+					"sid": 735999443349840
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Baterias",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-released",
+									"objectClass": "Mouse",
+									"sid": 271343892217865,
+									"parameters": {
+										"mouse-button": "left"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 847159183027669,
+									"parameters": {
+										"variable": "Bateria",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 374031430789077
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 496281718846679
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "BateriaHud",
+									"sid": 308528626179250,
+									"parameters": {
+										"frame-number": "Bateria"
+									}
+								}
+							],
+							"sid": 357890572609858
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 472000769447250,
+									"parameters": {
+										"object": "Bateria"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 101137824756908,
+									"parameters": {
+										"variable": "Bateria",
+										"value": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Bateria",
+									"sid": 306162422493641
+								}
+							],
+							"sid": 490209038061038
+						}
+					],
+					"sid": 459544107338940
+				}
+			],
+			"sid": 180204563145536
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Audio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 662048903831560
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 951872232820024,
+							"parameters": {
+								"audio-file": "battleThemeA",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"bg\""
+							}
+						}
+					],
+					"sid": 685018241935008
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 389767348453493
+						}
+					],
+					"actions": [
+						{
+							"id": "set-master-volume",
+							"objectClass": "Audio",
+							"sid": 164073942946047,
+							"parameters": {
+								"db": "33 * log10(SliderBar.Value/100)"
+							}
+						}
+					],
+					"sid": 526076019174689
+				}
+			],
+			"sid": 382465345868511
+		},
+		{
+			"functionName": "stop player gaunlet launch",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Player",
+					"sid": 520298773882846,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 405734590175604,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 796470435281492,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 637785394393289,
+					"behaviorType": "Platform",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 312262466094893
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pause",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 930125134621374,
+							"parameters": {
+								"key": 9
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 915845130960777,
+							"parameters": {
+								"layer": "1",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 639531783719323,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 811007925484054,
+							"parameters": {
+								"group-name": "\"Gameplay\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 954024923567857
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "Button",
+							"sid": 348440805215487
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 391218422898868,
+							"parameters": {
+								"layer": "1",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 669789839962789,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 736659109325771,
+							"parameters": {
+								"group-name": "\"Gameplay\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 324158675897833
+				}
+			],
+			"sid": 731367376484727
+		}
+	],
+	"sid": 194953318407231
+}

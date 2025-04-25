@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -38,6 +45,13 @@
 			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -105,7 +119,12 @@
 			"SliderBar",
 			"ParedeQuebravel",
 			"BateriaHud",
-			"Bateria"
+			"Bateria",
+			"btnStart",
+			"btnTestBox",
+			"TiledBackground",
+			"Text",
+			"Button"
 		],
 		"subfolders": []
 	},
@@ -117,14 +136,16 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1",
-			"Test Box"
+			"level1",
+			"testbox",
+			"menuMain"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Main Sheet"
+			"game",
+			"menu"
 		],
 		"subfolders": []
 	},
