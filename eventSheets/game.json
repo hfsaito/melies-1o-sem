@@ -861,9 +861,9 @@
 										{
 											"id": "set-animation",
 											"objectClass": "EnemyCreeperBot",
-											"sid": 423053976349010,
+											"sid": 438568659640143,
 											"parameters": {
-												"animation": "\"explode\"",
+												"animation": "\"charging\"",
 												"from": "beginning"
 											}
 										}
@@ -878,9 +878,9 @@
 								{
 									"id": "on-animation-finished",
 									"objectClass": "EnemyCreeperBot",
-									"sid": 412038613159212,
+									"sid": 344342227679386,
 									"parameters": {
-										"animation": "\"explode\""
+										"animation": "\"charging\""
 									}
 								}
 							],
@@ -906,10 +906,10 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "EnemyCreeperBot",
-									"sid": 875163631291139,
+									"sid": 120783813734111,
 									"parameters": {
 										"instance-variable": "explosionTimeout",
-										"value": "5"
+										"value": "0"
 									}
 								}
 							],
@@ -936,7 +936,7 @@
 										{
 											"id": "every-x-seconds",
 											"objectClass": "System",
-											"sid": 524651397258759,
+											"sid": 865403261576305,
 											"parameters": {
 												"interval-seconds": ".1"
 											}
@@ -946,10 +946,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "EnemyCreeperBot",
-											"sid": 859915911121737,
+											"sid": 132410879719757,
 											"parameters": {
 												"instance-variable": "explosionTimeout",
-												"value": "Self.explosionTimeout - 1"
+												"value": "min(Self.explosionTimeout + 1, 5)"
 											}
 										}
 									],
@@ -961,11 +961,11 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "EnemyCreeperBot",
-											"sid": 575656196696262,
+											"sid": 359166702052764,
 											"parameters": {
 												"instance-variable": "explosionTimeout",
 												"comparison": 0,
-												"value": "0"
+												"value": "5"
 											}
 										}
 									],
@@ -984,19 +984,21 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "Player",
-									"sid": 100078248919070,
+									"id": "is-overlapping-another-object",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 395243904781057,
 									"parameters": {
-										"object": "EnemyCreeperBot"
+										"object": "Player"
 									}
 								},
 								{
-									"id": "is-animation-playing",
+									"id": "compare-instance-variable",
 									"objectClass": "EnemyCreeperBot",
-									"sid": 973061186759982,
+									"sid": 925535445176931,
 									"parameters": {
-										"animation": "\"explosion\""
+										"instance-variable": "explosionTimeout",
+										"comparison": 5,
+										"value": "2"
 									}
 								}
 							],
