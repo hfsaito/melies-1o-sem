@@ -25,7 +25,7 @@
 			"eventType": "variable",
 			"name": "Bateria",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "3",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -255,10 +255,149 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Player Controls",
+					"title": "Player Events",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 169754273915748
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "Player",
+									"sid": 938535301596940,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-speed": "100"
+									}
+								},
+								{
+									"id": "set-acceleration",
+									"objectClass": "Player",
+									"sid": 495266076479248,
+									"behaviorType": "Platform",
+									"parameters": {
+										"acceleration": "500"
+									}
+								},
+								{
+									"id": "set-deceleration",
+									"objectClass": "Player",
+									"sid": 529006008732805,
+									"behaviorType": "Platform",
+									"parameters": {
+										"deceleration": "500"
+									}
+								},
+								{
+									"id": "set-jump-strength",
+									"objectClass": "Player",
+									"sid": 620276298420963,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "400"
+									}
+								},
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "Player",
+									"sid": 782274138483184,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "1000"
+									}
+								},
+								{
+									"id": "set-double-jump",
+									"objectClass": "Player",
+									"sid": 528107973708355,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-jump-sustain",
+									"objectClass": "Player",
+									"sid": 134543143552263,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-sustain": "0"
+									}
+								},
+								{
+									"id": "set-default-controls",
+									"objectClass": "Player",
+									"sid": 745506508301372,
+									"behaviorType": "Platform",
+									"parameters": {
+										"default-controls": false
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Player",
+									"sid": 403217962759795,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "enabled"
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "Player",
+									"sid": 792024879532176,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "0"
+									}
+								},
+								{
+									"id": "set-acceleration",
+									"objectClass": "Player",
+									"sid": 343825116770879,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"acceleration": "0"
+									}
+								},
+								{
+									"id": "set-gravity",
+									"objectClass": "Player",
+									"sid": 471705556758412,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"gravity": "1000"
+									}
+								},
+								{
+									"id": "set-bounce-off-solids",
+									"objectClass": "Player",
+									"sid": 486617067441015,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": false
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Player",
+									"sid": 118033579624301,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 506577744422483
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -348,29 +487,198 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "has-los-to-object",
-									"objectClass": "EnemyCreeperBot",
-									"sid": 859508063352463,
-									"behaviorType": "CampoDeVisão",
-									"parameters": {
-										"object": "Player",
-										"image-point": "0"
-									},
-									"isInverted": true
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 270653905129453
 								}
 							],
 							"actions": [
 								{
-									"id": "set-cone-of-view",
+									"id": "set-mirrored",
 									"objectClass": "EnemyCreeperBot",
-									"sid": 528313342506447,
+									"sid": 357942107737015,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "set-max-speed",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 515136352593334,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"max-speed": "100"
+									}
+								},
+								{
+									"id": "set-acceleration",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 569203253130666,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"acceleration": "500"
+									}
+								},
+								{
+									"id": "set-deceleration",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 634489432901789,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"deceleration": "500"
+									}
+								},
+								{
+									"id": "set-jump-strength",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 240079531526599,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"jump-strength": "0"
+									}
+								},
+								{
+									"id": "set-gravity",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 698815573942908,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"gravity": "1000"
+									}
+								},
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 800885185944590,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"max-fall-speed": "1000"
+									}
+								},
+								{
+									"id": "set-double-jump",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 564044862131346,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-jump-sustain",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 251816413528139,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"jump-sustain": "0"
+									}
+								},
+								{
+									"id": "set-default-controls",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 244715584796918,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"default-controls": false
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 164461331117735,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"state": "enabled"
+									}
+								},
+								{
+									"id": "set-range",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 313155477128789,
 									"behaviorType": "CampoDeVisão",
 									"parameters": {
-										"cone-of-view": "360"
+										"range": "192"
+									}
+								},
+								{
+									"id": "set-cone-of-view",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 314504448326585,
+									"behaviorType": "CampoDeVisão",
+									"parameters": {
+										"cone-of-view": "10"
+									}
+								},
+								{
+									"id": "set-range",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 826963341865019,
+									"behaviorType": "CampoDeVisão2",
+									"parameters": {
+										"range": "64"
+									}
+								},
+								{
+									"id": "set-cone-of-view",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 636917650505982,
+									"behaviorType": "CampoDeVisão2",
+									"parameters": {
+										"cone-of-view": "90"
 									}
 								}
 							],
-							"sid": 406479090707151,
+							"sid": 378071404894352
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 472034610594762,
+									"parameters": {
+										"animation": "\"idle\""
+									}
+								},
+								{
+									"id": "has-los-to-object",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 829333173451115,
+									"behaviorType": "CampoDeVisão",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 916050219374111,
+									"parameters": {
+										"animation": "\"walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 947023425376855
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 983342371781731,
+									"parameters": {
+										"animation": "\"walk\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 357171336232070,
 							"children": [
 								{
 									"eventType": "block",
@@ -378,7 +686,7 @@
 										{
 											"id": "compare-x",
 											"objectClass": "EnemyCreeperBot",
-											"sid": 589519843556620,
+											"sid": 605828922485917,
 											"parameters": {
 												"comparison": 2,
 												"x-co-ordinate": "Player.x"
@@ -389,13 +697,22 @@
 										{
 											"id": "set-mirrored",
 											"objectClass": "EnemyCreeperBot",
-											"sid": 516618407466446,
+											"sid": 259017790032805,
 											"parameters": {
-												"state": "mirrored"
+												"state": "not-mirrored"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 282822929392594,
+											"behaviorType": "Plataforma",
+											"parameters": {
+												"control": "right"
 											}
 										}
 									],
-									"sid": 262490908084971
+									"sid": 820787011627641
 								},
 								{
 									"eventType": "block",
@@ -403,7 +720,7 @@
 										{
 											"id": "compare-x",
 											"objectClass": "EnemyCreeperBot",
-											"sid": 883484048102487,
+											"sid": 858422588100546,
 											"parameters": {
 												"comparison": 4,
 												"x-co-ordinate": "Player.x"
@@ -414,13 +731,117 @@
 										{
 											"id": "set-mirrored",
 											"objectClass": "EnemyCreeperBot",
-											"sid": 818215770141005,
+											"sid": 969927523075277,
 											"parameters": {
-												"state": "not-mirrored"
+												"state": "mirrored"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 810663595026654,
+											"behaviorType": "Plataforma",
+											"parameters": {
+												"control": "left"
 											}
 										}
 									],
-									"sid": 241562220347902
+									"sid": 199421994365239
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 815033463673659,
+											"parameters": {
+												"interval-seconds": ".1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 886149030838660,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-los-to-object",
+													"objectClass": "EnemyCreeperBot",
+													"sid": 644375002354585,
+													"behaviorType": "CampoDeVisão",
+													"parameters": {
+														"object": "Player",
+														"image-point": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "EnemyCreeperBot",
+													"sid": 577003280794677,
+													"parameters": {
+														"instance-variable": "awarenessTimeout",
+														"value": "50"
+													}
+												}
+											],
+											"sid": 410603761659491
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 655021993405780
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "EnemyCreeperBot",
+													"sid": 582205783169821,
+													"parameters": {
+														"instance-variable": "awarenessTimeout",
+														"value": "max(Self.awarenessTimeout - 1, 0)"
+													}
+												}
+											],
+											"sid": 284027925910466,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "EnemyCreeperBot",
+															"sid": 566914142148870,
+															"parameters": {
+																"instance-variable": "awarenessTimeout",
+																"comparison": 0,
+																"value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "EnemyCreeperBot",
+															"sid": 880689009680519,
+															"parameters": {
+																"animation": "\"idle\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 271464066855841
+												}
+											]
+										}
+									]
 								},
 								{
 									"eventType": "block",
@@ -428,63 +849,26 @@
 										{
 											"id": "has-los-to-object",
 											"objectClass": "EnemyCreeperBot",
-											"sid": 730758996379373,
-											"behaviorType": "CampoDeVisão",
+											"sid": 253803044971597,
+											"behaviorType": "CampoDeVisão2",
 											"parameters": {
 												"object": "Player",
 												"image-point": "0"
 											}
 										}
 									],
-									"actions": [],
-									"sid": 921638593966883,
-									"children": [
+									"actions": [
 										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-mirrored",
-													"objectClass": "EnemyCreeperBot",
-													"sid": 151046688876867
-												}
-											],
-											"actions": [
-												{
-													"id": "simulate-control",
-													"objectClass": "EnemyCreeperBot",
-													"sid": 872834784194951,
-													"behaviorType": "Plataforma",
-													"parameters": {
-														"control": "right"
-													}
-												}
-											],
-											"sid": 758651720863315
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-mirrored",
-													"objectClass": "EnemyCreeperBot",
-													"sid": 348214470357286,
-													"isInverted": true
-												}
-											],
-											"actions": [
-												{
-													"id": "simulate-control",
-													"objectClass": "EnemyCreeperBot",
-													"sid": 994999862376085,
-													"behaviorType": "Plataforma",
-													"parameters": {
-														"control": "left"
-													}
-												}
-											],
-											"sid": 353449825844366
+											"id": "set-animation",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 423053976349010,
+											"parameters": {
+												"animation": "\"explode\"",
+												"from": "beginning"
+											}
 										}
-									]
+									],
+									"sid": 818076092534123
 								}
 							]
 						},
@@ -492,63 +876,138 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "has-los-to-object",
+									"id": "on-animation-finished",
 									"objectClass": "EnemyCreeperBot",
-									"sid": 202440642919669,
-									"behaviorType": "CampoDeVisão",
+									"sid": 412038613159212,
 									"parameters": {
-										"object": "Player",
-										"image-point": "0"
+										"animation": "\"explode\""
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-cone-of-view",
+									"id": "set-enabled",
 									"objectClass": "EnemyCreeperBot",
-									"sid": 668244480727119,
-									"behaviorType": "CampoDeVisão",
+									"sid": 184317291484212,
+									"behaviorType": "Plataforma",
 									"parameters": {
-										"cone-of-view": "170"
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 932867691890475,
+									"parameters": {
+										"animation": "\"explosion\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 875163631291139,
+									"parameters": {
+										"instance-variable": "explosionTimeout",
+										"value": "5"
 									}
 								}
 							],
-							"sid": 950367018218311
+							"sid": 452244585726796
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 320848948454263,
+									"id": "is-animation-playing",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 477806181318875,
 									"parameters": {
-										"first-value": "distance(Player.X, Player.Y, EnemyCreeperBot.X, EnemyCreeperBot.Y)",
-										"comparison": 2,
-										"second-value": "10"
+										"animation": "\"explosion\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 527942125480137,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 524651397258759,
+											"parameters": {
+												"interval-seconds": ".1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 859915911121737,
+											"parameters": {
+												"instance-variable": "explosionTimeout",
+												"value": "Self.explosionTimeout - 1"
+											}
+										}
+									],
+									"sid": 102587148154049
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 575656196696262,
+											"parameters": {
+												"instance-variable": "explosionTimeout",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 340770219460121
+										}
+									],
+									"sid": 126244913738604
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 100078248919070,
+									"parameters": {
+										"object": "EnemyCreeperBot"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 973061186759982,
+									"parameters": {
+										"animation": "\"explosion\""
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "spawn-another-object",
-									"objectClass": "EnemyCreeperBot",
-									"sid": 937660734695933,
-									"parameters": {
-										"object": "PartículasMorte",
-										"layer": "0",
-										"image-point": "0",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "destroy",
-									"objectClass": "EnemyCreeperBot",
-									"sid": 118023363350197
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 843118194540005
 								}
 							],
-							"sid": 933073062275441
+							"sid": 694868068388073
 						}
 					],
 					"sid": 504914733787594

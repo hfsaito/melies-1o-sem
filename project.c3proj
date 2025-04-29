@@ -315,7 +315,7 @@
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},
-	"viewportWidth": 320,
-	"viewportHeight": 180,
+	"viewportWidth": 500,
+	"viewportHeight": 300,
 	"firstLayout": "menuMain"
 }
