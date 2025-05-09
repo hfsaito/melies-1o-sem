@@ -494,14 +494,6 @@
 							],
 							"actions": [
 								{
-									"id": "set-mirrored",
-									"objectClass": "EnemyCreeperBot",
-									"sid": 357942107737015,
-									"parameters": {
-										"state": "mirrored"
-									}
-								},
-								{
 									"id": "set-max-speed",
 									"objectClass": "EnemyCreeperBot",
 									"sid": 515136352593334,
@@ -677,7 +669,17 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 243530464821436,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"max-speed": "100"
+									}
+								}
+							],
 							"sid": 357171336232070,
 							"children": [
 								{
@@ -1010,6 +1012,212 @@
 								}
 							],
 							"sid": 694868068388073
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 393530040314487
+								}
+							],
+							"actions": [],
+							"sid": 397118012506348,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 160104548157457,
+											"parameters": {
+												"instance-variable": "mirrored"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 729239146055324,
+											"parameters": {
+												"state": "mirrored"
+											}
+										}
+									],
+									"sid": 121538350090056
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 331458973827126
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 179600289281813,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										}
+									],
+									"sid": 853654174289976
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 484796188755704,
+									"parameters": {
+										"animation": "\"idle\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 199853496297086,
+									"behaviorType": "Plataforma",
+									"parameters": {
+										"max-speed": "50"
+									}
+								}
+							],
+							"sid": 638796389501485,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 571999938922369,
+											"parameters": {
+												"object": "EnemyWatchingRegion"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 364869639520577,
+											"parameters": {
+												"instance-variable": "watcherTurning"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 429845008267383,
+											"parameters": {
+												"instance-variable": "watcherTurning",
+												"value": "true"
+											}
+										},
+										{
+											"id": "toggle-boolean-instvar",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 500598632386086,
+											"parameters": {
+												"instance-variable": "mirrored"
+											}
+										}
+									],
+									"sid": 626279864111839
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 755507069146353,
+											"parameters": {
+												"object": "EnemyWatchingRegion"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 325523782799254,
+											"parameters": {
+												"instance-variable": "watcherTurning"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 443177255387861,
+											"parameters": {
+												"instance-variable": "watcherTurning",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 632680660960669
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-mirrored",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 773475893414275
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 409331770474284,
+											"behaviorType": "Plataforma",
+											"parameters": {
+												"control": "left"
+											}
+										}
+									],
+									"sid": 273517215137276
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 639249506185077
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 229467333714367,
+											"behaviorType": "Plataforma",
+											"parameters": {
+												"control": "right"
+											}
+										}
+									],
+									"sid": 180657538702834
+								}
+							]
 						}
 					],
 					"sid": 504914733787594

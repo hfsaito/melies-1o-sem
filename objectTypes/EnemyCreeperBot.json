@@ -9,15 +9,29 @@
 			"name": "awarenessTimeout",
 			"type": "number",
 			"desc": "",
-			"show": true,
+			"show": false,
 			"sid": 855436698604027
 		},
 		{
 			"name": "explosionTimeout",
 			"type": "number",
 			"desc": "",
-			"show": true,
+			"show": false,
 			"sid": 230627752336765
+		},
+		{
+			"name": "watcherTurning",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 340185887334619
+		},
+		{
+			"name": "mirrored",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 230853119931680
 		}
 	],
 	"behaviorTypes": [

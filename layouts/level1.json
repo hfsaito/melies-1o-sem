@@ -177,7 +177,9 @@
 					"tags": "",
 					"instanceVariables": {
 						"awarenessTimeout": 0,
-						"explosionTimeout": 0
+						"explosionTimeout": 0,
+						"watcherTurning": false,
+						"mirrored": false
 					},
 					"behaviors": {
 						"Plataforma": {
