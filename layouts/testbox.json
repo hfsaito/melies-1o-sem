@@ -4,7 +4,123 @@
 		{
 			"name": "Layer 0",
 			"overriden": 0,
-			"subLayers": [],
+			"subLayers": [
+				{
+					"name": "helpers",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "EnemyWatchingRegion",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 32,
+							"sid": 782004212849100,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 782004212849100,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 338.66125213664503,
+								"y": 202.8939556602638,
+								"width": 116.28001810287586,
+								"height": 12.5,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "ControlForceByCharge",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 9,
+							"sid": 348262005244478,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 348262005244478,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 59.88661810342565,
+								"y": 174.80793769857763,
+								"width": 3.3035663712083903,
+								"height": 3.3035663712083903,
+								"originX": 0,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 225356413127414,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				}
+			],
 			"instances": [
 				{
 					"type": "Platform",
@@ -235,46 +351,6 @@
 					}
 				},
 				{
-					"type": "ControlForceByCharge",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 9,
-					"sid": 348262005244478,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 348262005244478,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 80,
-						"y": 260,
-						"width": 3.3035663712083903,
-						"height": 3.3035663712083903,
-						"originX": 0,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "EnemyCreeperBot",
 					"properties": {
 						"initially-visible": true,
@@ -288,7 +364,9 @@
 					"tags": "",
 					"instanceVariables": {
 						"awarenessTimeout": 0,
-						"explosionTimeout": 0
+						"explosionTimeout": 0,
+						"watcherTurning": false,
+						"mirrored": false
 					},
 					"behaviors": {
 						"Plataforma": {
@@ -332,8 +410,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 416,
-						"y": 192,
+						"x": 319.48482463547356,
+						"y": 191.5982867835717,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -455,8 +533,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 64,
-						"y": 256,
+						"x": 67.81177887627813,
+						"y": 256.24053546178084,
 						"width": 68,
 						"height": 68,
 						"originX": 0.5,

@@ -124,7 +124,8 @@
 			"btnTestBox",
 			"TiledBackground",
 			"Text",
-			"Button"
+			"Button",
+			"EnemyWatchingRegion"
 		],
 		"subfolders": []
 	},
