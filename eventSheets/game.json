@@ -3,16 +3,6 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "charge",
-			"type": "number",
-			"initialValue": "25",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 180693511250757
-		},
-		{
-			"eventType": "variable",
 			"name": "masterVolume",
 			"type": "number",
 			"initialValue": "100",
@@ -23,13 +13,33 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Bateria",
+			"name": "minLaunchForce",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "25",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 751219938360451
+		},
+		{
+			"eventType": "variable",
+			"name": "maxLaunchForce",
+			"type": "number",
+			"initialValue": "25",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 362571589740869
+		},
+		{
+			"eventType": "variable",
+			"name": "level",
+			"type": "number",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 758585950143466
+			"sid": 584417951187678
 		},
 		{
 			"eventType": "group",
@@ -41,7 +51,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Gauntlet Launch - Charge",
+					"title": "Gauntlet Launch",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -65,11 +75,11 @@
 									}
 								},
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 577033223368833,
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 252031419587957,
 									"parameters": {
-										"variable": "Bateria",
+										"instance-variable": "charges",
 										"comparison": 4,
 										"value": "0"
 									}
@@ -77,12 +87,12 @@
 							],
 							"actions": [
 								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 217142857409000,
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 798692038864271,
 									"parameters": {
-										"variable": "charge",
-										"value": "min(charge + 1, 25)"
+										"instance-variable": "launchForce",
+										"value": "min(Player.launchForce + 1, maxLaunchForce)"
 									}
 								},
 								{
@@ -108,11 +118,11 @@
 									}
 								},
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 929671730529404,
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 986480844506574,
 									"parameters": {
-										"variable": "Bateria",
+										"instance-variable": "charges",
 										"comparison": 4,
 										"value": "0"
 									}
@@ -148,10 +158,10 @@
 								{
 									"id": "set-speed",
 									"objectClass": "Player",
-									"sid": 399483182048379,
+									"sid": 948548984707324,
 									"behaviorType": "Bullet",
 									"parameters": {
-										"speed": "charge * 15"
+										"speed": "Player.launchForce * 15"
 									}
 								},
 								{
@@ -173,11 +183,12 @@
 									}
 								},
 								{
-									"id": "reset-eventvar",
-									"objectClass": "System",
-									"sid": 277684271346307,
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 764201089569282,
 									"parameters": {
-										"variable": "charge"
+										"instance-variable": "launchForce",
+										"value": "minLaunchForce"
 									}
 								}
 							],
@@ -196,9 +207,9 @@
 								{
 									"id": "set-size",
 									"objectClass": "ControlForceByCharge",
-									"sid": 907618349095629,
+									"sid": 699450773122038,
 									"parameters": {
-										"width": "8 + charge",
+										"width": "(8 + Player.launchForce) * 3",
 										"height": "2"
 									}
 								},
@@ -255,7 +266,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Player Events",
+					"title": "Player",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -371,7 +382,7 @@
 								{
 									"id": "set-gravity",
 									"objectClass": "Player",
-									"sid": 471705556758412,
+									"sid": 203901359314171,
 									"behaviorType": "Bullet",
 									"parameters": {
 										"gravity": "1000"
@@ -393,6 +404,15 @@
 									"behaviorType": "Bullet",
 									"parameters": {
 										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 531528852392413,
+									"parameters": {
+										"instance-variable": "launchForce",
+										"value": "minLaunchForce"
 									}
 								}
 							],
@@ -479,7 +499,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Inimigo1",
+					"title": "Enemy01",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -620,7 +640,34 @@
 									}
 								}
 							],
-							"sid": 378071404894352
+							"sid": 378071404894352,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 582704084484135,
+											"parameters": {
+												"object": "EnemyWatchingRegion"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "EnemyCreeperBot",
+											"sid": 182627214066384,
+											"parameters": {
+												"instance-variable": "watcherEnabled",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 204713409038552
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -1082,6 +1129,14 @@
 									"parameters": {
 										"animation": "\"idle\""
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "EnemyCreeperBot",
+									"sid": 403084251148437,
+									"parameters": {
+										"instance-variable": "watcherEnabled"
+									}
 								}
 							],
 							"actions": [
@@ -1293,7 +1348,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Baterias",
+					"title": "Battery",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -1311,11 +1366,11 @@
 							],
 							"actions": [
 								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 847159183027669,
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 842130580797318,
 									"parameters": {
-										"variable": "Bateria",
+										"instance-variable": "charges",
 										"value": "1"
 									}
 								}
@@ -1334,10 +1389,10 @@
 							"actions": [
 								{
 									"id": "set-animation-frame",
-									"objectClass": "BateriaHud",
-									"sid": 308528626179250,
+									"objectClass": "BatteryCounter",
+									"sid": 534896546001461,
 									"parameters": {
-										"frame-number": "Bateria"
+										"frame-number": "Player.charges"
 									}
 								}
 							],
@@ -1351,27 +1406,103 @@
 									"objectClass": "Player",
 									"sid": 472000769447250,
 									"parameters": {
-										"object": "Bateria"
+										"object": "Battery"
 									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Battery",
+									"sid": 461130562907206
 								}
 							],
 							"actions": [
 								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 101137824756908,
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 944237646170177,
 									"parameters": {
-										"variable": "Bateria",
+										"instance-variable": "charges",
 										"value": "1"
+									}
+								}
+							],
+							"sid": 490209038061038,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Battery",
+											"sid": 537249222639892,
+											"parameters": {
+												"instance-variable": "respawnIfPlayerHasNoCharges"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Battery",
+											"sid": 393130399072594,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 588593638399316
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 496219022213836
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Battery",
+											"sid": 940269724885025
+										}
+									],
+									"sid": 594929782354700
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 244616958603612,
+									"parameters": {
+										"instance-variable": "charges",
+										"comparison": 0,
+										"value": "0"
 									}
 								},
 								{
-									"id": "destroy",
-									"objectClass": "Bateria",
-									"sid": 306162422493641
+									"id": "is-visible",
+									"objectClass": "Battery",
+									"sid": 679510144739577,
+									"isInverted": true
 								}
 							],
-							"sid": 490209038061038
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Battery",
+									"sid": 993815248267246,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 358806649087068
 						}
 					],
 					"sid": 459544107338940
@@ -1424,6 +1555,39 @@
 						}
 					],
 					"sid": 137982507260280
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 172731961099063,
+							"parameters": {
+								"object": "FinishLine"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 699017638093148,
+							"parameters": {
+								"variable": "level",
+								"value": "1"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 992943826412815,
+							"parameters": {
+								"layout": "\"Level\" & str(level)"
+							}
+						}
+					],
+					"sid": 711715974866545
 				}
 			],
 			"sid": 180204563145536
@@ -1475,7 +1639,7 @@
 							"objectClass": "Audio",
 							"sid": 164073942946047,
 							"parameters": {
-								"db": "33 * log10(SliderBar.Value/100)"
+								"db": "33 * log10(SoundVolume.Value/100)"
 							}
 						}
 					],
@@ -1507,9 +1671,9 @@
 						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
-							"sid": 915845130960777,
+							"sid": 158193850741971,
 							"parameters": {
-								"layer": "1",
+								"layer": "\"LPause\"",
 								"visibility": "visible"
 							}
 						},
@@ -1538,7 +1702,7 @@
 					"conditions": [
 						{
 							"id": "on-clicked",
-							"objectClass": "Button",
+							"objectClass": "Resume",
 							"sid": 348440805215487
 						}
 					],
@@ -1546,9 +1710,9 @@
 						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
-							"sid": 391218422898868,
+							"sid": 989570915418322,
 							"parameters": {
-								"layer": "1",
+								"layer": "\"LPause\"",
 								"visibility": "invisible"
 							}
 						},
@@ -1574,6 +1738,27 @@
 				}
 			],
 			"sid": 731367376484727
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 317301153571834
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Paused",
+					"sid": 595720293687261,
+					"parameters": {
+						"text": "\"Level:\" & str(level)"
+					}
+				}
+			],
+			"sid": 363935471453738
 		}
 	],
 	"sid": 194953318407231

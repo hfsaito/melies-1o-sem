@@ -36,13 +36,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Particles",
-			"name": "Particles",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -110,24 +103,61 @@
 		"items": [
 			"Platform",
 			"Player",
-			"ControlForceByCharge",
-			"Mouse",
-			"Keyboard",
-			"EnemyCreeperBot",
-			"PartículasMorte",
 			"Audio",
-			"SliderBar",
-			"ParedeQuebravel",
-			"BateriaHud",
-			"Bateria",
-			"btnStart",
-			"btnTestBox",
-			"TiledBackground",
-			"Text",
-			"Button",
-			"EnemyWatchingRegion"
+			"FinishLine"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"BatteryCounter",
+					"ControlForceByCharge"
+				],
+				"subfolders": [],
+				"name": "HUD"
+			},
+			{
+				"items": [
+					"Start",
+					"TestBox"
+				],
+				"subfolders": [],
+				"name": "MainMenu"
+			},
+			{
+				"items": [
+					"Resume",
+					"SoundVolume",
+					"Paused",
+					"Overlay"
+				],
+				"subfolders": [],
+				"name": "Pause"
+			},
+			{
+				"items": [
+					"Keyboard",
+					"Mouse"
+				],
+				"subfolders": [],
+				"name": "Controls"
+			},
+			{
+				"items": [
+					"EnemyWatchingRegion",
+					"EnemyCreeperBot"
+				],
+				"subfolders": [],
+				"name": "Enemies"
+			},
+			{
+				"items": [
+					"Battery",
+					"ParedeQuebravel"
+				],
+				"subfolders": [],
+				"name": "Items"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -137,16 +167,18 @@
 	},
 	"layouts": {
 		"items": [
-			"level1",
-			"testbox",
-			"menuMain"
+			"MainMenu",
+			"TestBox",
+			"Level0",
+			"Level1"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"game",
-			"menu"
+			"menu",
+			"level0"
 		],
 		"subfolders": []
 	},
@@ -318,5 +350,5 @@
 	},
 	"viewportWidth": 500,
 	"viewportHeight": 300,
-	"firstLayout": "menuMain"
+	"firstLayout": "MainMenu"
 }

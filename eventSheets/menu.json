@@ -6,7 +6,7 @@
 			"conditions": [
 				{
 					"id": "on-clicked",
-					"objectClass": "btnStart",
+					"objectClass": "Start",
 					"sid": 156326024224459
 				}
 			],
@@ -14,9 +14,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 852206308983306,
+					"sid": 852157069197755,
 					"parameters": {
-						"layout": "level1"
+						"layout": "Level0"
 					}
 				}
 			],
@@ -27,7 +27,7 @@
 			"conditions": [
 				{
 					"id": "on-clicked",
-					"objectClass": "btnTestBox",
+					"objectClass": "TestBox",
 					"sid": 956205866682902
 				}
 			],
@@ -35,9 +35,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 287811295023235,
+					"sid": 114735304176194,
 					"parameters": {
-						"layout": "testbox"
+						"layout": "TestBox"
 					}
 				}
 			],

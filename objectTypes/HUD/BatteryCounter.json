@@ -1,5 +1,5 @@
 {
-	"name": "BateriaHud",
+	"name": "BatteryCounter",
 	"plugin-id": "Sprite",
 	"sid": 288886725084976,
 	"isGlobal": false,

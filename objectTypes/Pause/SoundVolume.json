@@ -1,7 +1,7 @@
 {
-	"name": "btnTestBox",
-	"plugin-id": "Button",
-	"sid": 963938927460362,
+	"name": "SoundVolume",
+	"plugin-id": "sliderbar",
+	"sid": 855973305187247,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],

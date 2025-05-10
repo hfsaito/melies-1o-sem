@@ -1,7 +1,7 @@
 {
-	"name": "Button",
+	"name": "TestBox",
 	"plugin-id": "Button",
-	"sid": 772252640815915,
+	"sid": 963938927460362,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
