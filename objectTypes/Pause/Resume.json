@@ -1,7 +1,7 @@
 {
-	"name": "SliderBar",
-	"plugin-id": "sliderbar",
-	"sid": 855973305187247,
+	"name": "Resume",
+	"plugin-id": "Button",
+	"sid": 772252640815915,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],

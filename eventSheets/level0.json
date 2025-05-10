@@ -1,0 +1,28 @@
+{
+	"name": "level0",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "game"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "ParedeQuebravel",
+					"sid": 434323424197033
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Battery",
+					"sid": 973848332356980
+				}
+			],
+			"sid": 153994100375780
+		}
+	],
+	"sid": 631108751167960
+}

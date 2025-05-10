@@ -1,10 +1,25 @@
 {
-	"name": "Bateria",
+	"name": "Battery",
 	"plugin-id": "Sprite",
 	"sid": 937289630891536,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "respawnIfPlayerHasNoCharges",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 856718339577341
+		},
+		{
+			"name": "respawnCountdown",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 239633953772613
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Sin",
