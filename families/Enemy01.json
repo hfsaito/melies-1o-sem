@@ -1,0 +1,23 @@
+{
+	"name": "Enemy01",
+	"plugin-id": "Sprite",
+	"sid": 133566434042996,
+	"instanceVariables": [
+		{
+			"name": "parentUniqueID",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 729665201411526
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Enemy01Explosion",
+		"Enemy01Containers",
+		"Enemy01Body",
+		"Enemy01Water",
+		"Enemy01Wheels"
+	]
+}

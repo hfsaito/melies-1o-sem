@@ -1,0 +1,111 @@
+{
+	"name": "Enemy01Hitbox",
+	"plugin-id": "Sprite",
+	"sid": 481077029866419,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "mirrored",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 863028759857305
+		},
+		{
+			"name": "controlled",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 536564011057869
+		},
+		{
+			"name": "state",
+			"type": "string",
+			"desc": "",
+			"show": false,
+			"sid": 820614128115017
+		},
+		{
+			"name": "watcherTurning",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 250454662962591
+		},
+		{
+			"name": "awarenessTimeout",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 934214494029512
+		},
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 593976528074613
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 979632426419800
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 144254292310143
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight2",
+			"sid": 697796548173902
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 128,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1584548,
+						"collisionPoly": {
+							"points": [
+								0.296875,
+								0.296875,
+								0.6875,
+								0.296875,
+								0.6875,
+								0.75,
+								0.296875,
+								0.75
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 624938010128193,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

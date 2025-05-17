@@ -143,10 +143,22 @@
 			},
 			{
 				"items": [
-					"EnemyWatchingRegion",
-					"EnemyCreeperBot"
+					"EnemyWatchingRegion"
 				],
-				"subfolders": [],
+				"subfolders": [
+					{
+						"items": [
+							"Enemy01Body",
+							"Enemy01Containers",
+							"Enemy01Explosion",
+							"Enemy01Hitbox",
+							"Enemy01Water",
+							"Enemy01Wheels"
+						],
+						"subfolders": [],
+						"name": "Enemy01"
+					}
+				],
 				"name": "Enemies"
 			},
 			{
@@ -162,7 +174,9 @@
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Enemy01"
+		],
 		"subfolders": []
 	},
 	"layouts": {

@@ -2,58 +2,18 @@
 	"name": "Level0",
 	"layers": [
 		{
-			"name": "LBase",
+			"name": "Level",
 			"overriden": 0,
 			"subLayers": [
 				{
-					"name": "Base.Helpers",
+					"name": "LevelHelpers",
 					"overriden": 0,
 					"subLayers": [],
 					"instances": [
 						{
-							"type": "ControlForceByCharge",
-							"properties": {
-								"initially-visible": false,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 109,
-							"sid": 344146347614177,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 344146347614177,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 0,
-								"y": -40,
-								"width": 32,
-								"height": 32,
-								"originX": 0,
-								"originY": 0.5,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
 							"type": "FinishLine",
 							"properties": {
-								"initially-visible": false,
+								"initially-visible": true,
 								"initial-animation": "Animation 1",
 								"initial-frame": 0,
 								"enable-collisions": true,
@@ -93,7 +53,7 @@
 					],
 					"sid": 839802462786048,
 					"effectTypes": [],
-					"isInitiallyVisible": true,
+					"isInitiallyVisible": false,
 					"isInitiallyInteractive": true,
 					"isHTMLElementsLayer": false,
 					"color": [
@@ -340,75 +300,6 @@
 						"height": 30,
 						"originX": 0,
 						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Player",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Idle",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 96,
-					"sid": 500658890931781,
-					"tags": "",
-					"instanceVariables": {
-						"charges": 0,
-						"launchForce": 0
-					},
-					"behaviors": {
-						"Platform": {
-							"properties": {
-								"max-speed": 100,
-								"acceleration": 500,
-								"deceleration": 500,
-								"jump-strength": 400,
-								"gravity": 1000,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": false,
-								"enabled": true
-							}
-						},
-						"Bullet": {
-							"properties": {
-								"speed": 0,
-								"acceleration": 0,
-								"gravity": 1000,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": true,
-								"enabled": false
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 500658890931781,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 60,
-						"y": 240,
-						"width": 68,
-						"height": 68,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -785,6 +676,186 @@
 			"global": false
 		},
 		{
+			"name": "Player",
+			"overriden": 0,
+			"subLayers": [
+				{
+					"name": "PlayerHelpers",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "ControlForceByCharge",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 109,
+							"sid": 344146347614177,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 344146347614177,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 0,
+								"y": -40,
+								"width": 32,
+								"height": 32,
+								"originX": 0,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 645435789905139,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				}
+			],
+			"instances": [
+				{
+					"type": "Player",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "old",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 96,
+					"sid": 500658890931781,
+					"tags": "",
+					"instanceVariables": {
+						"charges": 0,
+						"launchForce": 0
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 100,
+								"acceleration": 500,
+								"deceleration": 500,
+								"jump-strength": 400,
+								"gravity": 1000,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 0,
+								"acceleration": 0,
+								"gravity": 1000,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": true,
+								"enabled": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 500658890931781,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 60,
+						"y": 240,
+						"width": 68,
+						"height": 68,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 169084381720420,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "LHUD",
 			"overriden": 0,
 			"subLayers": [],
@@ -860,7 +931,7 @@
 			"global": false
 		},
 		{
-			"name": "LPause",
+			"name": "Pause",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
