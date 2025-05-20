@@ -189,6 +189,39 @@
 			"sid": 859143776071992
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 957915729148546,
+					"parameters": {
+						"object": "FinishLine"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 616273622850488,
+					"parameters": {
+						"variable": "level",
+						"value": "1"
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 483452107799488,
+					"parameters": {
+						"layout": "\"Level\" & str(level)"
+					}
+				}
+			],
+			"sid": 325181094888477
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Gameplay",
@@ -262,227 +295,72 @@
 						}
 					],
 					"sid": 735999443349840
-				},
+				}
+			],
+			"sid": 180204563145536
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "battery",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "Battery",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
+					"eventType": "block",
+					"conditions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-button-released",
-									"objectClass": "Mouse",
-									"sid": 271343892217865,
-									"parameters": {
-										"mouse-button": "left"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 726627432523169,
-									"parameters": {
-										"instance-variable": "charges",
-										"comparison": 4,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "subtract-from-instvar",
-									"objectClass": "Player",
-									"sid": 842130580797318,
-									"parameters": {
-										"instance-variable": "charges",
-										"value": "1"
-									}
-								}
-							],
-							"sid": 374031430789077
+							"id": "on-button-released",
+							"objectClass": "Mouse",
+							"sid": 767751645404704,
+							"parameters": {
+								"mouse-button": "left"
+							}
 						},
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 496281718846679
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation-frame",
-									"objectClass": "BatteryCounter",
-									"sid": 534896546001461,
-									"parameters": {
-										"frame-number": "Player.charges"
-									}
-								}
-							],
-							"sid": 357890572609858
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "Player",
-									"sid": 472000769447250,
-									"parameters": {
-										"object": "Battery"
-									}
-								},
-								{
-									"id": "is-visible",
-									"objectClass": "Battery",
-									"sid": 461130562907206
-								}
-							],
-							"actions": [
-								{
-									"id": "add-to-instvar",
-									"objectClass": "Player",
-									"sid": 944237646170177,
-									"parameters": {
-										"instance-variable": "charges",
-										"value": "1"
-									}
-								}
-							],
-							"sid": 490209038061038,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Battery",
-											"sid": 537249222639892,
-											"parameters": {
-												"instance-variable": "respawnIfPlayerHasNoCharges"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "Battery",
-											"sid": 393130399072594,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										}
-									],
-									"sid": 588593638399316
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 496219022213836
-										}
-									],
-									"actions": [
-										{
-											"id": "destroy",
-											"objectClass": "Battery",
-											"sid": 940269724885025
-										}
-									],
-									"sid": 594929782354700
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 244616958603612,
-									"parameters": {
-										"instance-variable": "charges",
-										"comparison": 0,
-										"value": "0"
-									}
-								},
-								{
-									"id": "is-visible",
-									"objectClass": "Battery",
-									"sid": 679510144739577,
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "Battery",
-									"sid": 993815248267246,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 358806649087068
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 978448876683418,
+							"parameters": {
+								"instance-variable": "charges",
+								"comparison": 4,
+								"value": "0"
+							}
 						}
 					],
-					"sid": 459544107338940
-				},
-				{
-					"functionName": "stop player gaunlet launch",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
 					"actions": [
 						{
-							"id": "set-angle",
+							"id": "subtract-from-instvar",
 							"objectClass": "Player",
-							"sid": 638196666207236,
+							"sid": 792541530934250,
 							"parameters": {
-								"angle": "0"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "Player",
-							"sid": 593323206646939,
-							"parameters": {
-								"animation": "\"Idle\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Player",
-							"sid": 353458698454110,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Player",
-							"sid": 988045587217742,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "enabled"
+								"instance-variable": "charges",
+								"value": "1"
 							}
 						}
 					],
-					"sid": 137982507260280
+					"sid": 988369091914083
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 470511723648826
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BatteryCounter",
+							"sid": 612682096617372,
+							"parameters": {
+								"frame-number": "Player.charges"
+							}
+						}
+					],
+					"sid": 235930698417564
 				},
 				{
 					"eventType": "block",
@@ -490,35 +368,108 @@
 						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Player",
-							"sid": 172731961099063,
+							"sid": 221944664308252,
 							"parameters": {
-								"object": "FinishLine"
+								"object": "Battery"
 							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Battery",
+							"sid": 590991480580549
 						}
 					],
 					"actions": [
 						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 699017638093148,
+							"id": "add-to-instvar",
+							"objectClass": "Player",
+							"sid": 425982347663520,
 							"parameters": {
-								"variable": "level",
+								"instance-variable": "charges",
 								"value": "1"
-							}
-						},
-						{
-							"id": "go-to-layout-by-name",
-							"objectClass": "System",
-							"sid": 992943826412815,
-							"parameters": {
-								"layout": "\"Level\" & str(level)"
 							}
 						}
 					],
-					"sid": 711715974866545
+					"sid": 510788701627529,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Battery",
+									"sid": 470891565450762,
+									"parameters": {
+										"instance-variable": "respawnIfPlayerHasNoCharges"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Battery",
+									"sid": 973959583911752,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 574440208016857
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 635080091070081
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Battery",
+									"sid": 972898605466099
+								}
+							],
+							"sid": 549888531978974
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 422586846999870,
+							"parameters": {
+								"instance-variable": "charges",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Battery",
+							"sid": 791925557186531,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Battery",
+							"sid": 200920532932321,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 810835133878252
 				}
 			],
-			"sid": 180204563145536
+			"sid": 280096608389468
 		},
 		{
 			"eventType": "group",
@@ -696,76 +647,134 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 439653580419633,
-									"parameters": {
-										"key": 65
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "simulate-control",
+									"id": "is-enabled",
 									"objectClass": "Player",
-									"sid": 109164887626705,
-									"behaviorType": "Platform",
-									"parameters": {
-										"control": "left"
-									}
-								}
-							],
-							"sid": 612259644154689
-						},
-						{
-							"eventType": "block",
-							"conditions": [
+									"sid": 270539568673463,
+									"behaviorType": "Platform"
+								},
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 714098895019530,
-									"parameters": {
-										"key": 68
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "simulate-control",
+									"id": "is-animation-playing",
 									"objectClass": "Player",
-									"sid": 111255376166778,
-									"behaviorType": "Platform",
+									"sid": 201037865268127,
 									"parameters": {
-										"control": "right"
-									}
+										"animation": "\"charging\""
+									},
+									"isInverted": true
 								}
 							],
-							"sid": 875111773169293
-						},
-						{
-							"eventType": "block",
-							"conditions": [
+							"actions": [],
+							"sid": 681789669556109,
+							"children": [
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 361118793011475,
-									"parameters": {
-										"key": 32
-									}
-								}
-							],
-							"actions": [
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 278021670183374,
+											"parameters": {
+												"key": 65
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Player",
+											"sid": 265900751706303,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "left"
+											}
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "Player",
+											"sid": 619791333155435,
+											"parameters": {
+												"state": "mirrored"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 988715114005246,
+											"parameters": {
+												"animation": "\"walking\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 194578965664083
+								},
 								{
-									"id": "simulate-control",
-									"objectClass": "Player",
-									"sid": 624743950308443,
-									"behaviorType": "Platform",
-									"parameters": {
-										"control": "jump"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 996840533092660,
+											"parameters": {
+												"key": 68
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Player",
+											"sid": 736492900391124,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "right"
+											}
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "Player",
+											"sid": 408019070739594,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 115762096645190,
+											"parameters": {
+												"animation": "\"walking\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 162542083403699
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 100841708060042,
+											"parameters": {
+												"key": 32
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Player",
+											"sid": 295550324523657,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "jump"
+											}
+										}
+									],
+									"sid": 448264555799157
 								}
-							],
-							"sid": 988484923948508
+							]
 						}
 					],
 					"sid": 760490132794021
@@ -777,6 +786,253 @@
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "player.gauntlet.trajectory",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"functionName": "playerTrajectoryAngle",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "number",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-function-return-value",
+											"objectClass": "Functions",
+											"sid": 593494109129784,
+											"parameters": {
+												"value": "angle(Player.X, Player.Y, Mouse.X, Mouse.Y)"
+											}
+										}
+									],
+									"sid": 995151985291117
+								},
+								{
+									"functionName": "playerTrajectoryForce",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "number",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-function-return-value",
+											"objectClass": "Functions",
+											"sid": 640019929774086,
+											"parameters": {
+												"value": "Player.launchForce * 20"
+											}
+										}
+									],
+									"sid": 975716830609831
+								},
+								{
+									"functionName": "playerTrajectoryForceX",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "number",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-function-return-value",
+											"objectClass": "Functions",
+											"sid": 196266657214714,
+											"parameters": {
+												"value": "Functions.playerTrajectoryForce * cos(Functions.playerTrajectoryAngle)"
+											}
+										}
+									],
+									"sid": 916761867508111
+								},
+								{
+									"functionName": "playerTrajectoryForceY",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "number",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-function-return-value",
+											"objectClass": "Functions",
+											"sid": 460998281443759,
+											"parameters": {
+												"value": "Functions.playerTrajectoryForce * sin(Functions.playerTrajectoryAngle)"
+											}
+										}
+									],
+									"sid": 613298167744755
+								},
+								{
+									"functionName": "playerTrajectoryX",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "number",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "t",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 893360145367568
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-function-return-value",
+											"objectClass": "Functions",
+											"sid": 495799698449085,
+											"parameters": {
+												"value": "Player.X + Functions.playerTrajectoryForceX * .75 * t "
+											}
+										}
+									],
+									"sid": 190095032400497
+								},
+								{
+									"functionName": "playerTrajectoryY",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "number",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "t",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 321176165933775
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-function-return-value",
+											"objectClass": "Functions",
+											"sid": 783775313917725,
+											"parameters": {
+												"value": "Player.Y + Functions.playerTrajectoryForceY * t + 700 * t^2"
+											}
+										}
+									],
+									"sid": 128210470066939
+								},
+								{
+									"functionName": "drawGauntletTrajectory",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "clear-canvas",
+											"objectClass": "DrawingCanvas",
+											"sid": 203185850716775,
+											"parameters": {
+												"color": "rgba(0, 0, 0, 0)"
+											}
+										}
+									],
+									"sid": 718759063695860,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "repeat",
+													"objectClass": "System",
+													"sid": 815176606067687,
+													"parameters": {
+														"count": "Functions.playerTrajectoryForce / 10"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "line-dashed",
+													"objectClass": "DrawingCanvas",
+													"sid": 752668012285615,
+													"parameters": {
+														"x1": "Functions.playerTrajectoryX(loopindex*10/Functions.playerTrajectoryForce)",
+														"y1": "Functions.playerTrajectoryY(loopindex*10/Functions.playerTrajectoryForce)",
+														"x2": "Functions.playerTrajectoryX((loopindex + 1)*10/Functions.playerTrajectoryForce)",
+														"y2": "Functions.playerTrajectoryY((loopindex + 1)*10/Functions.playerTrajectoryForce)",
+														"color": "rgba(0, 0, 0, 30)",
+														"line-thickness": "1",
+														"dash-length": "2",
+														"line-cap": "butt"
+													}
+												},
+												{
+													"id": "clear-rect",
+													"objectClass": "DrawingCanvas",
+													"sid": 196382745050297,
+													"parameters": {
+														"left": "0",
+														"top": "Player.Y + 25",
+														"right": "ViewportRight(0)",
+														"bottom": "ViewportBottom(0)",
+														"color": "rgba(0, 0, 0, 0)"
+													}
+												}
+											],
+											"sid": 983549885370729
+										}
+									]
+								},
+								{
+									"functionName": "removeTrajectory",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "clear-canvas",
+											"objectClass": "DrawingCanvas",
+											"sid": 135308250057878,
+											"parameters": {
+												"color": "rgba(0, 0, 0, 0)"
+											}
+										}
+									],
+									"sid": 432114459324909
+								}
+							],
+							"sid": 187488471820238
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -806,6 +1062,12 @@
 										"animation": "\"charging\""
 									},
 									"isInverted": true
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "Player",
+									"sid": 978818262497151,
+									"behaviorType": "Platform"
 								}
 							],
 							"actions": [
@@ -816,14 +1078,6 @@
 									"parameters": {
 										"animation": "\"charging\"",
 										"from": "beginning"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "ControlForceByCharge",
-									"sid": 957030307881509,
-									"parameters": {
-										"visibility": "visible"
 									}
 								}
 							],
@@ -841,161 +1095,171 @@
 									}
 								}
 							],
-							"actions": [],
-							"sid": 966982406220195
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-x-seconds",
-									"objectClass": "System",
-									"sid": 633683459088053,
-									"parameters": {
-										"interval-seconds": "0.1"
-									}
-								}
-							],
 							"actions": [
 								{
-									"id": "set-instvar-value",
-									"objectClass": "Player",
-									"sid": 260620269044840,
-									"parameters": {
-										"instance-variable": "launchForce",
-										"value": "min(Player.launchForce + 1, maxLaunchForce)"
-									}
+									"callFunction": "drawGauntletTrajectory",
+									"sid": 921833015703811
 								}
 							],
-							"sid": 472187165636036
-						},
-						{
-							"eventType": "block",
-							"conditions": [
+							"sid": 966982406220195,
+							"children": [
 								{
-									"id": "on-button-released",
-									"objectClass": "Mouse",
-									"sid": 802739675987779,
-									"parameters": {
-										"mouse-button": "left"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 441228148346805,
+											"parameters": {
+												"interval-seconds": "0.1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player",
+											"sid": 422100122467170,
+											"parameters": {
+												"instance-variable": "launchForce",
+												"value": "min(Player.launchForce + 1, maxLaunchForce)"
+											}
+										}
+									],
+									"sid": 164829251451833
 								},
 								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 960821768261380,
-									"parameters": {
-										"instance-variable": "charges",
-										"comparison": 4,
-										"value": "0"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-released",
+											"objectClass": "Mouse",
+											"sid": 611899173043039,
+											"parameters": {
+												"mouse-button": "left"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player",
+											"sid": 200686295679866,
+											"parameters": {
+												"instance-variable": "charges",
+												"comparison": 4,
+												"value": "0"
+											}
+										},
+										{
+											"id": "is-mirrored",
+											"objectClass": "Player",
+											"sid": 251333405436189
+										}
+									],
+									"actions": [
+										{
+											"id": "set-flipped",
+											"objectClass": "Player",
+											"sid": 100443598986287,
+											"parameters": {
+												"state": "flipped"
+											}
+										}
+									],
+									"sid": 122605862579063
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-released",
+											"objectClass": "Mouse",
+											"sid": 270062041700124,
+											"parameters": {
+												"mouse-button": "left"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player",
+											"sid": 871708243301880,
+											"parameters": {
+												"instance-variable": "charges",
+												"comparison": 4,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "removeTrajectory",
+											"sid": 865914852829541
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "Player",
+											"sid": 276664978381776,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 851753235653417,
+											"parameters": {
+												"animation": "\"Launch\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player",
+											"sid": 578886072733084,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-angle-toward-position",
+											"objectClass": "Player",
+											"sid": 621974491448627,
+											"parameters": {
+												"x": "Mouse.X",
+												"y": "Mouse.Y"
+											}
+										},
+										{
+											"id": "set-speed",
+											"objectClass": "Player",
+											"sid": 661163769802656,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"speed": "Player.launchForce * 15"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player",
+											"sid": 642204373172485,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"state": "enabled"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player",
+											"sid": 614028679121792,
+											"parameters": {
+												"instance-variable": "launchForce",
+												"value": "minLaunchForce"
+											}
+										}
+									],
+									"sid": 350902032421900
 								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "ControlForceByCharge",
-									"sid": 970629004236155,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 140827494225114,
-									"parameters": {
-										"animation": "\"Launch\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "set-angle-toward-position",
-									"objectClass": "Player",
-									"sid": 991588829934859,
-									"parameters": {
-										"x": "Mouse.X",
-										"y": "Mouse.Y"
-									}
-								},
-								{
-									"id": "set-speed",
-									"objectClass": "Player",
-									"sid": 957900029370152,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"speed": "Player.launchForce * 15"
-									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "Player",
-									"sid": 810076490347160,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"state": "enabled"
-									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "Player",
-									"sid": 143528208997548,
-									"behaviorType": "Platform",
-									"parameters": {
-										"state": "disabled"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Player",
-									"sid": 809714699586588,
-									"parameters": {
-										"instance-variable": "launchForce",
-										"value": "minLaunchForce"
-									}
-								}
-							],
-							"sid": 302961894131736
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 156927102984168
-								}
-							],
-							"actions": [
-								{
-									"id": "set-size",
-									"objectClass": "ControlForceByCharge",
-									"sid": 199818345400466,
-									"parameters": {
-										"width": "(8 + Player.launchForce) * 3",
-										"height": "2"
-									}
-								},
-								{
-									"id": "set-angle-toward-position",
-									"objectClass": "ControlForceByCharge",
-									"sid": 460708124882901,
-									"parameters": {
-										"x": "Mouse.X",
-										"y": "Mouse.Y"
-									}
-								},
-								{
-									"id": "set-position",
-									"objectClass": "ControlForceByCharge",
-									"sid": 878577800437874,
-									"parameters": {
-										"x": "Player.X",
-										"y": "Player.Y"
-									}
-								}
-							],
-							"sid": 991627207679773
+							]
 						},
 						{
 							"eventType": "block",
@@ -1025,6 +1289,155 @@
 						}
 					],
 					"sid": 941452320505571
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "player.animations",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-moved",
+									"objectClass": "Player",
+									"sid": 309597630581929,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 237313888769244,
+									"parameters": {
+										"animation": "\"walking\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 706539261589280
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-stopped",
+									"objectClass": "Player",
+									"sid": 988921856286754,
+									"behaviorType": "Platform"
+								},
+								{
+									"id": "on-jump",
+									"objectClass": "Player",
+									"sid": 497710775323630,
+									"behaviorType": "Platform"
+								},
+								{
+									"id": "on-jump",
+									"objectClass": "Player",
+									"sid": 302429942514243,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 782457737190775,
+									"parameters": {
+										"animation": "\"idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 351315433579113,
+							"isOrBlock": true
+						}
+					],
+					"sid": 305036156651759
+				},
+				{
+					"functionName": "stop player gaunlet launch",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "Player",
+							"sid": 205158962180701,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 174791669286220,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 609586072828909,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 830821227314695,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 620931245853289,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-flipped",
+									"objectClass": "Player",
+									"sid": 521731743205115
+								}
+							],
+							"actions": [
+								{
+									"id": "set-flipped",
+									"objectClass": "Player",
+									"sid": 724504803117962,
+									"parameters": {
+										"state": "not-flipped"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Player",
+									"sid": 104964945175720,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 932397957706326
+						}
+					]
 				}
 			],
 			"sid": 677888026045447
