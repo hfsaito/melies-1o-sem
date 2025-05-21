@@ -239,6 +239,36 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 263638656521839
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ParedeQuebravel",
+									"sid": 390937488266369,
+									"parameters": {
+										"animation": "\"\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation-speed",
+									"objectClass": "ParedeQuebravel",
+									"sid": 937857060671882,
+									"parameters": {
+										"speed": "0"
+									}
+								}
+							],
+							"sid": 319229757800674
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "on-collision-with-another-object",
 									"objectClass": "ParedeQuebravel",
 									"sid": 702333910986493,
@@ -286,12 +316,45 @@
 							],
 							"actions": [
 								{
-									"id": "destroy",
+									"id": "set-animation",
 									"objectClass": "ParedeQuebravel",
-									"sid": 206825694644624
+									"sid": 380436773614336,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation-speed",
+									"objectClass": "ParedeQuebravel",
+									"sid": 348072628929644,
+									"parameters": {
+										"speed": "2"
+									}
 								}
 							],
 							"sid": 505541523660543
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-animation-finished",
+									"objectClass": "ParedeQuebravel",
+									"sid": 826501448278047,
+									"parameters": {
+										"animation": "\"Animation 1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "ParedeQuebravel",
+									"sid": 234449678661715
+								}
+							],
+							"sid": 337679182633469
 						}
 					],
 					"sid": 735999443349840
@@ -2486,7 +2549,36 @@
 													}
 												}
 											],
-											"sid": 878753267482733
+											"sid": 878753267482733,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 545814087984450,
+															"parameters": {
+																"first-value": "distance(Enemy01Explosion.X, Enemy01Explosion.Y, Player.X, Player.Y)",
+																"comparison": 2,
+																"second-value": "100"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "subtract-from-instvar",
+															"objectClass": "Player",
+															"sid": 987474187887283,
+															"parameters": {
+																"instance-variable": "Life",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 998071955273046
+												}
+											]
 										}
 									]
 								}
@@ -3051,6 +3143,307 @@
 				}
 			],
 			"sid": 698244114572686
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player.Life",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 871444464540896
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PlayerLife",
+							"sid": 240723989828361,
+							"parameters": {
+								"frame-number": "Player.Life"
+							}
+						}
+					],
+					"sid": 214329668430530
+				}
+			],
+			"sid": 718992880810767
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy02",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Tiro",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Player",
+									"sid": 643894872868204,
+									"parameters": {
+										"comparison": 5,
+										"x-co-ordinate": "enemy02.X-100"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "enemy02",
+									"sid": 734642818144058,
+									"parameters": {
+										"animation": "\"Animation 2\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 860631171090114,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 726215456697920,
+											"parameters": {
+												"interval-seconds": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "enemy02",
+											"sid": 346328155841326,
+											"parameters": {
+												"object": "Sprite",
+												"layer": "0",
+												"image-point": "1",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										}
+									],
+									"sid": 200755029390278,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-x",
+													"objectClass": "enemy02",
+													"sid": 729767194659441,
+													"parameters": {
+														"comparison": 4,
+														"x-co-ordinate": "Player.X"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "Sprite",
+													"sid": 546578498871807,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "180"
+													}
+												}
+											],
+											"sid": 365998266551032
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 524001354677637
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "Sprite",
+													"sid": 193564316285493,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "360"
+													}
+												}
+											],
+											"sid": 466119589906943
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-collision-with-another-object",
+													"objectClass": "Sprite",
+													"sid": 683768237402864,
+													"parameters": {
+														"object": "Player"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Player",
+													"sid": 163877227508708,
+													"parameters": {
+														"instance-variable": "Life",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 473836755675153
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 661622148962778
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "enemy02",
+									"sid": 314552980469341,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 208658145146383
+						}
+					],
+					"sid": 191295821557968
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Patrulha",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 907162948262690
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "enemy02",
+									"sid": 573694034354342,
+									"parameters": {
+										"x": "enemy02.X + (enemy02.direcao * 0.2)\n\n"
+									}
+								}
+							],
+							"sid": 790163593669823
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "enemy02",
+									"sid": 675346493151019,
+									"parameters": {
+										"object": "pontoFinal"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "enemy02",
+									"sid": 221409891165610,
+									"parameters": {
+										"instance-variable": "direcao",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "enemy02",
+									"sid": 343879068280518,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 685588755801196
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "enemy02",
+									"sid": 454121888603765,
+									"parameters": {
+										"object": "pontoInicial"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "enemy02",
+									"sid": 176755219355187,
+									"parameters": {
+										"instance-variable": "direcao",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "enemy02",
+									"sid": 617405297672560,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 433261459120465
+						}
+					],
+					"sid": 986384284641261
+				}
+			],
+			"sid": 473883323330360
 		}
 	],
 	"sid": 194953318407231

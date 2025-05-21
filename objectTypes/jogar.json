@@ -1,0 +1,78 @@
+{
+	"name": "jogar",
+	"plugin-id": "Sprite",
+	"sid": 180241204122949,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 344,
+						"height": 144,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1881924,
+						"collisionPoly": {
+							"points": [
+								0.9941860465116279,
+								0.027777777777777776,
+								0.9302325581395345,
+								0.9930555555555556,
+								0.005813953488372093,
+								0.9930555555555556,
+								0.020348837209302327,
+								0.055555555555556344
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 344,
+						"height": 144,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8161773,
+						"collisionPoly": {
+							"points": [
+								0.9941860465116279,
+								0.027777777777777776,
+								0.9302325581395349,
+								0.9930555555555556,
+								0.005813953488372093,
+								0.9930555555555556,
+								0.020348837209302327,
+								0.05555555555555555
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 460811827121172,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
