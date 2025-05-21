@@ -9,15 +9,8 @@
 			"name": "mirrored",
 			"type": "boolean",
 			"desc": "",
-			"show": true,
+			"show": false,
 			"sid": 863028759857305
-		},
-		{
-			"name": "controlled",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 536564011057869
 		},
 		{
 			"name": "state",
@@ -46,6 +39,27 @@
 			"desc": "",
 			"show": false,
 			"sid": 593976528074613
+		},
+		{
+			"name": "hasFloorAhead",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 381315138667012
+		},
+		{
+			"name": "hasWallAhead",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 827778053640779
+		},
+		{
+			"name": "patrol",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 587505737504305
 		}
 	],
 	"behaviorTypes": [

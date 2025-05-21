@@ -776,11 +776,13 @@
 					"tags": "",
 					"instanceVariables": {
 						"mirrored": true,
-						"controlled": false,
 						"state": "",
 						"watcherTurning": false,
 						"awarenessTimeout": 0,
-						"id": 0
+						"id": 0,
+						"hasFloorAhead": false,
+						"hasWallAhead": false,
+						"patrol": false
 					},
 					"behaviors": {
 						"Platform": {

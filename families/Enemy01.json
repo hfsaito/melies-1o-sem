@@ -18,6 +18,8 @@
 		"Enemy01Containers",
 		"Enemy01Body",
 		"Enemy01Water",
-		"Enemy01Wheels"
+		"Enemy01Wheels",
+		"Enemy01FloorChecker",
+		"Enemy01WallChecker"
 	]
 }

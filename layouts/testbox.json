@@ -98,19 +98,19 @@
 						{
 							"type": "EnemyWatchingRegion",
 							"properties": {
-								"initially-visible": false,
+								"initially-visible": true,
 								"initial-animation": "Animation 1",
 								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 13,
-							"sid": 474622140692025,
+							"sid": 215606667775284,
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 474622140692025,
+								"sid": 215606667775284,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -119,8 +119,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 135,
-								"y": 120,
+								"x": 140,
+								"y": 160,
 								"width": 110,
 								"height": 12.5,
 								"originX": 0.5,
@@ -437,7 +437,7 @@
 					"locked": false,
 					"world": {
 						"x": 20,
-						"y": 140,
+						"y": 180,
 						"width": 224,
 						"height": 16,
 						"originX": 0,
@@ -593,11 +593,13 @@
 					"tags": "",
 					"instanceVariables": {
 						"mirrored": false,
-						"controlled": false,
 						"state": "",
 						"watcherTurning": false,
 						"awarenessTimeout": 0,
-						"id": 0
+						"id": 0,
+						"hasFloorAhead": false,
+						"hasWallAhead": false,
+						"patrol": true
 					},
 					"behaviors": {
 						"Platform": {
@@ -641,8 +643,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 130,
-						"y": 100,
+						"x": 110,
+						"y": 140,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -656,9 +658,44 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
+				}
+			],
+			"sid": 460497800273006,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Trajectory",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
 				{
-					"type": "DrawingCanvas",
+					"type": "TrajectoryCanvas",
 					"properties": {
 						"resolution-mode": "auto",
 						"initially-visible": true,
@@ -697,7 +734,7 @@
 					}
 				}
 			],
-			"sid": 460497800273006,
+			"sid": 857375830618979,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,

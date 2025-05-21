@@ -113,7 +113,7 @@
 			"Audio",
 			"FinishLine",
 			"TiledBackground",
-			"DrawingCanvas"
+			"TrajectoryCanvas"
 		],
 		"subfolders": [
 			{
@@ -161,7 +161,9 @@
 							"Enemy01Explosion",
 							"Enemy01Hitbox",
 							"Enemy01Water",
-							"Enemy01Wheels"
+							"Enemy01Wheels",
+							"Enemy01FloorChecker",
+							"Enemy01WallChecker"
 						],
 						"subfolders": [],
 						"name": "Enemy01"
@@ -192,7 +194,8 @@
 			"MainMenu",
 			"TestBox",
 			"Level0",
-			"Level1"
+			"Level1",
+			"ContructTests"
 		],
 		"subfolders": []
 	},
@@ -200,7 +203,8 @@
 		"items": [
 			"game",
 			"menu",
-			"level0"
+			"level0",
+			"ConstructTests"
 		],
 		"subfolders": []
 	},
