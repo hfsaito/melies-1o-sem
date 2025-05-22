@@ -416,12 +416,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 325,
-						"y": 200,
+						"x": 290,
+						"y": 203,
 						"width": 12,
-						"height": 21,
+						"height": 23,
 						"originX": 0.5,
-						"originY": 0.5675675675675675,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -780,7 +780,7 @@
 						"charges": 0,
 						"launchForce": 0,
 						"wasMirrored": false,
-						"Life": 3
+						"Life": 5
 					},
 					"behaviors": {
 						"Platform": {
@@ -889,7 +889,7 @@
 					"locked": false,
 					"world": {
 						"x": 47.8145854429922,
-						"y": 39.52226532691062,
+						"y": 39,
 						"width": 31.56060667844681,
 						"height": 18.03463238768389,
 						"originX": 0.5,
@@ -909,7 +909,7 @@
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
-						"initial-frame": 3,
+						"initial-frame": 5,
 						"enable-collisions": false,
 						"live-preview": false
 					},
@@ -925,12 +925,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 98.02567296991845,
-						"y": 38.24186094747964,
-						"width": 44.355598957846084,
-						"height": 11.499599729811948,
+						"x": 108.43024328044538,
+						"y": 39,
+						"width": 68.66765141028266,
+						"height": 18.0252584951992,
 						"originX": 0.5,
-						"originY": 0.38095238095238093,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

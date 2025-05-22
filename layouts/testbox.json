@@ -447,7 +447,7 @@
 						"charges": 99,
 						"launchForce": 0,
 						"wasMirrored": false,
-						"Life": 3
+						"Life": 6
 					},
 					"behaviors": {
 						"Platform": {
@@ -668,10 +668,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 404.1287281865901,
-						"y": 211.96272397183344,
-						"width": 9.851559947253556,
-						"height": 70.83740723977559,
+						"x": 393.91479119954124,
+						"y": 203.7793629438494,
+						"width": 11.785196760068766,
+						"height": 84.74117670335164,
 						"originX": 0.5,
 						"originY": 0.46688741721854304,
 						"color": [
@@ -705,8 +705,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 285.18376398889046,
-						"y": 227,
+						"x": 268.9909458328501,
+						"y": 229.31325973657718,
 						"width": 4.883139762325104,
 						"height": 4.883139762325104,
 						"originX": 0.5,
@@ -742,10 +742,47 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 460.2904877398346,
-						"y": 227,
+						"x": 471.08569984386156,
+						"y": 228.1566298682886,
 						"width": 4.88314,
 						"height": 4.88314,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlayerLife",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 5,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 21,
+					"sid": 382142899528121,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 382142899528121,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 93.44232940673828,
+						"y": 57.42890548706055,
+						"width": 68.66765141028266,
+						"height": 18.0252584951992,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

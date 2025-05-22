@@ -848,6 +848,31 @@
 									"sid": 448264555799157
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 189487326997151,
+									"parameters": {
+										"object": "Sprite"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 613877713599501,
+									"parameters": {
+										"instance-variable": "Life",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 344823692110447
 						}
 					],
 					"sid": 760490132794021
@@ -3436,6 +3461,31 @@
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Sprite",
+											"sid": 418269984308029,
+											"parameters": {
+												"frame-number": "0"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 365989239131975,
+											"parameters": {
+												"seconds": "0.2",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Sprite",
+											"sid": 106829046313225,
+											"parameters": {
+												"frame-number": "1"
+											}
 										}
 									],
 									"sid": 200755029390278,
@@ -3503,31 +3553,6 @@
 												}
 											],
 											"sid": 466119589906943
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "on-collision-with-another-object",
-													"objectClass": "Sprite",
-													"sid": 683768237402864,
-													"parameters": {
-														"object": "Player"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "subtract-from-instvar",
-													"objectClass": "Player",
-													"sid": 163877227508708,
-													"parameters": {
-														"instance-variable": "Life",
-														"value": "1"
-													}
-												}
-											],
-											"sid": 473836755675153
 										}
 									]
 								}
