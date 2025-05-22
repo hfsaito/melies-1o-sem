@@ -6,27 +6,6 @@
 			"conditions": [
 				{
 					"id": "on-clicked",
-					"objectClass": "Start",
-					"sid": 156326024224459
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 852157069197755,
-					"parameters": {
-						"layout": "Level0"
-					}
-				}
-			],
-			"sid": 312146951964340
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-clicked",
 					"objectClass": "TestBox",
 					"sid": 956205866682902
 				}
@@ -42,6 +21,261 @@
 				}
 			],
 			"sid": 725664390220478
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Jogar",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 142280100351128,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "jogar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 526458101761913,
+							"parameters": {
+								"layout": "Level0"
+							}
+						}
+					],
+					"sid": 644045346735461
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 987474997256137,
+							"parameters": {
+								"object": "jogar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "jogar",
+							"sid": 833129378106686,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 113751190539899
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 960354648160447,
+							"parameters": {
+								"object": "jogar"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "jogar",
+							"sid": 154311912475003,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 165162305995210
+				}
+			],
+			"sid": 894866729850896
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "opcoes",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 343588219489320,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "opcoes"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 713616087399472,
+							"parameters": {
+								"layout": "MainMenu"
+							}
+						}
+					],
+					"sid": 482566307687583
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 144730947254256,
+							"parameters": {
+								"object": "opcoes"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "opcoes",
+							"sid": 601438434358487,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 745367514483948
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 675974609899974,
+							"parameters": {
+								"object": "opcoes"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "opcoes",
+							"sid": 720075668944120,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 801154144955429
+				}
+			],
+			"sid": 650180863221587
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "creditos",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 121172264871075,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "creditos"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 193606569739723,
+							"parameters": {
+								"layout": "MainMenu"
+							}
+						}
+					],
+					"sid": 530722154931983
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 348884417188003,
+							"parameters": {
+								"object": "creditos"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "creditos",
+							"sid": 243750792391040,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 372410286892797
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 814740972846468,
+							"parameters": {
+								"object": "creditos"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "creditos",
+							"sid": 680766527376042,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 870528701871075
+				}
+			],
+			"sid": 753504210876232
 		}
 	],
 	"sid": 229297571637859
