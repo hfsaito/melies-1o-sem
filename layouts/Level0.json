@@ -2,7 +2,7 @@
 	"name": "Level0",
 	"layers": [
 		{
-			"name": "Layer 0",
+			"name": "Background",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -88,7 +88,7 @@
 			"overriden": 0,
 			"subLayers": [
 				{
-					"name": "LevelHelpers",
+					"name": "Level.Helpers",
 					"overriden": 0,
 					"subLayers": [],
 					"instances": [
@@ -727,42 +727,7 @@
 		{
 			"name": "Player",
 			"overriden": 0,
-			"subLayers": [
-				{
-					"name": "PlayerHelpers",
-					"overriden": 0,
-					"subLayers": [],
-					"instances": [],
-					"sid": 645435789905139,
-					"effectTypes": [],
-					"isInitiallyVisible": true,
-					"isInitiallyInteractive": true,
-					"isHTMLElementsLayer": false,
-					"color": [
-						1,
-						1,
-						1,
-						1
-					],
-					"backgroundColor": [
-						0.3686274509803922,
-						0.3686274509803922,
-						0.3686274509803922,
-						1
-					],
-					"isTransparent": true,
-					"parallaxX": 1,
-					"parallaxY": 1,
-					"scaleRate": 1,
-					"forceOwnTexture": false,
-					"renderingMode": "3d",
-					"drawOrder": "z-order",
-					"useRenderCells": false,
-					"blendMode": "normal",
-					"zElevation": 0,
-					"global": false
-				}
-			],
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "Player",

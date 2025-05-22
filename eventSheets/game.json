@@ -62,9 +62,9 @@
 						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
-							"sid": 142240868791480,
+							"sid": 842877198267650,
 							"parameters": {
-								"layer": "\"LPause\"",
+								"layer": "\"Pause\"",
 								"visibility": "invisible"
 							}
 						},
@@ -109,9 +109,9 @@
 								{
 									"id": "layer-is-visible",
 									"objectClass": "System",
-									"sid": 496759288689559,
+									"sid": 597843859200186,
 									"parameters": {
-										"layer": "\"LPause\""
+										"layer": "\"Pause\""
 									}
 								}
 							],
@@ -136,9 +136,9 @@
 								{
 									"id": "set-layer-visible",
 									"objectClass": "System",
-									"sid": 741685886142891,
+									"sid": 663707338963938,
 									"parameters": {
-										"layer": "\"LPause\"",
+										"layer": "\"Pause\"",
 										"visibility": "visible"
 									}
 								},
@@ -713,11 +713,11 @@
 								{
 									"id": "add-layer",
 									"objectClass": "System",
-									"sid": 846746448136002,
+									"sid": 966799620155697,
 									"parameters": {
-										"name": "\"Trajectory\"",
-										"insert-by": "\"LBase\"",
-										"where": "above"
+										"name": "\"Player.Trajectory\"",
+										"insert-by": "\"Player\"",
+										"where": "add-top-sublayer"
 									}
 								},
 								{
@@ -1144,12 +1144,12 @@
 												{
 													"id": "clear-rect",
 													"objectClass": "TrajectoryCanvas",
-													"sid": 196382745050297,
+													"sid": 296113942323193,
 													"parameters": {
 														"left": "0",
 														"top": "Player.Y + 25",
-														"right": "ViewportRight(0)",
-														"bottom": "ViewportBottom(0)",
+														"right": "ViewportRight(Self.LayerName)",
+														"bottom": "ViewportBottom(Self.LayerName)",
 														"color": "rgba(0, 0, 0, 0)"
 													}
 												}
@@ -1780,10 +1780,10 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "Enemy01Hitbox",
-									"sid": 738652061303636,
+									"sid": 576271181262291,
 									"parameters": {
 										"object": "Enemy01Explosion",
-										"layer": "\"LBase\"",
+										"layer": "\"Level\"",
 										"image-point": "0",
 										"create-hierarchy": false,
 										"template-name": "\"\""
@@ -1792,10 +1792,10 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "Enemy01Hitbox",
-									"sid": 929975898387735,
+									"sid": 899361773412818,
 									"parameters": {
 										"object": "Enemy01Water",
-										"layer": "\"LBase\"",
+										"layer": "\"Level\"",
 										"image-point": "0",
 										"create-hierarchy": false,
 										"template-name": "\"\""
@@ -1804,10 +1804,10 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "Enemy01Hitbox",
-									"sid": 690226019545900,
+									"sid": 749273806180939,
 									"parameters": {
 										"object": "Enemy01Containers",
-										"layer": "\"LBase\"",
+										"layer": "\"Level\"",
 										"image-point": "0",
 										"create-hierarchy": false,
 										"template-name": "\"\""
@@ -1816,10 +1816,10 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "Enemy01Hitbox",
-									"sid": 953448408975856,
+									"sid": 258883477006754,
 									"parameters": {
 										"object": "Enemy01Body",
-										"layer": "\"LBase\"",
+										"layer": "\"Level\"",
 										"image-point": "0",
 										"create-hierarchy": false,
 										"template-name": "\"\""
@@ -1828,10 +1828,10 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "Enemy01Hitbox",
-									"sid": 239957725831487,
+									"sid": 204170406015724,
 									"parameters": {
 										"object": "Enemy01Wheels",
-										"layer": "\"LBase\"",
+										"layer": "\"Level\"",
 										"image-point": "0",
 										"create-hierarchy": false,
 										"template-name": "\"\""
@@ -1840,10 +1840,10 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "Enemy01Hitbox",
-									"sid": 179629634065290,
+									"sid": 432896589280847,
 									"parameters": {
 										"object": "Enemy01FloorChecker",
-										"layer": "\"LBase\"",
+										"layer": "\"Level\"",
 										"image-point": "0",
 										"create-hierarchy": false,
 										"template-name": "\"\""
@@ -1852,10 +1852,10 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "Enemy01Hitbox",
-									"sid": 480370769242601,
+									"sid": 320522420339723,
 									"parameters": {
 										"object": "Enemy01WallChecker",
-										"layer": "\"LBase\"",
+										"layer": "\"Level\"",
 										"image-point": "0",
 										"create-hierarchy": false,
 										"template-name": "\"\""
