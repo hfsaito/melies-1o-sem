@@ -91,45 +91,7 @@
 					"name": "Base.Helpers",
 					"overriden": 0,
 					"subLayers": [],
-					"instances": [
-						{
-							"type": "EnemyWatchingRegion",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 13,
-							"sid": 215606667775284,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 215606667775284,
-								"expanded": true
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 140,
-								"y": 160,
-								"width": 110,
-								"height": 12.5,
-								"originX": 0.5,
-								"originY": 0.5,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						}
-					],
+					"instances": [],
 					"sid": 290444096345875,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
@@ -571,9 +533,9 @@
 						"watcherTurning": false,
 						"awarenessTimeout": 0,
 						"id": 0,
-						"hasFloorAhead": false,
+						"hasFloorEndingAhead": false,
 						"hasWallAhead": false,
-						"patrol": true
+						"patrolEnabled": true
 					},
 					"behaviors": {
 						"Platform": {

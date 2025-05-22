@@ -41,7 +41,7 @@
 			"sid": 593976528074613
 		},
 		{
-			"name": "hasFloorAhead",
+			"name": "hasFloorEndingAhead",
 			"type": "boolean",
 			"desc": "",
 			"show": false,
@@ -55,7 +55,7 @@
 			"sid": 827778053640779
 		},
 		{
-			"name": "patrol",
+			"name": "patrolEnabled",
 			"type": "boolean",
 			"desc": "",
 			"show": true,

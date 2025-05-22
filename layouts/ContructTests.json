@@ -24,9 +24,9 @@
 						"watcherTurning": false,
 						"awarenessTimeout": 0,
 						"id": 0,
-						"hasFloorAhead": false,
+						"hasFloorEndingAhead": false,
 						"hasWallAhead": false,
-						"patrol": false
+						"patrolEnabled": false
 					},
 					"behaviors": {
 						"Platform": {

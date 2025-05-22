@@ -46,43 +46,6 @@
 								"angle": 0,
 								"zElevation": 0
 							}
-						},
-						{
-							"type": "EnemyWatchingRegion",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 112,
-							"sid": 455001678464101,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 455001678464101,
-								"expanded": true
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 255,
-								"y": 240,
-								"width": 330,
-								"height": 12.5,
-								"originX": 0.5,
-								"originY": 0.5,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
 						}
 					],
 					"sid": 231277791687086,
@@ -742,9 +705,9 @@
 						"watcherTurning": false,
 						"awarenessTimeout": 0,
 						"id": 0,
-						"hasFloorAhead": false,
+						"hasFloorEndingAhead": false,
 						"hasWallAhead": false,
-						"patrol": false
+						"patrolEnabled": false
 					},
 					"behaviors": {
 						"Platform": {
