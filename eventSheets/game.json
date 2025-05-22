@@ -3443,6 +3443,14 @@
 													"parameters": {
 														"angle": "180"
 													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "enemy02",
+													"sid": 238868340806206,
+													"parameters": {
+														"state": "not-mirrored"
+													}
 												}
 											],
 											"sid": 365998266551032
@@ -3464,6 +3472,14 @@
 													"behaviorType": "Bullet",
 													"parameters": {
 														"angle": "360"
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "enemy02",
+													"sid": 870983317913550,
+													"parameters": {
+														"state": "mirrored"
 													}
 												}
 											],
