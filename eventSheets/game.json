@@ -49,61 +49,20 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 223784226930170,
-							"parameters": {
-								"key": 81
-							}
-						}
-					],
+					"functionName": "resume",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
 					"actions": [
 						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
-							"sid": 112659231444777,
-							"parameters": {
-								"layer": "\"LPause\"",
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-time-scale",
-							"objectClass": "System",
-							"sid": 321456546049192,
-							"parameters": {
-								"time-scale": "0"
-							}
-						},
-						{
-							"id": "set-group-active",
-							"objectClass": "System",
-							"sid": 867112786362336,
-							"parameters": {
-								"group-name": "\"Gameplay\"",
-								"state": "deactivated"
-							}
-						}
-					],
-					"sid": 275356541532668
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-clicked",
-							"objectClass": "Resume",
-							"sid": 271198907860384
-						}
-					],
-					"actions": [
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 660628538937648,
+							"sid": 142240868791480,
 							"parameters": {
 								"layer": "\"LPause\"",
 								"visibility": "invisible"
@@ -112,7 +71,7 @@
 						{
 							"id": "set-time-scale",
 							"objectClass": "System",
-							"sid": 982486910609182,
+							"sid": 969026786467060,
 							"parameters": {
 								"time-scale": "1"
 							}
@@ -120,14 +79,107 @@
 						{
 							"id": "set-group-active",
 							"objectClass": "System",
-							"sid": 459645891569193,
+							"sid": 682925152649493,
 							"parameters": {
 								"group-name": "\"Gameplay\"",
 								"state": "activated"
 							}
 						}
 					],
-					"sid": 998321685255090
+					"sid": 806692713333997
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 674079906691468,
+							"parameters": {
+								"key": 9
+							}
+						}
+					],
+					"actions": [],
+					"sid": 275356541532668,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 496759288689559,
+									"parameters": {
+										"layer": "\"LPause\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "resume",
+									"sid": 995491119106105
+								}
+							],
+							"sid": 251810688931656
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 799449634722655
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 741685886142891,
+									"parameters": {
+										"layer": "\"LPause\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 702216072948523,
+									"parameters": {
+										"time-scale": "0"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 791091470738303,
+									"parameters": {
+										"group-name": "\"Gameplay\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 142754396398355
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "Resume",
+							"sid": 296751848707080
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "resume",
+							"sid": 823106790838139
+						}
+					],
+					"sid": 268582067627739
 				},
 				{
 					"eventType": "group",
@@ -2415,7 +2467,16 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Enemy01FloorChecker",
+											"sid": 583925522538948,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
 									"sid": 939120830662710,
 									"children": [
 										{
@@ -2429,6 +2490,15 @@
 														"instance-variable": "parentUniqueID",
 														"comparison": 0,
 														"value": "Enemy01Hitbox.UID"
+													}
+												},
+												{
+													"id": "compare-time",
+													"objectClass": "System",
+													"sid": 254919186155493,
+													"parameters": {
+														"comparison": 4,
+														"time-seconds": ".5"
 													}
 												}
 											],
@@ -2451,10 +2521,10 @@
 														{
 															"id": "set-boolean-instvar",
 															"objectClass": "Enemy01Hitbox",
-															"sid": 307202339131842,
+															"sid": 610119520261769,
 															"parameters": {
-																"instance-variable": "hasFloorAhead",
-																"value": "true"
+																"instance-variable": "hasFloorEndingAhead",
+																"value": "false"
 															}
 														}
 													],
@@ -2473,10 +2543,10 @@
 														{
 															"id": "set-boolean-instvar",
 															"objectClass": "Enemy01Hitbox",
-															"sid": 457200315241401,
+															"sid": 207972615537299,
 															"parameters": {
-																"instance-variable": "hasFloorAhead",
-																"value": "false"
+																"instance-variable": "hasFloorEndingAhead",
+																"value": "true"
 															}
 														}
 													],
@@ -2508,7 +2578,16 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Enemy01WallChecker",
+											"sid": 715769651433769,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
 									"sid": 810064516902072,
 									"children": [
 										{
@@ -2522,6 +2601,15 @@
 														"instance-variable": "parentUniqueID",
 														"comparison": 0,
 														"value": "Enemy01Hitbox.UID"
+													}
+												},
+												{
+													"id": "compare-time",
+													"objectClass": "System",
+													"sid": 471820974550294,
+													"parameters": {
+														"comparison": 4,
+														"time-seconds": ".5"
 													}
 												}
 											],
@@ -2596,16 +2684,21 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-created",
+									"id": "compare-instance-variable",
 									"objectClass": "Enemy01Hitbox",
-									"sid": 824027999705108
+									"sid": 203997774166587,
+									"parameters": {
+										"instance-variable": "state",
+										"comparison": 0,
+										"value": "\"idle\""
+									}
 								},
 								{
-									"id": "is-overlapping-another-object",
+									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Enemy01Hitbox",
-									"sid": 918385592435115,
+									"sid": 937267893327178,
 									"parameters": {
-										"object": "EnemyWatchingRegion"
+										"instance-variable": "patrolEnabled"
 									}
 								}
 							],
@@ -2613,14 +2706,131 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Enemy01Hitbox",
-									"sid": 789748352590470,
+									"sid": 647961108647243,
 									"parameters": {
 										"instance-variable": "state",
 										"value": "\"watching\""
 									}
 								}
 							],
-							"sid": 766191183915717
+							"sid": 965062286635512
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 525201302465889,
+									"parameters": {
+										"object": "Enemy01Hitbox"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 882174287408015,
+									"parameters": {
+										"instance-variable": "state",
+										"comparison": 0,
+										"value": "\"watching\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 278080815432447,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-speed": "50"
+									}
+								}
+							],
+							"sid": 965551044669292,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 742079227954041,
+											"parameters": {
+												"instance-variable": "mirrored"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 393346893010984,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "left"
+											}
+										}
+									],
+									"sid": 897977203383819
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 577197077276036
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 627046613252395,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "right"
+											}
+										}
+									],
+									"sid": 292695512486875
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 183290479031787,
+											"parameters": {
+												"instance-variable": "hasFloorEndingAhead"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 146934414415288,
+											"parameters": {
+												"instance-variable": "hasWallAhead"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "toggle-boolean-instvar",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 647646277417177,
+											"parameters": {
+												"instance-variable": "mirrored"
+											}
+										}
+									],
+									"sid": 344335801283836,
+									"isOrBlock": true
+								}
+							]
 						}
 					],
 					"sid": 419617249490101
@@ -2860,168 +3070,6 @@
 					"actions": [],
 					"sid": 497389559913975,
 					"children": [
-						{
-							"eventType": "group",
-							"disabled": false,
-							"title": "enemy01.foreach.watching",
-							"description": "",
-							"isActiveOnStart": true,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Enemy01Hitbox",
-											"sid": 428608690311248,
-											"parameters": {
-												"instance-variable": "state",
-												"comparison": 0,
-												"value": "\"watching\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-max-speed",
-											"objectClass": "Enemy01Hitbox",
-											"sid": 887436377315573,
-											"behaviorType": "Platform",
-											"parameters": {
-												"max-speed": "50"
-											}
-										}
-									],
-									"sid": 183907866620922,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-overlapping-another-object",
-													"objectClass": "Enemy01Hitbox",
-													"sid": 979087293478614,
-													"parameters": {
-														"object": "EnemyWatchingRegion"
-													},
-													"isInverted": true
-												},
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "Enemy01Hitbox",
-													"sid": 345486879155188,
-													"parameters": {
-														"instance-variable": "watcherTurning"
-													},
-													"isInverted": true
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Enemy01Hitbox",
-													"sid": 758584846686443,
-													"parameters": {
-														"instance-variable": "watcherTurning",
-														"value": "true"
-													}
-												},
-												{
-													"id": "toggle-boolean-instvar",
-													"objectClass": "Enemy01Hitbox",
-													"sid": 139770548265067,
-													"parameters": {
-														"instance-variable": "mirrored"
-													}
-												}
-											],
-											"sid": 262894757239592
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-overlapping-another-object",
-													"objectClass": "Enemy01Hitbox",
-													"sid": 825071769649313,
-													"parameters": {
-														"object": "EnemyWatchingRegion"
-													}
-												},
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "Enemy01Hitbox",
-													"sid": 490599322438431,
-													"parameters": {
-														"instance-variable": "watcherTurning"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Enemy01Hitbox",
-													"sid": 869826462711130,
-													"parameters": {
-														"instance-variable": "watcherTurning",
-														"value": "false"
-													}
-												}
-											],
-											"sid": 334893683711889
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "Enemy01Hitbox",
-													"sid": 864184394774230,
-													"parameters": {
-														"instance-variable": "mirrored"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "simulate-control",
-													"objectClass": "Enemy01Hitbox",
-													"sid": 745457769818646,
-													"behaviorType": "Platform",
-													"parameters": {
-														"control": "left"
-													}
-												}
-											],
-											"sid": 105724095650291
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "else",
-													"objectClass": "System",
-													"sid": 885921366754094
-												}
-											],
-											"actions": [
-												{
-													"id": "simulate-control",
-													"objectClass": "Enemy01Hitbox",
-													"sid": 246297419309874,
-													"behaviorType": "Platform",
-													"parameters": {
-														"control": "right"
-													}
-												}
-											],
-											"sid": 632231063056524
-										}
-									]
-								}
-							],
-							"sid": 988566411122213
-						},
 						{
 							"eventType": "group",
 							"disabled": false,

@@ -165,9 +165,7 @@
 				"name": "Controls"
 			},
 			{
-				"items": [
-					"EnemyWatchingRegion"
-				],
+				"items": [],
 				"subfolders": [
 					{
 						"items": [
