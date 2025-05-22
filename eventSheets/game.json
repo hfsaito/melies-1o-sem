@@ -373,41 +373,6 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-button-released",
-							"objectClass": "Mouse",
-							"sid": 767751645404704,
-							"parameters": {
-								"mouse-button": "left"
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Player",
-							"sid": 978448876683418,
-							"parameters": {
-								"instance-variable": "charges",
-								"comparison": 4,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "subtract-from-instvar",
-							"objectClass": "Player",
-							"sid": 792541530934250,
-							"parameters": {
-								"instance-variable": "charges",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 988369091914083
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "every-tick",
 							"objectClass": "System",
 							"sid": 470511723648826
@@ -692,9 +657,54 @@
 										"instance-variable": "launchForce",
 										"value": "minLaunchForce"
 									}
+								},
+								{
+									"id": "add-layer",
+									"objectClass": "System",
+									"sid": 846746448136002,
+									"parameters": {
+										"name": "\"Trajectory\"",
+										"insert-by": "\"LBase\"",
+										"where": "above"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 891991134860408,
+									"parameters": {
+										"object-to-create": "TrajectoryCanvas",
+										"layer": "\"Trajectory\"",
+										"x": "0",
+										"y": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
 								}
 							],
 							"sid": 138228612770480
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "TrajectoryCanvas",
+									"sid": 383380255002143
+								}
+							],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "TrajectoryCanvas",
+									"sid": 476672513195175,
+									"parameters": {
+										"width": "ViewportWidth(Self.LayerName)",
+										"height": "ViewportHeight(Self.LayerName)"
+									}
+								}
+							],
+							"sid": 415726746914765
 						}
 					],
 					"sid": 692956531998835
@@ -1317,6 +1327,15 @@
 											"parameters": {
 												"instance-variable": "launchForce",
 												"value": "minLaunchForce"
+											}
+										},
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Player",
+											"sid": 923693845409089,
+											"parameters": {
+												"instance-variable": "charges",
+												"value": "1"
 											}
 										}
 									],
