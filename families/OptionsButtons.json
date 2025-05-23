@@ -1,0 +1,14 @@
+{
+	"name": "OptionsButtons",
+	"plugin-id": "Text",
+	"sid": 690306768514651,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"OptionsRightKey",
+		"OptionsLeftKey",
+		"OptionsJumpKey",
+		"OptionsClose"
+	]
+}

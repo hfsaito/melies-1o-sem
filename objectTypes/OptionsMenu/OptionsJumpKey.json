@@ -1,0 +1,10 @@
+{
+	"name": "OptionsJumpKey",
+	"plugin-id": "Text",
+	"sid": 629071956220614,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

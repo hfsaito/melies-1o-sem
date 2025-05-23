@@ -82,85 +82,88 @@
 			"title": "Gameplay",
 			"description": "",
 			"isActiveOnStart": true,
+			"children": [],
+			"sid": 180204563145536
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "breakableWall",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "ParedeQuebravel",
-					"description": "",
-					"isActiveOnStart": true,
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "BreakableWall",
+							"sid": 213629463875161
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-animation",
+							"objectClass": "BreakableWall",
+							"sid": 525756018920785
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "BreakableWall",
+							"sid": 659450596056041,
+							"parameters": {
+								"instance-variable": "health",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 973791151372907
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-instance-signal",
+							"objectClass": "BreakableWall",
+							"sid": 281928601224546,
+							"parameters": {
+								"tag": "\"break\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BreakableWall",
+							"sid": 790877122282929,
+							"parameters": {
+								"instance-variable": "health",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "BreakableWall",
+							"sid": 756470680262258,
+							"parameters": {
+								"instance-variable": "health",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 475476827795554,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-start-of-layout",
-									"objectClass": "System",
-									"sid": 263638656521839
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "ParedeQuebravel",
-									"sid": 390937488266369,
-									"parameters": {
-										"animation": "\"\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "set-animation-speed",
-									"objectClass": "ParedeQuebravel",
-									"sid": 937857060671882,
-									"parameters": {
-										"speed": "0"
-									}
-								}
-							],
-							"sid": 319229757800674
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "Player",
-									"sid": 469561155402177,
-									"parameters": {
-										"object": "ParedeQuebravel"
-									}
-								},
-								{
-									"id": "is-enabled",
-									"objectClass": "Player",
-									"sid": 642139921189632,
-									"behaviorType": "Bullet"
-								}
-							],
-							"actions": [
-								{
-									"id": "subtract-from-instvar",
-									"objectClass": "ParedeQuebravel",
-									"sid": 276909830470319,
-									"parameters": {
-										"instance-variable": "HP",
-										"value": "1"
-									}
-								}
-							],
-							"sid": 339090657163110
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "compare-instance-variable",
-									"objectClass": "ParedeQuebravel",
-									"sid": 747893688104098,
+									"objectClass": "BreakableWall",
+									"sid": 820954585477697,
 									"parameters": {
-										"instance-variable": "HP",
-										"comparison": 3,
+										"instance-variable": "health",
+										"comparison": 0,
 										"value": "0"
 									}
 								}
@@ -168,42 +171,41 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "ParedeQuebravel",
-									"sid": 661716290700953,
+									"objectClass": "BreakableWall",
+									"sid": 398148204323036,
 									"parameters": {
 										"animation": "\"breaking\"",
 										"from": "beginning"
 									}
 								}
 							],
-							"sid": 505541523660543
-						},
+							"sid": 951122202372780
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-animation-finished",
-									"objectClass": "ParedeQuebravel",
-									"sid": 826501448278047,
-									"parameters": {
-										"animation": "\"Animation 1\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "ParedeQuebravel",
-									"sid": 234449678661715
-								}
-							],
-							"sid": 337679182633469
+							"id": "on-animation-finished",
+							"objectClass": "BreakableWall",
+							"sid": 434497144544476,
+							"parameters": {
+								"animation": "\"breaking\""
+							}
 						}
 					],
-					"sid": 735999443349840
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "BreakableWall",
+							"sid": 206649556051159
+						}
+					],
+					"sid": 929740738085751
 				}
 			],
-			"sid": 180204563145536
+			"sid": 484434555458441
 		},
 		{
 			"eventType": "group",
@@ -594,11 +596,11 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "key-is-down",
+											"id": "key-code-is-down",
 											"objectClass": "Keyboard",
-											"sid": 278021670183374,
+											"sid": 933664230347810,
 											"parameters": {
-												"key": 65
+												"keycode": "ctrlLeft"
 											}
 										}
 									],
@@ -636,11 +638,11 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "key-is-down",
+											"id": "key-code-is-down",
 											"objectClass": "Keyboard",
-											"sid": 996840533092660,
+											"sid": 146873401044843,
 											"parameters": {
-												"key": 68
+												"keycode": "ctrlRight"
 											}
 										}
 									],
@@ -678,11 +680,11 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "on-key-pressed",
+											"id": "on-key-code-pressed",
 											"objectClass": "Keyboard",
-											"sid": 100841708060042,
+											"sid": 938304880634368,
 											"parameters": {
-												"key": 32
+												"keycode": "ctrlJump"
 											}
 										}
 									],
@@ -1204,105 +1206,108 @@
 								{
 									"id": "on-collision-with-another-object",
 									"objectClass": "Player",
+									"sid": 598542957430303,
+									"parameters": {
+										"object": "BreakableWall"
+									}
+								},
+								{
+									"id": "is-enabled",
+									"objectClass": "Player",
+									"sid": 642804149175638,
+									"behaviorType": "Bullet"
+								}
+							],
+							"actions": [
+								{
+									"id": "instance-signal",
+									"objectClass": "BreakableWall",
+									"sid": 652602479622235,
+									"parameters": {
+										"tag": "\"break\""
+									}
+								},
+								{
+									"callFunction": "playerStopGauntlet",
+									"sid": 426103663805965
+								}
+							],
+							"sid": 832414146964819
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
 									"sid": 545498706735967,
 									"parameters": {
 										"object": "PlatformsTilemap"
 									}
 								},
 								{
-									"id": "on-collision-with-another-object",
+									"id": "is-enabled",
 									"objectClass": "Player",
-									"sid": 621167785308336,
+									"sid": 250862404281793,
+									"behaviorType": "Bullet"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "playerStopGauntlet",
+									"sid": 143561478403007
+								}
+							],
+							"sid": 198429800383141
+						},
+						{
+							"functionName": "playerStopGauntlet",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "Player",
+									"sid": 745881140909923,
 									"parameters": {
-										"object": "ParedeQuebravel"
+										"angle": "0"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 212428285496032,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Player",
+									"sid": 681202613111917,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Player",
+									"sid": 715900634100035,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "enabled"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 198429800383141,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-enabled",
-											"objectClass": "Player",
-											"sid": 211811206678663,
-											"behaviorType": "Bullet"
-										}
-									],
-									"actions": [
-										{
-											"id": "set-angle",
-											"objectClass": "Player",
-											"sid": 759670684012053,
-											"parameters": {
-												"angle": "0"
-											}
-										},
-										{
-											"id": "set-animation",
-											"objectClass": "Player",
-											"sid": 766786948773950,
-											"parameters": {
-												"animation": "\"Idle\"",
-												"from": "beginning"
-											}
-										},
-										{
-											"id": "set-enabled",
-											"objectClass": "Player",
-											"sid": 297269136750686,
-											"behaviorType": "Bullet",
-											"parameters": {
-												"state": "disabled"
-											}
-										},
-										{
-											"id": "set-enabled",
-											"objectClass": "Player",
-											"sid": 687726116698767,
-											"behaviorType": "Platform",
-											"parameters": {
-												"state": "enabled"
-											}
-										}
-									],
-									"sid": 444678551389152,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-flipped",
-													"objectClass": "Player",
-													"sid": 247084248344476
-												}
-											],
-											"actions": [
-												{
-													"id": "set-flipped",
-													"objectClass": "Player",
-													"sid": 869140776416329,
-													"parameters": {
-														"state": "not-flipped"
-													}
-												},
-												{
-													"id": "set-mirrored",
-													"objectClass": "Player",
-													"sid": 948319053982189,
-													"parameters": {
-														"state": "mirrored"
-													}
-												}
-											],
-											"sid": 449797928978548
-										}
-									]
-								}
-							],
-							"isOrBlock": true
+							"sid": 256181908573570
 						}
 					],
 					"sid": 941452320505571

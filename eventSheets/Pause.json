@@ -2,6 +2,10 @@
 	"name": "Pause",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "OptionsMenu"
+		},
+		{
 			"eventType": "variable",
 			"name": "paused",
 			"type": "boolean",
@@ -10,6 +14,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 170093296139506
+		},
+		{
+			"eventType": "variable",
+			"name": "pauseEnabled",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 988653198669486
 		},
 		{
 			"eventType": "group",
@@ -78,7 +92,7 @@
 							"objectClass": "System",
 							"sid": 909804054025477,
 							"parameters": {
-								"object-to-create": "PauseResume",
+								"object-to-create": "PauseButtonResume",
 								"layer": "\"Pause\"",
 								"x": "0",
 								"y": "0",
@@ -89,9 +103,9 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 459479968282351,
+							"sid": 499226105178163,
 							"parameters": {
-								"object-to-create": "PauseVolumeControl",
+								"object-to-create": "PauseButtonOptions",
 								"layer": "\"Pause\"",
 								"x": "0",
 								"y": "0",
@@ -101,6 +115,56 @@
 						}
 					],
 					"sid": 364558404026123
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 309653684657914,
+							"parameters": {
+								"tag": "\"OptionsMenuOpen\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 107187383947865,
+							"parameters": {
+								"variable": "pauseEnabled",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 600873512291785
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 837929700635989,
+							"parameters": {
+								"tag": "\"OptionsMenuClose\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 432356030892001,
+							"parameters": {
+								"variable": "pauseEnabled",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 390580716923484
 				}
 			],
 			"sid": 670155048429277
@@ -125,10 +189,10 @@
 						{
 							"id": "set-size",
 							"objectClass": "PauseOverlay",
-							"sid": 761736198903411,
+							"sid": 147396098629094,
 							"parameters": {
-								"width": "ViewportWidth(\"Pause\")",
-								"height": "ViewportHeight(\"Pause\")"
+								"width": "ViewportWidth(Self.LayerName)",
+								"height": "ViewportHeight(Self.LayerName)"
 							}
 						}
 					],
@@ -169,14 +233,14 @@
 					"conditions": [
 						{
 							"id": "on-created",
-							"objectClass": "PauseResume",
+							"objectClass": "PauseButtonResume",
 							"sid": 497167119174225
 						}
 					],
 					"actions": [
 						{
 							"id": "set-scale",
-							"objectClass": "PauseResume",
+							"objectClass": "PauseButtonResume",
 							"sid": 609960574677994,
 							"parameters": {
 								"scale": ".25"
@@ -184,7 +248,7 @@
 						},
 						{
 							"id": "set-position",
-							"objectClass": "PauseResume",
+							"objectClass": "PauseButtonResume",
 							"sid": 818364342209807,
 							"parameters": {
 								"x": "(ViewportWidth(Self.LayerName) / 2)",
@@ -199,31 +263,30 @@
 					"conditions": [
 						{
 							"id": "on-created",
-							"objectClass": "PauseVolumeControl",
-							"sid": 203638774727159
+							"objectClass": "PauseButtonOptions",
+							"sid": 378926799362884
 						}
 					],
 					"actions": [
 						{
-							"id": "set-size",
-							"objectClass": "PauseVolumeControl",
-							"sid": 837183945507645,
+							"id": "set-scale",
+							"objectClass": "PauseButtonOptions",
+							"sid": 963289461525988,
 							"parameters": {
-								"width": "100",
-								"height": "25"
+								"scale": ".20"
 							}
 						},
 						{
 							"id": "set-position",
-							"objectClass": "PauseVolumeControl",
-							"sid": 875295236877066,
+							"objectClass": "PauseButtonOptions",
+							"sid": 946366868398050,
 							"parameters": {
-								"x": "(ViewportWidth(\"Pause\") / 2) - (PauseVolumeControl.Width / 2)",
-								"y": "(ViewportHeight(\"Pause\") * 6 / 10) - (PauseVolumeControl.Height/ 2)"
+								"x": "(ViewportWidth(Self.LayerName) / 2)",
+								"y": "(ViewportHeight(Self.LayerName) * 65 / 100)"
 							}
 						}
 					],
-					"sid": 824556881517179
+					"sid": 219742710300725
 				}
 			],
 			"sid": 238516711570574
@@ -231,7 +294,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "pause.toggle",
+			"title": "pause.functions",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -314,58 +377,220 @@
 						}
 					],
 					"sid": 337880063443583
-				},
+				}
+			],
+			"sid": 447567427229321
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "pause.whenPaused",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 754512024250784,
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 935274390277883,
 							"parameters": {
-								"key": 9
+								"variable": "pauseEnabled"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 456623720809932,
+					"sid": 647092027143695,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "layer-is-visible",
+									"id": "for-each",
 									"objectClass": "System",
-									"sid": 913172231806859,
+									"sid": 991072089136453,
 									"parameters": {
-										"layer": "\"Pause\""
+										"object": "PauseItems"
 									}
 								}
 							],
 							"actions": [
 								{
-									"callFunction": "resume",
-									"sid": 857768256509486
+									"id": "set-visible",
+									"objectClass": "PauseItems",
+									"sid": 781828326981318,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
-							"sid": 905883436852704
+							"sid": 590170657979837
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 949404411427270
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 615988047682906,
+									"parameters": {
+										"key": 9
+									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 492744097945253,
+							"children": [
 								{
-									"callFunction": "pause",
-									"sid": 243186005890770
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 921720950424250,
+											"parameters": {
+												"layer": "\"Pause\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "resume",
+											"sid": 250070125552371
+										}
+									],
+									"sid": 920071124556867
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 424114650279977
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "pause",
+											"sid": 761528569736276
+										}
+									],
+									"sid": 372391167748903
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 222661914783921,
+									"parameters": {
+										"variable": "paused"
+									}
 								}
 							],
-							"sid": 734285796596427
+							"actions": [],
+							"sid": 635162656402262,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 368787520955649,
+											"parameters": {
+												"object": "PauseButtons"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "PauseButtons",
+											"sid": 352393533086081,
+											"parameters": {
+												"animation": "\"hovered\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 990701596598659
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 465093362335639
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "PauseButtons",
+											"sid": 360397146800717,
+											"parameters": {
+												"animation": "\"idle\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 999753872304884
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 434632039756592,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "PauseButtonResume"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "resume",
+											"sid": 522885212487383
+										}
+									],
+									"sid": 201100782972452
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 232122009680101,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "PauseButtonOptions"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "openOptionsMenu",
+											"sid": 302878127603134,
+											"parameters": [
+												false
+											]
+										}
+									],
+									"sid": 883676606092387
+								}
+							]
 						}
 					]
 				},
@@ -373,73 +598,42 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-object-clicked",
-							"objectClass": "Mouse",
-							"sid": 688612699670304,
-							"parameters": {
-								"mouse-button": "left",
-								"click-type": "clicked",
-								"object-clicked": "PauseResume"
-							}
-						}
-					],
-					"actions": [
-						{
-							"callFunction": "resume",
-							"sid": 921847541224871
-						}
-					],
-					"sid": 781443605536877
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "cursor-is-over-object",
-							"objectClass": "Mouse",
-							"sid": 325023956246706,
-							"parameters": {
-								"object": "PauseResume"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PauseResume",
-							"sid": 190736258545227,
-							"parameters": {
-								"animation": "\"hovered\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 209756390436147
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "else",
 							"objectClass": "System",
-							"sid": 635152136491351
+							"sid": 355125070756425
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 843300992265871,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "PauseResume",
-							"sid": 580238872683657,
-							"parameters": {
-								"animation": "\"idle\"",
-								"from": "beginning"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 709522043867244,
+									"parameters": {
+										"object": "PauseItems"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "PauseItems",
+									"sid": 427342553939151,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 650805105668717
 						}
-					],
-					"sid": 766847562262401
+					]
 				}
 			],
-			"sid": 447567427229321
+			"sid": 781212225022164
 		},
 		{
 			"eventType": "group",
@@ -454,14 +648,14 @@
 						{
 							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 330208291998499
+							"sid": 910905860116695
 						}
 					],
 					"actions": [
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 150486284370512,
+							"sid": 515935521968485,
 							"parameters": {
 								"audio-file": "battleThemeA",
 								"loop": "looping",
@@ -471,7 +665,7 @@
 							}
 						}
 					],
-					"sid": 820587495692164
+					"sid": 834606956814397
 				},
 				{
 					"eventType": "block",
@@ -479,23 +673,23 @@
 						{
 							"id": "every-tick",
 							"objectClass": "System",
-							"sid": 134497041318322
+							"sid": 229601454993529
 						}
 					],
 					"actions": [
 						{
 							"id": "set-master-volume",
 							"objectClass": "Audio",
-							"sid": 786853432845322,
+							"sid": 882575603494913,
 							"parameters": {
 								"db": "33 * log10(PauseVolumeControl.Value/100)"
 							}
 						}
 					],
-					"sid": 937999664592743
+					"sid": 293055261663440
 				}
 			],
-			"sid": 585940363760844
+			"sid": 389303252143123
 		}
 	],
 	"sid": 563233474643183

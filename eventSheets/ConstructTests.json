@@ -1,5 +1,10 @@
 {
 	"name": "ConstructTests",
-	"events": [],
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "OptionsMenu"
+		}
+	],
 	"sid": 705040661753437
 }

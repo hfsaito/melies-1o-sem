@@ -674,7 +674,7 @@
 									"objectClass": "Enemy02Bullet",
 									"sid": 181992459766247,
 									"parameters": {
-										"object": "ParedeQuebravel"
+										"object": "BreakableWall"
 									}
 								},
 								{

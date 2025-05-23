@@ -315,7 +315,7 @@
 					}
 				},
 				{
-					"type": "ParedeQuebravel",
+					"type": "BreakableWall",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "breaking",
@@ -327,7 +327,7 @@
 					"sid": 934636233403084,
 					"tags": "",
 					"instanceVariables": {
-						"HP": 1
+						"health": 1
 					},
 					"behaviors": {
 						"Sólido": {
@@ -344,10 +344,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 400,
+						"x": 368,
 						"y": 176,
-						"width": 79,
-						"height": 71,
+						"width": 64,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -574,6 +574,74 @@
 				}
 			],
 			"sid": 482489235670284,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Pause",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 419422661625276,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "OptionsMenu",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 901206254038777,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,

@@ -1,0 +1,13 @@
+{
+	"name": "PauseItems",
+	"plugin-id": "Sprite",
+	"sid": 627183581669004,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"PauseButtonOptions",
+		"PauseButtonResume",
+		"PauseTitle"
+	]
+}

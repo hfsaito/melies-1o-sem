@@ -6,8 +6,9 @@
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
-		"creditsButton",
-		"optionButton",
-		"playButton"
+		"MainMenuButtonCredits",
+		"MainMenuButtonOptions",
+		"MainMenuButtonPlay",
+		"PauseButtonOptions"
 	]
 }

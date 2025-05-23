@@ -10,7 +10,7 @@
 			"conditions": [
 				{
 					"id": "on-destroyed",
-					"objectClass": "ParedeQuebravel",
+					"objectClass": "BreakableWall",
 					"sid": 434323424197033
 				}
 			],

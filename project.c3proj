@@ -43,6 +43,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "TiledBg",
 			"name": "Tiled Background",
 			"author": "Scirra",
@@ -120,9 +127,9 @@
 			{
 				"items": [
 					"MainMenuBackground",
-					"playButton",
-					"optionButton",
-					"creditsButton"
+					"MainMenuButtonPlay",
+					"MainMenuButtonOptions",
+					"MainMenuButtonCredits"
 				],
 				"subfolders": [],
 				"name": "MainMenu"
@@ -132,7 +139,8 @@
 					"PauseVolumeControl",
 					"PauseOverlay",
 					"PauseTitle",
-					"PauseResume"
+					"PauseButtonResume",
+					"PauseButtonOptions"
 				],
 				"subfolders": [],
 				"name": "Pause"
@@ -181,7 +189,7 @@
 			{
 				"items": [
 					"Battery",
-					"ParedeQuebravel"
+					"BreakableWall"
 				],
 				"subfolders": [],
 				"name": "Items"
@@ -202,6 +210,21 @@
 				],
 				"subfolders": [],
 				"name": "Level"
+			},
+			{
+				"items": [
+					"OptionsOverlay",
+					"OptionsRightLabel",
+					"OptionsLeftKey",
+					"OptionsJumpLabel",
+					"OptionsRightKey",
+					"OptionsLeftLabel",
+					"OptionsJumpKey",
+					"OptionsTitle",
+					"OptionsClose"
+				],
+				"subfolders": [],
+				"name": "OptionsMenu"
 			}
 		]
 	},
@@ -213,7 +236,10 @@
 			"Enemy01Parts",
 			"MainMenuButtons",
 			"Enemy02Parts",
-			"MaybeRescale"
+			"MaybeRescale",
+			"OptionsButtons",
+			"PauseButtons",
+			"PauseItems"
 		],
 		"subfolders": []
 	},
@@ -235,7 +261,8 @@
 			"ConstructTests",
 			"Pause",
 			"Enemy01",
-			"Enemy02"
+			"Enemy02",
+			"OptionsMenu"
 		],
 		"subfolders": []
 	},
