@@ -15,16 +15,6 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "masterVolume",
-			"type": "number",
-			"initialValue": "100",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 255411893018504
-		},
-		{
-			"eventType": "variable",
 			"name": "minLaunchForce",
 			"type": "number",
 			"initialValue": "25",
@@ -1449,49 +1439,6 @@
 				}
 			],
 			"sid": 718992880810767
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-created",
-					"objectClass": "MaybeRescale",
-					"sid": 624664566057866
-				}
-			],
-			"actions": [
-				{
-					"id": "set-scale",
-					"objectClass": "MaybeRescale",
-					"sid": 545759600240711,
-					"parameters": {
-						"scale": ".75"
-					}
-				}
-			],
-			"sid": 803507419917491,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 693225296729246
-				}
-			],
-			"actions": [
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 347253015279636,
-					"parameters": {
-						"time-scale": ".2"
-					}
-				}
-			],
-			"sid": 819566455397216
 		}
 	],
 	"sid": 194953318407231
