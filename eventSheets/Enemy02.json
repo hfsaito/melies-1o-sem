@@ -691,6 +691,14 @@
 									"id": "destroy",
 									"objectClass": "Enemy02Bullet",
 									"sid": 265764242413297
+								},
+								{
+									"id": "instance-signal",
+									"objectClass": "Player",
+									"sid": 751869535109930,
+									"parameters": {
+										"tag": "\"damage\""
+									}
 								}
 							],
 							"sid": 523695912118805,

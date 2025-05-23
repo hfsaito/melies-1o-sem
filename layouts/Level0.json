@@ -318,7 +318,7 @@
 					"type": "ParedeQuebravel",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "breaking",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -346,8 +346,8 @@
 					"world": {
 						"x": 400,
 						"y": 176,
-						"width": 63.70967741935485,
-						"height": 97.45098039215686,
+						"width": 79,
+						"height": 71,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -411,7 +411,7 @@
 						"charges": 0,
 						"launchForce": 0,
 						"wasMirrored": false,
-						"Life": 5
+						"life": 5
 					},
 					"behaviors": {
 						"Platform": {

@@ -275,7 +275,7 @@
 						"charges": 0,
 						"launchForce": 0,
 						"wasMirrored": false,
-						"Life": 3
+						"life": 3
 					},
 					"behaviors": {
 						"Platform": {

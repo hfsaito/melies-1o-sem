@@ -248,7 +248,7 @@
 					"locked": false,
 					"world": {
 						"x": 110,
-						"y": 140,
+						"y": 160,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -412,7 +412,7 @@
 						"charges": 99,
 						"launchForce": 0,
 						"wasMirrored": false,
-						"Life": 6
+						"life": 6
 					},
 					"behaviors": {
 						"Platform": {

@@ -169,18 +169,10 @@
 								{
 									"id": "set-animation",
 									"objectClass": "ParedeQuebravel",
-									"sid": 380436773614336,
+									"sid": 661716290700953,
 									"parameters": {
-										"animation": "\"Animation 1\"",
+										"animation": "\"breaking\"",
 										"from": "beginning"
-									}
-								},
-								{
-									"id": "set-animation-speed",
-									"objectClass": "ParedeQuebravel",
-									"sid": 348072628929644,
-									"parameters": {
-										"speed": "2"
 									}
 								}
 							],
@@ -708,31 +700,6 @@
 									"sid": 448264555799157
 								}
 							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "Player",
-									"sid": 189487326997151,
-									"parameters": {
-										"object": "Enemy02Bullet"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "subtract-from-instvar",
-									"objectClass": "Player",
-									"sid": 613877713599501,
-									"parameters": {
-										"instance-variable": "Life",
-										"value": "1"
-									}
-								}
-							],
-							"sid": 344823692110447
 						}
 					],
 					"sid": 760490132794021
@@ -1435,40 +1402,65 @@
 						}
 					],
 					"sid": 305036156651759
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "player.life",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-instance-signal",
+									"objectClass": "Player",
+									"sid": 121698106728594,
+									"parameters": {
+										"tag": "\"damage\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 925387292949629,
+									"parameters": {
+										"instance-variable": "life",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 209640357231660
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 424280121863500
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "PlayerLife",
+									"sid": 853039313813591,
+									"parameters": {
+										"frame-number": "Player.Life"
+									}
+								}
+							],
+							"sid": 184057680600161
+						}
+					],
+					"sid": 225675861110538
 				}
 			],
 			"sid": 677888026045447
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "hud.life",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 978913448412936
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "PlayerLife",
-							"sid": 261122314590962,
-							"parameters": {
-								"frame-number": "Player.Life"
-							}
-						}
-					],
-					"sid": 645431337064540
-				}
-			],
-			"sid": 236208075621612
 		}
 	],
 	"sid": 194953318407231

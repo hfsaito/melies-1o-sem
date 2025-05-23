@@ -596,35 +596,48 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "for-each",
-									"objectClass": "System",
-									"sid": 680155814560261,
-									"parameters": {
-										"object": "Enemy01Explosion"
-									}
-								},
-								{
 									"id": "is-visible",
 									"objectClass": "Enemy01Explosion",
-									"sid": 181240874452953
+									"sid": 653524093842113
 								},
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Enemy01Explosion",
-									"sid": 956447544733385,
+									"sid": 571195443752783,
 									"parameters": {
 										"object": "Player"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Enemy01Explosion",
+									"sid": 218730086065469,
+									"parameters": {
+										"instance-variable": "alreadyAppliedDamage"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
-									"id": "restart-layout",
-									"objectClass": "System",
-									"sid": 529229148409283
+									"id": "set-boolean-instvar",
+									"objectClass": "Enemy01Explosion",
+									"sid": 803015214279170,
+									"parameters": {
+										"instance-variable": "alreadyAppliedDamage",
+										"value": "true"
+									}
+								},
+								{
+									"id": "instance-signal",
+									"objectClass": "Player",
+									"sid": 964331177077183,
+									"parameters": {
+										"tag": "\"damage\""
+									}
 								}
 							],
-							"sid": 938675396959116
+							"sid": 849882224226231
 						}
 					],
 					"sid": 813591266276488
@@ -1722,36 +1735,7 @@
 											}
 										}
 									],
-									"sid": 212481542300939,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 938872643736245,
-													"parameters": {
-														"first-value": "distance(Enemy01Explosion.X, Enemy01Explosion.Y, Player.X, Player.Y)",
-														"comparison": 2,
-														"second-value": "100"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "subtract-from-instvar",
-													"objectClass": "Player",
-													"sid": 392493649803038,
-													"parameters": {
-														"instance-variable": "Life",
-														"value": "1"
-													}
-												}
-											],
-											"sid": 291025081812412
-										}
-									]
+									"sid": 212481542300939
 								}
 							]
 						}

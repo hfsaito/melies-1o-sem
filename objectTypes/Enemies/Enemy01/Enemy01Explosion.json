@@ -4,7 +4,15 @@
 	"sid": 845616368623389,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "alreadyAppliedDamage",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 904028162177804
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
