@@ -288,7 +288,7 @@
 					}
 				},
 				{
-					"type": "FinishLine",
+					"type": "LevelFinishZone",
 					"properties": {
 						"initially-visible": false,
 						"initial-animation": "Animation 1",
@@ -375,7 +375,8 @@
 						"charges": 0,
 						"launchForce": 0,
 						"wasMirrored": false,
-						"life": 5
+						"life": 6,
+						"shootingDelay": 0
 					},
 					"behaviors": {
 						"Platform": {

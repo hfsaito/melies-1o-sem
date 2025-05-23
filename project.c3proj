@@ -114,7 +114,9 @@
 	],
 	"uniqueId": "cd3ubb1liqo",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Text"
+		],
 		"subfolders": [
 			{
 				"items": [
@@ -197,7 +199,9 @@
 			{
 				"items": [
 					"Player",
-					"TrajectoryCanvas"
+					"PlayerTrajectoryCanvas",
+					"PlayerBullet",
+					"PlayerBulletMirrored"
 				],
 				"subfolders": [],
 				"name": "Player"
@@ -205,8 +209,9 @@
 			{
 				"items": [
 					"BackgroundOutside",
-					"FinishLine",
-					"PlatformsTilemap"
+					"LevelFinishZone",
+					"PlatformsTilemap",
+					"LevelDeathZone"
 				],
 				"subfolders": [],
 				"name": "Level"
@@ -243,7 +248,10 @@
 			"MaybeRescale",
 			"OptionsButtons",
 			"PauseButtons",
-			"PauseItems"
+			"PauseItems",
+			"PlayerBullets",
+			"Enemies",
+			"LevelZones"
 		],
 		"subfolders": []
 	},
@@ -253,22 +261,45 @@
 			"TestBox",
 			"Level0",
 			"Level1",
-			"ContructTests"
+			"ContructTests",
+			"Level2",
+			"Level3"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Game",
-			"MainMenu",
-			"Level0",
+			"RootGame",
 			"ConstructTests",
-			"Pause",
-			"Enemy01",
-			"Enemy02",
-			"OptionsMenu"
+			"Controls"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"MainMenu",
+					"OptionsMenu",
+					"Pause"
+				],
+				"subfolders": [],
+				"name": "Menus"
+			},
+			{
+				"items": [
+					"Player",
+					"Enemy01",
+					"Enemy02"
+				],
+				"subfolders": [],
+				"name": "Characters"
+			},
+			{
+				"items": [
+					"Level0"
+				],
+				"subfolders": [],
+				"name": "Levels"
+			}
+		]
 	},
 	"rootFileFolders": {
 		"script": {

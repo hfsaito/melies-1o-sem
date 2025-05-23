@@ -2,6 +2,10 @@
 	"name": "OptionsMenu",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Controls"
+		},
+		{
 			"eventType": "variable",
 			"name": "changingControl",
 			"type": "string",
@@ -10,56 +14,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 465306376232473
-		},
-		{
-			"eventType": "variable",
-			"name": "ctrlLeft",
-			"type": "number",
-			"initialValue": "65",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 872405295777486
-		},
-		{
-			"eventType": "variable",
-			"name": "ctrlRight",
-			"type": "number",
-			"initialValue": "68",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 804165532174281
-		},
-		{
-			"eventType": "variable",
-			"name": "ctrlJump",
-			"type": "number",
-			"initialValue": "32",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 443980570853520
-		},
-		{
-			"eventType": "variable",
-			"name": "ctrlPause",
-			"type": "number",
-			"initialValue": "9",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 811587289411162
-		},
-		{
-			"eventType": "variable",
-			"name": "ctrlTestBox",
-			"type": "number",
-			"initialValue": "48",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 573978232470957
 		},
 		{
 			"eventType": "group",

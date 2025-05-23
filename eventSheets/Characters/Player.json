@@ -1,0 +1,1712 @@
+{
+	"name": "Player",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Controls"
+		},
+		{
+			"eventType": "variable",
+			"name": "playerGauntletMinForce",
+			"type": "number",
+			"initialValue": "25",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 711609516500961
+		},
+		{
+			"eventType": "variable",
+			"name": "playerGauntletMaxForce",
+			"type": "number",
+			"initialValue": "25",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 255869524931988
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "player.setup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Player",
+							"sid": 391850785859748
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "Player",
+							"sid": 359485690210026,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "100"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "Player",
+							"sid": 473764204745827,
+							"behaviorType": "Platform",
+							"parameters": {
+								"acceleration": "500"
+							}
+						},
+						{
+							"id": "set-deceleration",
+							"objectClass": "Player",
+							"sid": 983472208531745,
+							"behaviorType": "Platform",
+							"parameters": {
+								"deceleration": "500"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "Player",
+							"sid": 676995200749532,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "400"
+							}
+						},
+						{
+							"id": "set-max-fall-speed",
+							"objectClass": "Player",
+							"sid": 826699023650417,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-fall-speed": "1000"
+							}
+						},
+						{
+							"id": "set-double-jump",
+							"objectClass": "Player",
+							"sid": 785106353077544,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-jump-sustain",
+							"objectClass": "Player",
+							"sid": 491341230458884,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-sustain": "0"
+							}
+						},
+						{
+							"id": "set-default-controls",
+							"objectClass": "Player",
+							"sid": 961431331079092,
+							"behaviorType": "Platform",
+							"parameters": {
+								"default-controls": false
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 234489787479568,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Player",
+							"sid": 610155665890696,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "0"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "Player",
+							"sid": 159042892446067,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"acceleration": "0"
+							}
+						},
+						{
+							"id": "set-gravity",
+							"objectClass": "Player",
+							"sid": 294425157686661,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"gravity": "1000"
+							}
+						},
+						{
+							"id": "set-bounce-off-solids",
+							"objectClass": "Player",
+							"sid": 531743224726194,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": false
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 664677846633070,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 413099348013778,
+							"parameters": {
+								"instance-variable": "launchForce",
+								"value": "playerGauntletMinForce"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 872207760723781,
+							"parameters": {
+								"instance-variable": "shootingDelay",
+								"value": "0"
+							}
+						},
+						{
+							"id": "add-layer",
+							"objectClass": "System",
+							"sid": 690495076076119,
+							"parameters": {
+								"name": "\"Player.Trajectory\"",
+								"insert-by": "\"Player\"",
+								"where": "add-top-sublayer"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 189138058451191,
+							"parameters": {
+								"object-to-create": "PlayerTrajectoryCanvas",
+								"layer": "\"Player.Trajectory\"",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 790308287078352
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "PlayerTrajectoryCanvas",
+							"sid": 325553643005685
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "PlayerTrajectoryCanvas",
+							"sid": 508679593364466,
+							"parameters": {
+								"width": "ViewportWidth(Self.LayerName)",
+								"height": "ViewportHeight(Self.LayerName)"
+							}
+						}
+					],
+					"sid": 419479484153158
+				}
+			],
+			"sid": 294180998688316
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "player.controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-enabled",
+							"objectClass": "Player",
+							"sid": 564283769876129,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Player",
+							"sid": 790465723978960,
+							"parameters": {
+								"animation": "\"dying\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 517457030268873,
+							"parameters": {
+								"variable": "paused"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 760776043125088,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-code-is-down",
+									"objectClass": "Keyboard",
+									"sid": 313760987943372,
+									"parameters": {
+										"keycode": "ctrlLeft"
+									}
+								},
+								{
+									"id": "mouse-button-is-down",
+									"objectClass": "Mouse",
+									"sid": 883717948226084,
+									"parameters": {
+										"mouse-button": "left"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 607176973904021,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Player",
+									"sid": 896827353211466,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 699329912402301,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-floor",
+											"objectClass": "Player",
+											"sid": 845601328814888,
+											"behaviorType": "Platform"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 162883783500852,
+											"parameters": {
+												"animation": "\"walking\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 350987927151270
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-code-is-down",
+									"objectClass": "Keyboard",
+									"sid": 763405797760033,
+									"parameters": {
+										"keycode": "ctrlRight"
+									}
+								},
+								{
+									"id": "mouse-button-is-down",
+									"objectClass": "Mouse",
+									"sid": 151427691941922,
+									"parameters": {
+										"mouse-button": "left"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 526141634293222,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Player",
+									"sid": 260262919479635,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 711739288475224,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-floor",
+											"objectClass": "Player",
+											"sid": 694520053559668,
+											"behaviorType": "Platform"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 654344984005068,
+											"parameters": {
+												"animation": "\"walking\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 296921548157386
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-code-pressed",
+									"objectClass": "Keyboard",
+									"sid": 977818823976893,
+									"parameters": {
+										"keycode": "ctrlJump"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 243423615476923,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 414749211514699
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 658927389587991,
+									"parameters": {
+										"mouse-button": "right",
+										"click-type": "clicked"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 513834481032612,
+									"parameters": {
+										"instance-variable": "charges",
+										"comparison": 4,
+										"value": "0"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "Player",
+									"sid": 114364529117753,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 733229277179163,
+									"parameters": {
+										"animation": "\"charging\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 405135724673747
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "mouse-button-is-down",
+									"objectClass": "Mouse",
+									"sid": 824860502570176,
+									"parameters": {
+										"mouse-button": "left"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 729348131654025,
+									"parameters": {
+										"instance-variable": "shootingDelay",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 115822589524689,
+									"parameters": {
+										"animation": "\"shooting\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 520192029093295,
+									"parameters": {
+										"instance-variable": "shootingDelay",
+										"value": "5"
+									}
+								}
+							],
+							"sid": 133668695409987,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 110094720426218,
+											"parameters": {
+												"first-value": "Mouse.X",
+												"comparison": 5,
+												"second-value": "Player.x"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "Player",
+											"sid": 941378215214688,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										}
+									],
+									"sid": 900008665560482
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 398950225317738
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "Player",
+											"sid": 980206328933123,
+											"parameters": {
+												"state": "mirrored"
+											}
+										}
+									],
+									"sid": 749808806913649
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 951613286009784
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "player.gauntlet",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "player.gauntlet.trajectory",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "playerTrajectoryAngle",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "number",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 627562538763975,
+									"parameters": {
+										"value": "angle(Player.X, Player.Y, Mouse.X, Mouse.Y)"
+									}
+								}
+							],
+							"sid": 110947271374237
+						},
+						{
+							"functionName": "playerTrajectoryForce",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "number",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 447374300128431,
+									"parameters": {
+										"value": "Player.launchForce * 20"
+									}
+								}
+							],
+							"sid": 731368011099729
+						},
+						{
+							"functionName": "playerTrajectoryForceX",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "number",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 511854222407860,
+									"parameters": {
+										"value": "Functions.playerTrajectoryForce * cos(Functions.playerTrajectoryAngle)"
+									}
+								}
+							],
+							"sid": 722026349594924
+						},
+						{
+							"functionName": "playerTrajectoryForceY",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "number",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 264399653762854,
+									"parameters": {
+										"value": "Functions.playerTrajectoryForce * sin(Functions.playerTrajectoryAngle)"
+									}
+								}
+							],
+							"sid": 270519972908863
+						},
+						{
+							"functionName": "playerTrajectoryX",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "number",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "t",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 893360145367568
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 733093626306303,
+									"parameters": {
+										"value": "Player.X + Functions.playerTrajectoryForceX * .75 * t "
+									}
+								}
+							],
+							"sid": 167342178726264
+						},
+						{
+							"functionName": "playerTrajectoryY",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "number",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "t",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 321176165933775
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 138337622618899,
+									"parameters": {
+										"value": "Player.Y + Functions.playerTrajectoryForceY * t + 700 * t^2"
+									}
+								}
+							],
+							"sid": 367444930960977
+						},
+						{
+							"functionName": "drawGauntletTrajectory",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "clear-canvas",
+									"objectClass": "PlayerTrajectoryCanvas",
+									"sid": 719192347390552,
+									"parameters": {
+										"color": "rgba(0, 0, 0, 0)"
+									}
+								}
+							],
+							"sid": 431265127009509,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "repeat",
+											"objectClass": "System",
+											"sid": 303560461428101,
+											"parameters": {
+												"count": "Functions.playerTrajectoryForce / 10"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "line-dashed",
+											"objectClass": "PlayerTrajectoryCanvas",
+											"sid": 721514441626377,
+											"parameters": {
+												"x1": "Functions.playerTrajectoryX(loopindex*10/Functions.playerTrajectoryForce)",
+												"y1": "Functions.playerTrajectoryY(loopindex*10/Functions.playerTrajectoryForce)",
+												"x2": "Functions.playerTrajectoryX((loopindex + 1)*10/Functions.playerTrajectoryForce)",
+												"y2": "Functions.playerTrajectoryY((loopindex + 1)*10/Functions.playerTrajectoryForce)",
+												"color": "rgba(0, 0, 0, 30)",
+												"line-thickness": "1",
+												"dash-length": "2",
+												"line-cap": "butt"
+											}
+										},
+										{
+											"id": "clear-rect",
+											"objectClass": "PlayerTrajectoryCanvas",
+											"sid": 794659157288256,
+											"parameters": {
+												"left": "0",
+												"top": "Player.Y + 25",
+												"right": "ViewportRight(Self.LayerName)",
+												"bottom": "ViewportBottom(Self.LayerName)",
+												"color": "rgba(0, 0, 0, 0)"
+											}
+										}
+									],
+									"sid": 613655581375331
+								}
+							]
+						},
+						{
+							"functionName": "removeTrajectory",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "clear-canvas",
+									"objectClass": "PlayerTrajectoryCanvas",
+									"sid": 216660509778386,
+									"parameters": {
+										"color": "rgba(0, 0, 0, 0)"
+									}
+								}
+							],
+							"sid": 136640334262825
+						}
+					],
+					"sid": 482011992240834
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 899672364453171,
+							"parameters": {
+								"tag": "\"paused\""
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Player",
+							"sid": 438557040182348,
+							"parameters": {
+								"animation": "\"charging\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 340220221074184,
+							"parameters": {
+								"animation": "\"idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 790461936235773
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Player",
+							"sid": 778436825984742,
+							"parameters": {
+								"animation": "\"charging\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 140060240452959,
+							"parameters": {
+								"variable": "paused"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 715132486362875,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 772613555462850,
+									"parameters": {
+										"interval-seconds": "0.1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 779196492091502,
+									"parameters": {
+										"instance-variable": "launchForce",
+										"value": "min(Player.launchForce + 1, playerGauntletMaxForce)"
+									}
+								}
+							],
+							"sid": 630233878871142
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-released",
+									"objectClass": "Mouse",
+									"sid": 599924247652158,
+									"parameters": {
+										"mouse-button": "right"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 907422884746302,
+									"parameters": {
+										"instance-variable": "charges",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Player",
+									"sid": 470372320197970,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 919757165217530,
+									"parameters": {
+										"animation": "\"Launch\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Player",
+									"sid": 263561333453381,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-angle-toward-position",
+									"objectClass": "Player",
+									"sid": 808668525178108,
+									"parameters": {
+										"x": "Mouse.X",
+										"y": "Mouse.Y"
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "Player",
+									"sid": 561324199688880,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "Player.launchForce * 15"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Player",
+									"sid": 191510576157586,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "enabled"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 412267079798475,
+									"parameters": {
+										"instance-variable": "launchForce",
+										"value": "playerGauntletMinForce"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 718234704621853,
+									"parameters": {
+										"instance-variable": "charges",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 133692198133502,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-mirrored",
+											"objectClass": "Player",
+											"sid": 172442444968741
+										}
+									],
+									"actions": [
+										{
+											"id": "set-flipped",
+											"objectClass": "Player",
+											"sid": 545238605704289,
+											"parameters": {
+												"state": "flipped"
+											}
+										}
+									],
+									"sid": 127128643338806
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Player",
+							"sid": 611378743134527,
+							"parameters": {
+								"animation": "\"charging\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "drawGauntletTrajectory",
+							"sid": 293226310576649
+						}
+					],
+					"sid": 580264511971838
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 659322290788155
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "removeTrajectory",
+							"sid": 375450448939756
+						}
+					],
+					"sid": 874047323309929
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 363914539558571,
+							"parameters": {
+								"object": "BreakableWall"
+							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "Player",
+							"sid": 509041173289165,
+							"behaviorType": "Bullet"
+						}
+					],
+					"actions": [
+						{
+							"id": "instance-signal",
+							"objectClass": "BreakableWall",
+							"sid": 977462219736062,
+							"parameters": {
+								"tag": "\"break\""
+							}
+						},
+						{
+							"callFunction": "playerStopGauntlet",
+							"sid": 401271841934774
+						}
+					],
+					"sid": 613702332476765
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 958649721227347,
+							"parameters": {
+								"object": "PlatformsTilemap"
+							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "Player",
+							"sid": 711139600774908,
+							"behaviorType": "Bullet"
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "playerStopGauntlet",
+							"sid": 487455364087345
+						}
+					],
+					"sid": 306671603331051
+				},
+				{
+					"functionName": "playerStopGauntlet",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "Player",
+							"sid": 275090534406981,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 250143991428552,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 412907660060344,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 972239613230269,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 322407034609105
+				}
+			],
+			"sid": 922889656424453
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "player.animations",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-moved",
+							"objectClass": "Player",
+							"sid": 648881875519628,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Player",
+							"sid": 314957146648739,
+							"parameters": {
+								"animation": "\"charging\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 244840807885051,
+							"parameters": {
+								"animation": "\"walking\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 648438021696464
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-stopped",
+							"objectClass": "Player",
+							"sid": 305019787181714,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "on-jump",
+							"objectClass": "Player",
+							"sid": 364978969122475,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "on-jump",
+							"objectClass": "Player",
+							"sid": 474915774521120,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [],
+					"sid": 100869103317311,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Player",
+									"sid": 322384923374575,
+									"parameters": {
+										"animation": "\"charging\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 911183879639960,
+									"parameters": {
+										"animation": "\"idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 368733421234877
+						}
+					],
+					"isOrBlock": true
+				}
+			],
+			"sid": 304106491279794
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "player.shooting",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 198145846402050
+						},
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 914077695307328,
+							"parameters": {
+								"tag": "\"resume\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 431238798724494,
+							"parameters": {
+								"instance-variable": "shootingDelay",
+								"value": "5"
+							}
+						}
+					],
+					"sid": 249306725435734,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 380479915709203,
+							"parameters": {
+								"interval-seconds": ".1"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 985685997957812,
+							"parameters": {
+								"instance-variable": "shootingDelay",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Player",
+							"sid": 740697555642763,
+							"parameters": {
+								"instance-variable": "shootingDelay",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 327627624042367
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Player",
+							"sid": 645455615223703,
+							"parameters": {
+								"animation": "\"shooting\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 274354532471619,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "Player",
+									"sid": 168241487713463,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 479980710759310,
+									"parameters": {
+										"object-to-create": "PlayerBullet",
+										"layer": "Player.LayerName",
+										"x": "Player.X",
+										"y": "Player.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 171927702744958
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 280722710454655
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 533263731109329,
+									"parameters": {
+										"object-to-create": "PlayerBulletMirrored",
+										"layer": "Player.LayerName",
+										"x": "Player.X",
+										"y": "Player.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 221439370204435
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "PlayerBullets",
+							"sid": 574879696378673
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "PlayerBullets",
+							"sid": 742850982577058,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "150"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "PlayerBullets",
+							"sid": 741873312154091,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"acceleration": "0"
+							}
+						},
+						{
+							"id": "set-gravity",
+							"objectClass": "PlayerBullets",
+							"sid": 441635628103759,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"gravity": "0"
+							}
+						},
+						{
+							"id": "set-bounce-off-solids",
+							"objectClass": "PlayerBullets",
+							"sid": 578411287143217,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": false
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "PlayerBullets",
+							"sid": 581419644376334,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 105798873432717
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "PlayerBulletMirrored",
+							"sid": 502484272165501
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "PlayerBulletMirrored",
+							"sid": 244774692270512,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "PlayerBulletMirrored",
+							"sid": 567067289897336,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 361095050824357
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerBullets",
+							"sid": 463345345333932,
+							"parameters": {
+								"object": "BreakableWall"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "PlayerBullets",
+							"sid": 800142522309163
+						}
+					],
+					"sid": 870675816756100
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerBullets",
+							"sid": 244519065404478,
+							"parameters": {
+								"object": "PlatformsTilemap"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "PlayerBullets",
+							"sid": 939348354393953
+						}
+					],
+					"sid": 162630364406845
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerBullets",
+							"sid": 831114078565564,
+							"parameters": {
+								"object": "Enemies"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "instance-signal",
+							"objectClass": "Enemies",
+							"sid": 969405007650215,
+							"parameters": {
+								"tag": "\"hit\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PlayerBullets",
+							"sid": 476187841774660
+						}
+					],
+					"sid": 973290882311378
+				}
+			],
+			"sid": 395193361230494
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "player.life",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-instance-signal",
+							"objectClass": "Player",
+							"sid": 574150729912390,
+							"parameters": {
+								"tag": "\"damage\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 571084500074386,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Player",
+							"sid": 284619812380763,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 590353185085873,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 298535779096104,
+									"parameters": {
+										"instance-variable": "life",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 807068090416533,
+									"parameters": {
+										"animation": "\"dying\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 427539105027515
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 223606775704965
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PlayerLife",
+							"sid": 644683789738630,
+							"parameters": {
+								"frame-number": "Player.life"
+							}
+						}
+					],
+					"sid": 436662026783488
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Player",
+							"sid": 936394513743623,
+							"parameters": {
+								"animation": "\"dying\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 163547371756669,
+							"parameters": {
+								"seconds": "3.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 923449136927689
+						}
+					],
+					"sid": 680174995235417
+				}
+			],
+			"sid": 723496018812714
+		}
+	],
+	"sid": 943409860040377
+}

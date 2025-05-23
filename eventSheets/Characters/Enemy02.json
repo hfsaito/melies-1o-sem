@@ -447,6 +447,14 @@
 													"parameters": {
 														"object": "PlatformsTilemap"
 													}
+												},
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "Enemy02WallChecker",
+													"sid": 891514597129887,
+													"parameters": {
+														"object": "BreakableWall"
+													}
 												}
 											],
 											"actions": [
@@ -460,7 +468,8 @@
 													}
 												}
 											],
-											"sid": 612296493973108
+											"sid": 612296493973108,
+											"isOrBlock": true
 										},
 										{
 											"eventType": "block",
@@ -549,6 +558,14 @@
 													"parameters": {
 														"object": "PlatformsTilemap"
 													}
+												},
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "Enemy02WallChecker",
+													"sid": 117500660502001,
+													"parameters": {
+														"object": "BreakableWall"
+													}
 												}
 											],
 											"actions": [
@@ -562,7 +579,8 @@
 													}
 												}
 											],
-											"sid": 617949830893014
+											"sid": 617949830893014,
+											"isOrBlock": true
 										},
 										{
 											"eventType": "block",
@@ -1414,63 +1432,28 @@
 										"instance-variable": "state",
 										"value": "\"shooting\""
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Enemy02",
+									"sid": 355898764627203,
+									"parameters": {
+										"animation": "\"shooting\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Enemy02",
+									"sid": 201794387614901,
+									"parameters": {
+										"frame-number": "Enemy02.AnimationFrameCount - 1"
+									}
 								}
 							],
 							"sid": 202020706546634
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 913580164613225,
-							"parameters": {
-								"object": "Enemy02"
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Enemy02",
-							"sid": 713225568433605,
-							"parameters": {
-								"instance-variable": "state",
-								"comparison": 0,
-								"value": "\"shooting\""
-							}
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "Enemy02",
-							"sid": 157970463401278,
-							"parameters": {
-								"animation": "\"shooting\""
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "Enemy02",
-							"sid": 334440677075273,
-							"parameters": {
-								"animation": "\"shooting\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Enemy02",
-							"sid": 418896122674571,
-							"parameters": {
-								"frame-number": "Enemy02.AnimationFrameCount - 1"
-							}
-						}
-					],
-					"sid": 861789062872704
 				},
 				{
 					"eventType": "block",
@@ -1491,14 +1474,6 @@
 								"instance-variable": "state",
 								"comparison": 0,
 								"value": "\"shooting\""
-							}
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "Enemy02",
-							"sid": 808220202824560,
-							"parameters": {
-								"animation": "\"shooting\""
 							}
 						}
 					],
@@ -1579,10 +1554,10 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Enemy02",
-									"sid": 539588582947993,
+									"sid": 400708988163579,
 									"parameters": {
 										"instance-variable": "attackDelay",
-										"value": "20"
+										"value": "10"
 									}
 								}
 							],
@@ -1659,14 +1634,6 @@
 							}
 						},
 						{
-							"id": "every-x-seconds",
-							"objectClass": "System",
-							"sid": 347231517366586,
-							"parameters": {
-								"interval-seconds": ".1"
-							}
-						},
-						{
 							"id": "compare-instance-variable",
 							"objectClass": "Enemy02",
 							"sid": 510273018967423,
@@ -1677,18 +1644,35 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 676922555498808,
+					"children": [
 						{
-							"id": "subtract-from-instvar",
-							"objectClass": "Enemy02",
-							"sid": 749864257688839,
-							"parameters": {
-								"instance-variable": "attackDelay",
-								"value": "1"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 205634445904663,
+									"parameters": {
+										"interval-seconds": ".1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Enemy02",
+									"sid": 754228957032777,
+									"parameters": {
+										"instance-variable": "attackDelay",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 238019666868715
 						}
-					],
-					"sid": 676922555498808
+					]
 				}
 			],
 			"sid": 854687843974150
@@ -1699,7 +1683,72 @@
 			"title": "enemy02.dying",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [],
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-instance-signal",
+							"objectClass": "Enemy02",
+							"sid": 669688859612041,
+							"parameters": {
+								"tag": "\"hit\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy02",
+							"sid": 509236643781354,
+							"parameters": {
+								"animation": "\"dying\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Enemy02",
+							"sid": 347245780024204,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"dying\""
+							}
+						}
+					],
+					"sid": 716758362074302
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Enemy02",
+							"sid": 889259612872289,
+							"parameters": {
+								"animation": "\"dying\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 590970648639415,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Enemy02",
+							"sid": 417223258126930
+						}
+					],
+					"sid": 962886526603873
+				}
+			],
 			"sid": 826990333928591
 		}
 	],

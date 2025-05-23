@@ -412,7 +412,8 @@
 						"charges": 99,
 						"launchForce": 0,
 						"wasMirrored": false,
-						"life": 6
+						"life": 200,
+						"shootingDelay": 0
 					},
 					"behaviors": {
 						"Platform": {
@@ -525,8 +526,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 340,
-						"y": 60,
+						"x": 170,
+						"y": 250,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -714,5 +715,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Game"
+	"eventSheet": "RootGame"
 }

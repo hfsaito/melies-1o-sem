@@ -1,0 +1,366 @@
+{
+	"name": "RootGame",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Pause"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Enemy01"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Enemy02"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Player"
+		},
+		{
+			"eventType": "variable",
+			"name": "level",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 584417951187678
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "LevelZones",
+					"sid": 310523046266070
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "LevelZones",
+					"sid": 557253454733352,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 787178917850550
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 957915729148546,
+					"parameters": {
+						"object": "LevelFinishZone"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 616273622850488,
+					"parameters": {
+						"variable": "level",
+						"value": "1"
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 483452107799488,
+					"parameters": {
+						"layout": "\"Level\" & str(level)"
+					}
+				}
+			],
+			"sid": 325181094888477
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 405078695818745,
+					"parameters": {
+						"object": "LevelDeathZone"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 548185211631879
+				}
+			],
+			"sid": 247769087202527
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "breakableWall",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "BreakableWall",
+							"sid": 213629463875161
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-animation",
+							"objectClass": "BreakableWall",
+							"sid": 525756018920785
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "BreakableWall",
+							"sid": 659450596056041,
+							"parameters": {
+								"instance-variable": "health",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 973791151372907
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-instance-signal",
+							"objectClass": "BreakableWall",
+							"sid": 281928601224546,
+							"parameters": {
+								"tag": "\"break\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BreakableWall",
+							"sid": 790877122282929,
+							"parameters": {
+								"instance-variable": "health",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "BreakableWall",
+							"sid": 756470680262258,
+							"parameters": {
+								"instance-variable": "health",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 475476827795554,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "BreakableWall",
+									"sid": 820954585477697,
+									"parameters": {
+										"instance-variable": "health",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "BreakableWall",
+									"sid": 398148204323036,
+									"parameters": {
+										"animation": "\"breaking\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 951122202372780
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "BreakableWall",
+							"sid": 434497144544476,
+							"parameters": {
+								"animation": "\"breaking\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "BreakableWall",
+							"sid": 206649556051159
+						}
+					],
+					"sid": 929740738085751
+				}
+			],
+			"sid": 484434555458441
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "battery",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 470511723648826
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BatteryCounter",
+							"sid": 612682096617372,
+							"parameters": {
+								"frame-number": "Player.charges"
+							}
+						}
+					],
+					"sid": 235930698417564
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 221944664308252,
+							"parameters": {
+								"object": "Battery"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Battery",
+							"sid": 590991480580549
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Player",
+							"sid": 425982347663520,
+							"parameters": {
+								"instance-variable": "charges",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 510788701627529,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Battery",
+									"sid": 470891565450762,
+									"parameters": {
+										"instance-variable": "respawnIfPlayerHasNoCharges"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Battery",
+									"sid": 973959583911752,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 574440208016857
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 635080091070081
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Battery",
+									"sid": 972898605466099
+								}
+							],
+							"sid": 549888531978974
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 422586846999870,
+							"parameters": {
+								"instance-variable": "charges",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Battery",
+							"sid": 791925557186531,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Battery",
+							"sid": 200920532932321,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 810835133878252
+				}
+			],
+			"sid": 280096608389468
+		}
+	],
+	"sid": 194953318407231
+}

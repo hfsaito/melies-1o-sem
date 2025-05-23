@@ -1622,6 +1622,155 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"functionName": "Enemy01Explode",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "parentUID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 921837436194608
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 932582115725424,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 991085331933009,
+									"parameters": {
+										"unique-id": "parentUID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 791752777341528,
+									"parameters": {
+										"instance-variable": "state",
+										"value": "\"exploding\""
+									}
+								}
+							],
+							"sid": 280252567516952,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 789571335120872,
+											"parameters": {
+												"object": "Enemy01Parts"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemy01Parts",
+											"sid": 473945445107915,
+											"parameters": {
+												"instance-variable": "parentUniqueID",
+												"comparison": 0,
+												"value": "Enemy01Hitbox.UID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Enemy01Parts",
+											"sid": 534012632036961,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 886607381536505
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 512780542543064,
+											"parameters": {
+												"object": "Enemy01Explosion"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemy01Explosion",
+											"sid": 712834112519969,
+											"parameters": {
+												"instance-variable": "parentUniqueID",
+												"comparison": 0,
+												"value": "Enemy01Hitbox.UID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Enemy01Explosion",
+											"sid": 868447360138913,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-animation-speed",
+											"objectClass": "Enemy01Explosion",
+											"sid": 237457131913018,
+											"parameters": {
+												"speed": "14"
+											}
+										}
+									],
+									"sid": 355398713597523
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-instance-signal",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 387121406425767,
+							"parameters": {
+								"tag": "\"hit\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Enemy01Explode",
+							"sid": 127811183152474,
+							"parameters": [
+								"Enemy01Hitbox.UID"
+							]
+						}
+					],
+					"sid": 638812120087435
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -1633,113 +1782,16 @@
 							}
 						}
 					],
-					"actions": [],
-					"sid": 350442756235983,
-					"children": [
+					"actions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-by-unique-id",
-									"objectClass": "Enemy01Hitbox",
-									"sid": 109484975978259,
-									"parameters": {
-										"unique-id": "Enemy01Water.parentUniqueID"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Enemy01Hitbox",
-									"sid": 506234082759246,
-									"parameters": {
-										"instance-variable": "state",
-										"value": "\"exploding\""
-									}
-								}
-							],
-							"sid": 467525093113641,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "for-each",
-											"objectClass": "System",
-											"sid": 140986778247726,
-											"parameters": {
-												"object": "Enemy01Parts"
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Enemy01Parts",
-											"sid": 304114916956356,
-											"parameters": {
-												"instance-variable": "parentUniqueID",
-												"comparison": 0,
-												"value": "Enemy01Hitbox.UID"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "Enemy01Parts",
-											"sid": 144365910865649,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										}
-									],
-									"sid": 498237807974680
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "for-each",
-											"objectClass": "System",
-											"sid": 160589985129290,
-											"parameters": {
-												"object": "Enemy01Explosion"
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Enemy01Explosion",
-											"sid": 582719602648962,
-											"parameters": {
-												"instance-variable": "parentUniqueID",
-												"comparison": 0,
-												"value": "Enemy01Hitbox.UID"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "Enemy01Explosion",
-											"sid": 119919513331801,
-											"parameters": {
-												"visibility": "visible"
-											}
-										},
-										{
-											"id": "set-animation-speed",
-											"objectClass": "Enemy01Explosion",
-											"sid": 839071226122209,
-											"parameters": {
-												"speed": "14"
-											}
-										}
-									],
-									"sid": 212481542300939
-								}
+							"callFunction": "Enemy01Explode",
+							"sid": 755503246228823,
+							"parameters": [
+								"Enemy01Water.parentUniqueID"
 							]
 						}
-					]
+					],
+					"sid": 350442756235983
 				},
 				{
 					"eventType": "block",

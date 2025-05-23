@@ -1,7 +1,7 @@
 {
-	"name": "FinishLine",
+	"name": "LevelDeathZone",
 	"plugin-id": "Sprite",
-	"sid": 121956802676411,
+	"sid": 836370535863259,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,13 +20,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6612872,
+						"imageSpriteId": 3745903,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 114270746065873,
+				"sid": 743071219527363,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -1,0 +1,12 @@
+{
+	"name": "LevelZones",
+	"plugin-id": "Sprite",
+	"sid": 125145088067002,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"LevelFinishZone",
+		"LevelDeathZone"
+	]
+}

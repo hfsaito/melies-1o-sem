@@ -1,0 +1,56 @@
+{
+	"name": "Controls",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "ctrlLeft",
+			"type": "number",
+			"initialValue": "65",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 117161628354965
+		},
+		{
+			"eventType": "variable",
+			"name": "ctrlRight",
+			"type": "number",
+			"initialValue": "68",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 522515241281021
+		},
+		{
+			"eventType": "variable",
+			"name": "ctrlJump",
+			"type": "number",
+			"initialValue": "32",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 926840655816052
+		},
+		{
+			"eventType": "variable",
+			"name": "ctrlPause",
+			"type": "number",
+			"initialValue": "9",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 179400884481753
+		},
+		{
+			"eventType": "variable",
+			"name": "ctrlTestBox",
+			"type": "number",
+			"initialValue": "48",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 383005567623177
+		}
+	],
+	"sid": 931170157094646
+}

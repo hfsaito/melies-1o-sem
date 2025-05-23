@@ -1,5 +1,5 @@
 {
-	"name": "TrajectoryCanvas",
+	"name": "PlayerTrajectoryCanvas",
 	"plugin-id": "DrawingCanvas",
 	"sid": 418354532175529,
 	"isGlobal": false,

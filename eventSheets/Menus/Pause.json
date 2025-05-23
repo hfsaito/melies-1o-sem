@@ -6,6 +6,10 @@
 			"includeSheet": "OptionsMenu"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "Controls"
+		},
+		{
 			"eventType": "variable",
 			"name": "paused",
 			"type": "boolean",
@@ -324,6 +328,14 @@
 								"variable": "paused",
 								"value": "true"
 							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 311096207216114,
+							"parameters": {
+								"tag": "\"paused\""
+							}
 						}
 					],
 					"sid": 228077020112011
@@ -363,6 +375,14 @@
 							"parameters": {
 								"variable": "paused",
 								"value": "false"
+							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 892881625754986,
+							"parameters": {
+								"tag": "\"resume\""
 							}
 						}
 					],
