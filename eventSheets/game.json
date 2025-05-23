@@ -1111,45 +1111,6 @@
 										{
 											"id": "on-button-released",
 											"objectClass": "Mouse",
-											"sid": 611899173043039,
-											"parameters": {
-												"mouse-button": "left"
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Player",
-											"sid": 200686295679866,
-											"parameters": {
-												"instance-variable": "charges",
-												"comparison": 4,
-												"value": "0"
-											}
-										},
-										{
-											"id": "is-mirrored",
-											"objectClass": "Player",
-											"sid": 251333405436189
-										}
-									],
-									"actions": [
-										{
-											"id": "set-flipped",
-											"objectClass": "Player",
-											"sid": 100443598986287,
-											"parameters": {
-												"state": "flipped"
-											}
-										}
-									],
-									"sid": 122605862579063
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-button-released",
-											"objectClass": "Mouse",
 											"sid": 270062041700124,
 											"parameters": {
 												"mouse-button": "left"
@@ -1243,7 +1204,30 @@
 											}
 										}
 									],
-									"sid": 350902032421900
+									"sid": 350902032421900,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "Player",
+													"sid": 343051615377299
+												}
+											],
+											"actions": [
+												{
+													"id": "set-flipped",
+													"objectClass": "Player",
+													"sid": 931877168101622,
+													"parameters": {
+														"state": "flipped"
+													}
+												}
+											],
+											"sid": 961551711290083
+										}
+									]
 								}
 							]
 						},
@@ -1371,6 +1355,15 @@
 									"objectClass": "Player",
 									"sid": 309597630581929,
 									"behaviorType": "Platform"
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Player",
+									"sid": 535959119056961,
+									"parameters": {
+										"animation": "\"charging\""
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -1408,18 +1401,36 @@
 									"behaviorType": "Platform"
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 351315433579113,
+							"children": [
 								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 782457737190775,
-									"parameters": {
-										"animation": "\"idle\"",
-										"from": "beginning"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Player",
+											"sid": 703183328866970,
+											"parameters": {
+												"animation": "\"charging\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 194819611747517,
+											"parameters": {
+												"animation": "\"idle\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 155469520237684
 								}
 							],
-							"sid": 351315433579113,
 							"isOrBlock": true
 						}
 					],
