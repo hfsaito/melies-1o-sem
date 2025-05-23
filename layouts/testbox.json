@@ -84,7 +84,7 @@
 			"global": false
 		},
 		{
-			"name": "Level",
+			"name": "Platforms",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -150,7 +150,42 @@
 						],
 						"zElevation": 0
 					}
-				},
+				}
+			],
+			"sid": 300400621174033,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Level",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
 				{
 					"type": "Enemy01Hitbox",
 					"properties": {

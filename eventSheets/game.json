@@ -995,11 +995,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "mouse-button-is-down",
+									"id": "on-click",
 									"objectClass": "Mouse",
-									"sid": 681954718670333,
+									"sid": 765536218263872,
 									"parameters": {
-										"mouse-button": "left"
+										"mouse-button": "left",
+										"click-type": "clicked"
 									}
 								},
 								{
@@ -1026,6 +1027,15 @@
 									"objectClass": "Player",
 									"sid": 978818262497151,
 									"behaviorType": "Platform"
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 125633074302942,
+									"parameters": {
+										"variable": "paused"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -1051,6 +1061,15 @@
 									"parameters": {
 										"animation": "\"charging\""
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 477459860138907,
+									"parameters": {
+										"variable": "paused"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -1412,7 +1431,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Player.Life",
+			"title": "hud.life",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -1422,23 +1441,23 @@
 						{
 							"id": "every-tick",
 							"objectClass": "System",
-							"sid": 871444464540896
+							"sid": 978913448412936
 						}
 					],
 					"actions": [
 						{
 							"id": "set-animation-frame",
 							"objectClass": "PlayerLife",
-							"sid": 240723989828361,
+							"sid": 261122314590962,
 							"parameters": {
 								"frame-number": "Player.Life"
 							}
 						}
 					],
-					"sid": 214329668430530
+					"sid": 645431337064540
 				}
 			],
-			"sid": 718992880810767
+			"sid": 236208075621612
 		}
 	],
 	"sid": 194953318407231
