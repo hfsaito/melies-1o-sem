@@ -221,7 +221,11 @@
 					"OptionsLeftLabel",
 					"OptionsJumpKey",
 					"OptionsTitle",
-					"OptionsClose"
+					"OptionsClose",
+					"OptionsPauseLabel",
+					"OptionsPauseKey",
+					"OptionsTestBoxKey",
+					"OptionsTestBoxLabel"
 				],
 				"subfolders": [],
 				"name": "OptionsMenu"

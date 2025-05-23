@@ -79,15 +79,6 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Gameplay",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [],
-			"sid": 180204563145536
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
 			"title": "breakableWall",
 			"description": "",
 			"isActiveOnStart": true,

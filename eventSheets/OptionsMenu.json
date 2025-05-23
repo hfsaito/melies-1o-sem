@@ -43,13 +43,23 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "ctrlPause",
+			"type": "number",
+			"initialValue": "9",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 811587289411162
+		},
+		{
+			"eventType": "variable",
 			"name": "ctrlTestBox",
 			"type": "number",
 			"initialValue": "48",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 459743546389779
+			"sid": 573978232470957
 		},
 		{
 			"eventType": "group",
@@ -187,6 +197,58 @@
 							"sid": 286341686989798,
 							"parameters": {
 								"object-to-create": "OptionsJumpKey",
+								"layer": "\"OptionsMenu\"",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 360941436830777,
+							"parameters": {
+								"object-to-create": "OptionsPauseLabel",
+								"layer": "\"OptionsMenu\"",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 348708083784156,
+							"parameters": {
+								"object-to-create": "OptionsPauseKey",
+								"layer": "\"OptionsMenu\"",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 311870587593388,
+							"parameters": {
+								"object-to-create": "OptionsTestBoxLabel",
+								"layer": "\"OptionsMenu\"",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 395211241650317,
+							"parameters": {
+								"object-to-create": "OptionsTestBoxKey",
 								"layer": "\"OptionsMenu\"",
 								"x": "0",
 								"y": "0",
@@ -340,334 +402,564 @@
 					"sid": 343615648252842
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "options.parts.left",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "on-created",
-							"objectClass": "OptionsLeftLabel",
-							"sid": 127128207737891
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "OptionsLeftLabel",
+									"sid": 330680038065881
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "OptionsLeftLabel",
+									"sid": 723744616209654,
+									"parameters": {
+										"text": "\"Left:\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "OptionsLeftLabel",
+									"sid": 303340111426918,
+									"parameters": {
+										"width": "50",
+										"height": "20"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "OptionsLeftLabel",
+									"sid": 542686215224751,
+									"parameters": {
+										"horizontal-alignment": "center"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "OptionsLeftLabel",
+									"sid": 281440777328288,
+									"parameters": {
+										"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) - 50",
+										"y": "(ViewportHeight(Self.LayerName) * 4/ 10) - (Self.Height / 2)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "OptionsLeftLabel",
+									"sid": 545647766154811,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 360584319896645
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "OptionsLeftKey",
+									"sid": 652220076381863
+								}
+							],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "OptionsLeftKey",
+									"sid": 270359981030343,
+									"parameters": {
+										"width": "50",
+										"height": "20"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "OptionsLeftKey",
+									"sid": 659606017929101,
+									"parameters": {
+										"horizontal-alignment": "center"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "OptionsLeftKey",
+									"sid": 406471041930763,
+									"parameters": {
+										"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) + 50",
+										"y": "(ViewportHeight(Self.LayerName) * 4/ 10) - (Self.Height / 2)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "OptionsLeftKey",
+									"sid": 713746997073786,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 234593297825425
 						}
 					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "OptionsLeftLabel",
-							"sid": 771474157299100,
-							"parameters": {
-								"text": "\"Left:\""
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "OptionsLeftLabel",
-							"sid": 583183108823599,
-							"parameters": {
-								"width": "50",
-								"height": "20"
-							}
-						},
-						{
-							"id": "set-horizontal-alignment",
-							"objectClass": "OptionsLeftLabel",
-							"sid": 715108899487688,
-							"parameters": {
-								"horizontal-alignment": "center"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "OptionsLeftLabel",
-							"sid": 548622769367173,
-							"parameters": {
-								"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) - 50",
-								"y": "(ViewportHeight(Self.LayerName) / 2) - (Self.Height / 2)"
-							}
-						},
-						{
-							"id": "set-font-color",
-							"objectClass": "OptionsLeftLabel",
-							"sid": 482510912223219,
-							"parameters": {
-								"color": "rgbEx(100, 100, 100)"
-							}
-						}
-					],
-					"sid": 565987807842381
+					"sid": 680037700886564
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "options.parts.right",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "on-created",
-							"objectClass": "OptionsLeftKey",
-							"sid": 412798724448269
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "OptionsRightLabel",
+									"sid": 416862401658002
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "OptionsRightLabel",
+									"sid": 280331475371106,
+									"parameters": {
+										"text": "\"Right:\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "OptionsRightLabel",
+									"sid": 860279361788114,
+									"parameters": {
+										"width": "50",
+										"height": "20"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "OptionsRightLabel",
+									"sid": 853351949035930,
+									"parameters": {
+										"horizontal-alignment": "center"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "OptionsRightLabel",
+									"sid": 222285484973093,
+									"parameters": {
+										"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) - 50",
+										"y": "(ViewportHeight(Self.LayerName) * 5 / 10) - (Self.Height / 2)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "OptionsRightLabel",
+									"sid": 612606236198227,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 469923888266459
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "OptionsRightKey",
+									"sid": 860493726767422
+								}
+							],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "OptionsRightKey",
+									"sid": 481490751050042,
+									"parameters": {
+										"width": "50",
+										"height": "20"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "OptionsRightKey",
+									"sid": 548520318493207,
+									"parameters": {
+										"horizontal-alignment": "center"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "OptionsRightKey",
+									"sid": 466928517892224,
+									"parameters": {
+										"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) + 50",
+										"y": "(ViewportHeight(Self.LayerName) * 5 / 10) - (Self.Height / 2)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "OptionsRightKey",
+									"sid": 140528261640630,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 300126270681051
 						}
 					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "OptionsLeftKey",
-							"sid": 983629763440160,
-							"parameters": {
-								"text": "Keyboard.StringFromKeyCode(ctrlLeft)"
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "OptionsLeftKey",
-							"sid": 889072259622461,
-							"parameters": {
-								"width": "50",
-								"height": "20"
-							}
-						},
-						{
-							"id": "set-horizontal-alignment",
-							"objectClass": "OptionsLeftKey",
-							"sid": 878233322582379,
-							"parameters": {
-								"horizontal-alignment": "center"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "OptionsLeftKey",
-							"sid": 185144149233580,
-							"parameters": {
-								"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) + 50",
-								"y": "(ViewportHeight(Self.LayerName) / 2) - (Self.Height / 2)"
-							}
-						},
-						{
-							"id": "set-font-color",
-							"objectClass": "OptionsLeftKey",
-							"sid": 971933412871773,
-							"parameters": {
-								"color": "rgbEx(100, 100, 100)"
-							}
-						}
-					],
-					"sid": 726084568365893
+					"sid": 388761194688740
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "options.parts.jump",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "on-created",
-							"objectClass": "OptionsRightLabel",
-							"sid": 492844286667680
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "OptionsJumpLabel",
+									"sid": 303288810048233
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "OptionsJumpLabel",
+									"sid": 211569832155265,
+									"parameters": {
+										"text": "\"Jump:\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "OptionsJumpLabel",
+									"sid": 383521323093016,
+									"parameters": {
+										"width": "50",
+										"height": "20"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "OptionsJumpLabel",
+									"sid": 613504581263891,
+									"parameters": {
+										"horizontal-alignment": "center"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "OptionsJumpLabel",
+									"sid": 619854428310606,
+									"parameters": {
+										"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) - 50",
+										"y": "(ViewportHeight(Self.LayerName) * 6 / 10) - (Self.Height / 2)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "OptionsJumpLabel",
+									"sid": 271481257357469,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 686769394711757
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "OptionsJumpKey",
+									"sid": 361983852903719
+								}
+							],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "OptionsJumpKey",
+									"sid": 656647755033612,
+									"parameters": {
+										"width": "80",
+										"height": "20"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "OptionsJumpKey",
+									"sid": 441760921589202,
+									"parameters": {
+										"horizontal-alignment": "center"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "OptionsJumpKey",
+									"sid": 514298969439650,
+									"parameters": {
+										"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) + 50",
+										"y": "(ViewportHeight(Self.LayerName) * 6 / 10) - (Self.Height / 2)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "OptionsJumpKey",
+									"sid": 941878372442640,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 307614203422019
 						}
 					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "OptionsRightLabel",
-							"sid": 120281159909129,
-							"parameters": {
-								"text": "\"Right:\""
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "OptionsRightLabel",
-							"sid": 189996279397288,
-							"parameters": {
-								"width": "50",
-								"height": "20"
-							}
-						},
-						{
-							"id": "set-horizontal-alignment",
-							"objectClass": "OptionsRightLabel",
-							"sid": 355288174176166,
-							"parameters": {
-								"horizontal-alignment": "center"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "OptionsRightLabel",
-							"sid": 622866435621527,
-							"parameters": {
-								"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) - 50",
-								"y": "(ViewportHeight(Self.LayerName) * 6 / 10) - (Self.Height / 2)"
-							}
-						},
-						{
-							"id": "set-font-color",
-							"objectClass": "OptionsRightLabel",
-							"sid": 170090341744663,
-							"parameters": {
-								"color": "rgbEx(100, 100, 100)"
-							}
-						}
-					],
-					"sid": 377570441894889
+					"sid": 346746671728193
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "options.parts.pause",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "on-created",
-							"objectClass": "OptionsRightKey",
-							"sid": 371952388102146
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "OptionsPauseLabel",
+									"sid": 881712753656281
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "OptionsPauseLabel",
+									"sid": 271951791266883,
+									"parameters": {
+										"text": "\"Pause:\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "OptionsPauseLabel",
+									"sid": 878634731955325,
+									"parameters": {
+										"width": "50",
+										"height": "20"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "OptionsPauseLabel",
+									"sid": 622994177473100,
+									"parameters": {
+										"horizontal-alignment": "center"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "OptionsPauseLabel",
+									"sid": 780779464519277,
+									"parameters": {
+										"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) - 50",
+										"y": "(ViewportHeight(Self.LayerName) * 7 / 10) - (Self.Height / 2)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "OptionsPauseLabel",
+									"sid": 526093393978654,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 326305092087218
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "OptionsPauseKey",
+									"sid": 116805987574989
+								}
+							],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "OptionsPauseKey",
+									"sid": 625812182059768,
+									"parameters": {
+										"width": "80",
+										"height": "20"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "OptionsPauseKey",
+									"sid": 769293160554354,
+									"parameters": {
+										"horizontal-alignment": "center"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "OptionsPauseKey",
+									"sid": 306843190948047,
+									"parameters": {
+										"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) + 50",
+										"y": "(ViewportHeight(Self.LayerName) * 7 / 10) - (Self.Height / 2)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "OptionsPauseKey",
+									"sid": 588301073481579,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 471828660731851
 						}
 					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "OptionsRightKey",
-							"sid": 158065315962729,
-							"parameters": {
-								"text": "Keyboard.StringFromKeyCode(ctrlRight)"
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "OptionsRightKey",
-							"sid": 182543659965969,
-							"parameters": {
-								"width": "50",
-								"height": "20"
-							}
-						},
-						{
-							"id": "set-horizontal-alignment",
-							"objectClass": "OptionsRightKey",
-							"sid": 134036497443320,
-							"parameters": {
-								"horizontal-alignment": "center"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "OptionsRightKey",
-							"sid": 536980231200486,
-							"parameters": {
-								"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) + 50",
-								"y": "(ViewportHeight(Self.LayerName) * 6 / 10) - (Self.Height / 2)"
-							}
-						},
-						{
-							"id": "set-font-color",
-							"objectClass": "OptionsRightKey",
-							"sid": 379506946152974,
-							"parameters": {
-								"color": "rgbEx(100, 100, 100)"
-							}
-						}
-					],
-					"sid": 831362245161493
+					"sid": 803269741588727
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "options.parts.testBox",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "on-created",
-							"objectClass": "OptionsJumpLabel",
-							"sid": 445877760620474
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "OptionsTestBoxLabel",
+									"sid": 142418951343595
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "OptionsTestBoxLabel",
+									"sid": 452006269962056,
+									"parameters": {
+										"text": "\"Test Box:\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "OptionsTestBoxLabel",
+									"sid": 332849064110681,
+									"parameters": {
+										"width": "100",
+										"height": "20"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "OptionsTestBoxLabel",
+									"sid": 481629385133453,
+									"parameters": {
+										"horizontal-alignment": "center"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "OptionsTestBoxLabel",
+									"sid": 334874118001221,
+									"parameters": {
+										"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) - 50",
+										"y": "(ViewportHeight(Self.LayerName) * 8 / 10) - (Self.Height / 2)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "OptionsTestBoxLabel",
+									"sid": 894150274529786,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 394896918435294
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "OptionsTestBoxKey",
+									"sid": 223998868597296
+								}
+							],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "OptionsTestBoxKey",
+									"sid": 909460037814140,
+									"parameters": {
+										"width": "80",
+										"height": "20"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "OptionsTestBoxKey",
+									"sid": 232340233610541,
+									"parameters": {
+										"horizontal-alignment": "center"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "OptionsTestBoxKey",
+									"sid": 187282956169337,
+									"parameters": {
+										"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) + 50",
+										"y": "(ViewportHeight(Self.LayerName) * 8 / 10) - (Self.Height / 2)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "OptionsTestBoxKey",
+									"sid": 133978802886206,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 182355938714089
 						}
 					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "OptionsJumpLabel",
-							"sid": 234026645540729,
-							"parameters": {
-								"text": "\"Jump:\""
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "OptionsJumpLabel",
-							"sid": 441406821754330,
-							"parameters": {
-								"width": "50",
-								"height": "20"
-							}
-						},
-						{
-							"id": "set-horizontal-alignment",
-							"objectClass": "OptionsJumpLabel",
-							"sid": 999313278353589,
-							"parameters": {
-								"horizontal-alignment": "center"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "OptionsJumpLabel",
-							"sid": 362320801931677,
-							"parameters": {
-								"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) - 50",
-								"y": "(ViewportHeight(Self.LayerName) * 7 / 10) - (Self.Height / 2)"
-							}
-						},
-						{
-							"id": "set-font-color",
-							"objectClass": "OptionsJumpLabel",
-							"sid": 774538849366447,
-							"parameters": {
-								"color": "rgbEx(100, 100, 100)"
-							}
-						}
-					],
-					"sid": 287262773156718
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-created",
-							"objectClass": "OptionsJumpKey",
-							"sid": 846624520305840
-						}
-					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "OptionsJumpKey",
-							"sid": 540950116943867,
-							"parameters": {
-								"text": "Functions.keycodeToString(ctrlJump)"
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "OptionsJumpKey",
-							"sid": 813770687851853,
-							"parameters": {
-								"width": "80",
-								"height": "20"
-							}
-						},
-						{
-							"id": "set-horizontal-alignment",
-							"objectClass": "OptionsJumpKey",
-							"sid": 333968123375305,
-							"parameters": {
-								"horizontal-alignment": "center"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "OptionsJumpKey",
-							"sid": 284655511331884,
-							"parameters": {
-								"x": "(ViewportWidth(Self.LayerName) / 2) - (Self.Width / 2) + 50",
-								"y": "(ViewportHeight(Self.LayerName) * 7 / 10) - (Self.Height / 2)"
-							}
-						},
-						{
-							"id": "set-font-color",
-							"objectClass": "OptionsJumpKey",
-							"sid": 583577763510640,
-							"parameters": {
-								"color": "rgbEx(100, 100, 100)"
-							}
-						}
-					],
-					"sid": 656445443353572
+					"sid": 469075439538521
 				},
 				{
 					"eventType": "block",
@@ -731,161 +1023,6 @@
 							"sid": 997733048465828
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 933929836553680
-						}
-					],
-					"actions": [],
-					"sid": 837044485216998,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 706795749428270,
-									"parameters": {
-										"variable": "changingControl",
-										"comparison": 1,
-										"value": "\"left\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-text",
-									"objectClass": "OptionsLeftKey",
-									"sid": 524022250222218,
-									"parameters": {
-										"text": "Functions.keycodeToString(ctrlLeft)"
-									}
-								}
-							],
-							"sid": 209456400383086
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 914163215609375
-								}
-							],
-							"actions": [
-								{
-									"id": "set-text",
-									"objectClass": "OptionsLeftKey",
-									"sid": 189438192170948,
-									"parameters": {
-										"text": "\". . .\""
-									}
-								}
-							],
-							"sid": 425171622648016
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 492575386668695,
-									"parameters": {
-										"variable": "changingControl",
-										"comparison": 1,
-										"value": "\"right\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-text",
-									"objectClass": "OptionsRightKey",
-									"sid": 619064671117299,
-									"parameters": {
-										"text": "Functions.keycodeToString(ctrlRight)"
-									}
-								}
-							],
-							"sid": 392215395985149
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 619063679424300
-								}
-							],
-							"actions": [
-								{
-									"id": "set-text",
-									"objectClass": "OptionsRightKey",
-									"sid": 436345294655439,
-									"parameters": {
-										"text": "\". . .\""
-									}
-								}
-							],
-							"sid": 222597191694637
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 483410786602619,
-									"parameters": {
-										"variable": "changingControl",
-										"comparison": 1,
-										"value": "\"jump\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-text",
-									"objectClass": "OptionsJumpKey",
-									"sid": 293751835326677,
-									"parameters": {
-										"text": "Functions.keycodeToString(ctrlJump)"
-									}
-								}
-							],
-							"sid": 966874265427843
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 900888111882434
-								}
-							],
-							"actions": [
-								{
-									"id": "set-text",
-									"objectClass": "OptionsJumpKey",
-									"sid": 773310168575326,
-									"parameters": {
-										"text": "\". . .\""
-									}
-								}
-							],
-							"sid": 531338166073861
-						}
-					]
 				}
 			],
 			"sid": 321968543625376
@@ -893,7 +1030,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "options.control",
+			"title": "options.controls",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -913,31 +1050,494 @@
 					"sid": 539494130179919,
 					"children": [
 						{
-							"eventType": "block",
-							"conditions": [
+							"eventType": "group",
+							"disabled": false,
+							"title": "options.controls.left",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
 								{
-									"id": "on-object-clicked",
-									"objectClass": "Mouse",
-									"sid": 258396610589649,
-									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked",
-										"object-clicked": "OptionsLeftKey"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 833313893895781,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "OptionsLeftKey"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 136011977126307,
+											"parameters": {
+												"variable": "changingControl",
+												"value": "\"left\""
+											}
+										}
+									],
+									"sid": 939724127620565
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 737852656696855
+										}
+									],
+									"actions": [],
+									"sid": 683769662518684,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 210194474237003,
+													"parameters": {
+														"variable": "changingControl",
+														"comparison": 1,
+														"value": "\"left\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "OptionsLeftKey",
+													"sid": 861391649031279,
+													"parameters": {
+														"text": "Functions.keycodeToString(ctrlLeft)"
+													}
+												}
+											],
+											"sid": 654539366099112
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 152737693715206
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "OptionsLeftKey",
+													"sid": 210441418761183,
+													"parameters": {
+														"text": "\". . .\""
+													}
+												}
+											],
+											"sid": 549514717697834
+										}
+									]
 								}
 							],
-							"actions": [
+							"sid": 617333125783073
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "options.controls.right",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
 								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 434980419311787,
-									"parameters": {
-										"variable": "changingControl",
-										"value": "\"left\""
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 745648990991671,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "OptionsRightKey"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 793705142948394,
+											"parameters": {
+												"variable": "changingControl",
+												"value": "\"right\""
+											}
+										}
+									],
+									"sid": 993183773116275
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 547175506575835
+										}
+									],
+									"actions": [],
+									"sid": 380242450886907,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 772502396348053,
+													"parameters": {
+														"variable": "changingControl",
+														"comparison": 1,
+														"value": "\"right\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "OptionsRightKey",
+													"sid": 315537498012987,
+													"parameters": {
+														"text": "Functions.keycodeToString(ctrlRight)"
+													}
+												}
+											],
+											"sid": 579564352511099
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 389555781293763
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "OptionsRightKey",
+													"sid": 288928558842142,
+													"parameters": {
+														"text": "\". . .\""
+													}
+												}
+											],
+											"sid": 100661902714967
+										}
+									]
 								}
 							],
-							"sid": 180031009117749
+							"sid": 680101387583477
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "options.controls.jump",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 206402816173145,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "OptionsJumpKey"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 706384182104400,
+											"parameters": {
+												"variable": "changingControl",
+												"value": "\"jump\""
+											}
+										}
+									],
+									"sid": 320478619110816
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 198102303150922
+										}
+									],
+									"actions": [],
+									"sid": 837563089385079,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 765461940626428,
+													"parameters": {
+														"variable": "changingControl",
+														"comparison": 1,
+														"value": "\"jump\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "OptionsJumpKey",
+													"sid": 317274900737477,
+													"parameters": {
+														"text": "Functions.keycodeToString(ctrlJump)"
+													}
+												}
+											],
+											"sid": 595125422319905
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 688844188760568
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "OptionsJumpKey",
+													"sid": 671247701796684,
+													"parameters": {
+														"text": "\". . .\""
+													}
+												}
+											],
+											"sid": 123242188575163
+										}
+									]
+								}
+							],
+							"sid": 419541410879479
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "options.controls.pause",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 198454097728404,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "OptionsPauseKey"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 864481154811921,
+											"parameters": {
+												"variable": "changingControl",
+												"value": "\"pause\""
+											}
+										}
+									],
+									"sid": 773641663338970
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 914324317152535
+										}
+									],
+									"actions": [],
+									"sid": 208239538863476,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 694156895497040,
+													"parameters": {
+														"variable": "changingControl",
+														"comparison": 1,
+														"value": "\"pause\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "OptionsPauseKey",
+													"sid": 216200516283724,
+													"parameters": {
+														"text": "Functions.keycodeToString(ctrlPause)"
+													}
+												}
+											],
+											"sid": 779549640380976
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 773422351553612
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "OptionsPauseKey",
+													"sid": 693788191412966,
+													"parameters": {
+														"text": "\". . .\""
+													}
+												}
+											],
+											"sid": 768496411594459
+										}
+									]
+								}
+							],
+							"sid": 995126654514909
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "options.controls.testBox",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 425104681818957,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "OptionsTestBoxKey"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 743790971224452,
+											"parameters": {
+												"variable": "changingControl",
+												"value": "\"testBox\""
+											}
+										}
+									],
+									"sid": 995686133832523
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 224740827225703
+										}
+									],
+									"actions": [],
+									"sid": 932134083330502,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 556005666905424,
+													"parameters": {
+														"variable": "changingControl",
+														"comparison": 1,
+														"value": "\"testBox\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "OptionsTestBoxKey",
+													"sid": 446497453646886,
+													"parameters": {
+														"text": "Functions.keycodeToString(ctrlTestBox)"
+													}
+												}
+											],
+											"sid": 679283498770921
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 449392834741257
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "OptionsTestBoxKey",
+													"sid": 735172042468559,
+													"parameters": {
+														"text": "\". . .\""
+													}
+												}
+											],
+											"sid": 277112969435762
+										}
+									]
+								}
+							],
+							"sid": 739493862431494
 						},
 						{
 							"eventType": "block",
@@ -945,61 +1545,7 @@
 								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 508836683357210,
-									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked",
-										"object-clicked": "OptionsRightKey"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 658417529153497,
-									"parameters": {
-										"variable": "changingControl",
-										"value": "\"right\""
-									}
-								}
-							],
-							"sid": 506188547973659
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-object-clicked",
-									"objectClass": "Mouse",
-									"sid": 124140688699719,
-									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked",
-										"object-clicked": "OptionsJumpKey"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 387828550846105,
-									"parameters": {
-										"variable": "changingControl",
-										"value": "\"jump\""
-									}
-								}
-							],
-							"sid": 363352709469899
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-object-clicked",
-									"objectClass": "Mouse",
-									"sid": 137472798588678,
+									"sid": 433227198715468,
 									"parameters": {
 										"mouse-button": "left",
 										"click-type": "clicked",
@@ -1010,10 +1556,10 @@
 							"actions": [
 								{
 									"callFunction": "closeOptionsMenu",
-									"sid": 707419829356079
+									"sid": 380383946721646
 								}
 							],
-							"sid": 951840049038806
+							"sid": 495755656855622
 						},
 						{
 							"eventType": "block",
@@ -1117,6 +1663,60 @@
 										}
 									],
 									"sid": 647756278138055
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 276077258177142,
+											"parameters": {
+												"variable": "changingControl",
+												"comparison": 0,
+												"value": "\"pause\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 285926544208897,
+											"parameters": {
+												"variable": "ctrlPause",
+												"value": "Keyboard.LastKeyCode"
+											}
+										}
+									],
+									"sid": 245898739519478
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 644851370296605,
+											"parameters": {
+												"variable": "changingControl",
+												"comparison": 0,
+												"value": "\"testBox\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 416312901170470,
+											"parameters": {
+												"variable": "ctrlTestBox",
+												"value": "Keyboard.LastKeyCode"
+											}
+										}
+									],
+									"sid": 848811704013198
 								},
 								{
 									"eventType": "block",

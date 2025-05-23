@@ -166,11 +166,11 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-key-pressed",
+							"id": "on-key-code-pressed",
 							"objectClass": "Keyboard",
-							"sid": 840324180961443,
+							"sid": 668977361937040,
 							"parameters": {
-								"key": 48
+								"keycode": "ctrlTestBox"
 							}
 						}
 					],
@@ -237,6 +237,26 @@
 				}
 			],
 			"sid": 433967494694227
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 839087671993926
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "openOptionsMenu",
+					"sid": 476654259495615,
+					"parameters": [
+						true
+					]
+				}
+			],
+			"sid": 656358274426430
 		}
 	],
 	"sid": 229297571637859

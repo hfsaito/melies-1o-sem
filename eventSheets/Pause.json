@@ -43,16 +43,6 @@
 					],
 					"actions": [
 						{
-							"id": "add-layer",
-							"objectClass": "System",
-							"sid": 819724637777372,
-							"parameters": {
-								"name": "\"Pause\"",
-								"insert-by": "\"Player\"",
-								"where": "above"
-							}
-						},
-						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
 							"sid": 521097463926878,
@@ -431,11 +421,11 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
+									"id": "on-key-code-pressed",
 									"objectClass": "Keyboard",
-									"sid": 615988047682906,
+									"sid": 702395657221138,
 									"parameters": {
-										"key": 9
+										"keycode": "ctrlPause"
 									}
 								}
 							],

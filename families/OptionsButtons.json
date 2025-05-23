@@ -9,6 +9,8 @@
 		"OptionsRightKey",
 		"OptionsLeftKey",
 		"OptionsJumpKey",
-		"OptionsClose"
+		"OptionsClose",
+		"OptionsPauseKey",
+		"OptionsTestBoxKey"
 	]
 }

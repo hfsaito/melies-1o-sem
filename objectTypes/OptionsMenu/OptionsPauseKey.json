@@ -1,0 +1,10 @@
+{
+	"name": "OptionsPauseKey",
+	"plugin-id": "Text",
+	"sid": 882402390729239,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

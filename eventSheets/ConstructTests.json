@@ -2,8 +2,33 @@
 	"name": "ConstructTests",
 	"events": [
 		{
-			"eventType": "include",
-			"includeSheet": "OptionsMenu"
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 294840202063290
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "OptionsJumpKey",
+					"sid": 880853543113219,
+					"parameters": {
+						"text": "Keyboard.LastKeyCode"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "OptionsJumpLabel",
+					"sid": 677989899676022,
+					"parameters": {
+						"text": "Keyboard.StringFromKeyCode(Keyboard.LastKeyCode)"
+					}
+				}
+			],
+			"sid": 302575315558906
 		}
 	],
 	"sid": 705040661753437
