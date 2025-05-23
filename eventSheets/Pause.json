@@ -1,0 +1,321 @@
+{
+	"name": "Pause",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "paused",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 170093296139506
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 267282708069903
+				}
+			],
+			"actions": [
+				{
+					"id": "add-layer",
+					"objectClass": "System",
+					"sid": 775458896146881,
+					"parameters": {
+						"name": "\"Pause\"",
+						"insert-by": "\"Player\"",
+						"where": "above"
+					}
+				},
+				{
+					"id": "set-layer-background-color",
+					"objectClass": "System",
+					"sid": 119620530040609,
+					"parameters": {
+						"layer": "\"Pause\"",
+						"color": "rgbEx(0, 0, 0)"
+					}
+				},
+				{
+					"id": "set-layer-transparent",
+					"objectClass": "System",
+					"sid": 999799550676387,
+					"parameters": {
+						"layer": "\"Pause\"",
+						"mode": "opaque"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 496497155253218,
+					"parameters": {
+						"layer": "\"Pause\"",
+						"opacity": "35"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 303557291922839,
+					"parameters": {
+						"layer": "\"Pause\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 354436822888584,
+					"parameters": {
+						"object-to-create": "Paused",
+						"layer": "\"Pause\"",
+						"x": "(ViewportWidth(\"Pause\") / 2) - (Paused.Width / 2)",
+						"y": "(ViewportHeight(\"Pause\") / 5) - (Paused.Height/ 2)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 361188095292720,
+					"parameters": {
+						"object-to-create": "Resume",
+						"layer": "\"Pause\"",
+						"x": "(ViewportWidth(\"Pause\") / 2) - (Resume.Width / 2)",
+						"y": "(ViewportHeight(\"Pause\") / 2) - (Resume.Height/ 2)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 394183009323028,
+					"parameters": {
+						"object-to-create": "SoundVolume",
+						"layer": "\"Pause\"",
+						"x": "(ViewportWidth(\"Pause\") / 2) - (SoundVolume.Width / 2)",
+						"y": "(ViewportHeight(\"Pause\") * 6 / 10) - (SoundVolume.Height/ 2)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 454691378075799
+		},
+		{
+			"functionName": "resume",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 211963372248130,
+					"parameters": {
+						"layer": "\"Pause\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 570857954787289,
+					"parameters": {
+						"time-scale": "1"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 797990691526010,
+					"parameters": {
+						"group-name": "\"Gameplay\"",
+						"state": "activated"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 320144383517745,
+					"parameters": {
+						"variable": "paused",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 318838194034685
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 733349205932696,
+					"parameters": {
+						"key": 9
+					}
+				}
+			],
+			"actions": [],
+			"sid": 109307959264412,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 487571542795923,
+							"parameters": {
+								"layer": "\"Pause\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "resume",
+							"sid": 146090872312585
+						}
+					],
+					"sid": 252471643322393
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 461145970793774
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 193659414890223,
+							"parameters": {
+								"layer": "\"Pause\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 424903578332374,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 326870396646590,
+							"parameters": {
+								"group-name": "\"Gameplay\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 369331730521877,
+							"parameters": {
+								"variable": "paused",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 817242684688429
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Resume",
+					"sid": 549556193305217
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "resume",
+					"sid": 786882939718281
+				}
+			],
+			"sid": 392839315878203
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "audio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 330208291998499
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 150486284370512,
+							"parameters": {
+								"audio-file": "battleThemeA",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"bg\""
+							}
+						}
+					],
+					"sid": 820587495692164
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 134497041318322
+						}
+					],
+					"actions": [
+						{
+							"id": "set-master-volume",
+							"objectClass": "Audio",
+							"sid": 786853432845322,
+							"parameters": {
+								"db": "33 * log10(SoundVolume.Value/100)"
+							}
+						}
+					],
+					"sid": 937999664592743
+				}
+			],
+			"sid": 585940363760844
+		}
+	],
+	"sid": 563233474643183
+}

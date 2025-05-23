@@ -64,6 +64,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "sliderbar",
 			"name": "Slider bar",
 			"author": "Scirra",
@@ -114,22 +121,7 @@
 	],
 	"uniqueId": "cd3ubb1liqo",
 	"objectTypes": {
-		"items": [
-			"Platform",
-			"Player",
-			"Audio",
-			"FinishLine",
-			"TiledBackground",
-			"TrajectoryCanvas",
-			"Sprite",
-			"enemy02",
-			"pontoInicial",
-			"pontoFinal",
-			"TiledBackground2",
-			"opcoes",
-			"creditos",
-			"jogar"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -141,7 +133,10 @@
 			},
 			{
 				"items": [
-					"TestBox"
+					"MainMenuBackground",
+					"playButton",
+					"optionButton",
+					"creditsButton"
 				],
 				"subfolders": [],
 				"name": "MainMenu"
@@ -151,7 +146,8 @@
 					"Resume",
 					"SoundVolume",
 					"Paused",
-					"Overlay"
+					"Overlay",
+					"Sprite2"
 				],
 				"subfolders": [],
 				"name": "Pause"
@@ -159,7 +155,8 @@
 			{
 				"items": [
 					"Keyboard",
-					"Mouse"
+					"Mouse",
+					"Audio"
 				],
 				"subfolders": [],
 				"name": "Controls"
@@ -180,6 +177,16 @@
 						],
 						"subfolders": [],
 						"name": "Enemy01"
+					},
+					{
+						"items": [
+							"enemy02",
+							"pontoFinal",
+							"pontoInicial",
+							"Sprite"
+						],
+						"subfolders": [],
+						"name": "Enemy02"
 					}
 				],
 				"name": "Enemies"
@@ -191,6 +198,23 @@
 				],
 				"subfolders": [],
 				"name": "Items"
+			},
+			{
+				"items": [
+					"Player",
+					"TrajectoryCanvas"
+				],
+				"subfolders": [],
+				"name": "Player"
+			},
+			{
+				"items": [
+					"BackgroundOutside",
+					"FinishLine",
+					"PlatformsTilemap"
+				],
+				"subfolders": [],
+				"name": "Level"
 			}
 		]
 	},
@@ -199,7 +223,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Enemy01"
+			"Enemy01",
+			"MainMenuButtons"
 		],
 		"subfolders": []
 	},
@@ -215,10 +240,11 @@
 	},
 	"eventSheets": {
 		"items": [
-			"game",
-			"menu",
-			"level0",
-			"ConstructTests"
+			"Game",
+			"MainMenu",
+			"Level0",
+			"ConstructTests",
+			"Pause"
 		],
 		"subfolders": []
 	},

@@ -1,0 +1,13 @@
+{
+	"name": "MainMenuButtons",
+	"plugin-id": "Sprite",
+	"sid": 961034150108673,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"creditsButton",
+		"optionButton",
+		"playButton"
+	]
+}

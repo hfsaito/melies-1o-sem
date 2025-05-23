@@ -1,9 +1,9 @@
 {
-	"name": "level0",
+	"name": "Level0",
 	"events": [
 		{
 			"eventType": "include",
-			"includeSheet": "game"
+			"includeSheet": "Game"
 		},
 		{
 			"eventType": "block",

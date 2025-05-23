@@ -1,8 +1,8 @@
 {
-	"name": "TiledBackground",
+	"name": "MainMenuBackground",
 	"plugin-id": "TiledBg",
-	"sid": 333394861203433,
-	"isGlobal": false,
+	"sid": 694814244910010,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -16,7 +16,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 8187789,
+		"imageSpriteId": 3110368,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

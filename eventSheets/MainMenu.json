@@ -1,0 +1,172 @@
+{
+	"name": "MainMenu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 127348363119244,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "playButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 566109294018014,
+					"parameters": {
+						"layout": "Level0"
+					}
+				}
+			],
+			"sid": 736295566870915
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 656464968163177,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "optionButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 581592380250357,
+					"parameters": {
+						"layout": "MainMenu"
+					}
+				}
+			],
+			"sid": 838434260683946
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 699201453284970,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "creditsButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 623758722393393,
+					"parameters": {
+						"layout": "MainMenu"
+					}
+				}
+			],
+			"sid": 369254958825230
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 684073418021149,
+					"parameters": {
+						"object": "MainMenuButtons"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 789227049498568,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 624239271116260,
+							"parameters": {
+								"object": "MainMenuButtons"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "MainMenuButtons",
+							"sid": 863012667784133,
+							"parameters": {
+								"animation": "\"hovered\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 339657386216093
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 413182219384069
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "MainMenuButtons",
+							"sid": 909217813135908,
+							"parameters": {
+								"animation": "\"idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 715600942097309
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 362612560245322,
+					"parameters": {
+						"key": 48
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 291822565611139,
+					"parameters": {
+						"layout": "TestBox"
+					}
+				}
+			],
+			"sid": 648235692920622
+		}
+	],
+	"sid": 229297571637859
+}

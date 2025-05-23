@@ -1,6 +1,10 @@
 {
-	"name": "game",
+	"name": "Game",
 	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Pause"
+		},
 		{
 			"eventType": "variable",
 			"name": "masterVolume",
@@ -40,205 +44,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 584417951187678
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "pause",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"functionName": "resume",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 842877198267650,
-							"parameters": {
-								"layer": "\"Pause\"",
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-time-scale",
-							"objectClass": "System",
-							"sid": 969026786467060,
-							"parameters": {
-								"time-scale": "1"
-							}
-						},
-						{
-							"id": "set-group-active",
-							"objectClass": "System",
-							"sid": 682925152649493,
-							"parameters": {
-								"group-name": "\"Gameplay\"",
-								"state": "activated"
-							}
-						}
-					],
-					"sid": 806692713333997
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 674079906691468,
-							"parameters": {
-								"key": 9
-							}
-						}
-					],
-					"actions": [],
-					"sid": 275356541532668,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "layer-is-visible",
-									"objectClass": "System",
-									"sid": 597843859200186,
-									"parameters": {
-										"layer": "\"Pause\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "resume",
-									"sid": 995491119106105
-								}
-							],
-							"sid": 251810688931656
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 799449634722655
-								}
-							],
-							"actions": [
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 663707338963938,
-									"parameters": {
-										"layer": "\"Pause\"",
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-time-scale",
-									"objectClass": "System",
-									"sid": 702216072948523,
-									"parameters": {
-										"time-scale": "0"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 791091470738303,
-									"parameters": {
-										"group-name": "\"Gameplay\"",
-										"state": "deactivated"
-									}
-								}
-							],
-							"sid": 142754396398355
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-clicked",
-							"objectClass": "Resume",
-							"sid": 296751848707080
-						}
-					],
-					"actions": [
-						{
-							"callFunction": "resume",
-							"sid": 823106790838139
-						}
-					],
-					"sid": 268582067627739
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "audio",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-start-of-layout",
-									"objectClass": "System",
-									"sid": 808373950636468
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 166535681285220,
-									"parameters": {
-										"audio-file": "battleThemeA",
-										"loop": "looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"bg\""
-									}
-								}
-							],
-							"sid": 688213296950680
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 566279176001081
-								}
-							],
-							"actions": [
-								{
-									"id": "set-master-volume",
-									"objectClass": "Audio",
-									"sid": 900828470066603,
-									"parameters": {
-										"db": "33 * log10(SoundVolume.Value/100)"
-									}
-								}
-							],
-							"sid": 750420985290192
-						}
-					],
-					"sid": 137527715914283
-				}
-			],
-			"sid": 859143776071992
 		},
 		{
 			"eventType": "block",
@@ -322,10 +127,10 @@
 							"conditions": [
 								{
 									"id": "on-collision-with-another-object",
-									"objectClass": "ParedeQuebravel",
-									"sid": 702333910986493,
+									"objectClass": "Player",
+									"sid": 469561155402177,
 									"parameters": {
-										"object": "Player"
+										"object": "ParedeQuebravel"
 									}
 								},
 								{
@@ -344,10 +149,6 @@
 										"instance-variable": "HP",
 										"value": "1"
 									}
-								},
-								{
-									"callFunction": "stop player gaunlet launch",
-									"sid": 234214333816543
 								}
 							],
 							"sid": 339090657163110
@@ -723,10 +524,10 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 891991134860408,
+									"sid": 203403234984256,
 									"parameters": {
 										"object-to-create": "TrajectoryCanvas",
-										"layer": "\"Trajectory\"",
+										"layer": "\"Player.Trajectory\"",
 										"x": "0",
 										"y": "0",
 										"create-hierarchy": false,
@@ -785,6 +586,15 @@
 										"animation": "\"charging\""
 									},
 									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 123497659508077,
+									"parameters": {
+										"variable": "paused"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [],
@@ -815,7 +625,7 @@
 										{
 											"id": "set-mirrored",
 											"objectClass": "Player",
-											"sid": 619791333155435,
+											"sid": 470127775527848,
 											"parameters": {
 												"state": "mirrored"
 											}
@@ -823,7 +633,7 @@
 										{
 											"id": "set-animation",
 											"objectClass": "Player",
-											"sid": 988715114005246,
+											"sid": 104121670411105,
 											"parameters": {
 												"animation": "\"walking\"",
 												"from": "beginning"
@@ -1426,25 +1236,105 @@
 								{
 									"id": "on-collision-with-another-object",
 									"objectClass": "Player",
-									"sid": 127718807678271,
+									"sid": 545498706735967,
 									"parameters": {
-										"object": "Platform"
+										"object": "PlatformsTilemap"
 									}
 								},
 								{
-									"id": "is-enabled",
+									"id": "on-collision-with-another-object",
 									"objectClass": "Player",
-									"sid": 325674086608372,
-									"behaviorType": "Bullet"
+									"sid": 621167785308336,
+									"parameters": {
+										"object": "ParedeQuebravel"
+									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 198429800383141,
+							"children": [
 								{
-									"callFunction": "stop player gaunlet launch",
-									"sid": 852854728733299
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-enabled",
+											"objectClass": "Player",
+											"sid": 211811206678663,
+											"behaviorType": "Bullet"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "Player",
+											"sid": 759670684012053,
+											"parameters": {
+												"angle": "0"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 766786948773950,
+											"parameters": {
+												"animation": "\"Idle\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player",
+											"sid": 297269136750686,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player",
+											"sid": 687726116698767,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 444678551389152,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-flipped",
+													"objectClass": "Player",
+													"sid": 247084248344476
+												}
+											],
+											"actions": [
+												{
+													"id": "set-flipped",
+													"objectClass": "Player",
+													"sid": 869140776416329,
+													"parameters": {
+														"state": "not-flipped"
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "Player",
+													"sid": 948319053982189,
+													"parameters": {
+														"state": "mirrored"
+													}
+												}
+											],
+											"sid": 449797928978548
+										}
+									]
 								}
 							],
-							"sid": 168832407097284
+							"isOrBlock": true
 						}
 					],
 					"sid": 941452320505571
@@ -1517,86 +1407,6 @@
 						}
 					],
 					"sid": 305036156651759
-				},
-				{
-					"functionName": "stop player gaunlet launch",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-angle",
-							"objectClass": "Player",
-							"sid": 205158962180701,
-							"parameters": {
-								"angle": "0"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "Player",
-							"sid": 174791669286220,
-							"parameters": {
-								"animation": "\"Idle\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Player",
-							"sid": 609586072828909,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Player",
-							"sid": 830821227314695,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "enabled"
-							}
-						}
-					],
-					"sid": 620931245853289,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-flipped",
-									"objectClass": "Player",
-									"sid": 521731743205115
-								}
-							],
-							"actions": [
-								{
-									"id": "set-flipped",
-									"objectClass": "Player",
-									"sid": 724504803117962,
-									"parameters": {
-										"state": "not-flipped"
-									}
-								},
-								{
-									"id": "set-mirrored",
-									"objectClass": "Player",
-									"sid": 104964945175720,
-									"parameters": {
-										"state": "mirrored"
-									}
-								}
-							],
-							"sid": 932397957706326
-						}
-					]
 				}
 			],
 			"sid": 677888026045447
@@ -2536,9 +2346,9 @@
 														{
 															"id": "is-overlapping-another-object",
 															"objectClass": "Enemy01FloorChecker",
-															"sid": 239644440881193,
+															"sid": 120694662281178,
 															"parameters": {
-																"object": "Platform"
+																"object": "PlatformsTilemap"
 															}
 														}
 													],
@@ -2647,9 +2457,9 @@
 														{
 															"id": "is-overlapping-another-object",
 															"objectClass": "Enemy01WallChecker",
-															"sid": 104027873290761,
+															"sid": 183603048393869,
 															"parameters": {
-																"object": "Platform"
+																"object": "PlatformsTilemap"
 															}
 														}
 													],
@@ -3501,10 +3311,10 @@
 										{
 											"id": "spawn-another-object",
 											"objectClass": "enemy02",
-											"sid": 346328155841326,
+											"sid": 752067817751716,
 											"parameters": {
 												"object": "Sprite",
-												"layer": "0",
+												"layer": "Self.LayerName",
 												"image-point": "1",
 												"create-hierarchy": false,
 												"template-name": "\"\""

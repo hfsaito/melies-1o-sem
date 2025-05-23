@@ -1,5 +1,5 @@
 {
-	"name": "opcoes",
+	"name": "optionButton",
 	"plugin-id": "Sprite",
 	"sid": 666831791207534,
 	"isGlobal": false,
@@ -36,7 +36,18 @@
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
-					},
+					}
+				],
+				"sid": 268705204915090,
+				"name": "idle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
 					{
 						"width": 280,
 						"height": 123,
@@ -46,7 +57,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 188636,
+						"imageSpriteId": 1052129,
 						"collisionPoly": {
 							"points": [
 								0.9945054945054945,
@@ -64,8 +75,8 @@
 						"tag": ""
 					}
 				],
-				"sid": 268705204915090,
-				"name": "Animation 1",
+				"sid": 342511366111093,
+				"name": "hovered",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
