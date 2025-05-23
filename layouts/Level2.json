@@ -236,7 +236,7 @@
 					"sid": 113240688158832,
 					"tags": "",
 					"instanceVariables": {
-						"charges": 3,
+						"charges": 0,
 						"launchForce": 0,
 						"wasMirrored": false,
 						"life": 6,

@@ -115,7 +115,12 @@
 	"uniqueId": "cd3ubb1liqo",
 	"objectTypes": {
 		"items": [
-			"Text"
+			"Text",
+			"Sprite",
+			"Sprite2",
+			"Sprite3",
+			"Sprite4",
+			"Sprite5"
 		],
 		"subfolders": [
 			{
