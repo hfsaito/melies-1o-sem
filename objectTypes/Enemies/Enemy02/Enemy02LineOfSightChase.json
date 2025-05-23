@@ -1,7 +1,7 @@
 {
-	"name": "pontoInicial",
+	"name": "Enemy02LineOfSightChase",
 	"plugin-id": "Sprite",
-	"sid": 436937489125953,
+	"sid": 735453971556837,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 14,
-						"height": 14,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 256,
+						"height": 72,
+						"originX": 0,
+						"originY": 0.3333333333333333,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7491649,
+						"imageSpriteId": 1856871,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 697012760683248,
+				"sid": 454132080254596,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -1,0 +1,1826 @@
+{
+	"name": "Enemy01",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "enemy01.setup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 590784646971292
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 144207014166225,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "100"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 172863277668345,
+							"behaviorType": "Platform",
+							"parameters": {
+								"acceleration": "500"
+							}
+						},
+						{
+							"id": "set-deceleration",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 165586797092044,
+							"behaviorType": "Platform",
+							"parameters": {
+								"deceleration": "500"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 421311636718065,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "0"
+							}
+						},
+						{
+							"id": "set-gravity",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 356215415197823,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "1000"
+							}
+						},
+						{
+							"id": "set-max-fall-speed",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 652060445751781,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-fall-speed": "1000"
+							}
+						},
+						{
+							"id": "set-double-jump",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 701798261126874,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-jump-sustain",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 326978669264673,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-sustain": "0"
+							}
+						},
+						{
+							"id": "set-default-controls",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 685117065621557,
+							"behaviorType": "Platform",
+							"parameters": {
+								"default-controls": false
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 716831109769579,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-range",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 752468368304898,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"range": "192"
+							}
+						},
+						{
+							"id": "set-cone-of-view",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 191091596058899,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"cone-of-view": "10"
+							}
+						},
+						{
+							"id": "set-range",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 534514076226869,
+							"behaviorType": "LineOfSight2",
+							"parameters": {
+								"range": "64"
+							}
+						},
+						{
+							"id": "set-cone-of-view",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 529028535674036,
+							"behaviorType": "LineOfSight2",
+							"parameters": {
+								"cone-of-view": "90"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 103446947641534,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"idle\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 890814648450328,
+							"parameters": {
+								"instance-variable": "id",
+								"value": "Self.IID"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 501577297386050,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 951946255364123,
+							"parameters": {
+								"object": "Enemy01Explosion",
+								"layer": "\"Level\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 282126321717443,
+							"parameters": {
+								"object": "Enemy01Water",
+								"layer": "\"Level\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 417582300828162,
+							"parameters": {
+								"object": "Enemy01Containers",
+								"layer": "\"Level\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 927088819021873,
+							"parameters": {
+								"object": "Enemy01Body",
+								"layer": "\"Level\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 226985358251747,
+							"parameters": {
+								"object": "Enemy01Wheels",
+								"layer": "\"Level\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 762857224019315,
+							"parameters": {
+								"object": "Enemy01FloorChecker",
+								"layer": "\"Level\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 746702509112236,
+							"parameters": {
+								"object": "Enemy01WallChecker",
+								"layer": "\"Level\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 622168753339039
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 198186183688925,
+							"parameters": {
+								"object": "Enemy01Hitbox"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 194871617664361,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 714497957087526,
+									"parameters": {
+										"instance-variable": "mirrored"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 312752699853284,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 796078334571876
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 560263172693580
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 963841596451402,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 757752789210127
+						}
+					]
+				}
+			],
+			"sid": 326220848335087
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "enemy01.parts",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Enemy01Parts",
+							"sid": 667078002978009
+						}
+					],
+					"actions": [],
+					"sid": 622783047788191,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 828131388260811,
+									"parameters": {
+										"object": "Enemy01Hitbox"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 335535093160041,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "Self.IID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Enemy01Parts",
+									"sid": 125386812470810,
+									"parameters": {
+										"instance-variable": "parentUniqueID",
+										"value": "Enemy01Hitbox.UID"
+									}
+								}
+							],
+							"sid": 244005559625100
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 835473767293590,
+							"parameters": {
+								"object": "Enemy01Hitbox"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemy01Parts",
+							"sid": 569333864773892,
+							"parameters": {
+								"instance-variable": "parentUniqueID",
+								"comparison": 0,
+								"value": "Enemy01Hitbox.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Enemy01Parts",
+							"sid": 944133373214107,
+							"parameters": {
+								"object": "Enemy01Hitbox",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 805372750372056,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 364190321696832,
+									"parameters": {
+										"instance-variable": "mirrored"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Enemy01Parts",
+									"sid": 486792625817288,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 756234739673190
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 177877649800397
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Enemy01Parts",
+									"sid": 688560889519880,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 453111885811185
+						}
+					]
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "enemy01new.parts.body",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 430752299491792,
+									"parameters": {
+										"object": "Enemy01Hitbox"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy01Body",
+									"sid": 106849006817515,
+									"parameters": {
+										"instance-variable": "parentUniqueID",
+										"comparison": 0,
+										"value": "Enemy01Hitbox.UID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 955044328131373,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 105699047737378,
+											"parameters": {
+												"instance-variable": "state",
+												"comparison": 0,
+												"value": "\"idle\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy01Body",
+											"sid": 567682381316421,
+											"parameters": {
+												"animation": "\"watching\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 817139842733294,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 602623008245287
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy01Body",
+											"sid": 669664707778379,
+											"parameters": {
+												"animation": "Enemy01Hitbox.state",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 875516896012473
+								}
+							]
+						}
+					],
+					"sid": 222734512415947
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "enemy01new.parts.containers",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [],
+					"sid": 120103359459294
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "enemy01new.parts.explosion",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "Enemy01Explosion",
+									"sid": 591046258711965
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Enemy01Explosion",
+									"sid": 455660092209568,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-animation-speed",
+									"objectClass": "Enemy01Explosion",
+									"sid": 817732534922744,
+									"parameters": {
+										"speed": "0"
+									}
+								}
+							],
+							"sid": 119308041162365
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 680155814560261,
+									"parameters": {
+										"object": "Enemy01Explosion"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Enemy01Explosion",
+									"sid": 181240874452953
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Enemy01Explosion",
+									"sid": 956447544733385,
+									"parameters": {
+										"object": "Player"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 529229148409283
+								}
+							],
+							"sid": 938675396959116
+						}
+					],
+					"sid": 813591266276488
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "enemy01new.parts.water",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 206515581250756,
+									"parameters": {
+										"object": "Enemy01Hitbox"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy01Water",
+									"sid": 506980318069616,
+									"parameters": {
+										"instance-variable": "parentUniqueID",
+										"comparison": 0,
+										"value": "Enemy01Hitbox.UID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 208903514241685,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 821149146389581,
+											"parameters": {
+												"instance-variable": "state",
+												"comparison": 0,
+												"value": "\"charging\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy01Water",
+											"sid": 888681939497252,
+											"parameters": {
+												"animation": "\"idle\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 798760498090162
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 773123743984736,
+											"parameters": {
+												"instance-variable": "state",
+												"comparison": 0,
+												"value": "\"charging\""
+											}
+										},
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Enemy01Water",
+											"sid": 700372537665623,
+											"parameters": {
+												"animation": "\"charging\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy01Water",
+											"sid": 527349667213455,
+											"parameters": {
+												"animation": "\"charging\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 751968301610814
+								}
+							]
+						}
+					],
+					"sid": 340823815884574
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "enemy01new.parts.wheels",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 831086272627236,
+									"parameters": {
+										"object": "Enemy01Hitbox"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 441632347678154,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemy01Wheels",
+											"sid": 196835428800721,
+											"parameters": {
+												"instance-variable": "parentUniqueID",
+												"comparison": 0,
+												"value": "Enemy01Hitbox.UID"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 224357958716927,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 279744161120393,
+													"parameters": {
+														"instance-variable": "state",
+														"comparison": 0,
+														"value": "\"watching\""
+													},
+													"isInverted": true
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 365928561906082,
+													"parameters": {
+														"instance-variable": "state",
+														"comparison": 0,
+														"value": "\"chasing\""
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-speed",
+													"objectClass": "Enemy01Wheels",
+													"sid": 217016199745487,
+													"parameters": {
+														"speed": "0"
+													}
+												}
+											],
+											"sid": 974157035645661
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 178975410620645,
+													"parameters": {
+														"instance-variable": "state",
+														"comparison": 0,
+														"value": "\"watching\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-speed",
+													"objectClass": "Enemy01Wheels",
+													"sid": 672911684346376,
+													"parameters": {
+														"speed": "5"
+													}
+												}
+											],
+											"sid": 906369695736218
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 616064316104079,
+													"parameters": {
+														"instance-variable": "state",
+														"comparison": 0,
+														"value": "\"chasing\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-speed",
+													"objectClass": "Enemy01Wheels",
+													"sid": 716325608270811,
+													"parameters": {
+														"speed": "10"
+													}
+												}
+											],
+											"sid": 983930196285651
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 391619856794306
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "enemy01.parts.floorChecker",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 374300216735753,
+									"parameters": {
+										"object": "Enemy01Hitbox"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Enemy01FloorChecker",
+									"sid": 186072984441907,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 186441114144944,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemy01FloorChecker",
+											"sid": 209903379398143,
+											"parameters": {
+												"instance-variable": "parentUniqueID",
+												"comparison": 0,
+												"value": "Enemy01Hitbox.UID"
+											}
+										},
+										{
+											"id": "compare-time",
+											"objectClass": "System",
+											"sid": 542017344954691,
+											"parameters": {
+												"comparison": 4,
+												"time-seconds": ".5"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 869231732598522,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "Enemy01FloorChecker",
+													"sid": 304560406465233,
+													"parameters": {
+														"object": "PlatformsTilemap"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 273435246955330,
+													"parameters": {
+														"instance-variable": "hasFloorEndingAhead",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 547767057203664
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 773118608065479
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 499298573895064,
+													"parameters": {
+														"instance-variable": "hasFloorEndingAhead",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 522740638885685
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 242187072436847
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "enemy01.parts.wallChecker",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 517543190048845,
+									"parameters": {
+										"object": "Enemy01Hitbox"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Enemy01WallChecker",
+									"sid": 879250649367811,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 232677947335158,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemy01WallChecker",
+											"sid": 830296453920158,
+											"parameters": {
+												"instance-variable": "parentUniqueID",
+												"comparison": 0,
+												"value": "Enemy01Hitbox.UID"
+											}
+										},
+										{
+											"id": "compare-time",
+											"objectClass": "System",
+											"sid": 438289820372595,
+											"parameters": {
+												"comparison": 4,
+												"time-seconds": ".5"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 142080865773531,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "Enemy01WallChecker",
+													"sid": 805280114752600,
+													"parameters": {
+														"object": "PlatformsTilemap"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 841486435098433,
+													"parameters": {
+														"instance-variable": "hasWallAhead",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 284594316278073
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 197076750873960
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 684525249052213,
+													"parameters": {
+														"instance-variable": "hasWallAhead",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 329160276087377
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 876889421867138
+				}
+			],
+			"sid": 138049076280370
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "enemy01.watching",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 128994309341289,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"idle\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 670022208492843,
+							"parameters": {
+								"instance-variable": "patrolEnabled"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 521512073918631,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"watching\""
+							}
+						}
+					],
+					"sid": 962708844690733
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 307911078151632,
+							"parameters": {
+								"object": "Enemy01Hitbox"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 379709524839081,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"watching\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "Enemy01Hitbox",
+							"sid": 521438694355284,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "50"
+							}
+						}
+					],
+					"sid": 385089834162919,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 360985997684313,
+									"parameters": {
+										"instance-variable": "mirrored"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 940406650229894,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 308991765291852
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 884464645165623
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 918645686989077,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 334818802915944
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 237675811536152,
+									"parameters": {
+										"instance-variable": "hasFloorEndingAhead"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 316643458452217,
+									"parameters": {
+										"instance-variable": "hasWallAhead"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "toggle-boolean-instvar",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 901242624598428,
+									"parameters": {
+										"instance-variable": "mirrored"
+									}
+								}
+							],
+							"sid": 945339929906812,
+							"isOrBlock": true
+						}
+					]
+				}
+			],
+			"sid": 168787303570815
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "enemy01.chasing",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 918826168354644,
+							"parameters": {
+								"object": "Enemy01Hitbox"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 364368227912984,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 752185937045391,
+									"parameters": {
+										"instance-variable": "state",
+										"comparison": 0,
+										"value": "\"idle\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 463418482988010,
+									"parameters": {
+										"instance-variable": "state",
+										"comparison": 0,
+										"value": "\"watching\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 785380546833983,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-los-to-object",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 607548359957992,
+											"behaviorType": "LineOfSight",
+											"parameters": {
+												"object": "Player",
+												"image-point": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 322238266338338,
+											"parameters": {
+												"instance-variable": "state",
+												"value": "\"chasing\""
+											}
+										}
+									],
+									"sid": 653027674644514
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 541546950604733,
+									"parameters": {
+										"instance-variable": "state",
+										"comparison": 0,
+										"value": "\"chasing\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 796666221183622,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-speed": "100"
+									}
+								}
+							],
+							"sid": 286368277728936,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 368773492848490,
+											"parameters": {
+												"comparison": 2,
+												"x-co-ordinate": "Player.x"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 249473255984700,
+											"parameters": {
+												"instance-variable": "mirrored",
+												"value": "false"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 737284455208029,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "right"
+											}
+										}
+									],
+									"sid": 555596841834413
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 982315276146230,
+											"parameters": {
+												"comparison": 4,
+												"x-co-ordinate": "Player.x"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 452665112032856,
+											"parameters": {
+												"instance-variable": "mirrored",
+												"value": "true"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Enemy01Hitbox",
+											"sid": 382938800301244,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "left"
+											}
+										}
+									],
+									"sid": 100472087528054
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 566990188194328,
+											"parameters": {
+												"interval-seconds": ".1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 422106432664007,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-los-to-object",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 918182421184697,
+													"behaviorType": "LineOfSight",
+													"parameters": {
+														"object": "Player",
+														"image-point": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 946815369039146,
+													"parameters": {
+														"instance-variable": "awarenessTimeout",
+														"value": "50"
+													}
+												}
+											],
+											"sid": 974297659378402
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-los-to-object",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 684215276546030,
+													"behaviorType": "LineOfSight",
+													"parameters": {
+														"object": "Player",
+														"image-point": "0"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Enemy01Hitbox",
+													"sid": 838970410327332,
+													"parameters": {
+														"instance-variable": "awarenessTimeout",
+														"value": "max(Self.awarenessTimeout - 1, 0)"
+													}
+												}
+											],
+											"sid": 813859078463877,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Enemy01Hitbox",
+															"sid": 841096985235119,
+															"parameters": {
+																"instance-variable": "awarenessTimeout",
+																"comparison": 0,
+																"value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Enemy01Hitbox",
+															"sid": 603164089084503,
+															"parameters": {
+																"instance-variable": "state",
+																"value": "\"idle\""
+															}
+														}
+													],
+													"sid": 268508076904158
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 285506363950142
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "enemy01.charging",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 178020297090728,
+							"parameters": {
+								"object": "Enemy01Hitbox"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 266976407614257,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 274371815214555,
+									"parameters": {
+										"instance-variable": "state",
+										"comparison": 0,
+										"value": "\"chasing\""
+									}
+								},
+								{
+									"id": "has-los-to-object",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 355659319958611,
+									"behaviorType": "LineOfSight2",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 739318370014331,
+									"parameters": {
+										"instance-variable": "state",
+										"value": "\"charging\""
+									}
+								}
+							],
+							"sid": 348558752970174
+						}
+					]
+				}
+			],
+			"sid": 142545644662239
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "enemy01.exploding",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Enemy01Water",
+							"sid": 748990836025475,
+							"parameters": {
+								"animation": "\"charging\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 350442756235983,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 109484975978259,
+									"parameters": {
+										"unique-id": "Enemy01Water.parentUniqueID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 506234082759246,
+									"parameters": {
+										"instance-variable": "state",
+										"value": "\"exploding\""
+									}
+								}
+							],
+							"sid": 467525093113641,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 140986778247726,
+											"parameters": {
+												"object": "Enemy01Parts"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemy01Parts",
+											"sid": 304114916956356,
+											"parameters": {
+												"instance-variable": "parentUniqueID",
+												"comparison": 0,
+												"value": "Enemy01Hitbox.UID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Enemy01Parts",
+											"sid": 144365910865649,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 498237807974680
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 160589985129290,
+											"parameters": {
+												"object": "Enemy01Explosion"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemy01Explosion",
+											"sid": 582719602648962,
+											"parameters": {
+												"instance-variable": "parentUniqueID",
+												"comparison": 0,
+												"value": "Enemy01Hitbox.UID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Enemy01Explosion",
+											"sid": 119919513331801,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-animation-speed",
+											"objectClass": "Enemy01Explosion",
+											"sid": 839071226122209,
+											"parameters": {
+												"speed": "14"
+											}
+										}
+									],
+									"sid": 212481542300939,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 938872643736245,
+													"parameters": {
+														"first-value": "distance(Enemy01Explosion.X, Enemy01Explosion.Y, Player.X, Player.Y)",
+														"comparison": 2,
+														"second-value": "100"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Player",
+													"sid": 392493649803038,
+													"parameters": {
+														"instance-variable": "Life",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 291025081812412
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Enemy01Explosion",
+							"sid": 529171521945576,
+							"parameters": {
+								"animation": "\"exploding\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 392639822972497,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy01Parts",
+									"sid": 429945616706861,
+									"parameters": {
+										"instance-variable": "parentUniqueID",
+										"comparison": 0,
+										"value": "Enemy01Explosion.parentUniqueID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemy01Parts",
+									"sid": 655219344342100
+								}
+							],
+							"sid": 210020921380587
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 680712262108350,
+									"parameters": {
+										"unique-id": "Enemy01Explosion.parentUniqueID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemy01Hitbox",
+									"sid": 919583317091644
+								}
+							],
+							"sid": 843681182962888
+						}
+					]
+				}
+			],
+			"sid": 970053412110075
+		}
+	],
+	"sid": 308997485940583
+}

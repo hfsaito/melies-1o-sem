@@ -9,7 +9,7 @@
 			"name": "mirrored",
 			"type": "boolean",
 			"desc": "",
-			"show": false,
+			"show": true,
 			"sid": 863028759857305
 		},
 		{

@@ -180,10 +180,12 @@
 					},
 					{
 						"items": [
-							"enemy02",
-							"pontoFinal",
-							"pontoInicial",
-							"Sprite"
+							"Enemy02",
+							"Enemy02Bullet",
+							"Enemy02FloorChecker",
+							"Enemy02WallChecker",
+							"Enemy02LineOfSightChase",
+							"Enemy02LineOfSightAttack"
 						],
 						"subfolders": [],
 						"name": "Enemy02"
@@ -223,8 +225,10 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Enemy01",
-			"MainMenuButtons"
+			"Enemy01Parts",
+			"MainMenuButtons",
+			"Enemy02Parts",
+			"MaybeRescale"
 		],
 		"subfolders": []
 	},
@@ -244,7 +248,9 @@
 			"MainMenu",
 			"Level0",
 			"ConstructTests",
-			"Pause"
+			"Pause",
+			"Enemy01",
+			"Enemy02"
 		],
 		"subfolders": []
 	},

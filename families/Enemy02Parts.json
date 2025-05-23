@@ -1,0 +1,22 @@
+{
+	"name": "Enemy02Parts",
+	"plugin-id": "Sprite",
+	"sid": 906830125721970,
+	"instanceVariables": [
+		{
+			"name": "parentUniqueID",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 647190174236406
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Enemy02FloorChecker",
+		"Enemy02WallChecker",
+		"Enemy02LineOfSightAttack",
+		"Enemy02LineOfSightChase"
+	]
+}

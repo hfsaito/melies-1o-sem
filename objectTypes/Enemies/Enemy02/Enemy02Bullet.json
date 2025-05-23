@@ -1,10 +1,18 @@
 {
-	"name": "Sprite",
+	"name": "Enemy02Bullet",
 	"plugin-id": "Sprite",
 	"sid": 601646559909900,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "parentUniqueID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 969922983210804
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Bullet",
@@ -25,8 +33,8 @@
 					{
 						"width": 18,
 						"height": 6,
-						"originX": 0.06666666666666667,
-						"originY": 0.4,
+						"originX": 0.16666666666666666,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
