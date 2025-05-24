@@ -39,6 +39,13 @@
 			"desc": "",
 			"show": false,
 			"sid": 976650715006655
+		},
+		{
+			"name": "maxLife",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 846169187502531
 		}
 	],
 	"behaviorTypes": [

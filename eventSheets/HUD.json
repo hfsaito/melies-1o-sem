@@ -1,0 +1,272 @@
+{
+	"name": "HUD",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 888220209511193
+				},
+				{
+					"id": "layer-name-exists",
+					"objectClass": "System",
+					"sid": 664532999138509,
+					"parameters": {
+						"layer": "\"HUD\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 107997226443335,
+					"parameters": {
+						"group-name": "\"hud\"",
+						"state": "deactivated"
+					}
+				}
+			],
+			"sid": 301215651444980,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-preview",
+							"objectClass": "System",
+							"sid": 458070835003367
+						}
+					],
+					"actions": [
+						{
+							"id": "alert",
+							"objectClass": "Browser",
+							"sid": 169061152951794,
+							"parameters": {
+								"message": "\"Missing HUD layer in layout \" & LayoutName &  \"\nHUD event sheet imported but there is no HUD layer\""
+							}
+						}
+					],
+					"sid": 216249869486871
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "hud",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "hud.setup",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "Player",
+									"sid": 847476755795640
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 784930796019179,
+									"parameters": {
+										"object-to-create": "HUDBattery",
+										"layer": "\"HUD\"",
+										"x": "0",
+										"y": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 129128300007067,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "repeat",
+											"objectClass": "System",
+											"sid": 996049531050551,
+											"parameters": {
+												"count": "Player.maxLife / 2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 280823045432490,
+											"parameters": {
+												"object-to-create": "HUDLife",
+												"layer": "\"HUD\"",
+												"x": "0",
+												"y": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										}
+									],
+									"sid": 105940142859182
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "HUDLife",
+									"sid": 117203497024033
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-animation",
+									"objectClass": "HUDLife",
+									"sid": 231880142373012
+								},
+								{
+									"id": "set-scale",
+									"objectClass": "HUDLife",
+									"sid": 963222608436174,
+									"parameters": {
+										"scale": ".8"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "HUDLife",
+									"sid": 786886390388749,
+									"parameters": {
+										"x": "8 + Self.IID * (Self.width + 2)",
+										"y": "8"
+									}
+								}
+							],
+							"sid": 987601825062938
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "HUDBattery",
+									"sid": 433095784053057
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-animation",
+									"objectClass": "HUDBattery",
+									"sid": 708437458105761
+								},
+								{
+									"id": "set-scale",
+									"objectClass": "HUDBattery",
+									"sid": 610948836175323,
+									"parameters": {
+										"scale": ".8"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "HUDBattery",
+									"sid": 188407998099379,
+									"parameters": {
+										"x": "8",
+										"y": "28"
+									}
+								}
+							],
+							"sid": 508271288713754
+						}
+					],
+					"sid": 154316480965407
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "hud.life",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 662923800554947,
+									"parameters": {
+										"object": "HUDLife"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "HUDLife",
+									"sid": 814120666230912,
+									"parameters": {
+										"frame-number": "min(Player.life - (loopindex * 2), 2)"
+									}
+								}
+							],
+							"sid": 211507579546121
+						}
+					],
+					"sid": 108208281766250
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "hud.battery",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 949714160989797
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "HUDBattery",
+									"sid": 358974501459773,
+									"parameters": {
+										"frame-number": "Player.charges"
+									}
+								}
+							],
+							"sid": 980617739283099
+						}
+					],
+					"sid": 159169946576644
+				}
+			],
+			"sid": 339144212162751
+		}
+	],
+	"sid": 166925769434501
+}

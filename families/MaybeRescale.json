@@ -7,7 +7,7 @@
 	"effectTypes": [],
 	"members": [
 		"Battery",
-		"BatteryCounter",
+		"HUDBattery",
 		"Enemy01Body",
 		"Enemy01Containers",
 		"Enemy01Explosion",

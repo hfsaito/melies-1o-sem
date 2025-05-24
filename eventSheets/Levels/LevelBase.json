@@ -1,10 +1,6 @@
 {
-	"name": "RootGame",
+	"name": "LevelBase",
 	"events": [
-		{
-			"eventType": "include",
-			"includeSheet": "Pause"
-		},
 		{
 			"eventType": "include",
 			"includeSheet": "Enemy01"
@@ -18,6 +14,14 @@
 			"includeSheet": "Player"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "HUD"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Pause"
+		},
+		{
 			"eventType": "variable",
 			"name": "level",
 			"type": "number",
@@ -26,6 +30,106 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 584417951187678
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 984961134410284
+				},
+				{
+					"id": "is-in-preview",
+					"objectClass": "System",
+					"sid": 764127010664708
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "LevelLayers",
+					"sid": 276813729561654,
+					"parameters": {
+						"json": "\"[\r\n  \"\"Background\"\",\r\n  \"\"Platforms\"\",\r\n  \"\"Level\"\",\r\n  \"\"Player\"\",\r\n  \"\"HUD\"\",\r\n  \"\"Pause\"\"\r\n]\""
+					}
+				}
+			],
+			"sid": 361381590589941,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 269671195507204,
+							"parameters": {
+								"count": "LevelLayers.Count"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 544651909756281,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-name-exists",
+									"objectClass": "System",
+									"sid": 839716551962769,
+									"parameters": {
+										"layer": "LevelLayers.At(loopindex)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "alert",
+									"objectClass": "Browser",
+									"sid": 568200400286185,
+									"parameters": {
+										"message": "\"Error in layout (\" & LayoutName & \")\nMissing layer labeled as \" & LevelLayers.At(loopindex)"
+									}
+								}
+							],
+							"sid": 938638794679603
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 757934366846390
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 724189393752127,
+									"parameters": {
+										"first-value": "LayerIndex(loopindex)",
+										"comparison": 1,
+										"second-value": "LevelLayers.At(loopindex)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "alert",
+									"objectClass": "Browser",
+									"sid": 229143734247826,
+									"parameters": {
+										"message": "\"Error in layout (\" & LayoutName & \")\nExpected layer \" & loopindex & \" to be labeled as \" & LevelLayers.At(loopindex)"
+									}
+								}
+							],
+							"sid": 834211941722693
+						}
+					]
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -231,27 +335,6 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 470511723648826
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "BatteryCounter",
-							"sid": 612682096617372,
-							"parameters": {
-								"frame-number": "Player.charges"
-							}
-						}
-					],
-					"sid": 235930698417564
-				},
 				{
 					"eventType": "block",
 					"conditions": [

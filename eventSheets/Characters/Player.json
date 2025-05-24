@@ -169,6 +169,14 @@
 							}
 						},
 						{
+							"id": "set-scale",
+							"objectClass": "Player",
+							"sid": 382448137321407,
+							"parameters": {
+								"scale": "1"
+							}
+						},
+						{
 							"id": "set-instvar-value",
 							"objectClass": "Player",
 							"sid": 413099348013778,
@@ -285,15 +293,6 @@
 									"parameters": {
 										"keycode": "ctrlLeft"
 									}
-								},
-								{
-									"id": "mouse-button-is-down",
-									"objectClass": "Mouse",
-									"sid": 883717948226084,
-									"parameters": {
-										"mouse-button": "left"
-									},
-									"isInverted": true
 								}
 							],
 							"actions": [
@@ -352,15 +351,6 @@
 									"parameters": {
 										"keycode": "ctrlRight"
 									}
-								},
-								{
-									"id": "mouse-button-is-down",
-									"objectClass": "Mouse",
-									"sid": 151427691941922,
-									"parameters": {
-										"mouse-button": "left"
-									},
-									"isInverted": true
 								}
 							],
 							"actions": [
@@ -518,56 +508,7 @@
 									}
 								}
 							],
-							"sid": 133668695409987,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 110094720426218,
-											"parameters": {
-												"first-value": "Mouse.X",
-												"comparison": 5,
-												"second-value": "Player.x"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-mirrored",
-											"objectClass": "Player",
-											"sid": 941378215214688,
-											"parameters": {
-												"state": "not-mirrored"
-											}
-										}
-									],
-									"sid": 900008665560482
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 398950225317738
-										}
-									],
-									"actions": [
-										{
-											"id": "set-mirrored",
-											"objectClass": "Player",
-											"sid": 980206328933123,
-											"parameters": {
-												"state": "mirrored"
-											}
-										}
-									],
-									"sid": 749808806913649
-								}
-							]
+							"sid": 133668695409987
 						}
 					]
 				}

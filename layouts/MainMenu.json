@@ -269,7 +269,20 @@
 		"subfolders": []
 	},
 	"sid": 340832825212546,
-	"nonworld-instances": [],
+	"nonworld-instances": [
+		{
+			"type": "LevelLayers",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 2,
+			"sid": 571006667153635,
+			"tags": "",
+			"instanceVariables": {}
+		}
+	],
 	"effectTypes": [],
 	"width": 500,
 	"height": 300,

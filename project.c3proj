@@ -8,8 +8,22 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Audio",
 			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -125,8 +139,9 @@
 		"subfolders": [
 			{
 				"items": [
-					"BatteryCounter",
-					"PlayerLife"
+					"HUDBattery",
+					"PlayerLife",
+					"HUDLife"
 				],
 				"subfolders": [],
 				"name": "HUD"
@@ -156,7 +171,8 @@
 				"items": [
 					"Keyboard",
 					"Mouse",
-					"Audio"
+					"Audio",
+					"Browser"
 				],
 				"subfolders": [],
 				"name": "Controls"
@@ -216,7 +232,8 @@
 					"BackgroundOutside",
 					"LevelFinishZone",
 					"PlatformsTilemap",
-					"LevelDeathZone"
+					"LevelDeathZone",
+					"LevelLayers"
 				],
 				"subfolders": [],
 				"name": "Level"
@@ -274,9 +291,9 @@
 	},
 	"eventSheets": {
 		"items": [
-			"RootGame",
 			"ConstructTests",
-			"Controls"
+			"Controls",
+			"HUD"
 		],
 		"subfolders": [
 			{
@@ -299,7 +316,11 @@
 			},
 			{
 				"items": [
-					"Level0"
+					"Level0",
+					"Level1",
+					"Level2",
+					"Level3",
+					"LevelBase"
 				],
 				"subfolders": [],
 				"name": "Levels"

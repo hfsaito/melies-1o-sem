@@ -240,7 +240,8 @@
 						"launchForce": 0,
 						"wasMirrored": false,
 						"life": 6,
-						"shootingDelay": 0
+						"shootingDelay": 0,
+						"maxLife": 6
 					},
 					"behaviors": {
 						"Platform": {
@@ -556,85 +557,10 @@
 			"global": false
 		},
 		{
-			"name": "LHUD",
+			"name": "HUD",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [
-				{
-					"type": "BatteryCounter",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 3,
-						"enable-collisions": false,
-						"live-preview": false
-					},
-					"uid": 28,
-					"sid": 456018313349267,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 456018313349267,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 42.48400225567178,
-						"y": 20,
-						"width": 26.38617919022716,
-						"height": 15.0778166801298,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 6.281836285605241,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "PlayerLife",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": false,
-						"live-preview": false
-					},
-					"uid": 29,
-					"sid": 205667779872885,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 205667779872885,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 93.87270699927804,
-						"y": 20,
-						"width": 57.22240782323702,
-						"height": 15.020882053599717,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
+			"instances": [],
 			"sid": 804273694370263,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -746,5 +672,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "RootGame"
+	"eventSheet": "Level2"
 }

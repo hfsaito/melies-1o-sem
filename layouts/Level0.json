@@ -116,11 +116,11 @@
 					},
 					"ownData": {
 						"tilemapData": {
-							"width": 32,
-							"height": 20,
-							"max-width": 57,
-							"max-height": 30,
-							"data": "15x0,2,29x0,2,29x0,2,29x0,2,29x0,2,29x0,2,29x0,2,29x0,2,29x0,2,29x0,2,29x0,2,28x0,6,8,28x0,2,29x0,2,29x0,2,29x0,2,29x0,2,29x0,2,29x0,2,29x0,2,29x0,2,15x0,6x2hd,9,7x0,2,21x0,2,7x0,2,21x0,2,7x0,2,21x0,2,7x0,2,21x0,2,7x0,2,21x0,2,7x0,2,21x0,2,7x0,2,21x0,2,7x0,2,21x0,2,7x0,2,21x0,2,7x0,2,21x0,2,7x0,2,24x0,1,134x0,2,605x0"
+							"width": 36,
+							"height": 22,
+							"max-width": 73,
+							"max-height": 32,
+							"data": "18x2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,16x0,2,14x0,2,13x0,6,2x2vd,8,14x0,2,13x0,2,17x0,2,13x0,2,17x0,2,13x0,2,17x0,2,13x0,2,17x0,7,2vd,4x2hd,9,7x0,2,23x0,2,7x0,2,23x0,2,7x0,2,23x0,2,7x0,2,23x0,2,7x0,2,23x0,2,7x0,2,23x0,2,7x0,2,23x0,2,7x0,2,23x0,2,7x0,2,23x0,2,7x0,2,23x0,2,7x0,2,23x0,2,7x0,2,23x0,2,7x0,2,23x0,9x2,73x0,2,1159x0"
 						},
 						"tile-width": 16,
 						"tile-height": 16,
@@ -136,10 +136,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 512,
-						"height": 320,
+						"x": -16,
+						"y": -16,
+						"width": 576,
+						"height": 352,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -272,7 +272,7 @@
 					"locked": false,
 					"world": {
 						"x": 368,
-						"y": 176,
+						"y": 160,
 						"width": 64,
 						"height": 96,
 						"originX": 0.5,
@@ -309,7 +309,7 @@
 					"locked": false,
 					"world": {
 						"x": 464,
-						"y": 112,
+						"y": 96,
 						"width": 64,
 						"height": 112,
 						"originX": 0,
@@ -597,8 +597,9 @@
 						"charges": 0,
 						"launchForce": 0,
 						"wasMirrored": false,
-						"life": 6,
-						"shootingDelay": 0
+						"life": 3,
+						"shootingDelay": 0,
+						"maxLife": 6
 					},
 					"behaviors": {
 						"Platform": {
@@ -681,86 +682,11 @@
 			"global": false
 		},
 		{
-			"name": "LHUD",
+			"name": "HUD",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [
-				{
-					"type": "BatteryCounter",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 4,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 103,
-					"sid": 485869837721558,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 485869837721558,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 47.8145854429922,
-						"y": 39,
-						"width": 31.56060667844681,
-						"height": 18.03463238768389,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "PlayerLife",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 5,
-						"enable-collisions": false,
-						"live-preview": false
-					},
-					"uid": 20,
-					"sid": 668955886479264,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 668955886479264,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 108.43024328044538,
-						"y": 39,
-						"width": 68.66765141028266,
-						"height": 18.0252584951992,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
-			"sid": 482489235670284,
+			"instances": [],
+			"sid": 928439506559202,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,

@@ -35,7 +35,7 @@
 			"eventType": "variable",
 			"name": "ctrlPause",
 			"type": "number",
-			"initialValue": "9",
+			"initialValue": "27",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,

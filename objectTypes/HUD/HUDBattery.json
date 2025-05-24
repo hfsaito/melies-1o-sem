@@ -1,5 +1,5 @@
 {
-	"name": "BatteryCounter",
+	"name": "HUDBattery",
 	"plugin-id": "Sprite",
 	"sid": 288886725084976,
 	"isGlobal": false,
@@ -14,8 +14,8 @@
 					{
 						"width": 21,
 						"height": 12,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -44,8 +44,8 @@
 					{
 						"width": 21,
 						"height": 12,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -74,8 +74,8 @@
 					{
 						"width": 21,
 						"height": 12,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -104,8 +104,8 @@
 					{
 						"width": 21,
 						"height": 12,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -134,8 +134,8 @@
 					{
 						"width": 21,
 						"height": 12,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
