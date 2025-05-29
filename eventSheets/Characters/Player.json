@@ -715,13 +715,13 @@
 										{
 											"id": "line-dashed",
 											"objectClass": "PlayerTrajectoryCanvas",
-											"sid": 721514441626377,
+											"sid": 976849948635928,
 											"parameters": {
 												"x1": "Functions.playerTrajectoryX(loopindex*10/Functions.playerTrajectoryForce)",
 												"y1": "Functions.playerTrajectoryY(loopindex*10/Functions.playerTrajectoryForce)",
 												"x2": "Functions.playerTrajectoryX((loopindex + 1)*10/Functions.playerTrajectoryForce)",
 												"y2": "Functions.playerTrajectoryY((loopindex + 1)*10/Functions.playerTrajectoryForce)",
-												"color": "rgba(0, 0, 0, 30)",
+												"color": "rgba(100, 100, 100, 60)",
 												"line-thickness": "1",
 												"dash-length": "2",
 												"line-cap": "butt"
@@ -775,9 +775,9 @@
 						{
 							"id": "on-signal",
 							"objectClass": "System",
-							"sid": 899672364453171,
+							"sid": 828546536126853,
 							"parameters": {
-								"tag": "\"paused\""
+								"tag": "\"pausePaused\""
 							}
 						},
 						{
@@ -937,13 +937,11 @@
 									}
 								},
 								{
-									"id": "subtract-from-instvar",
-									"objectClass": "Player",
-									"sid": 718234704621853,
-									"parameters": {
-										"instance-variable": "charges",
-										"value": "1"
-									}
+									"callFunction": "playerUpdateBattery",
+									"sid": 999166367874051,
+									"parameters": [
+										"-1"
+									]
 								}
 							],
 							"sid": 133692198133502,
@@ -1554,66 +1552,50 @@
 					],
 					"actions": [
 						{
-							"id": "subtract-from-instvar",
-							"objectClass": "Player",
-							"sid": 284619812380763,
-							"parameters": {
-								"instance-variable": "life",
-								"value": "1"
-							}
+							"callFunction": "playerTookDamage",
+							"sid": 209586214503804,
+							"parameters": [
+								"1"
+							]
 						}
 					],
-					"sid": 590353185085873,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player",
-									"sid": 298535779096104,
-									"parameters": {
-										"instance-variable": "life",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Player",
-									"sid": 807068090416533,
-									"parameters": {
-										"animation": "\"dying\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 427539105027515
-						}
-					]
+					"sid": 590353185085873
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 223606775704965
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 573600601978721,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Player",
+							"sid": 286529768742432,
+							"parameters": {
+								"animation": "\"dying\""
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
-							"id": "set-animation-frame",
-							"objectClass": "PlayerLife",
-							"sid": 644683789738630,
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 588145457803006,
 							"parameters": {
-								"frame-number": "Player.life"
+								"animation": "\"dying\"",
+								"from": "beginning"
 							}
 						}
 					],
-					"sid": 436662026783488
+					"sid": 930429229131585
 				},
 				{
 					"eventType": "block",
@@ -1647,6 +1629,84 @@
 				}
 			],
 			"sid": 723496018812714
+		},
+		{
+			"functionName": "playerTookDamage",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "damage",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 205282323978034
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Player",
+					"sid": 571150578425529,
+					"parameters": {
+						"instance-variable": "life",
+						"value": "damage"
+					}
+				},
+				{
+					"id": "instance-signal",
+					"objectClass": "Player",
+					"sid": 886110268717521,
+					"parameters": {
+						"tag": "\"lifeUpdated\""
+					}
+				}
+			],
+			"sid": 838262111860631
+		},
+		{
+			"functionName": "playerUpdateBattery",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "delta",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 466667194004844
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Player",
+					"sid": 940738342222446,
+					"parameters": {
+						"instance-variable": "charges",
+						"value": "delta"
+					}
+				},
+				{
+					"id": "instance-signal",
+					"objectClass": "Player",
+					"sid": 343928465346447,
+					"parameters": {
+						"tag": "\"chargesUpdated\""
+					}
+				}
+			],
+			"sid": 855784724449908
 		}
 	],
 	"sid": 943409860040377

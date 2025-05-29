@@ -157,6 +157,14 @@
 										"x": "8 + Self.IID * (Self.width + 2)",
 										"y": "8"
 									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "HUDLife",
+									"sid": 994849462524794,
+									"parameters": {
+										"frame-number": "min(Player.life - (Self.IID * 2), 2)"
+									}
 								}
 							],
 							"sid": 987601825062938
@@ -192,6 +200,14 @@
 										"x": "8",
 										"y": "28"
 									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "HUDBattery",
+									"sid": 519193288323927,
+									"parameters": {
+										"frame-number": "Player.charges"
+									}
 								}
 							],
 							"sid": 508271288713754
@@ -210,11 +226,11 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "for-each",
-									"objectClass": "System",
-									"sid": 662923800554947,
+									"id": "on-instance-signal",
+									"objectClass": "Player",
+									"sid": 474600817219821,
 									"parameters": {
-										"object": "HUDLife"
+										"tag": "\"lifeUpdated\""
 									}
 								}
 							],
@@ -222,13 +238,13 @@
 								{
 									"id": "set-animation-frame",
 									"objectClass": "HUDLife",
-									"sid": 814120666230912,
+									"sid": 225236316430396,
 									"parameters": {
-										"frame-number": "min(Player.life - (loopindex * 2), 2)"
+										"frame-number": "min(Player.life - (Self.IID * 2), 2)"
 									}
 								}
 							],
-							"sid": 211507579546121
+							"sid": 468697282921583
 						}
 					],
 					"sid": 108208281766250
@@ -244,16 +260,19 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 949714160989797
+									"id": "on-instance-signal",
+									"objectClass": "Player",
+									"sid": 505576710766815,
+									"parameters": {
+										"tag": "\"chargesUpdated\""
+									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-animation-frame",
 									"objectClass": "HUDBattery",
-									"sid": 358974501459773,
+									"sid": 410154291770580,
 									"parameters": {
 										"frame-number": "Player.charges"
 									}

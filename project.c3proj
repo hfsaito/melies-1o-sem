@@ -140,7 +140,6 @@
 			{
 				"items": [
 					"HUDBattery",
-					"PlayerLife",
 					"HUDLife"
 				],
 				"subfolders": [],

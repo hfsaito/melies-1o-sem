@@ -393,9 +393,9 @@
 								{
 									"id": "signal",
 									"objectClass": "System",
-									"sid": 188246661093765,
+									"sid": 270391377059815,
 									"parameters": {
-										"tag": "\"paused\""
+										"tag": "\"pausePaused\""
 									}
 								}
 							],
@@ -441,9 +441,9 @@
 								{
 									"id": "signal",
 									"objectClass": "System",
-									"sid": 316141754619219,
+									"sid": 101391802922158,
 									"parameters": {
-										"tag": "\"resume\""
+										"tag": "\"pauseResume\""
 									}
 								}
 							],

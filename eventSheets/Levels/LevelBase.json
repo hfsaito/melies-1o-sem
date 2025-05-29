@@ -354,13 +354,11 @@
 					],
 					"actions": [
 						{
-							"id": "add-to-instvar",
-							"objectClass": "Player",
-							"sid": 425982347663520,
-							"parameters": {
-								"instance-variable": "charges",
-								"value": "1"
-							}
+							"callFunction": "playerUpdateBattery",
+							"sid": 577132583882625,
+							"parameters": [
+								"1"
+							]
 						}
 					],
 					"sid": 510788701627529,

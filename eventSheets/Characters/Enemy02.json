@@ -674,11 +674,32 @@
 								{
 									"id": "on-collision-with-another-object",
 									"objectClass": "Enemy02Bullet",
-									"sid": 356519055962153,
+									"sid": 656984377088090,
 									"parameters": {
 										"object": "Player"
 									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemy02Bullet",
+									"sid": 773460627756106
 								},
+								{
+									"id": "instance-signal",
+									"objectClass": "Player",
+									"sid": 752156376802070,
+									"parameters": {
+										"tag": "\"damage\""
+									}
+								}
+							],
+							"sid": 642439574899274
+						},
+						{
+							"eventType": "block",
+							"conditions": [
 								{
 									"id": "on-collision-with-another-object",
 									"objectClass": "Enemy02Bullet",
@@ -694,14 +715,6 @@
 									"parameters": {
 										"object": "BreakableWall"
 									}
-								},
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "Enemy02Bullet",
-									"sid": 827323932283335,
-									"parameters": {
-										"object": "Enemy01Hitbox"
-									}
 								}
 							],
 							"actions": [
@@ -709,14 +722,6 @@
 									"id": "destroy",
 									"objectClass": "Enemy02Bullet",
 									"sid": 265764242413297
-								},
-								{
-									"id": "instance-signal",
-									"objectClass": "Player",
-									"sid": 751869535109930,
-									"parameters": {
-										"tag": "\"damage\""
-									}
 								}
 							],
 							"sid": 523695912118805,

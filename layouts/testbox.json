@@ -116,11 +116,11 @@
 					},
 					"ownData": {
 						"tilemapData": {
-							"width": 32,
-							"height": 19,
-							"max-width": 59,
-							"max-height": 34,
-							"data": "6d,17x2vd,9hvd,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,2,5x0,2v,15x0,2hv,11x0,3,5x0,2v,15x0,2hv,17x0,2v,15x0,2hv,17x0,2v,15x0,2hv,5x0,1,9x0,1,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,2hv,5x0,2,9x0,2,0,2v,15x0,7,17x2hd,8d,4x0,1,19x0,1,150x0,2,757x0"
+							"width": 35,
+							"height": 22,
+							"max-width": 62,
+							"max-height": 37,
+							"data": "6d,17x2vd,9hvd,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,2,6x0,2,17x0,2hv,11x0,3,6x0,2,17x0,2hv,18x0,2,17x0,2hv,18x0,2,17x0,2hv,5x0,1,12x0,2,17x0,2hv,5x0,2,10x0,1,0,2,17x0,2hv,5x0,2,10x0,2,0,2,17x0,2hv,5x0,2,10x0,2,0,2,17x0,2hv,5x0,2,10x0,2,0,2,17x0,2hv,5x0,2,10x0,2,0,2,17x0,2hv,5x0,2,10x0,2,0,2,17x0,2hv,5x0,2,10x0,2,0,2,17x0,2hv,5x0,2,10x0,2,0,2,17x0,2hv,5x0,2,10x0,2,0,2,17x0,2hv,5x0,2,10x0,2,0,2,17x0,2hv,5x0,2,10x0,2,0,2,17x0,2hv,5x0,2,10x0,2,0,2,17x0,2,5x0,2,10x0,2,0,2,3x0,1,13x0,20x2,152x0,2,937x0"
 						},
 						"tile-width": 16,
 						"tile-height": 16,
@@ -136,10 +136,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 520,
-						"height": 310,
+						"x": -16,
+						"y": -16,
+						"width": 560,
+						"height": 352,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -247,8 +247,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 110,
-						"y": 160,
+						"x": 112,
+						"y": 144,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -308,47 +308,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 460,
-						"y": 210,
+						"x": 448,
+						"y": 208,
 						"width": 128,
 						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "PlayerLife",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 5,
-						"enable-collisions": false,
-						"live-preview": false
-					},
-					"uid": 21,
-					"sid": 382142899528121,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 382142899528121,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 93.44232940673828,
-						"y": 57.42890548706055,
-						"width": 68.66765141028266,
-						"height": 18.0252584951992,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -409,10 +372,10 @@
 					"sid": 225371007564393,
 					"tags": "",
 					"instanceVariables": {
-						"charges": 99,
+						"charges": 2,
 						"launchForce": 0,
 						"wasMirrored": false,
-						"life": 200,
+						"life": 6,
 						"shootingDelay": 0,
 						"maxLife": 6
 					},
@@ -527,8 +490,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 170,
-						"y": 250,
+						"x": 176,
+						"y": 256,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -588,8 +551,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 420,
-						"y": 50,
+						"x": 432,
+						"y": 32,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -606,6 +569,40 @@
 				}
 			],
 			"sid": 959291655058391,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "HUD",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 594966529222096,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
