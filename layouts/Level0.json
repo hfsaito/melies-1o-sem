@@ -620,12 +620,15 @@
 							"properties": {
 								"speed": 0,
 								"acceleration": 0,
-								"gravity": 1000,
+								"gravity": 0,
 								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": true,
-								"enabled": false
+								"set-angle": false,
+								"step": false,
+								"enabled": true
 							}
+						},
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"instanceFolderItem": {
@@ -638,9 +641,9 @@
 						"x": 80,
 						"y": 208,
 						"width": 128,
-						"height": 68,
-						"originX": 0.75,
-						"originY": 0.5,
+						"height": 128,
+						"originX": 0.6484375,
+						"originY": 0.796875,
 						"color": [
 							1,
 							1,
