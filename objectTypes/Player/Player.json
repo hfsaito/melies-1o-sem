@@ -73,8 +73,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -107,8 +107,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -152,8 +152,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -184,8 +184,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -216,8 +216,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -259,8 +259,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -293,8 +293,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -327,8 +327,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -359,8 +359,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -391,8 +391,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -440,8 +440,8 @@
 					{
 						"width": 68,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -466,8 +466,8 @@
 					{
 						"width": 68,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -503,8 +503,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -531,14 +531,21 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "tiro",
+								"x": 0.6484375,
+								"y": 0.796875
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -565,14 +572,21 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "tiro",
+								"x": 0.6484375,
+								"y": 0.796875
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -599,14 +613,21 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "tiro",
+								"x": 0.6484375,
+								"y": 0.796875
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -633,6 +654,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "tiro",
+								"x": 0.6484375,
+								"y": 0.796875
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
@@ -650,8 +678,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -692,8 +720,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -724,8 +752,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -754,8 +782,8 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.6484375,
-						"originY": 0.796875,
+						"originX": 0.484375,
+						"originY": 0.65625,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,

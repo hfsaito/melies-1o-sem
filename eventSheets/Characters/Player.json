@@ -1223,12 +1223,12 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 479980710759310,
+									"sid": 918765900919889,
 									"parameters": {
 										"object-to-create": "PlayerBullet",
 										"layer": "Player.LayerName",
-										"x": "Player.X",
-										"y": "Player.Y",
+										"x": "Player.ImagePointX(1)",
+										"y": "Player.ImagePointY(1)",
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
@@ -1249,12 +1249,12 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 533263731109329,
+									"sid": 332041176883576,
 									"parameters": {
 										"object-to-create": "PlayerBulletMirrored",
 										"layer": "Player.LayerName",
-										"x": "Player.X",
-										"y": "Player.Y",
+										"x": "Player.ImagePointX(1)",
+										"y": "Player.ImagePointY(1)",
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
