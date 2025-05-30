@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 44000,
+	"savedWithRelease": 44002,
 	"name": "New project",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -108,6 +108,13 @@
 			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
 			"author": "Scirra",
 			"bundled": false
 		},

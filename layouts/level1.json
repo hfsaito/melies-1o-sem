@@ -231,6 +231,9 @@
 								"step": true,
 								"enabled": false
 							}
+						},
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"instanceFolderItem": {
@@ -243,9 +246,9 @@
 						"x": 48,
 						"y": 80,
 						"width": 128,
-						"height": 68,
-						"originX": 0.75,
-						"originY": 0.5,
+						"height": 128,
+						"originX": 0.6484375,
+						"originY": 0.796875,
 						"color": [
 							1,
 							1,
