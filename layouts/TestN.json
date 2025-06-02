@@ -313,67 +313,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Enemy02",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "idle",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 53,
-					"sid": 632840312031773,
-					"tags": "",
-					"instanceVariables": {
-						"state": "",
-						"id": 0,
-						"mirrored": false,
-						"patrolEnabled": true,
-						"hasFloorEndingAhead": false,
-						"hasWallAhead": false,
-						"awarenessTimeout": 0,
-						"attackDelay": 0
-					},
-					"behaviors": {
-						"Platform": {
-							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": true,
-								"enabled": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 632840312031773,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 242.1487603305785,
-						"y": 194.21487603305786,
-						"width": 128,
-						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "BreakableWall",
 					"properties": {
 						"initially-visible": true,
@@ -407,61 +346,6 @@
 						"y": 198,
 						"width": 64,
 						"height": 96,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Battery",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 55,
-					"sid": 154949996661235,
-					"tags": "",
-					"instanceVariables": {
-						"respawnIfPlayerHasNoCharges": true,
-						"respawnCountdown": 0
-					},
-					"behaviors": {
-						"Senóide": {
-							"properties": {
-								"movement": "vertical",
-								"wave": "sine",
-								"period": 1,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 2,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 154949996661235,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 336,
-						"y": 224,
-						"width": 32,
-						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -712,8 +596,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 162,
-						"y": 225,
+						"x": 258,
+						"y": 226,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,

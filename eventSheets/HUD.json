@@ -245,6 +245,11 @@
 									"parameters": {
 										"object": "Battery"
 									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Battery",
+									"sid": 530117496498444
 								}
 							],
 							"actions": [
@@ -259,40 +264,40 @@
 								{
 									"id": "flash",
 									"objectClass": "HUDBattery",
-									"sid": 579695034667776,
+									"sid": 242422505744995,
 									"behaviorType": "Flash",
 									"parameters": {
 										"on-time": "0.1",
 										"off-time": "0.1",
-										"duration": "0.5"
+										"duration": "0.4"
 									}
 								},
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 230896484289788,
+									"sid": 971702859582042,
 									"parameters": {
-										"seconds": "2",
+										"seconds": "2.5",
 										"use-timescale": true
 									}
 								},
 								{
 									"id": "flash",
 									"objectClass": "HUDBattery",
-									"sid": 168450925523936,
+									"sid": 918697048119949,
 									"behaviorType": "Flash",
 									"parameters": {
 										"on-time": "0.1",
 										"off-time": "0.1",
-										"duration": "0.5"
+										"duration": "0.4"
 									}
 								},
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 850271432556398,
+									"sid": 146075198987046,
 									"parameters": {
-										"seconds": "0.6",
+										"seconds": "0.5",
 										"use-timescale": true
 									}
 								},
@@ -306,6 +311,79 @@
 								}
 							],
 							"sid": 964423945060214
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "Player",
+									"sid": 351584511428750,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"dash\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "HUDBattery",
+									"sid": 330281097656710,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "HUDBattery",
+									"sid": 135070711841578,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "0.4"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 562420722674927,
+									"parameters": {
+										"seconds": "2.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "HUDBattery",
+									"sid": 187848568315803,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "0.4"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 301592076521656,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "HUDBattery",
+									"sid": 867830105556244,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 239612078240628
 						}
 					],
 					"sid": 154316480965407
