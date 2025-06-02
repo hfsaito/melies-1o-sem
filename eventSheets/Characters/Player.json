@@ -187,28 +187,6 @@
 						}
 					],
 					"sid": 790308287078352
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-created",
-							"objectClass": "PlayerTrajectoryCanvas",
-							"sid": 325553643005685
-						}
-					],
-					"actions": [
-						{
-							"id": "set-size",
-							"objectClass": "PlayerTrajectoryCanvas",
-							"sid": 508679593364466,
-							"parameters": {
-								"width": "ViewportWidth(Self.LayerName)",
-								"height": "ViewportHeight(Self.LayerName)"
-							}
-						}
-					],
-					"sid": 419479484153158
 				}
 			],
 			"sid": 294180998688316
