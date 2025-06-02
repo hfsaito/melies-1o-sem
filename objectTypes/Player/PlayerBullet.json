@@ -20,7 +20,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3519339,
+						"imageSpriteId": 4254836,
 						"collisionPoly": {
 							"points": [
 								0.0625,
@@ -50,12 +50,12 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1315407,
+						"imageSpriteId": 5699266,
 						"collisionPoly": {
 							"points": [
 								0.125,
 								0.3125,
-								0.25,
+								0.3125,
 								0.3125,
 								0.6875,
 								0.4375,
@@ -65,10 +65,12 @@
 								0.5625,
 								0.75,
 								0.625,
-								0.1875,
+								0.4375,
+								0.75,
+								0.3125,
 								0.75,
 								0.0625,
-								0.75,
+								0.625,
 								0.0625,
 								0.4375
 							]
@@ -84,7 +86,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 4
 			}
 		],
 		"subfolders": []
