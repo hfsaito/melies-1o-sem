@@ -173,44 +173,139 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-created",
-									"objectClass": "HUDBattery",
-									"sid": 433095784053057
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 521475518163987
 								}
 							],
 							"actions": [
 								{
-									"id": "stop-animation",
-									"objectClass": "HUDBattery",
-									"sid": 708437458105761
-								},
-								{
-									"id": "set-scale",
-									"objectClass": "HUDBattery",
-									"sid": 610948836175323,
-									"parameters": {
-										"scale": ".8"
-									}
-								},
-								{
 									"id": "set-position",
 									"objectClass": "HUDBattery",
-									"sid": 188407998099379,
+									"sid": 658854668029136,
 									"parameters": {
-										"x": "8",
-										"y": "28"
-									}
-								},
-								{
-									"id": "set-animation-frame",
-									"objectClass": "HUDBattery",
-									"sid": 519193288323927,
-									"parameters": {
-										"frame-number": "Player.charges"
+										"x": "Player.X -10",
+										"y": "Player.Y - 40"
 									}
 								}
 							],
-							"sid": 508271288713754
+							"sid": 813717500258504,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "HUDBattery",
+											"sid": 814047673328013
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "HUDBattery",
+											"sid": 121488541557500,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "stop-animation",
+											"objectClass": "HUDBattery",
+											"sid": 837536353088726
+										},
+										{
+											"id": "set-scale",
+											"objectClass": "HUDBattery",
+											"sid": 858507672629589,
+											"parameters": {
+												"scale": ".8"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "HUDBattery",
+											"sid": 138543725000219,
+											"parameters": {
+												"frame-number": "Player.charges"
+											}
+										}
+									],
+									"sid": 652115611479789
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 885718369969264,
+									"parameters": {
+										"object": "Battery"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "HUDBattery",
+									"sid": 470472887841330,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "HUDBattery",
+									"sid": 579695034667776,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "0.5"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 230896484289788,
+									"parameters": {
+										"seconds": "2",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "HUDBattery",
+									"sid": 168450925523936,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "0.5"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 850271432556398,
+									"parameters": {
+										"seconds": "0.6",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "HUDBattery",
+									"sid": 969583443792937,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 964423945060214
 						}
 					],
 					"sid": 154316480965407

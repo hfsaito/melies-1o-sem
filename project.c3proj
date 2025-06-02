@@ -92,6 +92,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "LOS",
 			"name": "Line of sight",
 			"author": "Scirra",
@@ -239,7 +246,9 @@
 					"LevelFinishZone",
 					"PlatformsTilemap",
 					"LevelDeathZone",
-					"LevelLayers"
+					"LevelLayers",
+					"TiledBackground",
+					"Zona"
 				],
 				"subfolders": [],
 				"name": "Level"
@@ -291,7 +300,8 @@
 			"Level1",
 			"ContructTests",
 			"Level2",
-			"Level3"
+			"Level3",
+			"TestN"
 		],
 		"subfolders": []
 	},
@@ -306,7 +316,8 @@
 				"items": [
 					"MainMenu",
 					"OptionsMenu",
-					"Pause"
+					"Pause",
+					"Camera"
 				],
 				"subfolders": [],
 				"name": "Menus"
@@ -326,7 +337,8 @@
 					"Level1",
 					"Level2",
 					"Level3",
-					"LevelBase"
+					"LevelBase",
+					"TestN"
 				],
 				"subfolders": [],
 				"name": "Levels"
@@ -454,7 +466,7 @@
 		"authorEmail": "",
 		"authorWebsite": "",
 		"appId": "",
-		"pixelRounding": true,
+		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,

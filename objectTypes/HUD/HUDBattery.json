@@ -4,8 +4,22 @@
 	"sid": 288886725084976,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "Tempo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 527665720524795
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 445755650590488
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

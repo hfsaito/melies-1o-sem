@@ -1,0 +1,52 @@
+{
+	"name": "Zona",
+	"plugin-id": "Sprite",
+	"sid": 551698984433364,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 500,
+						"height": 300,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6881925,
+						"collisionPoly": {
+							"points": [
+								0.00199203187250996,
+								0.0033112582781456954,
+								0.99800796812749,
+								0.0033112582781456954,
+								0.99800796812749,
+								0.9966887417218543,
+								0.00199203187250996,
+								0.9966887417218543
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 600442056702629,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -46,6 +46,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 846169187502531
+		},
+		{
+			"name": "camera",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 629451526743293
 		}
 	],
 	"behaviorTypes": [

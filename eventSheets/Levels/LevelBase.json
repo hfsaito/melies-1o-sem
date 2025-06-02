@@ -22,6 +22,10 @@
 			"includeSheet": "Pause"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "Camera"
+		},
+		{
 			"eventType": "variable",
 			"name": "level",
 			"type": "number",
