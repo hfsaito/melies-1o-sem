@@ -223,7 +223,10 @@
 					"PlayerBulletMirrored",
 					"PlayerChest",
 					"PlayerHitbox",
-					"PlayerHead"
+					"PlayerHead",
+					"PlayerGauntlet",
+					"PlayerGun",
+					"PlayerLegs"
 				],
 				"subfolders": [],
 				"name": "Player"
