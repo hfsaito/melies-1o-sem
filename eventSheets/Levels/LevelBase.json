@@ -161,7 +161,7 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
+					"objectClass": "PlayerHitbox",
 					"sid": 957915729148546,
 					"parameters": {
 						"object": "LevelFinishZone"
@@ -194,7 +194,7 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
+					"objectClass": "PlayerHitbox",
 					"sid": 405078695818745,
 					"parameters": {
 						"object": "LevelDeathZone"
@@ -344,7 +344,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 221944664308252,
 							"parameters": {
 								"object": "Battery"
@@ -416,7 +416,7 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 422586846999870,
 							"parameters": {
 								"instance-variable": "charges",

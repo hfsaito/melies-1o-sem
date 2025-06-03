@@ -37,14 +37,14 @@
 					"conditions": [
 						{
 							"id": "on-created",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 391850785859748
 						}
 					],
 					"actions": [
 						{
 							"id": "set-max-speed",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 359485690210026,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -53,7 +53,7 @@
 						},
 						{
 							"id": "set-acceleration",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 473764204745827,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -62,7 +62,7 @@
 						},
 						{
 							"id": "set-deceleration",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 983472208531745,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -71,25 +71,25 @@
 						},
 						{
 							"id": "set-jump-strength",
-							"objectClass": "Player",
-							"sid": 676995200749532,
+							"objectClass": "PlayerHitbox",
+							"sid": 224841950743255,
 							"behaviorType": "Platform",
 							"parameters": {
-								"jump-strength": "400"
+								"jump-strength": "450"
 							}
 						},
 						{
 							"id": "set-max-fall-speed",
-							"objectClass": "Player",
-							"sid": 826699023650417,
+							"objectClass": "PlayerHitbox",
+							"sid": 636560345034096,
 							"behaviorType": "Platform",
 							"parameters": {
-								"max-fall-speed": "1000"
+								"max-fall-speed": "500"
 							}
 						},
 						{
 							"id": "set-double-jump",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 785106353077544,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -98,7 +98,7 @@
 						},
 						{
 							"id": "set-jump-sustain",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 491341230458884,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -107,7 +107,7 @@
 						},
 						{
 							"id": "set-default-controls",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 961431331079092,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -116,7 +116,7 @@
 						},
 						{
 							"id": "set-enabled",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 234489787479568,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -125,7 +125,7 @@
 						},
 						{
 							"id": "set-speed",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 610155665890696,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -134,7 +134,7 @@
 						},
 						{
 							"id": "set-acceleration",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 159042892446067,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -143,7 +143,7 @@
 						},
 						{
 							"id": "set-bounce-off-solids",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 531743224726194,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -152,7 +152,7 @@
 						},
 						{
 							"id": "set-enabled",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 664677846633070,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -161,7 +161,7 @@
 						},
 						{
 							"id": "set-scale",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 382448137321407,
 							"parameters": {
 								"scale": "1"
@@ -169,7 +169,7 @@
 						},
 						{
 							"id": "set-instvar-value",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 413099348013778,
 							"parameters": {
 								"instance-variable": "launchForce",
@@ -178,11 +178,23 @@
 						},
 						{
 							"id": "set-instvar-value",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 872207760723781,
 							"parameters": {
 								"instance-variable": "shootingDelay",
 								"value": "0"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "PlayerHitbox",
+							"sid": 187863150149563,
+							"parameters": {
+								"object": "PlayerHead",
+								"layer": "\"Player\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						}
 					],
@@ -190,6 +202,15 @@
 				}
 			],
 			"sid": 294180998688316
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "player.parts",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 287083073031766
 		},
 		{
 			"eventType": "group",
@@ -203,13 +224,13 @@
 					"conditions": [
 						{
 							"id": "is-enabled",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 564283769876129,
 							"behaviorType": "Platform"
 						},
 						{
 							"id": "is-animation-playing",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 790465723978960,
 							"parameters": {
 								"animation": "\"dying\""
@@ -244,7 +265,7 @@
 							"actions": [
 								{
 									"id": "simulate-control",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 607176973904021,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -253,7 +274,7 @@
 								},
 								{
 									"id": "set-mirrored",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 896827353211466,
 									"parameters": {
 										"state": "mirrored"
@@ -267,7 +288,7 @@
 									"conditions": [
 										{
 											"id": "is-on-floor",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 845601328814888,
 											"behaviorType": "Platform"
 										}
@@ -275,7 +296,7 @@
 									"actions": [
 										{
 											"id": "set-animation",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 162883783500852,
 											"parameters": {
 												"animation": "\"walking\"",
@@ -302,7 +323,7 @@
 							"actions": [
 								{
 									"id": "simulate-control",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 526141634293222,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -311,7 +332,7 @@
 								},
 								{
 									"id": "set-mirrored",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 260262919479635,
 									"parameters": {
 										"state": "not-mirrored"
@@ -325,7 +346,7 @@
 									"conditions": [
 										{
 											"id": "is-on-floor",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 694520053559668,
 											"behaviorType": "Platform"
 										}
@@ -333,7 +354,7 @@
 									"actions": [
 										{
 											"id": "set-animation",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 654344984005068,
 											"parameters": {
 												"animation": "\"walking\"",
@@ -360,7 +381,7 @@
 							"actions": [
 								{
 									"id": "simulate-control",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 243423615476923,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -384,7 +405,7 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 513834481032612,
 									"parameters": {
 										"instance-variable": "charges",
@@ -394,7 +415,7 @@
 								},
 								{
 									"id": "is-on-floor",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 114364529117753,
 									"behaviorType": "Platform"
 								}
@@ -402,7 +423,7 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 733229277179163,
 									"parameters": {
 										"animation": "\"charging\"",
@@ -425,7 +446,7 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 729348131654025,
 									"parameters": {
 										"instance-variable": "shootingDelay",
@@ -437,7 +458,7 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 115822589524689,
 									"parameters": {
 										"animation": "\"shooting\"",
@@ -446,7 +467,7 @@
 								},
 								{
 									"id": "set-instvar-value",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 520192029093295,
 									"parameters": {
 										"instance-variable": "shootingDelay",
@@ -481,7 +502,7 @@
 						},
 						{
 							"id": "is-animation-playing",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 438557040182348,
 							"parameters": {
 								"animation": "\"charging\""
@@ -491,7 +512,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 340220221074184,
 							"parameters": {
 								"animation": "\"idle\"",
@@ -506,7 +527,7 @@
 					"conditions": [
 						{
 							"id": "is-animation-playing",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 778436825984742,
 							"parameters": {
 								"animation": "\"charging\""
@@ -540,11 +561,11 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 779196492091502,
 									"parameters": {
 										"instance-variable": "launchForce",
-										"value": "min(Player.launchForce + 1, playerGauntletMaxForce)"
+										"value": "min(PlayerHitbox.launchForce + 1, playerGauntletMaxForce)"
 									}
 								}
 							],
@@ -563,7 +584,7 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 907422884746302,
 									"parameters": {
 										"instance-variable": "charges",
@@ -575,7 +596,7 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 919757165217530,
 									"parameters": {
 										"animation": "\"Launch\"",
@@ -584,7 +605,7 @@
 								},
 								{
 									"id": "set-enabled",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 191510576157586,
 									"behaviorType": "Bullet",
 									"parameters": {
@@ -593,7 +614,7 @@
 								},
 								{
 									"id": "set-instvar-value",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 412267079798475,
 									"parameters": {
 										"instance-variable": "launchForce",
@@ -615,14 +636,14 @@
 									"conditions": [
 										{
 											"id": "is-mirrored",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 172442444968741
 										}
 									],
 									"actions": [
 										{
 											"id": "set-speed",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 354484510504152,
 											"behaviorType": "Bullet",
 											"parameters": {
@@ -631,7 +652,7 @@
 										},
 										{
 											"id": "set-angle-of-motion",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 418227230192422,
 											"behaviorType": "Bullet",
 											"parameters": {
@@ -640,7 +661,7 @@
 										},
 										{
 											"id": "set-ignoring-input",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 875497916161624,
 											"behaviorType": "Platform",
 											"parameters": {
@@ -649,7 +670,7 @@
 										},
 										{
 											"id": "set-animation",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 697497180232383,
 											"parameters": {
 												"animation": "\"launch\"",
@@ -658,7 +679,7 @@
 										},
 										{
 											"id": "start-timer",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 696637444279180,
 											"behaviorType": "Timer",
 											"parameters": {
@@ -675,7 +696,7 @@
 									"conditions": [
 										{
 											"id": "is-mirrored",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 921359270137711,
 											"isInverted": true
 										}
@@ -683,7 +704,7 @@
 									"actions": [
 										{
 											"id": "set-speed",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 558332867914526,
 											"behaviorType": "Bullet",
 											"parameters": {
@@ -692,7 +713,7 @@
 										},
 										{
 											"id": "set-angle-of-motion",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 165032376055512,
 											"behaviorType": "Bullet",
 											"parameters": {
@@ -701,7 +722,7 @@
 										},
 										{
 											"id": "set-ignoring-input",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 679696776605546,
 											"behaviorType": "Platform",
 											"parameters": {
@@ -710,7 +731,7 @@
 										},
 										{
 											"id": "set-animation",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 463840105314036,
 											"parameters": {
 												"animation": "\"launch\"",
@@ -719,7 +740,7 @@
 										},
 										{
 											"id": "start-timer",
-											"objectClass": "Player",
+											"objectClass": "PlayerHitbox",
 											"sid": 320944013418273,
 											"behaviorType": "Timer",
 											"parameters": {
@@ -740,7 +761,7 @@
 					"conditions": [
 						{
 							"id": "is-timer-running",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 544189094031861,
 							"behaviorType": "Timer",
 							"parameters": {
@@ -751,7 +772,7 @@
 					"actions": [
 						{
 							"id": "set-gravity",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 602202665013986,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -760,7 +781,7 @@
 						},
 						{
 							"id": "set-vector-y",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 472054684711872,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -775,7 +796,7 @@
 					"conditions": [
 						{
 							"id": "on-timer",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 300369645688581,
 							"behaviorType": "Timer",
 							"parameters": {
@@ -786,7 +807,7 @@
 					"actions": [
 						{
 							"id": "set-ignoring-input",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 269027827702543,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -795,7 +816,7 @@
 						},
 						{
 							"id": "set-speed",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 671210381974838,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -804,7 +825,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 968253099394476,
 							"parameters": {
 								"animation": "\"idle\"",
@@ -813,7 +834,7 @@
 						},
 						{
 							"id": "set-enabled",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 229578786534801,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -822,7 +843,7 @@
 						},
 						{
 							"id": "set-gravity",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 271205295288035,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -837,7 +858,7 @@
 					"conditions": [
 						{
 							"id": "is-animation-playing",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 611378743134527,
 							"parameters": {
 								"animation": "\"charging\""
@@ -864,7 +885,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 363914539558571,
 							"parameters": {
 								"object": "BreakableWall"
@@ -872,7 +893,7 @@
 						},
 						{
 							"id": "is-enabled",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 509041173289165,
 							"behaviorType": "Bullet"
 						}
@@ -898,7 +919,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 958649721227347,
 							"parameters": {
 								"object": "PlatformsTilemap"
@@ -906,7 +927,7 @@
 						},
 						{
 							"id": "is-enabled",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 711139600774908,
 							"behaviorType": "Bullet"
 						}
@@ -932,7 +953,7 @@
 					"actions": [
 						{
 							"id": "set-angle",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 275090534406981,
 							"parameters": {
 								"angle": "0"
@@ -940,7 +961,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 250143991428552,
 							"parameters": {
 								"animation": "\"Idle\"",
@@ -949,7 +970,7 @@
 						},
 						{
 							"id": "set-enabled",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 412907660060344,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -958,7 +979,7 @@
 						},
 						{
 							"id": "set-enabled",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 972239613230269,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -983,13 +1004,13 @@
 					"conditions": [
 						{
 							"id": "on-moved",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 648881875519628,
 							"behaviorType": "Platform"
 						},
 						{
 							"id": "is-animation-playing",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 314957146648739,
 							"parameters": {
 								"animation": "\"charging\""
@@ -998,7 +1019,7 @@
 						},
 						{
 							"id": "is-jumping",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 420429837191310,
 							"behaviorType": "Platform",
 							"isInverted": true
@@ -1007,7 +1028,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 244840807885051,
 							"parameters": {
 								"animation": "\"walking\"",
@@ -1022,19 +1043,19 @@
 					"conditions": [
 						{
 							"id": "on-stopped",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 305019787181714,
 							"behaviorType": "Platform"
 						},
 						{
 							"id": "on-jump",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 364978969122475,
 							"behaviorType": "Platform"
 						},
 						{
 							"id": "on-jump",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 474915774521120,
 							"behaviorType": "Platform"
 						}
@@ -1047,7 +1068,7 @@
 							"conditions": [
 								{
 									"id": "is-animation-playing",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 322384923374575,
 									"parameters": {
 										"animation": "\"charging\""
@@ -1058,7 +1079,7 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 911183879639960,
 									"parameters": {
 										"animation": "\"idle\"",
@@ -1076,7 +1097,7 @@
 					"conditions": [
 						{
 							"id": "on-animation-finished",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 993355495982474,
 							"parameters": {
 								"animation": "\"shooting\""
@@ -1086,7 +1107,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 455157906597475,
 							"parameters": {
 								"animation": "\"idle\"",
@@ -1126,7 +1147,7 @@
 					"actions": [
 						{
 							"id": "set-instvar-value",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 431238798724494,
 							"parameters": {
 								"instance-variable": "shootingDelay",
@@ -1150,7 +1171,7 @@
 						},
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 985685997957812,
 							"parameters": {
 								"instance-variable": "shootingDelay",
@@ -1162,7 +1183,7 @@
 					"actions": [
 						{
 							"id": "subtract-from-instvar",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 740697555642763,
 							"parameters": {
 								"instance-variable": "shootingDelay",
@@ -1177,7 +1198,7 @@
 					"conditions": [
 						{
 							"id": "on-animation-finished",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 645455615223703,
 							"parameters": {
 								"animation": "\"shooting\""
@@ -1192,7 +1213,7 @@
 							"conditions": [
 								{
 									"id": "is-mirrored",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 168241487713463,
 									"isInverted": true
 								}
@@ -1204,9 +1225,9 @@
 									"sid": 918765900919889,
 									"parameters": {
 										"object-to-create": "PlayerBullet",
-										"layer": "Player.LayerName",
-										"x": "Player.ImagePointX(1)",
-										"y": "Player.ImagePointY(1)",
+										"layer": "PlayerHitbox.LayerName",
+										"x": "PlayerHitbox.ImagePointX(1)",
+										"y": "PlayerHitbox.ImagePointY(1)",
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
@@ -1230,9 +1251,9 @@
 									"sid": 332041176883576,
 									"parameters": {
 										"object-to-create": "PlayerBulletMirrored",
-										"layer": "Player.LayerName",
-										"x": "Player.ImagePointX(1)",
-										"y": "Player.ImagePointY(1)",
+										"layer": "PlayerHitbox.LayerName",
+										"x": "PlayerHitbox.ImagePointX(1)",
+										"y": "PlayerHitbox.ImagePointY(1)",
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
@@ -1416,7 +1437,7 @@
 					"conditions": [
 						{
 							"id": "on-instance-signal",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 574150729912390,
 							"parameters": {
 								"tag": "\"damage\""
@@ -1424,7 +1445,7 @@
 						},
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 571084500074386,
 							"parameters": {
 								"instance-variable": "life",
@@ -1449,7 +1470,7 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 573600601978721,
 							"parameters": {
 								"instance-variable": "life",
@@ -1459,7 +1480,7 @@
 						},
 						{
 							"id": "is-animation-playing",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 286529768742432,
 							"parameters": {
 								"animation": "\"dying\""
@@ -1470,7 +1491,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 588145457803006,
 							"parameters": {
 								"animation": "\"dying\"",
@@ -1485,7 +1506,7 @@
 					"conditions": [
 						{
 							"id": "on-animation-finished",
-							"objectClass": "Player",
+							"objectClass": "PlayerHitbox",
 							"sid": 936394513743623,
 							"parameters": {
 								"animation": "\"dying\""
@@ -1534,7 +1555,7 @@
 			"actions": [
 				{
 					"id": "subtract-from-instvar",
-					"objectClass": "Player",
+					"objectClass": "PlayerHitbox",
 					"sid": 571150578425529,
 					"parameters": {
 						"instance-variable": "life",
@@ -1543,7 +1564,7 @@
 				},
 				{
 					"id": "instance-signal",
-					"objectClass": "Player",
+					"objectClass": "PlayerHitbox",
 					"sid": 886110268717521,
 					"parameters": {
 						"tag": "\"lifeUpdated\""
@@ -1573,7 +1594,7 @@
 			"actions": [
 				{
 					"id": "add-to-instvar",
-					"objectClass": "Player",
+					"objectClass": "PlayerHitbox",
 					"sid": 940738342222446,
 					"parameters": {
 						"instance-variable": "charges",
@@ -1582,7 +1603,7 @@
 				},
 				{
 					"id": "instance-signal",
-					"objectClass": "Player",
+					"objectClass": "PlayerHitbox",
 					"sid": 343928465346447,
 					"parameters": {
 						"tag": "\"chargesUpdated\""

@@ -54,7 +54,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "ThanksForPlaying",
 					"properties": {
 						"text": "Obrigado por jogar!",
 						"enable-bbcode": true,

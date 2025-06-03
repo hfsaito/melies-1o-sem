@@ -135,14 +135,7 @@
 	],
 	"uniqueId": "cd3ubb1liqo",
 	"objectTypes": {
-		"items": [
-			"Text",
-			"Sprite",
-			"Sprite2",
-			"Sprite3",
-			"Sprite4",
-			"Sprite5"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -227,7 +220,10 @@
 				"items": [
 					"Player",
 					"PlayerBullet",
-					"PlayerBulletMirrored"
+					"PlayerBulletMirrored",
+					"PlayerChest",
+					"PlayerHitbox",
+					"PlayerHead"
 				],
 				"subfolders": [],
 				"name": "Player"
@@ -240,7 +236,8 @@
 					"LevelDeathZone",
 					"LevelLayers",
 					"TiledBackground",
-					"Zona"
+					"Zona",
+					"ThanksForPlaying"
 				],
 				"subfolders": [],
 				"name": "Level"

@@ -74,7 +74,7 @@
 							"conditions": [
 								{
 									"id": "on-created",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 847476755795640
 								}
 							],
@@ -103,7 +103,7 @@
 											"objectClass": "System",
 											"sid": 996049531050551,
 											"parameters": {
-												"count": "Player.maxLife / 2"
+												"count": "PlayerHitbox.maxLife / 2"
 											}
 										}
 									],
@@ -163,7 +163,7 @@
 									"objectClass": "HUDLife",
 									"sid": 994849462524794,
 									"parameters": {
-										"frame-number": "min(Player.life - (Self.IID * 2), 2)"
+										"frame-number": "min(PlayerHitbox.life - (Self.IID * 2), 2)"
 									}
 								}
 							],
@@ -184,8 +184,8 @@
 									"objectClass": "HUDBattery",
 									"sid": 658854668029136,
 									"parameters": {
-										"x": "Player.X -10",
-										"y": "Player.Y - 40"
+										"x": "PlayerHitbox.X -10",
+										"y": "PlayerHitbox.Y - 40"
 									}
 								}
 							],
@@ -227,7 +227,7 @@
 											"objectClass": "HUDBattery",
 											"sid": 138543725000219,
 											"parameters": {
-												"frame-number": "Player.charges"
+												"frame-number": "PlayerHitbox.charges"
 											}
 										}
 									],
@@ -240,7 +240,7 @@
 							"conditions": [
 								{
 									"id": "on-collision-with-another-object",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 885718369969264,
 									"parameters": {
 										"object": "Battery"
@@ -317,7 +317,7 @@
 							"conditions": [
 								{
 									"id": "on-timer",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 351584511428750,
 									"behaviorType": "Timer",
 									"parameters": {
@@ -400,7 +400,7 @@
 							"conditions": [
 								{
 									"id": "on-instance-signal",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 474600817219821,
 									"parameters": {
 										"tag": "\"lifeUpdated\""
@@ -413,7 +413,7 @@
 									"objectClass": "HUDLife",
 									"sid": 225236316430396,
 									"parameters": {
-										"frame-number": "min(Player.life - (Self.IID * 2), 2)"
+										"frame-number": "min(PlayerHitbox.life - (Self.IID * 2), 2)"
 									}
 								}
 							],
@@ -434,7 +434,7 @@
 							"conditions": [
 								{
 									"id": "on-instance-signal",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 505576710766815,
 									"parameters": {
 										"tag": "\"chargesUpdated\""
@@ -447,7 +447,7 @@
 									"objectClass": "HUDBattery",
 									"sid": 410154291770580,
 									"parameters": {
-										"frame-number": "Player.charges"
+										"frame-number": "PlayerHitbox.charges"
 									}
 								}
 							],

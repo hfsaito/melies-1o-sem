@@ -605,7 +605,7 @@
 									"objectClass": "Enemy01Explosion",
 									"sid": 571195443752783,
 									"parameters": {
-										"object": "Player"
+										"object": "PlayerHitbox"
 									}
 								},
 								{
@@ -630,7 +630,7 @@
 								},
 								{
 									"id": "instance-signal",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 964331177077183,
 									"parameters": {
 										"tag": "\"damage\""
@@ -1324,7 +1324,7 @@
 											"sid": 607548359957992,
 											"behaviorType": "LineOfSight",
 											"parameters": {
-												"object": "Player",
+												"object": "PlayerHitbox",
 												"image-point": "0"
 											}
 										}
@@ -1381,7 +1381,7 @@
 											"sid": 368773492848490,
 											"parameters": {
 												"comparison": 2,
-												"x-co-ordinate": "Player.x"
+												"x-co-ordinate": "PlayerHitbox.x"
 											}
 										}
 									],
@@ -1416,7 +1416,7 @@
 											"sid": 982315276146230,
 											"parameters": {
 												"comparison": 4,
-												"x-co-ordinate": "Player.x"
+												"x-co-ordinate": "PlayerHitbox.x"
 											}
 										}
 									],
@@ -1466,7 +1466,7 @@
 													"sid": 918182421184697,
 													"behaviorType": "LineOfSight",
 													"parameters": {
-														"object": "Player",
+														"object": "PlayerHitbox",
 														"image-point": "0"
 													}
 												}
@@ -1493,7 +1493,7 @@
 													"sid": 684215276546030,
 													"behaviorType": "LineOfSight",
 													"parameters": {
-														"object": "Player",
+														"object": "PlayerHitbox",
 														"image-point": "0"
 													},
 													"isInverted": true
@@ -1591,7 +1591,7 @@
 									"sid": 355659319958611,
 									"behaviorType": "LineOfSight2",
 									"parameters": {
-										"object": "Player",
+										"object": "PlayerHitbox",
 										"image-point": "0"
 									}
 								}

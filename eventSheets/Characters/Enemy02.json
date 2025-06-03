@@ -649,7 +649,7 @@
 											"sid": 822155447618190,
 											"parameters": {
 												"comparison": 5,
-												"x-co-ordinate": "Player.x"
+												"x-co-ordinate": "PlayerHitbox.x"
 											}
 										}
 									],
@@ -676,7 +676,7 @@
 									"objectClass": "Enemy02Bullet",
 									"sid": 656984377088090,
 									"parameters": {
-										"object": "Player"
+										"object": "PlayerHitbox"
 									}
 								}
 							],
@@ -688,7 +688,7 @@
 								},
 								{
 									"id": "instance-signal",
-									"objectClass": "Player",
+									"objectClass": "PlayerHitbox",
 									"sid": 752156376802070,
 									"parameters": {
 										"tag": "\"damage\""
@@ -799,7 +799,7 @@
 									"objectClass": "Enemy02LineOfSightChase",
 									"sid": 344835262971178,
 									"parameters": {
-										"object": "Player"
+										"object": "PlayerHitbox"
 									}
 								}
 							],
@@ -1160,7 +1160,7 @@
 							"objectClass": "Enemy02LineOfSightChase",
 							"sid": 713918472207923,
 							"parameters": {
-								"object": "Player"
+								"object": "PlayerHitbox"
 							}
 						},
 						{
@@ -1168,7 +1168,7 @@
 							"objectClass": "Enemy02LineOfSightAttack",
 							"sid": 122813371714036,
 							"parameters": {
-								"object": "Player"
+								"object": "PlayerHitbox"
 							},
 							"isInverted": true
 						}
@@ -1298,7 +1298,7 @@
 											"sid": 920781240361810,
 											"parameters": {
 												"comparison": 5,
-												"x-co-ordinate": "Player.x"
+												"x-co-ordinate": "PlayerHitbox.x"
 											}
 										}
 									],
@@ -1395,7 +1395,7 @@
 							"objectClass": "Enemy02LineOfSightAttack",
 							"sid": 955997104231248,
 							"parameters": {
-								"object": "Player"
+								"object": "PlayerHitbox"
 							}
 						}
 					],
@@ -1494,7 +1494,7 @@
 									"sid": 183030205724137,
 									"parameters": {
 										"comparison": 5,
-										"x-co-ordinate": "Player.x"
+										"x-co-ordinate": "PlayerHitbox.x"
 									}
 								}
 							],
