@@ -1,0 +1,23 @@
+{
+	"name": "PlayerParts",
+	"plugin-id": "Sprite",
+	"sid": 342523433133479,
+	"instanceVariables": [
+		{
+			"name": "parentUniqueID",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 601740905872299
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"PlayerGauntlet",
+		"PlayerHead",
+		"PlayerGun",
+		"PlayerChest",
+		"PlayerLegs"
+	]
+}

@@ -3,6 +3,10 @@
 	"events": [
 		{
 			"eventType": "include",
+			"includeSheet": "HUD"
+		},
+		{
+			"eventType": "include",
 			"includeSheet": "Enemy01"
 		},
 		{
@@ -12,10 +16,6 @@
 		{
 			"eventType": "include",
 			"includeSheet": "Player"
-		},
-		{
-			"eventType": "include",
-			"includeSheet": "HUD"
 		},
 		{
 			"eventType": "include",

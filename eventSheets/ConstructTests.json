@@ -2,33 +2,144 @@
 	"name": "ConstructTests",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "variable",
+			"name": "asdsdfsa",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 475303036281319
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "key test",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-any-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 294840202063290
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 757777909346408
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "OptionsJumpKey",
+							"sid": 345917620791818,
+							"parameters": {
+								"text": "Keyboard.LastKeyCode"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "OptionsJumpLabel",
+							"sid": 220698172914915,
+							"parameters": {
+								"text": "Keyboard.StringFromKeyCode(Keyboard.LastKeyCode)"
+							}
+						}
+					],
+					"sid": 315250848746963
 				}
 			],
-			"actions": [
+			"sid": 266841003192065
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "another test",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "set-text",
-					"objectClass": "OptionsJumpKey",
-					"sid": 880853543113219,
-					"parameters": {
-						"text": "Keyboard.LastKeyCode"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 962170415093379
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 374975544036317,
+							"parameters": {
+								"variable": "asdsdfsa",
+								"value": "time"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "OptionsJumpLabel",
+							"sid": 423218202907904,
+							"parameters": {
+								"text": "asdsdfsa"
+							}
+						}
+					],
+					"sid": 240205214892257,
+					"disabled": true
 				},
 				{
-					"id": "set-text",
-					"objectClass": "OptionsJumpLabel",
-					"sid": 677989899676022,
-					"parameters": {
-						"text": "Keyboard.StringFromKeyCode(Keyboard.LastKeyCode)"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 879998328525899
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "OptionsJumpKey",
+							"sid": 838994102317691,
+							"parameters": {
+								"text": "time"
+							}
+						}
+					],
+					"sid": 401660739652013,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 624699201356124,
+							"parameters": {
+								"first-value": "time - asdsdfsa",
+								"comparison": 4,
+								"second-value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 983632524057683,
+							"parameters": {
+								"type": "log",
+								"message": "\"asdfdsffasd\""
+							}
+						}
+					],
+					"sid": 293874873290508,
+					"disabled": true
 				}
 			],
-			"sid": 302575315558906
+			"sid": 893109248104628
 		}
 	],
 	"sid": 705040661753437

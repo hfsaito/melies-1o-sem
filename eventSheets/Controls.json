@@ -29,7 +29,27 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 926840655816052
+			"sid": 293860096243168
+		},
+		{
+			"eventType": "variable",
+			"name": "ctrlShoot",
+			"type": "number",
+			"initialValue": "74",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 824089841129176
+		},
+		{
+			"eventType": "variable",
+			"name": "ctrlGauntlet",
+			"type": "number",
+			"initialValue": "75",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 945707218816269
 		},
 		{
 			"eventType": "variable",

@@ -21,7 +21,6 @@
 		"Enemy02FloorChecker",
 		"Enemy02LineOfSightAttack",
 		"Enemy02LineOfSightChase",
-		"Enemy02WallChecker",
-		"Player"
+		"Enemy02WallChecker"
 	]
 }

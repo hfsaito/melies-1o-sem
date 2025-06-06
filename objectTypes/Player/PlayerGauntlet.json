@@ -74,7 +74,7 @@
 				],
 				"sid": 606120410180431,
 				"name": "idle",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
@@ -175,7 +175,7 @@
 				],
 				"sid": 834649525383910,
 				"name": "walking",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
@@ -276,7 +276,7 @@
 				],
 				"sid": 806910433754081,
 				"name": "running",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
@@ -428,7 +428,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6860365,
+						"imageSpriteId": 60260,
 						"collisionPoly": {
 							"points": [
 								0.40625,
@@ -458,7 +458,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7599329,
+						"imageSpriteId": 352352,
 						"collisionPoly": {
 							"points": [
 								0.40625,
@@ -488,7 +488,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1593113,
+						"imageSpriteId": 5323511,
 						"collisionPoly": {
 							"points": [
 								0.40625,
@@ -508,7 +508,18 @@
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
-					},
+					}
+				],
+				"sid": 497770492094794,
+				"name": "charging",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
 					{
 						"width": 96,
 						"height": 96,
@@ -518,7 +529,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8335936,
+						"imageSpriteId": 8408986,
 						"collisionPoly": {
 							"points": [
 								0.375,
@@ -546,7 +557,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4950854,
+						"imageSpriteId": 3407045,
 						"collisionPoly": {
 							"points": [
 								0.4479166666666667,
@@ -570,8 +581,8 @@
 						"tag": ""
 					}
 				],
-				"sid": 337921167191372,
-				"name": "charge",
+				"sid": 448361514825131,
+				"name": "punching",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

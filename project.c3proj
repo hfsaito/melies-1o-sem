@@ -218,7 +218,6 @@
 			},
 			{
 				"items": [
-					"Player",
 					"PlayerBullet",
 					"PlayerBulletMirrored",
 					"PlayerChest",
@@ -280,7 +279,8 @@
 			"PauseItems",
 			"PlayerBullets",
 			"Enemies",
-			"LevelZones"
+			"LevelZones",
+			"PlayerParts"
 		],
 		"subfolders": []
 	},
