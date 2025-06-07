@@ -325,7 +325,8 @@
 					"sid": 965141853323032,
 					"tags": "",
 					"instanceVariables": {
-						"health": 1
+						"health": 1,
+						"virtuallyDestroyed": false
 					},
 					"behaviors": {
 						"Sólido": {
@@ -570,8 +571,7 @@
 					"sid": 876994851231840,
 					"tags": "",
 					"instanceVariables": {
-						"respawnIfPlayerHasNoCharges": true,
-						"respawnCountdown": 0
+						"softDestroy": true
 					},
 					"behaviors": {
 						"Senóide": {

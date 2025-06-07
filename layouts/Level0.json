@@ -136,8 +136,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -16,
-						"y": -16,
+						"x": -16.51315811823065,
+						"y": -16.513158118230734,
 						"width": 576,
 						"height": 352,
 						"originX": 0,
@@ -199,8 +199,7 @@
 					"sid": 534738775975422,
 					"tags": "",
 					"instanceVariables": {
-						"respawnIfPlayerHasNoCharges": true,
-						"respawnCountdown": 0
+						"softDestroy": true
 					},
 					"behaviors": {
 						"Senóide": {
@@ -254,7 +253,8 @@
 					"sid": 934636233403084,
 					"tags": "",
 					"instanceVariables": {
-						"health": 1
+						"health": 1,
+						"virtuallyDestroyed": false
 					},
 					"behaviors": {
 						"Sólido": {
@@ -372,7 +372,7 @@
 					"sid": 458210266334355,
 					"tags": "",
 					"instanceVariables": {
-						"charges": 3,
+						"charges": 0,
 						"launchForce": 0,
 						"wasMirrored": false,
 						"life": 6,

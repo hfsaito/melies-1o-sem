@@ -85,13 +85,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Flash",
-			"name": "Flash",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "LOS",
 			"name": "Line of sight",
 			"author": "Scirra",
@@ -127,6 +120,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "destroy",
 			"name": "Destroy outside layout",
 			"author": "Scirra",
@@ -146,8 +146,9 @@
 		"subfolders": [
 			{
 				"items": [
+					"HUDLife",
 					"HUDBattery",
-					"HUDLife"
+					"HUDBatteryEffect"
 				],
 				"subfolders": [],
 				"name": "HUD"
@@ -326,7 +327,8 @@
 				"items": [
 					"Player",
 					"Enemy01",
-					"Enemy02"
+					"Enemy02",
+					"Index.Characters"
 				],
 				"subfolders": [],
 				"name": "Characters"
@@ -342,6 +344,15 @@
 				],
 				"subfolders": [],
 				"name": "Levels"
+			},
+			{
+				"items": [
+					"BreakableWall",
+					"Battery",
+					"Index.Items"
+				],
+				"subfolders": [],
+				"name": "Items"
 			}
 		]
 	},

@@ -11,6 +11,13 @@
 			"desc": "",
 			"show": false,
 			"sid": 748674603129576
+		},
+		{
+			"name": "virtuallyDestroyed",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 939375661102627
 		}
 	],
 	"behaviorTypes": [

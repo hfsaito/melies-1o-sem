@@ -1,0 +1,78 @@
+{
+	"name": "Battery",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerHitbox",
+					"sid": 640609537022920,
+					"parameters": {
+						"object": "Battery"
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "Battery",
+					"sid": 355636556449449
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "playerUpdateBattery",
+					"sid": 777733059374364,
+					"parameters": [
+						"1"
+					]
+				}
+			],
+			"sid": 691968786738894,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Battery",
+							"sid": 410353783147797,
+							"parameters": {
+								"instance-variable": "softDestroy"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Battery",
+							"sid": 935933646412083,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 837449162567310
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 938350618585396
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Battery",
+							"sid": 559870672657068
+						}
+					],
+					"sid": 975162712886149
+				}
+			]
+		}
+	],
+	"sid": 923831758410926
+}

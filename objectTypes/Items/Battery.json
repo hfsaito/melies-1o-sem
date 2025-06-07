@@ -6,18 +6,11 @@
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
-			"name": "respawnIfPlayerHasNoCharges",
+			"name": "softDestroy",
 			"type": "boolean",
 			"desc": "",
 			"show": true,
 			"sid": 856718339577341
-		},
-		{
-			"name": "respawnCountdown",
-			"type": "number",
-			"desc": "",
-			"show": false,
-			"sid": 239633953772613
 		}
 	],
 	"behaviorTypes": [

@@ -1,0 +1,14 @@
+{
+	"name": "Index.Items",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "BreakableWall"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Battery"
+		}
+	],
+	"sid": 575207703435458
+}

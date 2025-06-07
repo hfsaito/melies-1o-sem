@@ -1,0 +1,135 @@
+{
+	"name": "BreakableWall",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "BreakableWall",
+					"sid": 723342439304665
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-animation",
+					"objectClass": "BreakableWall",
+					"sid": 712968807108272
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "BreakableWall",
+					"sid": 473793056052188,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 915740911437350
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-instance-signal",
+					"objectClass": "BreakableWall",
+					"sid": 143210968039080,
+					"parameters": {
+						"tag": "\"break\""
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "BreakableWall",
+					"sid": 273860992231838,
+					"parameters": {
+						"instance-variable": "health",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "BreakableWall",
+					"sid": 175340295724471,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 147844662899296,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BreakableWall",
+							"sid": 324878178235420,
+							"parameters": {
+								"instance-variable": "health",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BreakableWall",
+							"sid": 920217592646223,
+							"parameters": {
+								"animation": "\"breaking\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BreakableWall",
+							"sid": 529880847131525,
+							"parameters": {
+								"instance-variable": "virtuallyDestroyed",
+								"value": "true"
+							}
+						},
+						{
+							"id": "instance-signal",
+							"objectClass": "BreakableWall",
+							"sid": 599014983966545,
+							"parameters": {
+								"tag": "\"virtuallyDestroyed\""
+							}
+						}
+					],
+					"sid": 662320184492709
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "BreakableWall",
+					"sid": 594674153062112,
+					"parameters": {
+						"animation": "\"breaking\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BreakableWall",
+					"sid": 707112303048496
+				}
+			],
+			"sid": 151466497354194
+		}
+	],
+	"sid": 751179936968468
+}

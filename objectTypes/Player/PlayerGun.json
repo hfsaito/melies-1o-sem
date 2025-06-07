@@ -4,7 +4,15 @@
 	"sid": 311544642471552,
 	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "shooting",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 343130143649480
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
