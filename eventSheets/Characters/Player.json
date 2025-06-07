@@ -206,7 +206,25 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 173141733772407,
+							"sid": 457187350870521,
+							"parameters": {
+								"instance-variable": "charges",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerHitbox",
+							"sid": 809900953033866,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "6"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerHitbox",
+							"sid": 892470781774286,
 							"parameters": {
 								"instance-variable": "maxLife",
 								"value": "6"
@@ -287,6 +305,14 @@
 								"image-point": "0",
 								"create-hierarchy": false,
 								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "instance-signal",
+							"objectClass": "PlayerHitbox",
+							"sid": 355317300010990,
+							"parameters": {
+								"tag": "\"ready\""
 							}
 						}
 					],
@@ -1085,13 +1111,14 @@
 							"behaviorType": "Platform"
 						},
 						{
-							"id": "is-animation-playing",
+							"id": "compare-instance-variable",
 							"objectClass": "PlayerHitbox",
-							"sid": 790465723978960,
+							"sid": 389927723096915,
 							"parameters": {
-								"animation": "\"dying\""
-							},
-							"isInverted": true
+								"instance-variable": "anchorAnimation",
+								"comparison": 1,
+								"value": "\"dying\""
+							}
 						},
 						{
 							"id": "compare-boolean-eventvar",
@@ -1981,199 +2008,228 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-stopped",
+							"id": "compare-instance-variable",
 							"objectClass": "PlayerHitbox",
-							"sid": 204008313744493,
-							"behaviorType": "Platform"
-						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "PlayerHitbox",
-							"sid": 243693604275889,
+							"sid": 148407174857594,
 							"parameters": {
 								"instance-variable": "anchorAnimation",
-								"value": "\"idle\""
-							}
-						},
-						{
-							"id": "instance-signal",
-							"objectClass": "PlayerHitbox",
-							"sid": 632492267230842,
-							"parameters": {
-								"tag": "\"idle\""
+								"comparison": 1,
+								"value": "\"dying\""
 							}
 						}
 					],
-					"sid": 125277849378218
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+					"actions": [],
+					"sid": 921476674645692,
+					"children": [
 						{
-							"id": "on-moved",
-							"objectClass": "PlayerHitbox",
-							"sid": 405808572563480,
-							"behaviorType": "Platform"
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-stopped",
+									"objectClass": "PlayerHitbox",
+									"sid": 432016858500662,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PlayerHitbox",
+									"sid": 282181050154924,
+									"parameters": {
+										"instance-variable": "anchorAnimation",
+										"value": "\"idle\""
+									}
+								},
+								{
+									"id": "instance-signal",
+									"objectClass": "PlayerHitbox",
+									"sid": 632479975043952,
+									"parameters": {
+										"tag": "\"idle\""
+									}
+								}
+							],
+							"sid": 562791060830425
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-moved",
+									"objectClass": "PlayerHitbox",
+									"sid": 283973601752319,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PlayerHitbox",
+									"sid": 624873377435050,
+									"parameters": {
+										"instance-variable": "anchorAnimation",
+										"value": "\"running\""
+									}
+								},
+								{
+									"id": "instance-signal",
+									"objectClass": "PlayerHitbox",
+									"sid": 503652427355764,
+									"parameters": {
+										"tag": "\"run\""
+									}
+								}
+							],
+							"sid": 621298680539542
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-instance-signal",
+									"objectClass": "PlayerHitbox",
+									"sid": 936667229333524,
+									"parameters": {
+										"tag": "\"idle\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PlayerHitbox",
+									"sid": 558811049336916,
+									"parameters": {
+										"instance-variable": "anchorAnimation",
+										"comparison": 1,
+										"value": "\"dead\""
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "PlayerGun",
+									"sid": 541206922618576,
+									"parameters": {
+										"animation": "\"shooting\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PlayerGun",
+									"sid": 572387444305885,
+									"parameters": {
+										"animation": "\"idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 768499990557709
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-instance-signal",
+									"objectClass": "PlayerHitbox",
+									"sid": 545649094399556,
+									"parameters": {
+										"tag": "\"run\""
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "PlayerGun",
+									"sid": 406794827957232,
+									"parameters": {
+										"animation": "\"shooting\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PlayerGun",
+									"sid": 240050236236485,
+									"parameters": {
+										"animation": "\"running\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 144517466670551
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-instance-signal",
+									"objectClass": "PlayerHitbox",
+									"sid": 470387368517117,
+									"parameters": {
+										"tag": "\"shoot\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PlayerGun",
+									"sid": 956452751943553,
+									"parameters": {
+										"animation": "\"shooting\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "PlayerChest",
+									"sid": 919697131467684,
+									"parameters": {
+										"animation": "\"shooting\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "PlayerGun",
+									"sid": 636220046850746,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "PlayerChest",
+									"sid": 320895253285838,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "PlayerHead",
+									"sid": 548602877856330,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "stop-animation",
+									"objectClass": "PlayerHead",
+									"sid": 323234183396004
+								},
+								{
+									"id": "stop-animation",
+									"objectClass": "PlayerGauntlet",
+									"sid": 203949353705420
+								}
+							],
+							"sid": 838007661720241
 						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "PlayerHitbox",
-							"sid": 470062911533186,
-							"parameters": {
-								"instance-variable": "anchorAnimation",
-								"value": "\"running\""
-							}
-						},
-						{
-							"id": "instance-signal",
-							"objectClass": "PlayerHitbox",
-							"sid": 904110408140887,
-							"parameters": {
-								"tag": "\"run\""
-							}
-						}
-					],
-					"sid": 425430438919507
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-instance-signal",
-							"objectClass": "PlayerHitbox",
-							"sid": 542691464863636,
-							"parameters": {
-								"tag": "\"idle\""
-							}
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "PlayerGun",
-							"sid": 798573540711302,
-							"parameters": {
-								"animation": "\"shooting\""
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PlayerGun",
-							"sid": 980226812177529,
-							"parameters": {
-								"animation": "\"idle\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 523271040459677
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-instance-signal",
-							"objectClass": "PlayerHitbox",
-							"sid": 131659552825540,
-							"parameters": {
-								"tag": "\"run\""
-							}
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "PlayerGun",
-							"sid": 213590401795321,
-							"parameters": {
-								"animation": "\"shooting\""
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PlayerGun",
-							"sid": 994749051848595,
-							"parameters": {
-								"animation": "\"running\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 230621981763904
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-instance-signal",
-							"objectClass": "PlayerHitbox",
-							"sid": 477637632321916,
-							"parameters": {
-								"tag": "\"shoot\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PlayerGun",
-							"sid": 587222238515328,
-							"parameters": {
-								"animation": "\"shooting\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "PlayerChest",
-							"sid": 623859060454572,
-							"parameters": {
-								"animation": "\"shooting\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "PlayerGun",
-							"sid": 372742417875673,
-							"parameters": {
-								"frame-number": "0"
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "PlayerChest",
-							"sid": 814833464322378,
-							"parameters": {
-								"frame-number": "0"
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "PlayerHead",
-							"sid": 738457495525023,
-							"parameters": {
-								"frame-number": "0"
-							}
-						},
-						{
-							"id": "stop-animation",
-							"objectClass": "PlayerHead",
-							"sid": 456436818097056
-						},
-						{
-							"id": "stop-animation",
-							"objectClass": "PlayerGauntlet",
-							"sid": 947240918123281
-						}
-					],
-					"sid": 403568436601543
+					]
 				},
 				{
 					"eventType": "block",
@@ -2343,6 +2399,58 @@
 								}
 							],
 							"sid": 971473660574969
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-instance-signal",
+							"objectClass": "PlayerHitbox",
+							"sid": 702903264974811,
+							"parameters": {
+								"tag": "\"dead\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerHitbox",
+							"sid": 422394856676029,
+							"parameters": {
+								"instance-variable": "anchorAnimation",
+								"value": "\"dying\""
+							}
+						}
+					],
+					"sid": 708048322773370,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 138208175946879,
+									"parameters": {
+										"object": "PlayerParts"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PlayerParts",
+									"sid": 993341909388881,
+									"parameters": {
+										"animation": "PlayerHitbox.anchorAnimation",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 587658861602485
 						}
 					]
 				}
@@ -2524,47 +2632,45 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-instance-signal",
+							"objectClass": "PlayerHitbox",
+							"sid": 871556600144032,
+							"parameters": {
+								"tag": "\"lifeUpdated\""
+							}
+						},
+						{
 							"id": "compare-instance-variable",
 							"objectClass": "PlayerHitbox",
-							"sid": 573600601978721,
+							"sid": 926318332032158,
 							"parameters": {
 								"instance-variable": "life",
 								"comparison": 0,
 								"value": "0"
 							}
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "PlayerHitbox",
-							"sid": 286529768742432,
-							"parameters": {
-								"animation": "\"dying\""
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
 						{
-							"id": "set-animation",
+							"id": "instance-signal",
 							"objectClass": "PlayerHitbox",
-							"sid": 588145457803006,
+							"sid": 980245927313170,
 							"parameters": {
-								"animation": "\"dying\"",
-								"from": "beginning"
+								"tag": "\"dead\""
 							}
 						}
 					],
-					"sid": 930429229131585
+					"sid": 335876013314370
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-animation-finished",
+							"id": "on-instance-signal",
 							"objectClass": "PlayerHitbox",
-							"sid": 936394513743623,
+							"sid": 745342541763124,
 							"parameters": {
-								"animation": "\"dying\""
+								"tag": "\"dead\""
 							}
 						}
 					],
@@ -2609,12 +2715,12 @@
 			"conditions": [],
 			"actions": [
 				{
-					"id": "subtract-from-instvar",
+					"id": "set-instvar-value",
 					"objectClass": "PlayerHitbox",
-					"sid": 571150578425529,
+					"sid": 168971027582588,
 					"parameters": {
 						"instance-variable": "life",
-						"value": "damage"
+						"value": "max(PlayerHitbox.life - damage, 0)"
 					}
 				},
 				{

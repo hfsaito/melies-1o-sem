@@ -9,7 +9,7 @@
 			"name": "charges",
 			"type": "number",
 			"desc": "",
-			"show": true,
+			"show": false,
 			"sid": 331264313342531
 		},
 		{
@@ -44,14 +44,14 @@
 			"name": "maxLife",
 			"type": "number",
 			"desc": "",
-			"show": true,
+			"show": false,
 			"sid": 860031828100376
 		},
 		{
 			"name": "camera",
 			"type": "number",
 			"desc": "",
-			"show": true,
+			"show": false,
 			"sid": 608934047869610
 		},
 		{

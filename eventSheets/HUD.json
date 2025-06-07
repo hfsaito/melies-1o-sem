@@ -73,9 +73,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-created",
+									"id": "on-instance-signal",
 									"objectClass": "PlayerHitbox",
-									"sid": 847476755795640
+									"sid": 784020279693356,
+									"parameters": {
+										"tag": "\"ready\""
+									}
 								}
 							],
 							"actions": [
