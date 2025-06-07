@@ -36,6 +36,183 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 346182724390403
+						}
+					],
+					"actions": [],
+					"sid": 996158221580644,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 333969222671094,
+									"parameters": {
+										"first-value": "PlayerSpawnPoint.Count",
+										"comparison": 4,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 423168272118843,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 941747922595275,
+											"parameters": {
+												"first-value": "PlayerHitbox.Count",
+												"comparison": 4,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "PlayerHitbox",
+											"sid": 593996075098368,
+											"parameters": {
+												"object": "PlayerSpawnPoint",
+												"image-point-optional": "0"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "PlayerSpawnPoint",
+											"sid": 131485702306565
+										}
+									],
+									"sid": 551880310353412,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "Revive"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "PlayerHitbox",
+													"sid": 717041470596439,
+													"parameters": {
+														"instance-variable": "life",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 149385316770275,
+													"parameters": {
+														"seconds": ".1",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "playerUpdateLife",
+													"sid": 307077822640664,
+													"parameters": [
+														"6"
+													]
+												},
+												{
+													"callFunction": "playerUpdateBattery",
+													"sid": 102645326661653,
+													"parameters": [
+														"0"
+													]
+												},
+												{
+													"callFunction": "playerSetAnimation",
+													"sid": 282516109864852,
+													"parameters": [
+														"\"idle\""
+													]
+												}
+											],
+											"sid": 307124983734167
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 628554145649893,
+											"parameters": {
+												"first-value": "PlayerHitbox.Count",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "PlayerSpawnPoint",
+											"sid": 733570463402659,
+											"parameters": {
+												"object": "PlayerHitbox",
+												"layer": "\"Player\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "PlayerSpawnPoint",
+											"sid": 587678537175252
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 692803464323085,
+											"parameters": {
+												"seconds": ".1",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "playerUpdateLife",
+											"sid": 391450589616142,
+											"parameters": [
+												"6"
+											]
+										},
+										{
+											"callFunction": "playerUpdateBattery",
+											"sid": 981429644536042,
+											"parameters": [
+												"0"
+											]
+										}
+									],
+									"sid": 730453813745986
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-created",
 							"objectClass": "PlayerHitbox",
 							"sid": 391850785859748
@@ -206,25 +383,6 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 454304607651114,
-							"disabled": true,
-							"parameters": {
-								"instance-variable": "charges",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "PlayerHitbox",
-							"sid": 709561528014784,
-							"parameters": {
-								"instance-variable": "life",
-								"value": "6"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "PlayerHitbox",
 							"sid": 306436715916531,
 							"parameters": {
 								"instance-variable": "maxLife",
@@ -318,33 +476,6 @@
 						}
 					],
 					"sid": 790308287078352
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-created",
-							"objectClass": "PlayerSpawnPoint",
-							"sid": 547803757748026
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position-to-another-object",
-							"objectClass": "PlayerHitbox",
-							"sid": 153851819814424,
-							"parameters": {
-								"object": "PlayerSpawnPoint",
-								"image-point-optional": "0"
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "PlayerSpawnPoint",
-							"sid": 490665679398303
-						}
-					],
-					"sid": 913060138405593
 				}
 			],
 			"sid": 294180998688316
@@ -362,10 +493,19 @@
 						{
 							"id": "on-created",
 							"objectClass": "PlayerParts",
-							"sid": 437020170917778
+							"sid": 224296285086612
 						}
 					],
 					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 290527518834173,
+							"parameters": {
+								"seconds": ".1",
+								"use-timescale": true
+							}
+						},
 						{
 							"id": "pin-to-object-properties",
 							"objectClass": "PlayerParts",
@@ -379,6 +519,15 @@
 								"width-type": "no",
 								"height-type": "no",
 								"z": false
+							}
+						},
+						{
+							"id": "set-destroy",
+							"objectClass": "PlayerParts",
+							"sid": 370937553525387,
+							"behaviorType": "Pin",
+							"parameters": {
+								"destroy": true
 							}
 						}
 					],
@@ -774,21 +923,21 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "PlayerHitbox",
-							"sid": 389927723096915,
+							"sid": 612656495584950,
 							"parameters": {
 								"instance-variable": "anchorAnimation",
 								"comparison": 1,
-								"value": "\"dying\""
+								"value": "\"punching\""
 							}
 						},
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "PlayerHitbox",
-							"sid": 344755461786621,
+							"sid": 389927723096915,
 							"parameters": {
 								"instance-variable": "anchorAnimation",
 								"comparison": 1,
-								"value": "\"punching\""
+								"value": "\"dying\""
 							}
 						},
 						{
@@ -1031,7 +1180,7 @@
 									}
 								},
 								{
-									"callFunction": "playerUpdateBattery",
+									"callFunction": "playerUpdateBatteryDelta",
 									"sid": 602317838228644,
 									"parameters": [
 										"-1"
@@ -1349,6 +1498,29 @@
 						}
 					],
 					"sid": 437210216276117
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-instance-signal",
+							"objectClass": "PlayerHitbox",
+							"sid": 341093187817664,
+							"parameters": {
+								"tag": "\"dead\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "playerSetAnimation",
+							"sid": 783950094795880,
+							"parameters": [
+								"\"dying\""
+							]
+						}
+					],
+					"sid": 771843419561284
 				}
 			],
 			"sid": 864854303545150
@@ -1397,21 +1569,11 @@
 							],
 							"actions": [
 								{
-									"id": "set-instvar-value",
-									"objectClass": "PlayerHitbox",
-									"sid": 414807571712237,
-									"parameters": {
-										"instance-variable": "life",
-										"value": "max(PlayerHitbox.life - damage, 0)"
-									}
-								},
-								{
-									"id": "instance-signal",
-									"objectClass": "PlayerHitbox",
-									"sid": 236111582984780,
-									"parameters": {
-										"tag": "\"lifeUpdated\""
-									}
+									"callFunction": "playerUpdateLife",
+									"sid": 781836705170841,
+									"parameters": [
+										"PlayerHitbox.life - damage"
+									]
 								}
 							],
 							"sid": 872739489534597
@@ -1419,7 +1581,46 @@
 					]
 				},
 				{
-					"functionName": "playerUpdateBattery",
+					"functionName": "playerUpdateLife",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "newValue",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 179868591033240
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerHitbox",
+							"sid": 903273329067720,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "min(PlayerHitbox.maxLife, max(newValue, 0))"
+							}
+						},
+						{
+							"id": "instance-signal",
+							"objectClass": "PlayerHitbox",
+							"sid": 635135083559669,
+							"parameters": {
+								"tag": "\"lifeUpdated\""
+							}
+						}
+					],
+					"sid": 604314102392044
+				},
+				{
+					"functionName": "playerUpdateBatteryDelta",
 					"functionDescription": "",
 					"functionCategory": "",
 					"functionReturnType": "none",
@@ -1438,24 +1639,53 @@
 					"conditions": [],
 					"actions": [
 						{
-							"id": "add-to-instvar",
+							"callFunction": "playerUpdateBattery",
+							"sid": 544234389772695,
+							"parameters": [
+								"PlayerHitbox.charges + delta"
+							]
+						}
+					],
+					"sid": 833092817436624
+				},
+				{
+					"functionName": "playerUpdateBattery",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "newValue",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 314183091099236
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 124311883744199,
+							"sid": 798340098881833,
 							"parameters": {
 								"instance-variable": "charges",
-								"value": "delta"
+								"value": "min(max(newValue, 0), 4)"
 							}
 						},
 						{
 							"id": "instance-signal",
 							"objectClass": "PlayerHitbox",
-							"sid": 832242016262141,
+							"sid": 464077140408365,
 							"parameters": {
 								"tag": "\"chargesUpdated\""
 							}
 						}
 					],
-					"sid": 833092817436624
+					"sid": 612395703167228
 				},
 				{
 					"eventType": "block",

@@ -372,6 +372,30 @@
 										"instance-variable": "parentUniqueID",
 										"value": "Enemy01Hitbox.UID"
 									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "Enemy01Parts",
+									"sid": 249478525334958,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Enemy01Hitbox",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "set-destroy",
+									"objectClass": "Enemy01Parts",
+									"sid": 248908144925007,
+									"behaviorType": "Pin",
+									"parameters": {
+										"destroy": true
+									}
 								}
 							],
 							"sid": 244005559625100
@@ -400,17 +424,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-position-to-another-object",
-							"objectClass": "Enemy01Parts",
-							"sid": 944133373214107,
-							"parameters": {
-								"object": "Enemy01Hitbox",
-								"image-point-optional": "0"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 805372750372056,
 					"children": [
 						{
@@ -1807,29 +1821,6 @@
 					"actions": [],
 					"sid": 392639822972497,
 					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Enemy01Parts",
-									"sid": 429945616706861,
-									"parameters": {
-										"instance-variable": "parentUniqueID",
-										"comparison": 0,
-										"value": "Enemy01Explosion.parentUniqueID"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "Enemy01Parts",
-									"sid": 655219344342100
-								}
-							],
-							"sid": 210020921380587
-						},
 						{
 							"eventType": "block",
 							"conditions": [

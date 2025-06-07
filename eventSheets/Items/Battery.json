@@ -20,7 +20,7 @@
 			],
 			"actions": [
 				{
-					"callFunction": "playerUpdateBattery",
+					"callFunction": "playerUpdateBatteryDelta",
 					"sid": 777733059374364,
 					"parameters": [
 						"1"

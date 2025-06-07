@@ -420,8 +420,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 48,
-						"y": 144,
+						"x": 54,
+						"y": 253,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -557,8 +557,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 48,
-						"y": 256,
+						"x": 164,
+						"y": 248,
 						"width": 96,
 						"height": 96,
 						"originX": 0.5,

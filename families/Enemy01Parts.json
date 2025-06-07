@@ -11,7 +11,13 @@
 			"sid": 729665201411526
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 352776583112467
+		}
+	],
 	"effectTypes": [],
 	"members": [
 		"Enemy01Explosion",
