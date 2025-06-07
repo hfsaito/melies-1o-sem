@@ -2,7 +2,7 @@
 	"name": "PlayerGauntlet",
 	"plugin-id": "Sprite",
 	"sid": 742803923585860,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],

@@ -687,12 +687,11 @@
 									"sid": 773460627756106
 								},
 								{
-									"id": "instance-signal",
-									"objectClass": "PlayerHitbox",
-									"sid": 752156376802070,
-									"parameters": {
-										"tag": "\"damage\""
-									}
+									"callFunction": "playerTookDamage",
+									"sid": 837934087245811,
+									"parameters": [
+										"2"
+									]
 								}
 							],
 							"sid": 642439574899274

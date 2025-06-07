@@ -372,7 +372,7 @@
 					"sid": 458210266334355,
 					"tags": "",
 					"instanceVariables": {
-						"charges": 0,
+						"charges": 3,
 						"launchForce": 0,
 						"wasMirrored": false,
 						"life": 6,
@@ -419,7 +419,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 77.31577785200324,
+						"x": 43.44734204877656,
 						"y": 219.59210682761494,
 						"width": 96,
 						"height": 96,

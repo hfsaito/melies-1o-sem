@@ -225,7 +225,8 @@
 					"PlayerHead",
 					"PlayerGauntlet",
 					"PlayerGun",
-					"PlayerLegs"
+					"PlayerLegs",
+					"PlayerSpawnPoint"
 				],
 				"subfolders": [],
 				"name": "Player"

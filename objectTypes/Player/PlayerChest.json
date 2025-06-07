@@ -2,7 +2,7 @@
 	"name": "PlayerChest",
 	"plugin-id": "Sprite",
 	"sid": 288825871672214,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],

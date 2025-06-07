@@ -2,7 +2,7 @@
 	"name": "PlayerHead",
 	"plugin-id": "Sprite",
 	"sid": 524333352784237,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],

@@ -2,7 +2,7 @@
 	"name": "PlayerLegs",
 	"plugin-id": "Sprite",
 	"sid": 191030219706876,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],

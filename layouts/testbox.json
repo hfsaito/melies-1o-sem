@@ -278,8 +278,8 @@
 					"instanceVariables": {
 						"state": "",
 						"id": 0,
-						"mirrored": true,
-						"patrolEnabled": true,
+						"mirrored": false,
+						"patrolEnabled": false,
 						"hasFloorEndingAhead": false,
 						"hasWallAhead": false,
 						"awarenessTimeout": 0,
@@ -420,8 +420,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 176,
-						"y": 256,
+						"x": 48,
+						"y": 144,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -510,7 +510,7 @@
 					"sid": 729900412310439,
 					"tags": "",
 					"instanceVariables": {
-						"charges": 0,
+						"charges": 99,
 						"launchForce": 0,
 						"wasMirrored": false,
 						"life": 1,
@@ -557,8 +557,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 304,
-						"y": 224,
+						"x": 48,
+						"y": 256,
 						"width": 96,
 						"height": 96,
 						"originX": 0.5,

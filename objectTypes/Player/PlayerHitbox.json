@@ -2,14 +2,14 @@
 	"name": "PlayerHitbox",
 	"plugin-id": "Sprite",
 	"sid": 715975741153884,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "charges",
 			"type": "number",
 			"desc": "",
-			"show": false,
+			"show": true,
 			"sid": 331264313342531
 		},
 		{

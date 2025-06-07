@@ -2,7 +2,7 @@
 	"name": "PlayerGun",
 	"plugin-id": "Sprite",
 	"sid": 311544642471552,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],

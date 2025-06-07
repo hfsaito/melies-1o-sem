@@ -1,0 +1,52 @@
+{
+	"name": "PlayerSpawnPoint",
+	"plugin-id": "Sprite",
+	"sid": 184383998325468,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4931263,
+						"collisionPoly": {
+							"points": [
+								0.3958333333333333,
+								0.4270833333333333,
+								0.6041666666666666,
+								0.4270833333333333,
+								0.6041666666666666,
+								0.875,
+								0.3958333333333333,
+								0.875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 242271156143486,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

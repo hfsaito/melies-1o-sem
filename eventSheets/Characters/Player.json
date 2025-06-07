@@ -45,7 +45,7 @@
 						{
 							"id": "set-max-speed",
 							"objectClass": "PlayerHitbox",
-							"sid": 359485690210026,
+							"sid": 135614356751558,
 							"behaviorType": "Platform",
 							"parameters": {
 								"max-speed": "100"
@@ -54,7 +54,7 @@
 						{
 							"id": "set-acceleration",
 							"objectClass": "PlayerHitbox",
-							"sid": 473764204745827,
+							"sid": 240749680296633,
 							"behaviorType": "Platform",
 							"parameters": {
 								"acceleration": "500"
@@ -63,7 +63,7 @@
 						{
 							"id": "set-deceleration",
 							"objectClass": "PlayerHitbox",
-							"sid": 983472208531745,
+							"sid": 255466715215766,
 							"behaviorType": "Platform",
 							"parameters": {
 								"deceleration": "500"
@@ -72,7 +72,7 @@
 						{
 							"id": "set-jump-strength",
 							"objectClass": "PlayerHitbox",
-							"sid": 532967793351460,
+							"sid": 841795435750713,
 							"behaviorType": "Platform",
 							"parameters": {
 								"jump-strength": "500"
@@ -81,7 +81,7 @@
 						{
 							"id": "set-max-fall-speed",
 							"objectClass": "PlayerHitbox",
-							"sid": 636560345034096,
+							"sid": 513676789725277,
 							"behaviorType": "Platform",
 							"parameters": {
 								"max-fall-speed": "500"
@@ -90,7 +90,7 @@
 						{
 							"id": "set-double-jump",
 							"objectClass": "PlayerHitbox",
-							"sid": 785106353077544,
+							"sid": 717425015257214,
 							"behaviorType": "Platform",
 							"parameters": {
 								"state": "disabled"
@@ -99,7 +99,7 @@
 						{
 							"id": "set-jump-sustain",
 							"objectClass": "PlayerHitbox",
-							"sid": 491341230458884,
+							"sid": 827783437723175,
 							"behaviorType": "Platform",
 							"parameters": {
 								"jump-sustain": "0"
@@ -108,7 +108,7 @@
 						{
 							"id": "set-default-controls",
 							"objectClass": "PlayerHitbox",
-							"sid": 961431331079092,
+							"sid": 111154969388980,
 							"behaviorType": "Platform",
 							"parameters": {
 								"default-controls": false
@@ -117,7 +117,7 @@
 						{
 							"id": "set-enabled",
 							"objectClass": "PlayerHitbox",
-							"sid": 234489787479568,
+							"sid": 669668609679139,
 							"behaviorType": "Platform",
 							"parameters": {
 								"state": "enabled"
@@ -126,7 +126,7 @@
 						{
 							"id": "set-speed",
 							"objectClass": "PlayerHitbox",
-							"sid": 610155665890696,
+							"sid": 892873008536173,
 							"behaviorType": "Bullet",
 							"parameters": {
 								"speed": "0"
@@ -135,7 +135,7 @@
 						{
 							"id": "set-acceleration",
 							"objectClass": "PlayerHitbox",
-							"sid": 159042892446067,
+							"sid": 665355129549902,
 							"behaviorType": "Bullet",
 							"parameters": {
 								"acceleration": "0"
@@ -144,7 +144,7 @@
 						{
 							"id": "set-bounce-off-solids",
 							"objectClass": "PlayerHitbox",
-							"sid": 531743224726194,
+							"sid": 850969684668354,
 							"behaviorType": "Bullet",
 							"parameters": {
 								"state": false
@@ -153,7 +153,7 @@
 						{
 							"id": "set-enabled",
 							"objectClass": "PlayerHitbox",
-							"sid": 664677846633070,
+							"sid": 737541523569100,
 							"behaviorType": "Bullet",
 							"parameters": {
 								"state": "disabled"
@@ -162,7 +162,7 @@
 						{
 							"id": "set-enabled",
 							"objectClass": "PlayerHitbox",
-							"sid": 686004296933862,
+							"sid": 502711240673816,
 							"behaviorType": "Bullet",
 							"parameters": {
 								"state": "disabled"
@@ -171,7 +171,7 @@
 						{
 							"id": "set-scale",
 							"objectClass": "PlayerHitbox",
-							"sid": 382448137321407,
+							"sid": 629066442215492,
 							"parameters": {
 								"scale": "1"
 							}
@@ -179,7 +179,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 413099348013778,
+							"sid": 818794526766200,
 							"parameters": {
 								"instance-variable": "launchForce",
 								"value": "playerGauntletMinForce"
@@ -188,7 +188,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 872207760723781,
+							"sid": 947271433922606,
 							"parameters": {
 								"instance-variable": "shootingDelay",
 								"value": "0"
@@ -197,7 +197,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 146958378745105,
+							"sid": 639698269045392,
 							"parameters": {
 								"instance-variable": "id",
 								"value": "Self.IID"
@@ -206,7 +206,8 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 457187350870521,
+							"sid": 454304607651114,
+							"disabled": true,
 							"parameters": {
 								"instance-variable": "charges",
 								"value": "0"
@@ -215,7 +216,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 809900953033866,
+							"sid": 709561528014784,
 							"parameters": {
 								"instance-variable": "life",
 								"value": "6"
@@ -224,7 +225,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 892470781774286,
+							"sid": 306436715916531,
 							"parameters": {
 								"instance-variable": "maxLife",
 								"value": "6"
@@ -233,7 +234,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 267548271697652,
+							"sid": 813916280863087,
 							"parameters": {
 								"instance-variable": "anchorAnimation",
 								"value": "\"idle\""
@@ -242,7 +243,7 @@
 						{
 							"id": "set-visible",
 							"objectClass": "PlayerHitbox",
-							"sid": 301276759607392,
+							"sid": 863227097953604,
 							"parameters": {
 								"visibility": "invisible"
 							}
@@ -250,7 +251,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "PlayerHitbox",
-							"sid": 840571508883262,
+							"sid": 830267804927981,
 							"parameters": {
 								"object": "PlayerGun",
 								"layer": "\"Player\"",
@@ -262,7 +263,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "PlayerHitbox",
-							"sid": 927072612158360,
+							"sid": 393828188855257,
 							"parameters": {
 								"object": "PlayerLegs",
 								"layer": "\"Player\"",
@@ -274,7 +275,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "PlayerHitbox",
-							"sid": 723602780010347,
+							"sid": 570676160239738,
 							"parameters": {
 								"object": "PlayerChest",
 								"layer": "\"Player\"",
@@ -286,7 +287,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "PlayerHitbox",
-							"sid": 243127762976097,
+							"sid": 231350933015498,
 							"parameters": {
 								"object": "PlayerGauntlet",
 								"layer": "\"Player\"",
@@ -298,7 +299,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "PlayerHitbox",
-							"sid": 943093197385756,
+							"sid": 933213463353991,
 							"parameters": {
 								"object": "PlayerHead",
 								"layer": "\"Player\"",
@@ -310,13 +311,40 @@
 						{
 							"id": "instance-signal",
 							"objectClass": "PlayerHitbox",
-							"sid": 355317300010990,
+							"sid": 158866834317432,
 							"parameters": {
 								"tag": "\"ready\""
 							}
 						}
 					],
 					"sid": 790308287078352
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "PlayerSpawnPoint",
+							"sid": 547803757748026
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "PlayerHitbox",
+							"sid": 153851819814424,
+							"parameters": {
+								"object": "PlayerSpawnPoint",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PlayerSpawnPoint",
+							"sid": 490665679398303
+						}
+					],
+					"sid": 913060138405593
 				}
 			],
 			"sid": 294180998688316
@@ -1382,6 +1410,15 @@
 									"behaviorType": "Bullet",
 									"parameters": {
 										"gravity": "0"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "PlayerHitbox",
+									"sid": 475074958548172,
+									"parameters": {
+										"instance-variable": "charges",
+										"value": "1"
 									}
 								}
 							],
@@ -2601,39 +2638,6 @@
 						{
 							"id": "on-instance-signal",
 							"objectClass": "PlayerHitbox",
-							"sid": 574150729912390,
-							"parameters": {
-								"tag": "\"damage\""
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "PlayerHitbox",
-							"sid": 571084500074386,
-							"parameters": {
-								"instance-variable": "life",
-								"comparison": 4,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"callFunction": "playerTookDamage",
-							"sid": 209586214503804,
-							"parameters": [
-								"1"
-							]
-						}
-					],
-					"sid": 590353185085873
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-instance-signal",
-							"objectClass": "PlayerHitbox",
 							"sid": 871556600144032,
 							"parameters": {
 								"tag": "\"lifeUpdated\""
@@ -2713,26 +2717,45 @@
 			],
 			"eventType": "function-block",
 			"conditions": [],
-			"actions": [
+			"actions": [],
+			"sid": 838262111860631,
+			"children": [
 				{
-					"id": "set-instvar-value",
-					"objectClass": "PlayerHitbox",
-					"sid": 168971027582588,
-					"parameters": {
-						"instance-variable": "life",
-						"value": "max(PlayerHitbox.life - damage, 0)"
-					}
-				},
-				{
-					"id": "instance-signal",
-					"objectClass": "PlayerHitbox",
-					"sid": 886110268717521,
-					"parameters": {
-						"tag": "\"lifeUpdated\""
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PlayerHitbox",
+							"sid": 833602366146725,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerHitbox",
+							"sid": 624827461170694,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "max(PlayerHitbox.life - damage, 0)"
+							}
+						},
+						{
+							"id": "instance-signal",
+							"objectClass": "PlayerHitbox",
+							"sid": 354577851656050,
+							"parameters": {
+								"tag": "\"lifeUpdated\""
+							}
+						}
+					],
+					"sid": 291015972836765
 				}
-			],
-			"sid": 838262111860631
+			]
 		},
 		{
 			"functionName": "playerUpdateBattery",

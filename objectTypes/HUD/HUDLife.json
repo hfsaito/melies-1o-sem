@@ -2,7 +2,7 @@
 	"name": "HUDLife",
 	"plugin-id": "Sprite",
 	"sid": 670066078496094,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
