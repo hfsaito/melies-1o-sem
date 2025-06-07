@@ -176,6 +176,48 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-created",
+									"objectClass": "HUDBattery",
+									"sid": 875691131989322
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "HUDBattery",
+									"sid": 796439526026816,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "stop-animation",
+									"objectClass": "HUDBattery",
+									"sid": 546905467922886
+								},
+								{
+									"id": "set-scale",
+									"objectClass": "HUDBattery",
+									"sid": 472531002734749,
+									"parameters": {
+										"scale": ".8"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "HUDBattery",
+									"sid": 808626055227455,
+									"parameters": {
+										"frame-number": "PlayerHitbox.charges"
+									}
+								}
+							],
+							"sid": 247499761618069
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "every-tick",
 									"objectClass": "System",
 									"sid": 521475518163987
@@ -192,51 +234,7 @@
 									}
 								}
 							],
-							"sid": 813717500258504,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-created",
-											"objectClass": "HUDBattery",
-											"sid": 814047673328013
-										}
-									],
-									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "HUDBattery",
-											"sid": 121488541557500,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "stop-animation",
-											"objectClass": "HUDBattery",
-											"sid": 837536353088726
-										},
-										{
-											"id": "set-scale",
-											"objectClass": "HUDBattery",
-											"sid": 858507672629589,
-											"parameters": {
-												"scale": ".8"
-											}
-										},
-										{
-											"id": "set-animation-frame",
-											"objectClass": "HUDBattery",
-											"sid": 138543725000219,
-											"parameters": {
-												"frame-number": "PlayerHitbox.charges"
-											}
-										}
-									],
-									"sid": 652115611479789
-								}
-							]
+							"sid": 813717500258504
 						},
 						{
 							"eventType": "block",
