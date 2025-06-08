@@ -1,0 +1,19 @@
+{
+	"name": "HUDItems",
+	"plugin-id": "Sprite",
+	"sid": 941663653409961,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 515302658841420
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"HUDLife",
+		"HUDBatteryEffect",
+		"HUDBattery"
+	]
+}

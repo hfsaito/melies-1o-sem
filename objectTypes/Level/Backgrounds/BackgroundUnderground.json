@@ -1,30 +1,23 @@
 {
-	"name": "PlatformsTilemap",
-	"plugin-id": "Tilemap",
-	"sid": 660960313322581,
+	"name": "BackgroundUnderground",
+	"plugin-id": "TiledBg",
+	"sid": 268284544360992,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 345094207371217
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
-		"width": 160,
-		"height": 16,
+		"width": 65,
+		"height": 48,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 6058041,
+		"imageSpriteId": 557104,
 		"useCollisionPoly": true,
 		"tag": ""
-	},
-	"tile-collision-polys": {}
+	}
 }

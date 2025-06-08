@@ -1,44 +1,38 @@
 {
-	"name": "Zona",
+	"name": "PlayerCamera",
 	"plugin-id": "Sprite",
-	"sid": 551698984433364,
+	"sid": 344839817280645,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 138563602319991
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 500,
-						"height": 300,
-						"originX": 0,
-						"originY": 0,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6881925,
-						"collisionPoly": {
-							"points": [
-								0.00199203187250996,
-								0.0033112582781456954,
-								0.99800796812749,
-								0.0033112582781456954,
-								0.99800796812749,
-								0.9966887417218543,
-								0.00199203187250996,
-								0.9966887417218543
-							]
-						},
+						"imageSpriteId": 9819310,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 600442056702629,
+				"sid": 409026435976245,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

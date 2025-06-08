@@ -78,6 +78,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
 			"author": "Scirra",
@@ -129,6 +136,13 @@
 			"type": "behavior",
 			"id": "destroy",
 			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -233,7 +247,8 @@
 					"PlayerGauntlet",
 					"PlayerGun",
 					"PlayerLegs",
-					"PlayerSpawnPoint"
+					"PlayerSpawnPoint",
+					"PlayerCamera"
 				],
 				"subfolders": [],
 				"name": "Player"
@@ -245,11 +260,23 @@
 					"PlatformsTilemap",
 					"LevelDeathZone",
 					"LevelLayers",
-					"TiledBackground",
-					"Zona",
+					"deprecated",
 					"ThanksForPlaying"
 				],
-				"subfolders": [],
+				"subfolders": [
+					{
+						"items": [
+							"BackgroundBaseColor",
+							"BackgroundMountains1",
+							"BackgroundMountains2",
+							"BackgroundUnderground",
+							"BackgroundTower",
+							"Sprite"
+						],
+						"subfolders": [],
+						"name": "Backgrounds"
+					}
+				],
 				"name": "Level"
 			},
 			{
@@ -283,7 +310,8 @@
 			"OptionsButtons",
 			"PauseButtons",
 			"PauseItems",
-			"LevelZones"
+			"LevelZones",
+			"HUDItems"
 		],
 		"subfolders": [
 			{
@@ -308,10 +336,19 @@
 		"subfolders": [
 			{
 				"items": [
-					"Enemy02",
-					"Player"
+					"Template.HUD",
+					"Template.Background"
 				],
-				"subfolders": [],
+				"subfolders": [
+					{
+						"items": [
+							"Template.Enemy02",
+							"Template.Player"
+						],
+						"subfolders": [],
+						"name": "Characters"
+					}
+				],
 				"name": "Templates"
 			},
 			{
@@ -336,8 +373,7 @@
 				"items": [
 					"MainMenu",
 					"OptionsMenu",
-					"Pause",
-					"Camera"
+					"Pause"
 				],
 				"subfolders": [],
 				"name": "Menus"
@@ -358,8 +394,7 @@
 					"Level1",
 					"Level2",
 					"Level3",
-					"LevelBase",
-					"TestN"
+					"LevelBase"
 				],
 				"subfolders": [],
 				"name": "Levels"

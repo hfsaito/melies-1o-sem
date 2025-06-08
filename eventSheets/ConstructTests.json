@@ -113,62 +113,6 @@
 				}
 			],
 			"sid": 893109248104628
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 953358414500470
-				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 174325382852277,
-					"parameters": {
-						"object-to-create": "Enemy02",
-						"layer": "0",
-						"x": "ViewportMidX(0)",
-						"y": "ViewportMidY(0)",
-						"create-hierarchy": true,
-						"template-name": "\"test\""
-					}
-				}
-			],
-			"sid": 985695452422596
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-created",
-					"objectClass": "Enemy02",
-					"sid": 788470746352051
-				}
-			],
-			"actions": [
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 500983183087275,
-					"parameters": {
-						"seconds": "1.0",
-						"use-timescale": true
-					}
-				},
-				{
-					"id": "set-mirrored",
-					"objectClass": "Enemy02",
-					"sid": 594973899329850,
-					"parameters": {
-						"state": "mirrored"
-					}
-				}
-			],
-			"sid": 768894899033544
 		}
 	],
 	"sid": 705040661753437

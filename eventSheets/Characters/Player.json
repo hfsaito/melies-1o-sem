@@ -294,6 +294,38 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "player.parts.camera",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 432650193741564
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "PlayerCamera",
+									"sid": 315437649809393,
+									"parameters": {
+										"x": "PlayerHitbox.X",
+										"y": "PlayerHitbox.Y"
+									}
+								}
+							],
+							"sid": 846232580481046
+						}
+					],
+					"sid": 514812745567272
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "player.parts.bullets",
 					"description": "",
 					"isActiveOnStart": true,

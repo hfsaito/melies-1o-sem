@@ -1,5 +1,5 @@
 {
-	"name": "Enemy02",
+	"name": "Template.Player",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -7,441 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Enemy02SightToChase",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 43,
-					"sid": 232054651412585,
-					"tags": "",
-					"instanceVariables": {
-						"playerInSight": false,
-						"createdAt": 0
-					},
-					"behaviors": {},
-					"template": {
-						"mode": "template",
-						"templateName": "root",
-						"sourceTemplateName": "",
-						"replicaHierarchyInSyncWithTemplate": false,
-						"templatePropagateHierarchyChanges": true,
-						"replicaIgnoreTemplateHierarchyChanges": false,
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "playerInSight",
-												"state": true
-											},
-											{
-												"iv": "createdAt",
-												"state": true
-											}
-										]
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": []
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												true
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						],
-						"replicasUIDs": null
-					},
-					"sceneGraphData": {
-						"parent-uid": 36,
-						"uid": 43,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 232054651412585,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 50,
-						"y": 50,
-						"width": 256,
-						"height": 72,
-						"originX": 0,
-						"originY": 0.3333333333333333,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemy02SightToShoot",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 42,
-					"sid": 607602049015696,
-					"tags": "",
-					"instanceVariables": {
-						"playerInSight": false,
-						"createdAt": 0
-					},
-					"behaviors": {},
-					"template": {
-						"mode": "template",
-						"templateName": "root",
-						"sourceTemplateName": "",
-						"replicaHierarchyInSyncWithTemplate": false,
-						"templatePropagateHierarchyChanges": true,
-						"replicaIgnoreTemplateHierarchyChanges": false,
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "playerInSight",
-												"state": true
-											},
-											{
-												"iv": "createdAt",
-												"state": true
-											}
-										]
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": []
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												true
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						],
-						"replicasUIDs": null
-					},
-					"sceneGraphData": {
-						"parent-uid": 36,
-						"uid": 42,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 607602049015696,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 50,
-						"y": 50,
-						"width": 128,
-						"height": 30,
-						"originX": 0,
-						"originY": 0.3333333333333333,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemy02",
+					"type": "PlayerGun",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "idle",
@@ -449,32 +15,391 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 36,
-					"sid": 408328296405511,
+					"uid": 63,
+					"sid": 208990363363499,
 					"tags": "",
 					"instanceVariables": {
-						"initiallyMirrored": false,
-						"patrolEnabled": false,
-						"lastShootAt": 0,
-						"sawPlayerAt": 0,
-						"aware": false
+						"parentUniqueID": 0,
+						"shooting": false
 					},
 					"behaviors": {
-						"Platform": {
+						"Pin": {
 							"properties": {
-								"max-speed": 50,
-								"acceleration": 500,
-								"deceleration": 500,
-								"jump-strength": 0,
-								"gravity": 1000,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": false,
+								"destroy": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 61,
+						"uid": 63,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 208990363363499,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 50,
+						"y": 50,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlayerLegs",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 66,
+					"sid": 256747442289009,
+					"tags": "",
+					"instanceVariables": {
+						"parentUniqueID": 0
+					},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 61,
+						"uid": 66,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 256747442289009,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 50,
+						"y": 50,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlayerChest",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 65,
+					"sid": 865492511136559,
+					"tags": "",
+					"instanceVariables": {
+						"parentUniqueID": 0
+					},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 61,
+						"uid": 65,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 865492511136559,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 50,
+						"y": 50,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlayerHead",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 62,
+					"sid": 993456032436059,
+					"tags": "",
+					"instanceVariables": {
+						"parentUniqueID": 0
+					},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 61,
+						"uid": 62,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 993456032436059,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 50,
+						"y": 50,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlayerGauntlet",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 64,
+					"sid": 578853882274857,
+					"tags": "",
+					"instanceVariables": {
+						"parentUniqueID": 0
+					},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 61,
+						"uid": 64,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 578853882274857,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 50,
+						"y": 50,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlayerBullet",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 67,
+					"sid": 524122242484335,
+					"tags": "",
+					"instanceVariables": {
+						"initiallyMirrored": false
+					},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 300,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
 								"enabled": true
 							}
 						},
-						"Flash": {
+						"DestroyOutsideLayout": {
 							"properties": {}
 						}
 					},
@@ -521,21 +446,283 @@
 											{
 												"iv": "initiallyMirrored",
 												"state": true
-											},
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": [
+									{
+										"key": "Bullet",
+										"state": [
+											[
+												"speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"bounce-off-solids",
+												true
+											],
+											[
+												"set-angle",
+												true
+											],
+											[
+												"step",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "DestroyOutsideLayout",
+										"state": []
+									}
+								]
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						],
+						"replicasUIDs": null
+					},
+					"instanceFolderItem": {
+						"sid": 524122242484335,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 50,
+						"y": 150,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlayerHitbox",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 61,
+					"sid": 977915886763941,
+					"tags": "",
+					"instanceVariables": {
+						"charges": 0,
+						"life": 6,
+						"shootingDelay": 0,
+						"maxLife": 6,
+						"camera": 0,
+						"anchorAnimation": "",
+						"createdThisTurn": false
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 100,
+								"acceleration": 500,
+								"deceleration": 500,
+								"jump-strength": 500,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": false
+							}
+						}
+					},
+					"template": {
+						"mode": "template",
+						"templateName": "root",
+						"sourceTemplateName": "",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": true,
+						"replicaIgnoreTemplateHierarchyChanges": false,
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"initial-animation",
+												true
+											],
+											[
+												"initial-frame",
+												true
+											],
+											[
+												"enable-collisions",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
 											{
-												"iv": "patrolEnabled",
+												"iv": "charges",
 												"state": true
 											},
 											{
-												"iv": "lastShootAt",
+												"iv": "life",
 												"state": true
 											},
 											{
-												"iv": "sawPlayerAt",
+												"iv": "shootingDelay",
 												"state": true
 											},
 											{
-												"iv": "aware",
+												"iv": "maxLife",
+												"state": true
+											},
+											{
+												"iv": "camera",
+												"state": true
+											},
+											{
+												"iv": "anchorAnimation",
+												"state": true
+											},
+											{
+												"iv": "createdThisTurn",
 												"state": true
 											}
 										]
@@ -591,8 +778,37 @@
 										]
 									},
 									{
-										"key": "Flash",
-										"state": []
+										"key": "Bullet",
+										"state": [
+											[
+												"speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"bounce-off-solids",
+												true
+											],
+											[
+												"set-angle",
+												true
+											],
+											[
+												"step",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
 									}
 								]
 							},
@@ -691,10 +907,10 @@
 					},
 					"sceneGraphData": {
 						"parent-uid": null,
-						"uid": 36,
+						"uid": 61,
 						"children": [
 							{
-								"uid": 41,
+								"uid": 62,
 								"flags": {
 									"x": true,
 									"y": true,
@@ -709,7 +925,7 @@
 								}
 							},
 							{
-								"uid": 43,
+								"uid": 64,
 								"flags": {
 									"x": true,
 									"y": true,
@@ -724,7 +940,7 @@
 								}
 							},
 							{
-								"uid": 42,
+								"uid": 63,
 								"flags": {
 									"x": true,
 									"y": true,
@@ -739,13 +955,43 @@
 								}
 							},
 							{
-								"uid": 44,
+								"uid": 65,
 								"flags": {
 									"x": true,
 									"y": true,
 									"z": true,
 									"w": true,
 									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 66,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 86,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": true,
+									"w": false,
+									"h": false,
 									"a": true,
 									"o": false,
 									"v": false,
@@ -780,7 +1026,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 408328296405511,
+						"sid": 977915886763941,
 						"expanded": true
 					},
 					"showing": true,
@@ -788,8 +1034,8 @@
 					"world": {
 						"x": 50,
 						"y": 50,
-						"width": 128,
-						"height": 128,
+						"width": 96,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -803,25 +1049,39 @@
 					}
 				},
 				{
-					"type": "Enemy02FloorChecker",
+					"type": "PlayerBullet",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 41,
-					"sid": 585564109282843,
+					"uid": 73,
+					"sid": 735267688000967,
 					"tags": "",
 					"instanceVariables": {
-						"floorAhead": false,
-						"createdAt": 0
+						"initiallyMirrored": true
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 300,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
 					"template": {
 						"mode": "template",
-						"templateName": "root",
+						"templateName": "mirrored",
 						"sourceTemplateName": "",
 						"replicaHierarchyInSyncWithTemplate": false,
 						"templatePropagateHierarchyChanges": true,
@@ -860,11 +1120,7 @@
 										"key": "instance-variable",
 										"state": [
 											{
-												"iv": "floorAhead",
-												"state": true
-											},
-											{
-												"iv": "createdAt",
+												"iv": "initiallyMirrored",
 												"state": true
 											}
 										]
@@ -873,7 +1129,45 @@
 							},
 							{
 								"id": "behavior",
-								"component": []
+								"component": [
+									{
+										"key": "Bullet",
+										"state": [
+											[
+												"speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"bounce-off-solids",
+												true
+											],
+											[
+												"set-angle",
+												true
+											],
+											[
+												"step",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "DestroyOutsideLayout",
+										"state": []
+									}
+								]
 							},
 							{
 								"id": "effect",
@@ -968,47 +1262,19 @@
 						],
 						"replicasUIDs": null
 					},
-					"sceneGraphData": {
-						"parent-uid": 36,
-						"uid": 41,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
 					"instanceFolderItem": {
-						"sid": 585564109282843,
+						"sid": 735267688000967,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 50,
-						"width": 3,
-						"height": 3,
-						"originX": -8.666666666666666,
-						"originY": -16,
+						"y": 200,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1020,7 +1286,7 @@
 					}
 				},
 				{
-					"type": "Enemy02WallChecker",
+					"type": "PlayerSpawnPoint",
 					"properties": {
 						"initially-visible": false,
 						"initial-animation": "Animation 1",
@@ -1028,17 +1294,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 44,
-					"sid": 376006885607770,
+					"uid": 80,
+					"sid": 790794046018360,
 					"tags": "",
-					"instanceVariables": {
-						"wallAhead": false,
-						"createdAt": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {},
 					"template": {
 						"mode": "template",
-						"templateName": "root",
+						"templateName": "default",
 						"sourceTemplateName": "",
 						"replicaHierarchyInSyncWithTemplate": false,
 						"templatePropagateHierarchyChanges": true,
@@ -1075,16 +1338,7 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "wallAhead",
-												"state": true
-											},
-											{
-												"iv": "createdAt",
-												"state": true
-											}
-										]
+										"state": []
 									}
 								]
 							},
@@ -1185,15 +1439,58 @@
 						],
 						"replicasUIDs": null
 					},
+					"instanceFolderItem": {
+						"sid": 790794046018360,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 150,
+						"y": 50,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlayerCamera",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 86,
+					"sid": 725800782032412,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
-						"parent-uid": 36,
-						"uid": 44,
+						"parent-uid": 61,
+						"uid": 86,
 						"flags": {
-							"x": true,
-							"y": true,
+							"x": false,
+							"y": false,
 							"z": true,
-							"w": true,
-							"h": true,
+							"w": false,
+							"h": false,
 							"a": true,
 							"o": false,
 							"v": false,
@@ -1214,18 +1511,18 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 376006885607770,
+						"sid": 725800782032412,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 50,
-						"width": 3,
-						"height": 73,
-						"originX": -8.666666666666666,
-						"originY": 0.3424657534246575,
+						"y": 15,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1237,7 +1534,7 @@
 					}
 				}
 			],
-			"sid": 276252081917687,
+			"sid": 170849992189852,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -1271,7 +1568,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 753935532988841,
+	"sid": 220468931101463,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 500,

@@ -82,14 +82,14 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 784930796019179,
+									"sid": 604041642638076,
 									"parameters": {
 										"object-to-create": "HUDBattery",
 										"layer": "\"HUD\"",
-										"x": "0",
-										"y": "0",
-										"create-hierarchy": false,
-										"template-name": "\"\""
+										"x": "8",
+										"y": "32",
+										"create-hierarchy": true,
+										"template-name": "\"default\""
 									}
 								}
 							],
@@ -111,14 +111,14 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 280823045432490,
+											"sid": 180422759455105,
 											"parameters": {
 												"object-to-create": "HUDLife",
 												"layer": "\"HUD\"",
-												"x": "0",
-												"y": "0",
-												"create-hierarchy": false,
-												"template-name": "\"\""
+												"x": "8 + loopindex * 26",
+												"y": "8",
+												"create-hierarchy": true,
+												"template-name": "\"default\""
 											}
 										}
 									],
@@ -136,20 +136,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "stop-animation",
-									"objectClass": "HUDLife",
-									"sid": 231880142373012
-								},
-								{
-									"id": "set-position",
-									"objectClass": "HUDLife",
-									"sid": 786886390388749,
-									"parameters": {
-										"x": "8 + Self.IID * (Self.width + 2)",
-										"y": "8"
-									}
-								},
 								{
 									"id": "set-animation-frame",
 									"objectClass": "HUDLife",
@@ -172,15 +158,6 @@
 							],
 							"actions": [
 								{
-									"id": "set-position",
-									"objectClass": "HUDBattery",
-									"sid": 484695024224133,
-									"parameters": {
-										"x": "8 + (Self.Width / 2)",
-										"y": "32 + (Self.Height / 2)"
-									}
-								},
-								{
 									"id": "set-animation-frame",
 									"objectClass": "HUDBattery",
 									"sid": 808626055227455,
@@ -202,31 +179,15 @@
 							],
 							"actions": [
 								{
-									"id": "set-opacity",
-									"objectClass": "HUDBatteryEffect",
-									"sid": 436682615416774,
-									"parameters": {
-										"opacity": "80"
-									}
-								},
-								{
-									"id": "set-scale",
-									"objectClass": "HUDBatteryEffect",
-									"sid": 389954316520103,
-									"parameters": {
-										"scale": "1"
-									}
-								},
-								{
 									"id": "tween-one-property",
 									"objectClass": "HUDBatteryEffect",
-									"sid": 938876192260442,
+									"sid": 134255510451225,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"opacity\"",
 										"property": "offsetOpacity",
 										"end-value": "0",
-										"time": "1",
+										"time": ".75",
 										"ease": "noease",
 										"destroy-on-complete": "no",
 										"loop": "no",
@@ -237,13 +198,13 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "HUDBatteryEffect",
-									"sid": 739447938144242,
+									"sid": 579056143827188,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"xscale\"",
 										"property": "offsetScaleX",
 										"end-value": "1.5",
-										"time": "1",
+										"time": ".75",
 										"ease": "noease",
 										"destroy-on-complete": "no",
 										"loop": "no",
@@ -254,19 +215,33 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "HUDBatteryEffect",
-									"sid": 420805337998459,
+									"sid": 926308073274616,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"yscale\"",
 										"property": "offsetScaleY",
 										"end-value": "1.5",
-										"time": "1",
+										"time": ".75",
 										"ease": "noease",
 										"destroy-on-complete": "yes",
 										"loop": "no",
 										"ping-pong": "no",
 										"repeat-count": "1"
 									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 441465866208188,
+									"parameters": {
+										"seconds": ".75",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "HUDBatteryEffect",
+									"sid": 911214552113646
 								}
 							],
 							"sid": 414683162858727
