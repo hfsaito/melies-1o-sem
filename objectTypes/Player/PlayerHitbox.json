@@ -16,21 +16,21 @@
 			"name": "life",
 			"type": "number",
 			"desc": "",
-			"show": true,
+			"show": false,
 			"sid": 106432259251081
 		},
 		{
 			"name": "shootingDelay",
 			"type": "number",
 			"desc": "",
-			"show": false,
+			"show": true,
 			"sid": 857522448204996
 		},
 		{
 			"name": "maxLife",
 			"type": "number",
 			"desc": "",
-			"show": false,
+			"show": true,
 			"sid": 860031828100376
 		},
 		{
@@ -39,13 +39,6 @@
 			"desc": "",
 			"show": false,
 			"sid": 608934047869610
-		},
-		{
-			"name": "id",
-			"type": "number",
-			"desc": "",
-			"show": false,
-			"sid": 590482363493537
 		},
 		{
 			"name": "anchorAnimation",
@@ -88,7 +81,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6821584,
+						"imageSpriteId": 9539685,
 						"collisionPoly": {
 							"points": [
 								0.3958333333333333,

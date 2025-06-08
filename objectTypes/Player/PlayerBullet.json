@@ -4,8 +4,27 @@
 	"sid": 434483142407262,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "initiallyMirrored",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 356450097723071
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 120049953931338
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 335305652611634
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

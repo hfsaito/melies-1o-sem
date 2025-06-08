@@ -641,121 +641,246 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-overlapping-another-object",
+									"id": "on-created",
 									"objectClass": "Enemy02WallChecker",
-									"sid": 508770903200444,
-									"parameters": {
-										"object": "PlatformsTilemap"
-									},
-									"isInverted": true
-								},
-								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "Enemy02WallChecker",
-									"sid": 689390982003899,
-									"parameters": {
-										"object": "BreakableWall"
-									},
-									"isInverted": true
+									"sid": 931656634726587
 								}
 							],
-							"actions": [],
-							"sid": 218286104231517,
-							"children": [
+							"actions": [
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Enemy02WallChecker",
-											"sid": 859960965175302,
-											"parameters": {
-												"instance-variable": "wallAhead"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "Enemy02WallChecker",
-											"sid": 967419568545378,
-											"parameters": {
-												"instance-variable": "wallAhead",
-												"value": "false"
-											}
-										}
-									],
-									"sid": 789885312781955
+									"id": "set-instvar-value",
+									"objectClass": "Enemy02WallChecker",
+									"sid": 408616800108002,
+									"parameters": {
+										"instance-variable": "createdAt",
+										"value": "time"
+									}
 								}
-							]
+							],
+							"sid": 396854370046712
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-overlapping-another-object",
+									"id": "compare-instance-variable",
 									"objectClass": "Enemy02WallChecker",
-									"sid": 562002609091411,
+									"sid": 736326626183556,
 									"parameters": {
-										"object": "PlatformsTilemap"
-									}
-								},
-								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "Enemy02WallChecker",
-									"sid": 671417571701494,
-									"parameters": {
-										"object": "BreakableWall"
+										"instance-variable": "createdAt",
+										"comparison": 2,
+										"value": "time - .1"
 									}
 								}
 							],
 							"actions": [],
-							"sid": 908697323751338,
+							"sid": 216215029708446,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Enemy02WallChecker",
-											"sid": 224543067829196,
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 180376974763645,
 											"parameters": {
-												"instance-variable": "wallAhead"
-											},
-											"isInverted": true
-										},
-										{
-											"id": "pick-by-unique-id",
-											"objectClass": "Enemy02",
-											"sid": 108578107538410,
-											"parameters": {
-												"unique-id": "Enemy02WallChecker.ParentUID"
+												"interval-seconds": ".1"
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 603758706848296,
+									"children": [
 										{
-											"id": "set-boolean-instvar",
-											"objectClass": "Enemy02WallChecker",
-											"sid": 722534597828886,
-											"parameters": {
-												"instance-variable": "wallAhead",
-												"value": "true"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "Enemy02WallChecker",
+													"sid": 898389911209832,
+													"parameters": {
+														"object": "PlatformsTilemap"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "Enemy02WallChecker",
+													"sid": 280805466343485,
+													"parameters": {
+														"object": "BreakableWall"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [],
+											"sid": 567111059995608,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Enemy02WallChecker",
+															"sid": 141326760876147,
+															"parameters": {
+																"instance-variable": "wallAhead"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "Enemy02WallChecker",
+															"sid": 219327704085697,
+															"parameters": {
+																"instance-variable": "wallAhead",
+																"value": "false"
+															}
+														}
+													],
+													"sid": 249186379311288
+												}
+											]
 										},
 										{
-											"id": "instance-signal",
-											"objectClass": "Enemy02",
-											"sid": 269505095693184,
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "Enemy02WallChecker",
+													"sid": 646674467943791,
+													"parameters": {
+														"object": "PlatformsTilemap"
+													}
+												},
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "Enemy02WallChecker",
+													"sid": 153975040620026,
+													"parameters": {
+														"object": "BreakableWall"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 183081020369069,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Enemy02WallChecker",
+															"sid": 315648681872141,
+															"parameters": {
+																"instance-variable": "wallAhead"
+															},
+															"isInverted": true
+														},
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Enemy02",
+															"sid": 224955623829040,
+															"parameters": {
+																"unique-id": "Enemy02WallChecker.ParentUID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "Enemy02WallChecker",
+															"sid": 887139655958310,
+															"parameters": {
+																"instance-variable": "wallAhead",
+																"value": "true"
+															}
+														},
+														{
+															"id": "instance-signal",
+															"objectClass": "Enemy02",
+															"sid": 763527889437286,
+															"parameters": {
+																"tag": "\"turn\""
+															}
+														}
+													],
+													"sid": 455284165150055
+												}
+											],
+											"isOrBlock": true
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-instance-signal",
+											"objectClass": "Enemy02WallChecker",
+											"sid": 486361064292073,
 											"parameters": {
-												"tag": "\"turn\""
+												"tag": "\"check\""
 											}
 										}
 									],
-									"sid": 362247173644078
+									"actions": [],
+									"sid": 773843504484175,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "Enemy02WallChecker",
+													"sid": 802653924415778,
+													"parameters": {
+														"object": "PlatformsTilemap"
+													}
+												},
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "Enemy02WallChecker",
+													"sid": 926973887418476,
+													"parameters": {
+														"object": "BreakableWall"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 635772498903469,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Enemy02",
+															"sid": 197490340664511,
+															"parameters": {
+																"unique-id": "Enemy02WallChecker.ParentUID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "instance-signal",
+															"objectClass": "Enemy02",
+															"sid": 261814072596467,
+															"parameters": {
+																"tag": "\"turn\""
+															}
+														}
+													],
+													"sid": 647916971999174
+												}
+											],
+											"isOrBlock": true
+										}
+									]
 								}
-							],
-							"isOrBlock": true
+							]
 						}
 					],
 					"sid": 990465748124523

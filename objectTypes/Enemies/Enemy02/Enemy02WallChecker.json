@@ -11,6 +11,13 @@
 			"desc": "",
 			"show": false,
 			"sid": 842201510878334
+		},
+		{
+			"name": "createdAt",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 320462133975911
 		}
 	],
 	"behaviorTypes": [],

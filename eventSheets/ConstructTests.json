@@ -110,34 +110,6 @@
 					],
 					"sid": 401660739652013,
 					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 624699201356124,
-							"parameters": {
-								"first-value": "time - asdsdfsa",
-								"comparison": 4,
-								"second-value": "5"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 983632524057683,
-							"parameters": {
-								"type": "log",
-								"message": "\"asdfdsffasd\""
-							}
-						}
-					],
-					"sid": 293874873290508,
-					"disabled": true
 				}
 			],
 			"sid": 893109248104628

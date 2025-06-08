@@ -227,7 +227,6 @@
 			{
 				"items": [
 					"PlayerBullet",
-					"PlayerBulletMirrored",
 					"PlayerChest",
 					"PlayerHitbox",
 					"PlayerHead",
@@ -291,8 +290,7 @@
 				"items": [
 					"Enemies",
 					"Enemy01Parts",
-					"PlayerParts",
-					"PlayerBullets"
+					"PlayerParts"
 				],
 				"subfolders": [],
 				"name": "Characters"
@@ -303,20 +301,27 @@
 		"items": [
 			"MainMenu",
 			"TestBox",
-			"Level0",
-			"Level1",
 			"ContructTests",
-			"Level2",
 			"Level3",
 			"TestN"
 		],
 		"subfolders": [
 			{
 				"items": [
-					"Enemy02"
+					"Enemy02",
+					"Player"
 				],
 				"subfolders": [],
 				"name": "Templates"
+			},
+			{
+				"items": [
+					"Level0",
+					"Level1",
+					"Level2"
+				],
+				"subfolders": [],
+				"name": "Levels"
 			}
 		]
 	},

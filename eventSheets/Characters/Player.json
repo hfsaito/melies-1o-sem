@@ -87,15 +87,6 @@
 											"id": "destroy",
 											"objectClass": "PlayerSpawnPoint",
 											"sid": 341635416048765
-										},
-										{
-											"id": "log",
-											"objectClass": "Browser",
-											"sid": 561242211103076,
-											"parameters": {
-												"type": "log",
-												"message": "\"set spawn position\""
-											}
 										}
 									],
 									"sid": 458139631711058,
@@ -247,148 +238,14 @@
 						{
 							"id": "on-created",
 							"objectClass": "PlayerHitbox",
-							"sid": 391850785859748
+							"sid": 367996398049975
 						}
 					],
 					"actions": [
 						{
-							"id": "set-max-speed",
-							"objectClass": "PlayerHitbox",
-							"sid": 135614356751558,
-							"behaviorType": "Platform",
-							"parameters": {
-								"max-speed": "100"
-							}
-						},
-						{
-							"id": "set-acceleration",
-							"objectClass": "PlayerHitbox",
-							"sid": 240749680296633,
-							"behaviorType": "Platform",
-							"parameters": {
-								"acceleration": "500"
-							}
-						},
-						{
-							"id": "set-deceleration",
-							"objectClass": "PlayerHitbox",
-							"sid": 255466715215766,
-							"behaviorType": "Platform",
-							"parameters": {
-								"deceleration": "500"
-							}
-						},
-						{
-							"id": "set-jump-strength",
-							"objectClass": "PlayerHitbox",
-							"sid": 841795435750713,
-							"behaviorType": "Platform",
-							"parameters": {
-								"jump-strength": "500"
-							}
-						},
-						{
-							"id": "set-max-fall-speed",
-							"objectClass": "PlayerHitbox",
-							"sid": 513676789725277,
-							"behaviorType": "Platform",
-							"parameters": {
-								"max-fall-speed": "500"
-							}
-						},
-						{
-							"id": "set-double-jump",
-							"objectClass": "PlayerHitbox",
-							"sid": 717425015257214,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-jump-sustain",
-							"objectClass": "PlayerHitbox",
-							"sid": 827783437723175,
-							"behaviorType": "Platform",
-							"parameters": {
-								"jump-sustain": "0"
-							}
-						},
-						{
-							"id": "set-default-controls",
-							"objectClass": "PlayerHitbox",
-							"sid": 111154969388980,
-							"behaviorType": "Platform",
-							"parameters": {
-								"default-controls": false
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "PlayerHitbox",
-							"sid": 669668609679139,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-speed",
-							"objectClass": "PlayerHitbox",
-							"sid": 892873008536173,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"speed": "0"
-							}
-						},
-						{
-							"id": "set-acceleration",
-							"objectClass": "PlayerHitbox",
-							"sid": 665355129549902,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"acceleration": "0"
-							}
-						},
-						{
-							"id": "set-bounce-off-solids",
-							"objectClass": "PlayerHitbox",
-							"sid": 850969684668354,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": false
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "PlayerHitbox",
-							"sid": 737541523569100,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "PlayerHitbox",
-							"sid": 502711240673816,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-scale",
-							"objectClass": "PlayerHitbox",
-							"sid": 629066442215492,
-							"parameters": {
-								"scale": "1"
-							}
-						},
-						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 947271433922606,
+							"sid": 998527045098150,
 							"parameters": {
 								"instance-variable": "shootingDelay",
 								"value": "0"
@@ -397,25 +254,16 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 639698269045392,
+							"sid": 715954975910949,
 							"parameters": {
-								"instance-variable": "id",
-								"value": "Self.IID"
+								"instance-variable": "life",
+								"value": "Self.maxLife"
 							}
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerHitbox",
-							"sid": 306436715916531,
-							"parameters": {
-								"instance-variable": "maxLife",
-								"value": "6"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "PlayerHitbox",
-							"sid": 813916280863087,
+							"sid": 292702286246847,
 							"parameters": {
 								"instance-variable": "anchorAnimation",
 								"value": "\"idle\""
@@ -424,119 +272,14 @@
 						{
 							"id": "set-boolean-instvar",
 							"objectClass": "PlayerHitbox",
-							"sid": 445662939235027,
+							"sid": 835814783784600,
 							"parameters": {
 								"instance-variable": "createdThisTurn",
 								"value": "true"
 							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "PlayerHitbox",
-							"sid": 863227097953604,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "PlayerHitbox",
-							"sid": 830267804927981,
-							"parameters": {
-								"object": "PlayerGun",
-								"layer": "\"Player\"",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "PlayerHitbox",
-							"sid": 393828188855257,
-							"parameters": {
-								"object": "PlayerLegs",
-								"layer": "\"Player\"",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "PlayerHitbox",
-							"sid": 570676160239738,
-							"parameters": {
-								"object": "PlayerChest",
-								"layer": "\"Player\"",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "PlayerHitbox",
-							"sid": 231350933015498,
-							"parameters": {
-								"object": "PlayerGauntlet",
-								"layer": "\"Player\"",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "PlayerHitbox",
-							"sid": 933213463353991,
-							"parameters": {
-								"object": "PlayerHead",
-								"layer": "\"Player\"",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "wait-for-previous-actions",
-							"objectClass": "System",
-							"sid": 803349692920274
-						},
-						{
-							"id": "pin-to-object-properties",
-							"objectClass": "PlayerParts",
-							"sid": 194754551584123,
-							"behaviorType": "Pin",
-							"parameters": {
-								"pin-to": "PlayerHitbox",
-								"x": true,
-								"y": true,
-								"angle": true,
-								"width-type": "no",
-								"height-type": "no",
-								"z": false
-							}
-						},
-						{
-							"id": "set-destroy",
-							"objectClass": "PlayerParts",
-							"sid": 516102816266662,
-							"behaviorType": "Pin",
-							"parameters": {
-								"destroy": true
-							}
-						},
-						{
-							"id": "instance-signal",
-							"objectClass": "PlayerHitbox",
-							"sid": 158866834317432,
-							"parameters": {
-								"tag": "\"ready\""
-							}
 						}
 					],
-					"sid": 790308287078352
+					"sid": 786630010886021
 				}
 			],
 			"sid": 294180998688316
@@ -548,141 +291,6 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
-				{
-					"functionName": "player._setMirrored",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [
-						{
-							"name": "mirrored",
-							"type": "boolean",
-							"initialValue": "false",
-							"comment": "",
-							"sid": 483449157768420
-						}
-					],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [],
-					"sid": 943351855171388,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 849311917861262,
-									"parameters": {
-										"variable": "mirrored"
-									}
-								},
-								{
-									"id": "is-mirrored",
-									"objectClass": "PlayerHitbox",
-									"sid": 978806969383826,
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-mirrored",
-									"objectClass": "PlayerHitbox",
-									"sid": 263314072783174,
-									"parameters": {
-										"state": "mirrored"
-									}
-								}
-							],
-							"sid": 585483673702073,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "for-each",
-											"objectClass": "System",
-											"sid": 172028849832576,
-											"parameters": {
-												"object": "PlayerParts"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-mirrored",
-											"objectClass": "PlayerParts",
-											"sid": 821065184281207,
-											"parameters": {
-												"state": "mirrored"
-											}
-										}
-									],
-									"sid": 534911785065985
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 644861275447841,
-									"parameters": {
-										"variable": "mirrored"
-									},
-									"isInverted": true
-								},
-								{
-									"id": "is-mirrored",
-									"objectClass": "PlayerHitbox",
-									"sid": 880943144955103
-								}
-							],
-							"actions": [
-								{
-									"id": "set-mirrored",
-									"objectClass": "PlayerHitbox",
-									"sid": 698767029087960,
-									"parameters": {
-										"state": "not-mirrored"
-									}
-								}
-							],
-							"sid": 938854669327358,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "for-each",
-											"objectClass": "System",
-											"sid": 399231540917478,
-											"parameters": {
-												"object": "PlayerParts"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-mirrored",
-											"objectClass": "PlayerParts",
-											"sid": 657460157806143,
-											"parameters": {
-												"state": "not-mirrored"
-											}
-										}
-									],
-									"sid": 780773129109819
-								}
-							]
-						}
-					]
-				},
 				{
 					"eventType": "group",
 					"disabled": false,
@@ -719,14 +327,14 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 302618376429054,
+											"sid": 118773571673430,
 											"parameters": {
 												"object-to-create": "PlayerBullet",
 												"layer": "PlayerHitbox.LayerName",
-												"x": "PlayerHitbox.ImagePointX(1)",
-												"y": "PlayerHitbox.ImagePointY(1)",
-												"create-hierarchy": false,
-												"template-name": "\"\""
+												"x": "PlayerHitbox.ImagePointX(\"Shoot\")",
+												"y": "PlayerHitbox.ImagePointY(\"Shoot\")",
+												"create-hierarchy": true,
+												"template-name": "\"root\""
 											}
 										}
 									],
@@ -745,14 +353,14 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 168223171727288,
+											"sid": 560547655944771,
 											"parameters": {
-												"object-to-create": "PlayerBulletMirrored",
+												"object-to-create": "PlayerBullet",
 												"layer": "PlayerHitbox.LayerName",
-												"x": "PlayerHitbox.ImagePointX(1)",
-												"y": "PlayerHitbox.ImagePointY(1)",
-												"create-hierarchy": false,
-												"template-name": "\"\""
+												"x": "PlayerHitbox.ImagePointX(\"Shoot\")",
+												"y": "PlayerHitbox.ImagePointY(\"Shoot\")",
+												"create-hierarchy": true,
+												"template-name": "\"mirrored\""
 											}
 										}
 									],
@@ -765,54 +373,34 @@
 							"conditions": [
 								{
 									"id": "on-created",
-									"objectClass": "PlayerBullets",
-									"sid": 215619274984199
+									"objectClass": "PlayerBullet",
+									"sid": 540199492740141
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "PlayerBullet",
+									"sid": 375969782540684,
+									"parameters": {
+										"instance-variable": "initiallyMirrored"
+									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-speed",
-									"objectClass": "PlayerBullets",
-									"sid": 186599561342696,
-									"behaviorType": "Bullet",
+									"id": "set-mirrored",
+									"objectClass": "PlayerBullet",
+									"sid": 731924200522927,
 									"parameters": {
-										"speed": "250"
+										"state": "mirrored"
 									}
 								},
 								{
-									"id": "set-acceleration",
-									"objectClass": "PlayerBullets",
-									"sid": 535624844190027,
+									"id": "set-angle-of-motion",
+									"objectClass": "PlayerBullet",
+									"sid": 550224482294719,
 									"behaviorType": "Bullet",
 									"parameters": {
-										"acceleration": "0"
-									}
-								},
-								{
-									"id": "set-gravity",
-									"objectClass": "PlayerBullets",
-									"sid": 661725081094344,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"gravity": "0"
-									}
-								},
-								{
-									"id": "set-bounce-off-solids",
-									"objectClass": "PlayerBullets",
-									"sid": 725474022379002,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"state": false
-									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "PlayerBullets",
-									"sid": 659256684159792,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"state": "enabled"
+										"angle": "180"
 									}
 								}
 							],
@@ -822,38 +410,8 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-created",
-									"objectClass": "PlayerBulletMirrored",
-									"sid": 149641015062735
-								}
-							],
-							"actions": [
-								{
-									"id": "set-mirrored",
-									"objectClass": "PlayerBulletMirrored",
-									"sid": 688876454995354,
-									"parameters": {
-										"state": "mirrored"
-									}
-								},
-								{
-									"id": "set-angle-of-motion",
-									"objectClass": "PlayerBulletMirrored",
-									"sid": 164525667463747,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"angle": "180"
-									}
-								}
-							],
-							"sid": 248805170055632
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "on-collision-with-another-object",
-									"objectClass": "PlayerBullets",
+									"objectClass": "PlayerBullet",
 									"sid": 766138852473604,
 									"parameters": {
 										"object": "BreakableWall"
@@ -863,7 +421,7 @@
 							"actions": [
 								{
 									"id": "destroy",
-									"objectClass": "PlayerBullets",
+									"objectClass": "PlayerBullet",
 									"sid": 934643164091133
 								}
 							],
@@ -874,7 +432,7 @@
 							"conditions": [
 								{
 									"id": "on-collision-with-another-object",
-									"objectClass": "PlayerBullets",
+									"objectClass": "PlayerBullet",
 									"sid": 347874371295868,
 									"parameters": {
 										"object": "PlatformsTilemap"
@@ -884,7 +442,7 @@
 							"actions": [
 								{
 									"id": "destroy",
-									"objectClass": "PlayerBullets",
+									"objectClass": "PlayerBullet",
 									"sid": 140228432703421
 								}
 							],
@@ -895,7 +453,7 @@
 							"conditions": [
 								{
 									"id": "on-collision-with-another-object",
-									"objectClass": "PlayerBullets",
+									"objectClass": "PlayerBullet",
 									"sid": 104136025269464,
 									"parameters": {
 										"object": "Enemies"
@@ -913,7 +471,7 @@
 								},
 								{
 									"id": "destroy",
-									"objectClass": "PlayerBullets",
+									"objectClass": "PlayerBullet",
 									"sid": 515045898968435
 								}
 							],
@@ -991,11 +549,12 @@
 									}
 								},
 								{
-									"callFunction": "player._setMirrored",
-									"sid": 659517670223520,
-									"parameters": [
-										true
-									]
+									"id": "set-mirrored",
+									"objectClass": "PlayerHitbox",
+									"sid": 901734039773300,
+									"parameters": {
+										"state": "mirrored"
+									}
 								}
 							],
 							"sid": 699329912402301
@@ -1023,11 +582,12 @@
 									}
 								},
 								{
-									"callFunction": "player._setMirrored",
-									"sid": 689831890908727,
-									"parameters": [
-										false
-									]
+									"id": "set-mirrored",
+									"objectClass": "PlayerHitbox",
+									"sid": 417011225163443,
+									"parameters": {
+										"state": "not-mirrored"
+									}
 								}
 							],
 							"sid": 711739288475224
