@@ -373,14 +373,13 @@
 					"tags": "",
 					"instanceVariables": {
 						"charges": 0,
-						"launchForce": 0,
-						"wasMirrored": false,
 						"life": 6,
 						"shootingDelay": 0,
 						"maxLife": 6,
 						"camera": 0,
 						"id": 0,
-						"anchorAnimation": ""
+						"anchorAnimation": "",
+						"createdThisTurn": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -407,9 +406,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"Timer": {
-							"properties": {}
 						}
 					},
 					"instanceFolderItem": {
@@ -419,8 +415,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 43.44734204877656,
-						"y": 219.59210682761494,
+						"x": 35,
+						"y": 219,
 						"width": 96,
 						"height": 96,
 						"originX": 0.5,

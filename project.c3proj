@@ -113,13 +113,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Timer",
-			"name": "Timer",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
 			"author": "Scirra",
@@ -279,19 +272,26 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Enemy01Parts",
 			"MainMenuButtons",
-			"Enemy02Parts",
 			"MaybeRescale",
 			"OptionsButtons",
 			"PauseButtons",
 			"PauseItems",
-			"PlayerBullets",
-			"Enemies",
-			"LevelZones",
-			"PlayerParts"
+			"LevelZones"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Enemies",
+					"Enemy01Parts",
+					"Enemy02Parts",
+					"PlayerParts",
+					"PlayerBullets"
+				],
+				"subfolders": [],
+				"name": "Characters"
+			}
+		]
 	},
 	"layouts": {
 		"items": [

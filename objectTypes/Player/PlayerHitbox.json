@@ -13,20 +13,6 @@
 			"sid": 331264313342531
 		},
 		{
-			"name": "launchForce",
-			"type": "number",
-			"desc": "",
-			"show": false,
-			"sid": 181043991444307
-		},
-		{
-			"name": "wasMirrored",
-			"type": "boolean",
-			"desc": "",
-			"show": false,
-			"sid": 708169593626964
-		},
-		{
 			"name": "life",
 			"type": "number",
 			"desc": "",
@@ -67,6 +53,13 @@
 			"desc": "",
 			"show": false,
 			"sid": 803598706034221
+		},
+		{
+			"name": "createdThisTurn",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 889387302980232
 		}
 	],
 	"behaviorTypes": [
@@ -79,11 +72,6 @@
 			"behaviorId": "Bullet",
 			"name": "Bullet",
 			"sid": 929228910924175
-		},
-		{
-			"behaviorId": "Timer",
-			"name": "Timer",
-			"sid": 558399084114826
 		}
 	],
 	"effectTypes": [],
@@ -100,7 +88,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 2410574,
+						"imageSpriteId": 6821584,
 						"collisionPoly": {
 							"points": [
 								0.3958333333333333,
