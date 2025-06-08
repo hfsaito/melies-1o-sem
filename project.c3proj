@@ -85,6 +85,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "LOS",
 			"name": "Line of sight",
 			"author": "Scirra",
@@ -200,8 +207,8 @@
 							"Enemy02Bullet",
 							"Enemy02FloorChecker",
 							"Enemy02WallChecker",
-							"Enemy02LineOfSightChase",
-							"Enemy02LineOfSightAttack"
+							"Enemy02SightToChase",
+							"Enemy02SightToShoot"
 						],
 						"subfolders": [],
 						"name": "Enemy02"
@@ -284,7 +291,6 @@
 				"items": [
 					"Enemies",
 					"Enemy01Parts",
-					"Enemy02Parts",
 					"PlayerParts",
 					"PlayerBullets"
 				],
@@ -304,7 +310,15 @@
 			"Level3",
 			"TestN"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Enemy02"
+				],
+				"subfolders": [],
+				"name": "Templates"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [

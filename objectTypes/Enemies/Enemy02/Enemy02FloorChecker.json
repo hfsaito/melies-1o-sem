@@ -4,7 +4,22 @@
 	"sid": 137619701607050,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "floorAhead",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 312936231336911
+		},
+		{
+			"name": "createdAt",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 889451223772461
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {

@@ -6,21 +6,7 @@
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
-			"name": "state",
-			"type": "string",
-			"desc": "",
-			"show": false,
-			"sid": 267698587392954
-		},
-		{
-			"name": "id",
-			"type": "number",
-			"desc": "",
-			"show": false,
-			"sid": 160919664252062
-		},
-		{
-			"name": "mirrored",
+			"name": "initiallyMirrored",
 			"type": "boolean",
 			"desc": "",
 			"show": true,
@@ -34,32 +20,25 @@
 			"sid": 263110778464484
 		},
 		{
-			"name": "hasFloorEndingAhead",
-			"type": "boolean",
-			"desc": "",
-			"show": false,
-			"sid": 580154855192513
-		},
-		{
-			"name": "hasWallAhead",
-			"type": "boolean",
-			"desc": "",
-			"show": false,
-			"sid": 456451085690279
-		},
-		{
-			"name": "awarenessTimeout",
-			"type": "number",
-			"desc": "",
-			"show": false,
-			"sid": 603663392458247
-		},
-		{
-			"name": "attackDelay",
+			"name": "lastShootAt",
 			"type": "number",
 			"desc": "",
 			"show": false,
 			"sid": 503056488321321
+		},
+		{
+			"name": "sawPlayerAt",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 833946076780472
+		},
+		{
+			"name": "aware",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 410131615691522
 		}
 	],
 	"behaviorTypes": [
@@ -67,6 +46,11 @@
 			"behaviorId": "Platform",
 			"name": "Platform",
 			"sid": 727853777761391
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 575691359798430
 		}
 	],
 	"effectTypes": [],
@@ -97,6 +81,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -123,6 +114,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
@@ -160,6 +158,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -186,6 +191,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -212,6 +224,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -238,6 +257,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
@@ -275,6 +301,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -301,6 +334,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -327,6 +367,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -353,6 +400,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -379,6 +433,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
@@ -416,6 +477,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -442,6 +510,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -468,6 +543,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -494,6 +576,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
@@ -541,6 +630,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -579,6 +675,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -611,6 +714,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -639,6 +749,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "BulletSpawnPoint",
+								"x": 0.71875,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}

@@ -101,6 +101,10 @@
 									"sid": 458139631711058,
 									"children": [
 										{
+											"eventType": "comment",
+											"text": "Revive/Respawn"
+										},
+										{
 											"eventType": "block",
 											"conditions": [
 												{
@@ -147,10 +151,6 @@
 												}
 											],
 											"sid": 257327715534669
-										},
-										{
-											"eventType": "comment",
-											"text": "Revive/Respawn"
 										}
 									]
 								},
@@ -773,10 +773,10 @@
 								{
 									"id": "set-speed",
 									"objectClass": "PlayerBullets",
-									"sid": 659212344294629,
+									"sid": 186599561342696,
 									"behaviorType": "Bullet",
 									"parameters": {
-										"speed": "150"
+										"speed": "250"
 									}
 								},
 								{
@@ -1090,10 +1090,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "PlayerHitbox",
-											"sid": 194691195278704,
+											"sid": 947350379819607,
 											"parameters": {
 												"instance-variable": "shootingDelay",
-												"value": "time + .5"
+												"value": "time + .33"
 											}
 										},
 										{

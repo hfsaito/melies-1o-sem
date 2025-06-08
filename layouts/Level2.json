@@ -273,14 +273,11 @@
 					"sid": 249160534025463,
 					"tags": "",
 					"instanceVariables": {
-						"state": "",
-						"id": 0,
-						"mirrored": false,
+						"initiallyMirrored": false,
 						"patrolEnabled": true,
-						"hasFloorEndingAhead": false,
-						"hasWallAhead": false,
-						"awarenessTimeout": 0,
-						"attackDelay": 0
+						"lastShootAt": 0,
+						"sawPlayerAt": 0,
+						"aware": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -296,6 +293,9 @@
 								"default-controls": true,
 								"enabled": true
 							}
+						},
+						"Flash": {
+							"properties": {}
 						}
 					},
 					"instanceFolderItem": {

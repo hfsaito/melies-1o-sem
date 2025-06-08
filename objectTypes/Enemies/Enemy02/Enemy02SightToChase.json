@@ -1,10 +1,25 @@
 {
-	"name": "Enemy02LineOfSightChase",
+	"name": "Enemy02SightToChase",
 	"plugin-id": "Sprite",
 	"sid": 735453971556837,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "playerInSight",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 668265125866681
+		},
+		{
+			"name": "createdAt",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 195849082066942
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {

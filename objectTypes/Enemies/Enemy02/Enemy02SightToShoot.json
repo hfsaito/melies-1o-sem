@@ -1,10 +1,25 @@
 {
-	"name": "Enemy02LineOfSightAttack",
+	"name": "Enemy02SightToShoot",
 	"plugin-id": "Sprite",
 	"sid": 623274503995484,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "playerInSight",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 526975545252839
+		},
+		{
+			"name": "createdAt",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 951631484014212
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
