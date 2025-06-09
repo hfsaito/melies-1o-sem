@@ -1,0 +1,52 @@
+{
+	"name": "MenuControlsButtonChange",
+	"plugin-id": "Sprite",
+	"sid": 482333539855266,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 307,
+						"height": 159,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9346190,
+						"collisionPoly": {
+							"points": [
+								0.9837133550488599,
+								0.018867924528301886,
+								0.9837133550488599,
+								0.8679245283018868,
+								0.006514657980456026,
+								0.9874213836477987,
+								0.009771986970684038,
+								0.0440251572327044
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 432422599540275,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

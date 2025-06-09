@@ -1,0 +1,14 @@
+{
+	"name": "MenuPauseItems",
+	"plugin-id": "Sprite",
+	"sid": 627183581669004,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"MenuPauseButtonControls",
+		"MenuPauseButtonResume",
+		"MenuPauseTitle",
+		"MenuPauseButtonAudio"
+	]
+}

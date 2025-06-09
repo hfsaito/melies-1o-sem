@@ -777,7 +777,7 @@
 						"mode": "replica",
 						"templateName": "",
 						"sourceTemplateName": "root",
-						"replicaHierarchyInSyncWithTemplate": true,
+						"replicaHierarchyInSyncWithTemplate": false,
 						"templatePropagateHierarchyChanges": true,
 						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
@@ -1300,7 +1300,7 @@
 			"global": false
 		},
 		{
-			"name": "Pause",
+			"name": "MenuPause",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
@@ -1334,11 +1334,11 @@
 			"global": false
 		},
 		{
-			"name": "OptionsMenu",
+			"name": "MenuControls",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 901206254038777,
+			"sid": 458180686172197,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,

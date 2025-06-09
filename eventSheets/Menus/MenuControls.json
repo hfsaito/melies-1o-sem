@@ -1,0 +1,1488 @@
+{
+	"name": "MenuControls",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Controls"
+		},
+		{
+			"eventType": "variable",
+			"name": "menuControlsTarget",
+			"type": "string",
+			"initialValue": "\"\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 552711579679066
+		},
+		{
+			"functionName": "menuControlsKeyCodeToString",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "string",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "keyCode",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 613865078907279
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 622032343680526,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 831866925712879,
+							"parameters": {
+								"variable": "keyCode",
+								"comparison": 0,
+								"value": "32"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 955382433134454,
+							"parameters": {
+								"value": "\"<espaço>\""
+							}
+						}
+					],
+					"sid": 624247994741251
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 308978784508613
+						}
+					],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 680535693480048,
+							"parameters": {
+								"value": "Keyboard.StringFromKeyCode(keyCode)"
+							}
+						}
+					],
+					"sid": 834754561037305
+				}
+			]
+		},
+		{
+			"functionName": "menuControlsUpdateCtrlValues",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 873119333986793,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 214671522634067,
+							"parameters": {
+								"object": "MenuControlsValue"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 200372418800735,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "MenuControlsValue",
+									"sid": 903599115926490,
+									"parameters": {
+										"tags": "\"left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "MenuControlsValue",
+									"sid": 256363298315076,
+									"parameters": {
+										"text": "Functions.menuControlsKeyCodeToString(ctrlLeft)"
+									}
+								}
+							],
+							"sid": 990265737717308
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "MenuControlsValue",
+									"sid": 235578988734349,
+									"parameters": {
+										"tags": "\"right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "MenuControlsValue",
+									"sid": 160339242213982,
+									"parameters": {
+										"text": "Functions.menuControlsKeyCodeToString(ctrlRight)"
+									}
+								}
+							],
+							"sid": 741237932743922
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "MenuControlsValue",
+									"sid": 853112339030986,
+									"parameters": {
+										"tags": "\"jump\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "MenuControlsValue",
+									"sid": 292022627102714,
+									"parameters": {
+										"text": "Functions.menuControlsKeyCodeToString(ctrlJump)"
+									}
+								}
+							],
+							"sid": 512243347717810
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "MenuControlsValue",
+									"sid": 671740250911488,
+									"parameters": {
+										"tags": "\"shoot\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "MenuControlsValue",
+									"sid": 555658280234447,
+									"parameters": {
+										"text": "Functions.menuControlsKeyCodeToString(ctrlShoot)"
+									}
+								}
+							],
+							"sid": 457162153223875
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "MenuControlsValue",
+									"sid": 688912684973391,
+									"parameters": {
+										"tags": "\"gauntlet\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "MenuControlsValue",
+									"sid": 386065360776392,
+									"parameters": {
+										"text": "Functions.menuControlsKeyCodeToString(ctrlGauntlet)"
+									}
+								}
+							],
+							"sid": 526365164018885
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "MenuControlsValue",
+									"sid": 235465373792416,
+									"parameters": {
+										"tags": "\"pause\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "MenuControlsValue",
+									"sid": 213190059724389,
+									"parameters": {
+										"text": "Functions.menuControlsKeyCodeToString(ctrlPause)"
+									}
+								}
+							],
+							"sid": 966914571133260
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "MenuControlsValue",
+									"sid": 847096743656806,
+									"parameters": {
+										"tags": "\"testBox\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "MenuControlsValue",
+									"sid": 581935020976128,
+									"parameters": {
+										"text": "Functions.menuControlsKeyCodeToString(ctrlTestBox)"
+									}
+								}
+							],
+							"sid": 210624675133617
+						}
+					]
+				}
+			]
+		},
+		{
+			"functionName": "menuControlsValidateConflictCtrls",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "keyPressed",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 567981142873989
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 978775074093863,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "breakLoop",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 339071943640762
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 630467371414475,
+							"parameters": {
+								"name": "\"menuControlsValidateConflictCtrlsFor\"",
+								"start-index": "0",
+								"end-index": "7"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 389778628531256,
+							"parameters": {
+								"variable": "breakLoop"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 681884926778759,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "prevCtrl",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 566213921975485
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 690204034209637,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 750499945707338,
+									"parameters": {
+										"variable": "menuControlsTarget",
+										"comparison": 1,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 973211856621520,
+									"parameters": {
+										"variable": "prevCtrl",
+										"value": "ctrlLeft"
+									}
+								}
+							],
+							"sid": 899435798606434
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 402541052054066,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 238802356601908,
+									"parameters": {
+										"variable": "menuControlsTarget",
+										"comparison": 1,
+										"value": "\"right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 150289629165826,
+									"parameters": {
+										"variable": "prevCtrl",
+										"value": "ctrlRight"
+									}
+								}
+							],
+							"sid": 493082776998519
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 502417820162747,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 542679198194429,
+									"parameters": {
+										"variable": "menuControlsTarget",
+										"comparison": 1,
+										"value": "\"jump\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 644476292553163,
+									"parameters": {
+										"variable": "prevCtrl",
+										"value": "ctrlJump"
+									}
+								}
+							],
+							"sid": 567805151352567
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 902103979571377,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 196138253077073,
+									"parameters": {
+										"variable": "menuControlsTarget",
+										"comparison": 1,
+										"value": "\"shoot\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 108663857187944,
+									"parameters": {
+										"variable": "prevCtrl",
+										"value": "ctrlShoot"
+									}
+								}
+							],
+							"sid": 737134631258100
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 468509328037123,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 884006650363593,
+									"parameters": {
+										"variable": "menuControlsTarget",
+										"comparison": 1,
+										"value": "\"gauntlet\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 859153206658793,
+									"parameters": {
+										"variable": "prevCtrl",
+										"value": "ctrlGauntlet"
+									}
+								}
+							],
+							"sid": 347038923088635
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 438263683939309,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "5"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 317704778846720,
+									"parameters": {
+										"variable": "menuControlsTarget",
+										"comparison": 1,
+										"value": "\"pause\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 902768370053362,
+									"parameters": {
+										"variable": "prevCtrl",
+										"value": "ctrlPause"
+									}
+								}
+							],
+							"sid": 560203417089392
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 227944770655804,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "6"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 695517270174204,
+									"parameters": {
+										"variable": "menuControlsTarget",
+										"comparison": 1,
+										"value": "\"testBox\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 658405589879169,
+									"parameters": {
+										"variable": "prevCtrl",
+										"value": "ctrlTestBox"
+									}
+								}
+							],
+							"sid": 766331799500686
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 626078772901239,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuControlsAssignCtrl",
+									"sid": 923327516795766,
+									"parameters": [
+										"keyPressed"
+									]
+								}
+							],
+							"sid": 999744058413201
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 814749386382561,
+									"parameters": {
+										"variable": "keyPressed",
+										"comparison": 0,
+										"value": "prevCtrl"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "alert",
+									"objectClass": "Browser",
+									"sid": 838792313188402,
+									"parameters": {
+										"message": "\"Tecla em conflito com outro comando!\""
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 476722052835146,
+									"parameters": {
+										"variable": "breakLoop",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 748000027045947
+						}
+					]
+				}
+			]
+		},
+		{
+			"functionName": "menuControlsAssignCtrl",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "keyPressed",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 282007664822050
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 118862907765998,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 657738106007133,
+							"parameters": {
+								"variable": "menuControlsTarget",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 466432192799090,
+							"parameters": {
+								"variable": "ctrlLeft",
+								"value": "keyPressed"
+							}
+						}
+					],
+					"sid": 335604234975706
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 200436710633782,
+							"parameters": {
+								"variable": "menuControlsTarget",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 884061466781510,
+							"parameters": {
+								"variable": "ctrlRight",
+								"value": "keyPressed"
+							}
+						}
+					],
+					"sid": 486155735684200
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 605365206288920,
+							"parameters": {
+								"variable": "menuControlsTarget",
+								"comparison": 0,
+								"value": "\"jump\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 932978784153909,
+							"parameters": {
+								"variable": "ctrlJump",
+								"value": "keyPressed"
+							}
+						}
+					],
+					"sid": 570191089457969
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 826872910162548,
+							"parameters": {
+								"variable": "menuControlsTarget",
+								"comparison": 0,
+								"value": "\"shoot\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 189051716609428,
+							"parameters": {
+								"variable": "ctrlShoot",
+								"value": "keyPressed"
+							}
+						}
+					],
+					"sid": 339575410320167
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 546036339586924,
+							"parameters": {
+								"variable": "menuControlsTarget",
+								"comparison": 0,
+								"value": "\"gauntlet\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 110969240678298,
+							"parameters": {
+								"variable": "ctrlGauntlet",
+								"value": "keyPressed"
+							}
+						}
+					],
+					"sid": 331782002475196
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 969471820739791,
+							"parameters": {
+								"variable": "menuControlsTarget",
+								"comparison": 0,
+								"value": "\"pause\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 319381162167162,
+							"parameters": {
+								"variable": "ctrlPause",
+								"value": "keyPressed"
+							}
+						}
+					],
+					"sid": 298780289492910
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 240930961224574,
+							"parameters": {
+								"variable": "menuControlsTarget",
+								"comparison": 0,
+								"value": "\"testBox\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 442368852064818,
+							"parameters": {
+								"variable": "ctrlTestBox",
+								"value": "keyPressed"
+							}
+						}
+					],
+					"sid": 348452363625835
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 632159246642194,
+							"parameters": {
+								"variable": "menuControlsTarget",
+								"value": "\"\""
+							}
+						},
+						{
+							"callFunction": "menuControlsUpdateCtrlValues",
+							"sid": 218574286027687
+						}
+					],
+					"sid": 657712513553287
+				}
+			]
+		},
+		{
+			"functionName": "menuControlsOpen",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "withOverlay",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "",
+					"sid": 875147222252389
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 119683894812854,
+					"parameters": {
+						"layer": "\"MenuControls\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 634079127366688,
+					"parameters": {
+						"layer": "\"MenuControls\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 558907814068160,
+					"disabled": true
+				},
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 501599745346072,
+					"parameters": {
+						"tag": "\"MenuControlsOpen\""
+					}
+				}
+			],
+			"sid": 745912043682146,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 665758529102332,
+							"parameters": {
+								"variable": "withOverlay"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MenuControlsOverlay",
+							"sid": 292697662791011,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 885607999106987
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 629882854225424
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MenuControlsOverlay",
+							"sid": 525222750881600,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 201614155398886
+				}
+			]
+		},
+		{
+			"functionName": "menuControlsClose",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 783715162758706,
+					"parameters": {
+						"layer": "\"MenuControls\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 436979774572005,
+					"parameters": {
+						"layer": "\"MenuControls\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 669257170619542,
+					"disabled": true
+				},
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 701840314224926,
+					"parameters": {
+						"tag": "\"MenuControlsClose\""
+					}
+				}
+			],
+			"sid": 275823001078869
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MenuControls.check",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 857613919625505
+						},
+						{
+							"id": "layer-name-exists",
+							"objectClass": "System",
+							"sid": 530454007655793,
+							"parameters": {
+								"layer": "\"MenuControls\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 970990985949372,
+							"parameters": {
+								"group-name": "\"MenuControls.setup\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 531852415393379,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-in-preview",
+									"objectClass": "System",
+									"sid": 630866168997906
+								}
+							],
+							"actions": [
+								{
+									"id": "alert",
+									"objectClass": "Browser",
+									"sid": 819380604342254,
+									"parameters": {
+										"message": "\"Missing MenuControls layer in layout \" & LayoutName &  \"\n MenuControls event sheet imported but there is no  MenuControls layer\""
+									}
+								}
+							],
+							"sid": 978067370465687
+						}
+					]
+				}
+			],
+			"sid": 849314343928184
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MenuControls.setup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 802870053403305
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 252951861193951,
+							"parameters": {
+								"layer": "\"MenuControls\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 278324769927878,
+							"parameters": {
+								"layer": "\"MenuControls\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 329249360938933,
+							"parameters": {
+								"object-to-create": "MenuControlsOverlay",
+								"layer": "\"MenuControls\"",
+								"x": "ViewportLeft(\"MenuControls\")",
+								"y": "ViewportTop(\"MenuControls\")",
+								"create-hierarchy": true,
+								"template-name": "\"default\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 330355136112718,
+							"parameters": {
+								"seconds": ".1",
+								"use-timescale": false
+							}
+						},
+						{
+							"callFunction": "menuControlsUpdateCtrlValues",
+							"sid": 671430407829570
+						}
+					],
+					"sid": 106872576192796
+				}
+			],
+			"sid": 373942706770765
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MenuControls.open",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 766009435013700,
+							"parameters": {
+								"object": "MenuControlsButtons"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "MenuControlsButtons",
+							"sid": 626665113115729,
+							"parameters": {
+								"color": "rgbEx(70, 70, 70)"
+							}
+						}
+					],
+					"sid": 972064739575105
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 278058642547222
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "MenuControlsButtons",
+							"sid": 581555724951713,
+							"parameters": {
+								"color": "rgbEx(100, 100, 100)"
+							}
+						}
+					],
+					"sid": 933014557802631
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 781731589548121,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "MenuControlsButtonChange"
+							}
+						},
+						{
+							"id": "pick-parent",
+							"objectClass": "MenuControlsButtonChange",
+							"sid": 551577008543003,
+							"parameters": {
+								"parent": "MenuControlsValue",
+								"which": "own"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 346113667283799,
+							"parameters": {
+								"variable": "menuControlsTarget",
+								"value": "MenuControlsValue.TagAt(0)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "MenuControlsValue",
+							"sid": 300761694994081,
+							"parameters": {
+								"text": "\"...\""
+							}
+						}
+					],
+					"sid": 565040384516470
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 859593179948038
+						},
+						{
+							"id": "layer-is-interactive",
+							"objectClass": "System",
+							"sid": 279991277402931,
+							"parameters": {
+								"layer": "\"MenuControls\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 549410532270767,
+							"parameters": {
+								"variable": "menuControlsTarget",
+								"comparison": 1,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 434019609602887,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 310397597798523,
+									"parameters": {
+										"first-value": "Keyboard.LastKeyCode",
+										"comparison": 1,
+										"second-value": "32"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 129138092469625,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 277996572391879,
+											"parameters": {
+												"first-value": "Keyboard.LastKeyCode",
+												"comparison": 2,
+												"second-value": "65"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 810467352841136,
+											"parameters": {
+												"first-value": "Keyboard.LastKeyCode",
+												"comparison": 4,
+												"second-value": "90"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 100854053556028,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 191493689040861,
+													"parameters": {
+														"first-value": "Keyboard.LastKeyCode",
+														"comparison": 1,
+														"second-value": "27"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 438286333609659,
+													"parameters": {
+														"variable": "menuControlsTarget",
+														"comparison": 1,
+														"value": "\"pause\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "alert",
+													"objectClass": "Browser",
+													"sid": 387015790107331,
+													"parameters": {
+														"message": "\"Tecla inválida!\""
+													}
+												}
+											],
+											"sid": 990434719322505
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 939738444204903
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "menuControlsValidateConflictCtrls",
+													"sid": 157314898020371,
+													"parameters": [
+														"Keyboard.LastKeyCode"
+													]
+												}
+											],
+											"sid": 911682840300029
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 402694948196642
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "menuControlsValidateConflictCtrls",
+											"sid": 876839907358909,
+											"parameters": [
+												"Keyboard.LastKeyCode"
+											]
+										}
+									],
+									"sid": 121544929811287
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 996944661570897
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuControlsValidateConflictCtrls",
+									"sid": 263462244609471,
+									"parameters": [
+										"Keyboard.LastKeyCode"
+									]
+								}
+							],
+							"sid": 487518410695539
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 154117513427440,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "MenuControlsButtonBack"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "menuControlsClose",
+							"sid": 223966748773505
+						}
+					],
+					"sid": 661225543136630
+				}
+			],
+			"sid": 701945702928431
+		}
+	],
+	"sid": 867013347655353
+}

@@ -304,17 +304,17 @@
 								{
 									"id": "every-tick",
 									"objectClass": "System",
-									"sid": 432650193741564
+									"sid": 221406126001016
 								}
 							],
 							"actions": [
 								{
 									"id": "set-position",
 									"objectClass": "PlayerCamera",
-									"sid": 315437649809393,
+									"sid": 738740406294984,
 									"parameters": {
-										"x": "PlayerHitbox.X",
-										"y": "PlayerHitbox.Y"
+										"x": "lerp(PlayerCamera.X, PlayerHitbox.ImagePointX(\"Camera\"), 2 * dt)",
+										"y": "PlayerHitbox.ImagePointY(\"Camera\")"
 									}
 								}
 							],
@@ -546,11 +546,11 @@
 							}
 						},
 						{
-							"id": "compare-boolean-eventvar",
+							"id": "layer-is-visible",
 							"objectClass": "System",
-							"sid": 517457030268873,
+							"sid": 280509294151402,
 							"parameters": {
-								"variable": "paused"
+								"layer": "MenuPauseLayerName"
 							},
 							"isInverted": true
 						}

@@ -1,0 +1,60 @@
+{
+	"name": "MenuAudio",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 931433800711166
+				},
+				{
+					"id": "layer-name-exists",
+					"objectClass": "System",
+					"sid": 613831867666545,
+					"parameters": {
+						"layer": "\"MenuAudio\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 590440615278355,
+					"parameters": {
+						"group-name": "\"menuAudio\"",
+						"state": "deactivated"
+					}
+				}
+			],
+			"sid": 745716588629322,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-preview",
+							"objectClass": "System",
+							"sid": 298708955639872
+						}
+					],
+					"actions": [
+						{
+							"id": "alert",
+							"objectClass": "Browser",
+							"sid": 367990507511087,
+							"parameters": {
+								"message": "\"Missing MenuAudio layer in layout \" & LayoutName &  \"\nMenuAudio event sheet imported but there is no MenuAudio layer\""
+							}
+						}
+					],
+					"sid": 391213815479743
+				}
+			]
+		}
+	],
+	"sid": 981002479009657
+}

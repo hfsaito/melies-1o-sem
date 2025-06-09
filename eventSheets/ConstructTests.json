@@ -13,7 +13,7 @@
 		},
 		{
 			"eventType": "group",
-			"disabled": true,
+			"disabled": false,
 			"title": "key test",
 			"description": "",
 			"isActiveOnStart": true,
@@ -27,26 +27,8 @@
 							"sid": 757777909346408
 						}
 					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "OptionsJumpKey",
-							"sid": 345917620791818,
-							"parameters": {
-								"text": "Keyboard.LastKeyCode"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "OptionsJumpLabel",
-							"sid": 220698172914915,
-							"parameters": {
-								"text": "Keyboard.StringFromKeyCode(Keyboard.LastKeyCode)"
-							}
-						}
-					],
-					"sid": 315250848746963,
-					"disabled": true
+					"actions": [],
+					"sid": 315250848746963
 				}
 			],
 			"sid": 266841003192065
@@ -76,14 +58,6 @@
 								"variable": "asdsdfsa",
 								"value": "time"
 							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "OptionsJumpLabel",
-							"sid": 423218202907904,
-							"parameters": {
-								"text": "asdsdfsa"
-							}
 						}
 					],
 					"sid": 240205214892257,
@@ -98,16 +72,7 @@
 							"sid": 879998328525899
 						}
 					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "OptionsJumpKey",
-							"sid": 838994102317691,
-							"parameters": {
-								"text": "time"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 401660739652013,
 					"disabled": true
 				}

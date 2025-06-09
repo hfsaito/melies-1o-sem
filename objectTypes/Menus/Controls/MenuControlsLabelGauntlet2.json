@@ -1,0 +1,50 @@
+{
+	"name": "MenuControlsLabelGauntlet2",
+	"plugin-id": "Sprite",
+	"sid": 351512995170724,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 194,
+						"height": 66,
+						"originX": 1,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3353731,
+						"collisionPoly": {
+							"points": [
+								0.5360824742268041,
+								0.9545454545454546,
+								0.010309278350515464,
+								0.9696969696969697,
+								0.10824742268041238,
+								0.030303030303030304
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 484900300093887,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

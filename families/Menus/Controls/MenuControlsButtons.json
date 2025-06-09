@@ -1,0 +1,12 @@
+{
+	"name": "MenuControlsButtons",
+	"plugin-id": "Sprite",
+	"sid": 338561199461263,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"MenuControlsButtonChange",
+		"MenuControlsButtonBack"
+	]
+}

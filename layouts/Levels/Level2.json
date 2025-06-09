@@ -727,7 +727,7 @@
 			"global": false
 		},
 		{
-			"name": "Pause",
+			"name": "MenuPause",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
@@ -761,7 +761,7 @@
 			"global": false
 		},
 		{
-			"name": "OptionsMenu",
+			"name": "MenuControls",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],

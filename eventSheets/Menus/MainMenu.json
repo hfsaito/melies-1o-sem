@@ -3,11 +3,7 @@
 	"events": [
 		{
 			"eventType": "include",
-			"includeSheet": "OptionsMenu"
-		},
-		{
-			"eventType": "include",
-			"includeSheet": "Controls"
+			"includeSheet": "MenuControls"
 		},
 		{
 			"eventType": "variable",
@@ -23,11 +19,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-boolean-eventvar",
+					"id": "layer-is-interactive",
 					"objectClass": "System",
-					"sid": 636664672769287,
+					"sid": 901090550064376,
 					"parameters": {
-						"variable": "menuEnabled"
+						"layer": "\"MainMenu\""
 					}
 				}
 			],
@@ -76,8 +72,8 @@
 					],
 					"actions": [
 						{
-							"callFunction": "openOptionsMenu",
-							"sid": 582129089828107,
+							"callFunction": "menuControlsOpen",
+							"sid": 482112523450732,
 							"parameters": [
 								true
 							]
@@ -106,65 +102,46 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 670475639636645,
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 271356984758955,
 							"parameters": {
 								"object": "MainMenuButtons"
 							}
 						}
 					],
-					"actions": [],
-					"sid": 774933409425368,
-					"children": [
+					"actions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "cursor-is-over-object",
-									"objectClass": "Mouse",
-									"sid": 742008707381816,
-									"parameters": {
-										"object": "MainMenuButtons"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "MainMenuButtons",
-									"sid": 274672941344408,
-									"parameters": {
-										"animation": "\"hovered\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 359344300257073
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 939895493910559
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "MainMenuButtons",
-									"sid": 941312748297480,
-									"parameters": {
-										"animation": "\"idle\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 342451714850500
+							"id": "set-default-color",
+							"objectClass": "MainMenuButtons",
+							"sid": 362194367058470,
+							"parameters": {
+								"color": "rgbEx(70, 70, 70)"
+							}
 						}
-					]
+					],
+					"sid": 370888240920170
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 933766194158132
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "MainMenuButtons",
+							"sid": 198963727965879,
+							"parameters": {
+								"color": "rgbEx(100, 100, 100)"
+							}
+						}
+					],
+					"sid": 764108855559117
 				},
 				{
 					"eventType": "block",
@@ -198,9 +175,9 @@
 				{
 					"id": "on-signal",
 					"objectClass": "System",
-					"sid": 302206688325381,
+					"sid": 790665193663093,
 					"parameters": {
-						"tag": "\"optionsMenuOpen\""
+						"tag": "\"MenuControlsOpen\""
 					}
 				}
 			],
@@ -213,6 +190,15 @@
 						"variable": "menuEnabled",
 						"value": "false"
 					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 907851840583319,
+					"parameters": {
+						"layer": "\"MainMenu\"",
+						"interactive": false
+					}
 				}
 			],
 			"sid": 146232267485852
@@ -223,9 +209,9 @@
 				{
 					"id": "on-signal",
 					"objectClass": "System",
-					"sid": 200886061725497,
+					"sid": 956644886651615,
 					"parameters": {
-						"tag": "\"optionsMenuClose\""
+						"tag": "\"MenuControlsClose\""
 					}
 				}
 			],
@@ -237,6 +223,24 @@
 					"parameters": {
 						"variable": "menuEnabled",
 						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 353347774683647,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": false
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 840340288146139,
+					"parameters": {
+						"layer": "\"MainMenu\"",
+						"interactive": true
 					}
 				}
 			],

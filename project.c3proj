@@ -8,13 +8,6 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "Arr",
-			"name": "Array",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
@@ -38,6 +31,13 @@
 			"type": "plugin",
 			"id": "Mouse",
 			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PlatformInfo",
+			"name": "Platform info",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -169,31 +169,11 @@
 			},
 			{
 				"items": [
-					"MainMenuBackground",
-					"MainMenuButtonPlay",
-					"MainMenuButtonOptions",
-					"MainMenuButtonCredits"
-				],
-				"subfolders": [],
-				"name": "MainMenu"
-			},
-			{
-				"items": [
-					"PauseVolumeControl",
-					"PauseOverlay",
-					"PauseTitle",
-					"PauseButtonResume",
-					"PauseButtonOptions"
-				],
-				"subfolders": [],
-				"name": "Pause"
-			},
-			{
-				"items": [
 					"Keyboard",
 					"Mouse",
 					"Audio",
-					"Browser"
+					"Browser",
+					"PlatformInfo"
 				],
 				"subfolders": [],
 				"name": "Controls"
@@ -259,7 +239,6 @@
 					"LevelFinishZone",
 					"PlatformsTilemap",
 					"LevelDeathZone",
-					"LevelLayers",
 					"deprecated",
 					"ThanksForPlaying"
 				],
@@ -280,23 +259,49 @@
 				"name": "Level"
 			},
 			{
-				"items": [
-					"OptionsOverlay",
-					"OptionsRightLabel",
-					"OptionsLeftKey",
-					"OptionsJumpLabel",
-					"OptionsRightKey",
-					"OptionsLeftLabel",
-					"OptionsJumpKey",
-					"OptionsTitle",
-					"OptionsClose",
-					"OptionsPauseLabel",
-					"OptionsPauseKey",
-					"OptionsTestBoxKey",
-					"OptionsTestBoxLabel"
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"MenuControlsTitle",
+							"MenuControlsLabelLeft",
+							"MenuControlsLabelRight",
+							"MenuControlsLabelJump",
+							"MenuControlsLabelShoot",
+							"MenuControlsLabelGauntlet",
+							"MenuControlsButtonChange",
+							"MenuControlsButtonBack",
+							"MenuControlsValue",
+							"MenuControlsLabelGauntlet2",
+							"MenuControlsOverlay"
+						],
+						"subfolders": [],
+						"name": "Controls"
+					},
+					{
+						"items": [
+							"PauseVolumeControl",
+							"MenuPauseOverlay",
+							"MenuPauseTitle",
+							"MenuPauseButtonResume",
+							"MenuPauseButtonControls",
+							"MenuPauseButtonAudio"
+						],
+						"subfolders": [],
+						"name": "Pause"
+					},
+					{
+						"items": [
+							"MainMenuBackground",
+							"MainMenuButtonPlay",
+							"MainMenuButtonOptions",
+							"MainMenuButtonCredits"
+						],
+						"subfolders": [],
+						"name": "MainMenu"
+					}
 				],
-				"subfolders": [],
-				"name": "OptionsMenu"
+				"name": "Menus"
 			}
 		]
 	},
@@ -305,11 +310,6 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"MainMenuButtons",
-			"MaybeRescale",
-			"OptionsButtons",
-			"PauseButtons",
-			"PauseItems",
 			"LevelZones",
 			"HUDItems"
 		],
@@ -322,12 +322,39 @@
 				],
 				"subfolders": [],
 				"name": "Characters"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"MenuControlsButtons"
+						],
+						"subfolders": [],
+						"name": "Controls"
+					},
+					{
+						"items": [
+							"MenuPauseButtons",
+							"MenuPauseItems"
+						],
+						"subfolders": [],
+						"name": "Pause"
+					},
+					{
+						"items": [
+							"MainMenuButtons"
+						],
+						"subfolders": [],
+						"name": "MainMenu"
+					}
+				],
+				"name": "Menus"
 			}
 		]
 	},
 	"layouts": {
 		"items": [
-			"MainMenu",
 			"TestBox",
 			"ContructTests",
 			"Level3",
@@ -337,7 +364,8 @@
 			{
 				"items": [
 					"Template.HUD",
-					"Template.Background"
+					"Template.Background",
+					"Template.Items"
 				],
 				"subfolders": [
 					{
@@ -347,6 +375,15 @@
 						],
 						"subfolders": [],
 						"name": "Characters"
+					},
+					{
+						"items": [
+							"Template.MenuControls",
+							"Template.MenuPause",
+							"Template.MenuAudio"
+						],
+						"subfolders": [],
+						"name": "Menus"
 					}
 				],
 				"name": "Templates"
@@ -359,6 +396,13 @@
 				],
 				"subfolders": [],
 				"name": "Levels"
+			},
+			{
+				"items": [
+					"MainMenu"
+				],
+				"subfolders": [],
+				"name": "Menus"
 			}
 		]
 	},
@@ -372,8 +416,9 @@
 			{
 				"items": [
 					"MainMenu",
-					"OptionsMenu",
-					"Pause"
+					"MenuPause",
+					"MenuControls",
+					"MenuAudio"
 				],
 				"subfolders": [],
 				"name": "Menus"

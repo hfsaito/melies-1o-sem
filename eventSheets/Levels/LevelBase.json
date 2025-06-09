@@ -15,7 +15,7 @@
 		},
 		{
 			"eventType": "include",
-			"includeSheet": "Pause"
+			"includeSheet": "MenuPause"
 		},
 		{
 			"eventType": "variable",
@@ -41,56 +41,195 @@
 					"sid": 764127010664708
 				}
 			],
-			"actions": [
-				{
-					"id": "load",
-					"objectClass": "LevelLayers",
-					"sid": 276813729561654,
-					"parameters": {
-						"json": "\"[\r\n  \"\"Background\"\",\r\n  \"\"Platforms\"\",\r\n  \"\"Level\"\",\r\n  \"\"Player\"\",\r\n  \"\"HUD\"\",\r\n  \"\"Pause\"\"\r\n]\""
-					}
-				}
-			],
+			"actions": [],
 			"sid": 361381590589941,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "repeat",
+							"id": "for",
 							"objectClass": "System",
-							"sid": 269671195507204,
+							"sid": 761448673185988,
 							"parameters": {
-								"count": "LevelLayers.Count"
+								"name": "\"LevelBaseCheckLayersFor\"",
+								"start-index": "0",
+								"end-index": "4"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 544651909756281,
+					"sid": 322496287087104,
 					"children": [
+						{
+							"eventType": "variable",
+							"name": "currentExpectedLayer",
+							"type": "string",
+							"initialValue": "\"\"",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 629810884754484
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 488698746428913,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 769704358768029,
+									"parameters": {
+										"variable": "currentExpectedLayer",
+										"value": "\"Background\""
+									}
+								}
+							],
+							"sid": 460131817315454
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 656450643549467,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 127224760721373,
+									"parameters": {
+										"variable": "currentExpectedLayer",
+										"value": "\"Platforms\""
+									}
+								}
+							],
+							"sid": 967313273737145
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 870315547831404,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 202814626440018,
+									"parameters": {
+										"variable": "currentExpectedLayer",
+										"value": "\"Level\""
+									}
+								}
+							],
+							"sid": 791739332075269
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 781509835303782,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 585129802479823,
+									"parameters": {
+										"variable": "currentExpectedLayer",
+										"value": "\"Player\""
+									}
+								}
+							],
+							"sid": 734485812578439
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 427764257942403,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 200701069129827,
+									"parameters": {
+										"variable": "currentExpectedLayer",
+										"value": "\"HUD\""
+									}
+								}
+							],
+							"sid": 837174379404304
+						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "layer-name-exists",
 									"objectClass": "System",
-									"sid": 839716551962769,
+									"sid": 542355979482485,
 									"parameters": {
-										"layer": "LevelLayers.At(loopindex)"
-									}
+										"layer": "currentExpectedLayer"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
 									"id": "alert",
 									"objectClass": "Browser",
-									"sid": 568200400286185,
+									"sid": 978948704046867,
 									"parameters": {
-										"message": "\"Error in layout (\" & LayoutName & \")\nMissing layer labeled as \" & LevelLayers.At(loopindex)"
+										"message": "\"Error in layout (\" & LayoutName & \")\nMissing layer labeled as \" & currentExpectedLayer"
 									}
 								}
 							],
-							"sid": 938638794679603
+							"sid": 963958544081590
 						},
 						{
 							"eventType": "block",
@@ -98,16 +237,16 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 757934366846390
+									"sid": 337508072605190
 								},
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 724189393752127,
+									"sid": 243709745262549,
 									"parameters": {
-										"first-value": "LayerIndex(loopindex)",
+										"first-value": "LayerIndex(currentExpectedLayer)",
 										"comparison": 1,
-										"second-value": "LevelLayers.At(loopindex)"
+										"second-value": "loopindex"
 									}
 								}
 							],
@@ -115,13 +254,13 @@
 								{
 									"id": "alert",
 									"objectClass": "Browser",
-									"sid": 229143734247826,
+									"sid": 295389412582777,
 									"parameters": {
-										"message": "\"Error in layout (\" & LayoutName & \")\nExpected layer \" & loopindex & \" to be labeled as \" & LevelLayers.At(loopindex)"
+										"message": "\"Error in layout (\" & LayoutName & \")\nExpected layer \" & loopindex & \" to be labeled as \" & currentExpectedLayer"
 									}
 								}
 							],
-							"sid": 834211941722693
+							"sid": 856794442405236
 						}
 					]
 				}

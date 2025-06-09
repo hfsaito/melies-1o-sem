@@ -1,0 +1,29 @@
+{
+	"name": "MenuPauseOverlay",
+	"plugin-id": "TiledBg",
+	"sid": 222345715426745,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 944950367394727
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 134622,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

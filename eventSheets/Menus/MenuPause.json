@@ -1,0 +1,626 @@
+{
+	"name": "MenuPause",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "MenuControls"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Controls"
+		},
+		{
+			"eventType": "variable",
+			"name": "MenuPauseLayerName",
+			"type": "string",
+			"initialValue": "MenuPause",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 932802980094065
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "menuPause",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuPause.check",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 965276101117277
+								},
+								{
+									"id": "layer-name-exists",
+									"objectClass": "System",
+									"sid": 186218080275855,
+									"parameters": {
+										"layer": "MenuPauseLayerName"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 283603708266797,
+									"parameters": {
+										"group-name": "\"menuPause\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 260858661719477,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-in-preview",
+											"objectClass": "System",
+											"sid": 871436712523822
+										}
+									],
+									"actions": [
+										{
+											"id": "alert",
+											"objectClass": "Browser",
+											"sid": 116381427530887,
+											"parameters": {
+												"message": "\"Missing \" & MenuPauseLayerName & \" layer in layout \" & LayoutName &  \"\nMenuPause event sheet imported but the layer is missing\""
+											}
+										}
+									],
+									"sid": 879467799985774
+								}
+							]
+						}
+					],
+					"sid": 143808998759162
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuPause.setup",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 676374558176904
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 996087732722844,
+									"parameters": {
+										"layer": "MenuPauseLayerName",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 780942068430283,
+									"parameters": {
+										"layer": "MenuPauseLayerName",
+										"interactive": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 901124914434631,
+									"parameters": {
+										"object-to-create": "MenuPauseOverlay",
+										"layer": "MenuPauseLayerName",
+										"x": "ViewportLeft(MenuPauseLayerName)",
+										"y": "ViewportTop(MenuPauseLayerName)",
+										"create-hierarchy": true,
+										"template-name": "\"default\""
+									}
+								}
+							],
+							"sid": 473812995017195
+						}
+					],
+					"sid": 902551455615723
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuPause.functions",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "menuPauseOpen",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 608565234739780,
+									"parameters": {
+										"time-scale": "0"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 326234943333066,
+									"parameters": {
+										"layer": "MenuPauseLayerName",
+										"visibility": "visible"
+									}
+								},
+								{
+									"callFunction": "menuPauseShow",
+									"sid": 117154695709748
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 270391377059815,
+									"parameters": {
+										"tag": "\"pausePaused\""
+									}
+								}
+							],
+							"sid": 314562463248321
+						},
+						{
+							"functionName": "menuPauseClose",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 816611368567913,
+									"parameters": {
+										"time-scale": "1"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 342222475505022,
+									"parameters": {
+										"layer": "MenuPauseLayerName",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"callFunction": "menuPauseHide",
+									"sid": 900266074401775
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 101391802922158,
+									"parameters": {
+										"tag": "\"pauseResume\""
+									}
+								}
+							],
+							"sid": 828023700649414
+						},
+						{
+							"functionName": "menuPauseShow",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 563982322060145,
+									"parameters": {
+										"layer": "MenuPauseLayerName",
+										"interactive": true
+									}
+								}
+							],
+							"sid": 168425635536950,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 613748448703935,
+											"parameters": {
+												"object": "MenuPauseItems"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "MenuPauseItems",
+											"sid": 464394286840016,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 947903367848247
+								}
+							]
+						},
+						{
+							"functionName": "menuPauseHide",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 208802692748485,
+									"parameters": {
+										"layer": "MenuPauseLayerName",
+										"interactive": false
+									}
+								}
+							],
+							"sid": 774975861514960,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 237044650278860,
+											"parameters": {
+												"object": "MenuPauseItems"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "MenuPauseItems",
+											"sid": 194659632377049,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 543774086085125
+								}
+							]
+						}
+					],
+					"sid": 106435018805271
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuPause.open",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-code-pressed",
+									"objectClass": "Keyboard",
+									"sid": 505660964059479,
+									"parameters": {
+										"keycode": "ctrlPause"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 602829719109702,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 662779152705939,
+											"parameters": {
+												"layer": "MenuPauseLayerName"
+											}
+										},
+										{
+											"id": "layer-is-interactive",
+											"objectClass": "System",
+											"sid": 282553837547825,
+											"parameters": {
+												"layer": "MenuPauseLayerName"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "menuPauseClose",
+											"sid": 278409546149589
+										}
+									],
+									"sid": 262741034332990
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 826740221601557
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 733791408868068,
+											"parameters": {
+												"layer": "MenuPauseLayerName"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "layer-is-interactive",
+											"objectClass": "System",
+											"sid": 648900402212998,
+											"parameters": {
+												"layer": "MenuPauseLayerName"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "menuPauseOpen",
+											"sid": 112235764479079
+										}
+									],
+									"sid": 720800657865274
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 845023994459369,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "MenuPauseButtonResume"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuPauseClose",
+									"sid": 235126868331168
+								}
+							],
+							"sid": 290419691817135
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 378605073793198,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "MenuPauseButtonControls"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuControlsOpen",
+									"sid": 927977911438926,
+									"parameters": [
+										false
+									]
+								}
+							],
+							"sid": 965536246813165
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 796878523111828,
+									"parameters": {
+										"tag": "\"MenuControlsOpen\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuPauseHide",
+									"sid": 341737222434587
+								}
+							],
+							"sid": 558146954161755
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 551126766723714,
+									"parameters": {
+										"tag": "\"MenuControlsClose\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuPauseShow",
+									"sid": 894210916228919
+								}
+							],
+							"sid": 601842736086591
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 420544089656502,
+									"parameters": {
+										"object": "MenuPauseButtons"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "MenuPauseButtons",
+									"sid": 546177651759254,
+									"parameters": {
+										"color": "rgbEx(70, 70, 70)"
+									}
+								}
+							],
+							"sid": 423298672984204
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 654113290752714
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "MenuPauseButtons",
+									"sid": 563949539304356,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 767021112796020
+						}
+					],
+					"sid": 452771342975074
+				},
+				{
+					"eventType": "group",
+					"disabled": true,
+					"title": "pause.audio",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 488893113089415
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 414456015767411,
+									"parameters": {
+										"audio-file": "battleThemeA",
+										"loop": "looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"bg\""
+									}
+								}
+							],
+							"sid": 897070998941521,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 942150327494708
+								}
+							],
+							"actions": [
+								{
+									"id": "set-master-volume",
+									"objectClass": "Audio",
+									"sid": 767981184588367,
+									"parameters": {
+										"db": "33 * log10(PauseVolumeControl.Value/100)"
+									}
+								}
+							],
+							"sid": 720814883437068,
+							"disabled": true
+						}
+					],
+					"sid": 371768254088635
+				}
+			],
+			"sid": 752801569441350
+		}
+	],
+	"sid": 563233474643183
+}

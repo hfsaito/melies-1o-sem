@@ -1,0 +1,29 @@
+{
+	"name": "MenuControlsOverlay",
+	"plugin-id": "TiledBg",
+	"sid": 879064359442174,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 113908985482900
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 8152640,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}
