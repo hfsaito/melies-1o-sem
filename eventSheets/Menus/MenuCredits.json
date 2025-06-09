@@ -1,0 +1,369 @@
+{
+	"name": "MenuCredits",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "MenuCreditsLayerName",
+			"type": "string",
+			"initialValue": "MenuCredits",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 100658429101785
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "menuCredits",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuCredits.check",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 110172972323921
+								},
+								{
+									"id": "layer-name-exists",
+									"objectClass": "System",
+									"sid": 738686485533224,
+									"parameters": {
+										"layer": "MenuCreditsLayerName"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 202009460517760,
+									"parameters": {
+										"group-name": "\"menuCredits\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 966090353745604,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-in-preview",
+											"objectClass": "System",
+											"sid": 129268974629090
+										}
+									],
+									"actions": [
+										{
+											"id": "alert",
+											"objectClass": "Browser",
+											"sid": 870221534152902,
+											"parameters": {
+												"message": "\"Missing \" & MenuCreditsLayerName & \" layer in layout \" & LayoutName &  \"\nMenuCredits event sheet imported but the layer is missing\""
+											}
+										}
+									],
+									"sid": 239095285031740
+								}
+							]
+						}
+					],
+					"sid": 444699628400933
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuCredits.setup",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 542320992405093
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 377232532763308,
+									"parameters": {
+										"layer": "MenuCreditsLayerName",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 644954524197663,
+									"parameters": {
+										"layer": "MenuCreditsLayerName",
+										"interactive": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 740268341110195,
+									"parameters": {
+										"object-to-create": "MenuCreditsOverlay",
+										"layer": "MenuCreditsLayerName",
+										"x": "ViewportLeft(MenuCreditsLayerName)",
+										"y": "ViewportTop(MenuCreditsLayerName)",
+										"create-hierarchy": true,
+										"template-name": "\"default\""
+									}
+								}
+							],
+							"sid": 276750769047906
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "MenuCreditsAnchor",
+									"sid": 503209885697948
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "MenuCreditsAnchor",
+									"sid": 628298683797695,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "-90"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "MenuCreditsAnchor",
+									"sid": 847075100991698,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 782063880504726
+						}
+					],
+					"sid": 308317525339757
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuOptions.functions2",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "menuCreditsOpen",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 780371187309722,
+									"parameters": {
+										"layer": "MenuCreditsLayerName",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 404273139402638,
+									"parameters": {
+										"layer": "MenuCreditsLayerName",
+										"interactive": true
+									}
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 991507754460845,
+									"parameters": {
+										"tag": "\"MenuCreditsOpen\""
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "MenuCreditsAnchor",
+									"sid": 138537107311227,
+									"parameters": {
+										"x": "ViewportLeft(MenuCreditsLayerName)",
+										"y": "ViewportBottom(MenuCreditsLayerName) - 10"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "MenuCreditsAnchor",
+									"sid": 729098447521683,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 858597512248834
+						},
+						{
+							"functionName": "menuCreditsClose",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 914983499783913,
+									"parameters": {
+										"layer": "MenuCreditsLayerName",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 216660264667662,
+									"parameters": {
+										"layer": "MenuCreditsLayerName",
+										"interactive": false
+									}
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 838108066196236,
+									"parameters": {
+										"tag": "\"MenuCreditsClose\""
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "MenuCreditsAnchor",
+									"sid": 193311850095648,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 827802670216779
+						}
+					],
+					"sid": 818641740788990
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuCredits.open",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 466932588094258,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "MenuCreditsButtonBack"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuCreditsClose",
+									"sid": 649826504893106
+								}
+							],
+							"sid": 535335306713212
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 362891284099510,
+									"parameters": {
+										"object": "MenuCreditsButtonBack"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "MenuCreditsButtonBack",
+									"sid": 817845754099843,
+									"parameters": {
+										"color": "rgbEx(70, 70, 70)"
+									}
+								}
+							],
+							"sid": 211271363080366
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 141353353128718
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "MenuCreditsButtonBack",
+									"sid": 490306642952287,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 302711110842276
+						}
+					],
+					"sid": 781156559122955
+				}
+			],
+			"sid": 201609327568149
+		}
+	],
+	"sid": 685868166905632
+}

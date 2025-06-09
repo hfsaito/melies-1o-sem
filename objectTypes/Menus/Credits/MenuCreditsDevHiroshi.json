@@ -1,0 +1,54 @@
+{
+	"name": "MenuCreditsDevHiroshi",
+	"plugin-id": "Sprite",
+	"sid": 186234706004149,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 366,
+						"height": 70,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7606718,
+						"collisionPoly": {
+							"points": [
+								0.8442622950819675,
+								0.02857142857142857,
+								0.8934426229508197,
+								0.9857142857142858,
+								0.653005464480874,
+								0.9857142857142858,
+								0.00819672131147541,
+								0.8714285714285714,
+								0.00546448087431694,
+								0.02857142857142857
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 657442202826267,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

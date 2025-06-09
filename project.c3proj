@@ -152,6 +152,13 @@
 			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "wrap",
+			"name": "Wrap",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "cd3ubb1liqo",
@@ -325,6 +332,29 @@
 						],
 						"subfolders": [],
 						"name": "Options"
+					},
+					{
+						"items": [
+							"MenuCreditsTitle",
+							"MenuCreditsPositionDev",
+							"MenuCreditsPosition2DArtist",
+							"MenuCreditsPositionPixelArtist",
+							"MenuCreditsPositionSound",
+							"MenuCreditsDevBruno",
+							"MenuCreditsDevGabi",
+							"MenuCreditsDevHadryan",
+							"MenuCreditsDevHiroshi",
+							"MenuCreditsThanks",
+							"MenuCreditsProfDanilo",
+							"MenuCreditsProfLia",
+							"MenuCreditsProfPedro",
+							"MenuCreditsProfDenner",
+							"MenuCreditsButtonBack",
+							"MenuCreditsOverlay",
+							"MenuCreditsAnchor"
+						],
+						"subfolders": [],
+						"name": "Credits"
 					}
 				],
 				"name": "Menus"
@@ -417,7 +447,8 @@
 							"Template.MenuControls",
 							"Template.MenuPause",
 							"Template.MenuAudio",
-							"Template.MenuOptions"
+							"Template.MenuOptions",
+							"Template.MenuCredits"
 						],
 						"subfolders": [],
 						"name": "Menus"
@@ -457,7 +488,8 @@
 					"MenuPause",
 					"MenuControls",
 					"MenuAudio",
-					"MenuOptions"
+					"MenuOptions",
+					"MenuCredits"
 				],
 				"subfolders": [],
 				"name": "Menus"

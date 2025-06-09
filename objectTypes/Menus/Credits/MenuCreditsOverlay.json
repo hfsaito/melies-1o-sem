@@ -1,0 +1,29 @@
+{
+	"name": "MenuCreditsOverlay",
+	"plugin-id": "TiledBg",
+	"sid": 689376280473616,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 595349708419789
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 685657,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

@@ -10,6 +10,10 @@
 			"includeSheet": "MenuOptions"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "MenuCredits"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -86,7 +90,12 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"callFunction": "menuCreditsOpen",
+							"sid": 274022609186278
+						}
+					],
 					"sid": 272149810255711
 				},
 				{
@@ -170,6 +179,14 @@
 					"parameters": {
 						"tag": "\"MenuOptionsOpen\""
 					}
+				},
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 636160744267262,
+					"parameters": {
+						"tag": "\"MenuCreditsOpen\""
+					}
 				}
 			],
 			"actions": [
@@ -183,7 +200,8 @@
 					}
 				}
 			],
-			"sid": 146232267485852
+			"sid": 146232267485852,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -194,6 +212,14 @@
 					"sid": 993186360067716,
 					"parameters": {
 						"tag": "\"MenuOptionsClose\""
+					}
+				},
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 431975858023069,
+					"parameters": {
+						"tag": "\"MenuCreditsClose\""
 					}
 				}
 			],
@@ -217,7 +243,8 @@
 					}
 				}
 			],
-			"sid": 433967494694227
+			"sid": 433967494694227,
+			"isOrBlock": true
 		}
 	],
 	"sid": 229297571637859
