@@ -393,15 +393,15 @@
 		"items": [
 			"TestBox",
 			"ContructTests",
-			"Level3",
-			"TestN"
+			"Level3"
 		],
 		"subfolders": [
 			{
 				"items": [
 					"Template.HUD",
 					"Template.Background",
-					"Template.Items"
+					"Template.Items",
+					"Template.Level"
 				],
 				"subfolders": [
 					{
@@ -427,9 +427,9 @@
 			},
 			{
 				"items": [
-					"Level0",
-					"Level1",
-					"Level2"
+					"Level0Olc",
+					"Level1Old",
+					"Level2Old"
 				],
 				"subfolders": [],
 				"name": "Levels"

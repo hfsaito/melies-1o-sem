@@ -1,5 +1,5 @@
 {
-	"name": "Level0",
+	"name": "Level0Olc",
 	"layers": [
 		{
 			"name": "Background",
@@ -848,7 +848,7 @@
 						"mode": "replica",
 						"templateName": "",
 						"sourceTemplateName": "root",
-						"replicaHierarchyInSyncWithTemplate": true,
+						"replicaHierarchyInSyncWithTemplate": false,
 						"templatePropagateHierarchyChanges": true,
 						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [

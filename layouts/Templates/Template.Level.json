@@ -1,5 +1,5 @@
 {
-	"name": "TestN",
+	"name": "Template.Level",
 	"layers": [
 		{
 			"name": "Background",
@@ -588,7 +588,7 @@
 							"height": 21,
 							"max-width": 244,
 							"max-height": 55,
-							"data": "21x2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,3x0,2,30x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,4x0,2x2,28x0,2,16x0,10,2x0,2,4x0,2x2,28x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,21x2,8174x0"
+							"data": "21x2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,5x2vd,9,7x0,13,2x10vd,11vd,2x0,2,34x0,2,5x0,2,7x0,10,5x0,2,34x0,2,5x0,2,7x0,10,5x0,2,34x0,2,5x0,2,7x0,10,5x0,2,34x0,2,5x0,2,7x0,10,5x0,2,34x0,2,5x0,2,7x0,10,5x0,2,34x0,2,5x0,2,7x0,10,5x0,2,34x0,2,5x0,2,7x0,10,5x0,2,34x0,2,5x0,2,7x0,10,5x0,2,34x0,2,4x2hd,2vd,8,7x0,10,5x0,2,34x0,2,13x0,2x10,4x0,2,34x0,2,13x0,13hd,2x10hd,11,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,3x0,2,30x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,4x0,2x2,28x0,2,16x0,10,2x0,2,4x0,2x2,28x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,2,16x0,10,2x0,2,34x0,21x2,8174x0"
 						},
 						"tile-width": 16,
 						"tile-height": 16,
@@ -616,6 +616,100 @@
 							1,
 							1
 						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BackgroundUnderground",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0,
+						"enable-tile-randomization": false,
+						"x-random": 1,
+						"y-random": 1,
+						"angle-random": 1,
+						"blend-margin-x": 0.1,
+						"blend-margin-y": 0.1
+					},
+					"uid": 96,
+					"sid": 328857422666566,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 328857422666566,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 268,
+						"width": 1500,
+						"height": 32,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BackgroundUnderground",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 16,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0,
+						"enable-tile-randomization": false,
+						"x-random": 1,
+						"y-random": 1,
+						"angle-random": 1,
+						"blend-margin-x": 0.1,
+						"blend-margin-y": 0.1
+					},
+					"uid": 57,
+					"sid": 493500717611676,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 493500717611676,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 256,
+						"y": 220,
+						"width": 160,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
 						"zElevation": 0
 					}
 				}
@@ -678,182 +772,11 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 965141853323032,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 416,
-						"y": 192,
-						"width": 64,
-						"height": 96,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemy01Hitbox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 59,
-					"sid": 597364805232036,
-					"tags": "",
-					"instanceVariables": {
-						"mirrored": false,
-						"state": "",
-						"watcherTurning": false,
-						"awarenessTimeout": 0,
-						"id": 0,
-						"hasFloorEndingAhead": false,
-						"hasWallAhead": false,
-						"patrolEnabled": false
-					},
-					"behaviors": {
-						"Platform": {
-							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": true,
-								"enabled": true
-							}
-						},
-						"LineOfSight": {
-							"properties": {
-								"obstacles": "solids",
-								"range": 10000,
-								"cone-of-view": 360,
-								"use-collision-cells": true
-							}
-						},
-						"LineOfSight2": {
-							"properties": {
-								"obstacles": "solids",
-								"range": 10000,
-								"cone-of-view": 360,
-								"use-collision-cells": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 597364805232036,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 791,
-						"y": 211,
-						"width": 128,
-						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Battery",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 60,
-					"sid": 876994851231840,
-					"tags": "",
-					"instanceVariables": {
-						"softDestroy": true
-					},
-					"behaviors": {
-						"Senóide": {
-							"properties": {
-								"movement": "vertical",
-								"wave": "sine",
-								"period": 1,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 2,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 876994851231840,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 258,
-						"y": 226,
-						"width": 32,
-						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemy02SightToChase",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 58,
-					"sid": 633439438334511,
-					"tags": "",
-					"instanceVariables": {
-						"playerInSight": false,
-						"createdAt": 0
-					},
-					"behaviors": {},
 					"template": {
 						"mode": "replica",
 						"templateName": "",
-						"sourceTemplateName": "root",
-						"replicaHierarchyInSyncWithTemplate": false,
+						"sourceTemplateName": "default",
+						"replicaHierarchyInSyncWithTemplate": true,
 						"templatePropagateHierarchyChanges": true,
 						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
@@ -890,478 +813,11 @@
 										"key": "instance-variable",
 										"state": [
 											{
-												"iv": "playerInSight",
+												"iv": "health",
 												"state": true
 											},
 											{
-												"iv": "createdAt",
-												"state": true
-											}
-										]
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": []
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												true
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						],
-						"replicasUIDs": null
-					},
-					"sceneGraphData": {
-						"parent-uid": 57,
-						"uid": 58,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 633439438334511,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 574.4273842861373,
-						"y": 203.84588939735448,
-						"width": 256,
-						"height": 72,
-						"originX": 0,
-						"originY": 0.3333333333333333,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemy02SightToShoot",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 100,
-					"sid": 297155603297809,
-					"tags": "",
-					"instanceVariables": {
-						"playerInSight": false,
-						"createdAt": 0
-					},
-					"behaviors": {},
-					"template": {
-						"mode": "replica",
-						"templateName": "",
-						"sourceTemplateName": "root",
-						"replicaHierarchyInSyncWithTemplate": false,
-						"templatePropagateHierarchyChanges": true,
-						"replicaIgnoreTemplateHierarchyChanges": false,
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "playerInSight",
-												"state": true
-											},
-											{
-												"iv": "createdAt",
-												"state": true
-											}
-										]
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": []
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												true
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						],
-						"replicasUIDs": null
-					},
-					"sceneGraphData": {
-						"parent-uid": 57,
-						"uid": 100,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 297155603297809,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 574.4273842861373,
-						"y": 203.84588939735448,
-						"width": 128,
-						"height": 30,
-						"originX": 0,
-						"originY": 0.3333333333333333,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemy02",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "idle",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 57,
-					"sid": 737057406514185,
-					"tags": "",
-					"instanceVariables": {
-						"initiallyMirrored": false,
-						"patrolEnabled": false,
-						"lastShootAt": 0,
-						"sawPlayerAt": 0,
-						"aware": false
-					},
-					"behaviors": {
-						"Platform": {
-							"properties": {
-								"max-speed": 50,
-								"acceleration": 500,
-								"deceleration": 500,
-								"jump-strength": 0,
-								"gravity": 1000,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": false,
-								"enabled": true
-							}
-						},
-						"Flash": {
-							"properties": {}
-						}
-					},
-					"template": {
-						"mode": "replica",
-						"templateName": "",
-						"sourceTemplateName": "root",
-						"replicaHierarchyInSyncWithTemplate": false,
-						"templatePropagateHierarchyChanges": true,
-						"replicaIgnoreTemplateHierarchyChanges": false,
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "initiallyMirrored",
-												"state": true
-											},
-											{
-												"iv": "patrolEnabled",
-												"state": true
-											},
-											{
-												"iv": "lastShootAt",
-												"state": true
-											},
-											{
-												"iv": "sawPlayerAt",
-												"state": true
-											},
-											{
-												"iv": "aware",
+												"iv": "virtuallyDestroyed",
 												"state": true
 											}
 										]
@@ -1372,53 +828,17 @@
 								"id": "behavior",
 								"component": [
 									{
-										"key": "Platform",
+										"key": "Sólido",
 										"state": [
-											[
-												"max-speed",
-												true
-											],
-											[
-												"acceleration",
-												true
-											],
-											[
-												"deceleration",
-												true
-											],
-											[
-												"jump-strength",
-												true
-											],
-											[
-												"gravity",
-												true
-											],
-											[
-												"max-fall-speed",
-												true
-											],
-											[
-												"double-jump",
-												true
-											],
-											[
-												"jump-sustain",
-												true
-											],
-											[
-												"default-controls",
-												true
-											],
 											[
 												"enabled",
 												true
+											],
+											[
+												"tags",
+												true
 											]
 										]
-									},
-									{
-										"key": "Flash",
-										"state": []
 									}
 								]
 							},
@@ -1517,55 +937,10 @@
 					},
 					"sceneGraphData": {
 						"parent-uid": null,
-						"uid": 57,
+						"uid": 54,
 						"children": [
 							{
-								"uid": 58,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 100,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 102,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 103,
+								"uid": 60,
 								"flags": {
 									"x": true,
 									"y": true,
@@ -1606,16 +981,16 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 737057406514185,
+						"sid": 965141853323032,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 574.4273842861373,
-						"y": 203.84588939735448,
-						"width": 128,
-						"height": 128,
+						"x": 400,
+						"y": 156,
+						"width": 64,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1629,174 +1004,39 @@
 					}
 				},
 				{
-					"type": "Enemy02FloorChecker",
+					"type": "Battery",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 102,
-					"sid": 913442818677280,
+					"uid": 60,
+					"sid": 487541911945226,
 					"tags": "",
 					"instanceVariables": {
-						"floorAhead": false,
-						"createdAt": 0
+						"softDestroy": true
 					},
-					"behaviors": {},
-					"template": {
-						"mode": "replica",
-						"templateName": "",
-						"sourceTemplateName": "root",
-						"replicaHierarchyInSyncWithTemplate": false,
-						"templatePropagateHierarchyChanges": true,
-						"replicaIgnoreTemplateHierarchyChanges": false,
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "floorAhead",
-												"state": true
-											},
-											{
-												"iv": "createdAt",
-												"state": true
-											}
-										]
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": []
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												true
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
-						],
-						"replicasUIDs": null
+						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 57,
-						"uid": 102,
+						"parent-uid": 54,
+						"uid": 60,
 						"flags": {
 							"x": true,
 							"y": true,
@@ -1823,235 +1063,18 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 913442818677280,
+						"sid": 487541911945226,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 574.4273842861373,
-						"y": 203.84588939735448,
-						"width": 3,
-						"height": 3,
-						"originX": -8.666666666666666,
-						"originY": -16,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemy02WallChecker",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 103,
-					"sid": 809034597824162,
-					"tags": "",
-					"instanceVariables": {
-						"wallAhead": false,
-						"createdAt": 0
-					},
-					"behaviors": {},
-					"template": {
-						"mode": "replica",
-						"templateName": "",
-						"sourceTemplateName": "root",
-						"replicaHierarchyInSyncWithTemplate": false,
-						"templatePropagateHierarchyChanges": true,
-						"replicaIgnoreTemplateHierarchyChanges": false,
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "wallAhead",
-												"state": true
-											},
-											{
-												"iv": "createdAt",
-												"state": true
-											}
-										]
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": []
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												true
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						],
-						"replicasUIDs": null
-					},
-					"sceneGraphData": {
-						"parent-uid": 57,
-						"uid": 103,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 809034597824162,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 574.4273842861373,
-						"y": 203.84588939735448,
-						"width": 3,
-						"height": 73,
-						"originX": -8.666666666666666,
-						"originY": 0.3424657534246575,
+						"x": 288,
+						"y": 188,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -2535,53 +1558,6 @@
 					}
 				},
 				{
-					"type": "BackgroundUnderground",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0,
-						"enable-tile-randomization": false,
-						"x-random": 1,
-						"y-random": 1,
-						"angle-random": 1,
-						"blend-margin-x": 0.1,
-						"blend-margin-y": 0.1
-					},
-					"uid": 96,
-					"sid": 328857422666566,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 328857422666566,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 0,
-						"y": 268,
-						"width": 1500,
-						"height": 32,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "PlayerHitbox",
 					"properties": {
 						"initially-visible": false,
@@ -2633,7 +1609,7 @@
 						"mode": "replica",
 						"templateName": "",
 						"sourceTemplateName": "root",
-						"replicaHierarchyInSyncWithTemplate": true,
+						"replicaHierarchyInSyncWithTemplate": false,
 						"templatePropagateHierarchyChanges": true,
 						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
@@ -3165,7 +2141,7 @@
 			"global": false
 		},
 		{
-			"name": "Pause",
+			"name": "MenuPause",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
@@ -3199,11 +2175,45 @@
 			"global": false
 		},
 		{
-			"name": "OptionsMenu",
+			"name": "MenuControls",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
 			"sid": 385820493613931,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "MenuAudio",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 477538669068742,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,

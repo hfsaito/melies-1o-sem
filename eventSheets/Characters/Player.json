@@ -1759,6 +1759,14 @@
 							"parameters": {
 								"tag": "\"platformEnabled\""
 							}
+						},
+						{
+							"id": "instance-signal",
+							"objectClass": "PlayerHitbox",
+							"sid": 272081984830384,
+							"parameters": {
+								"tag": "\"PlayerGauntletStop\""
+							}
 						}
 					],
 					"sid": 224240303568512,

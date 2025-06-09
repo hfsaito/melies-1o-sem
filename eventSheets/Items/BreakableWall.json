@@ -75,6 +75,15 @@
 								"comparison": 0,
 								"value": "0"
 							}
+						},
+						{
+							"id": "pick-children",
+							"objectClass": "BreakableWall",
+							"sid": 120155498536064,
+							"parameters": {
+								"child": "Battery",
+								"which": "own"
+							}
 						}
 					],
 					"actions": [
@@ -103,6 +112,11 @@
 							"parameters": {
 								"tag": "\"virtuallyDestroyed\""
 							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Battery",
+							"sid": 886885147751912
 						}
 					],
 					"sid": 662320184492709
@@ -129,6 +143,64 @@
 				}
 			],
 			"sid": 151466497354194
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-instance-signal",
+					"objectClass": "PlayerHitbox",
+					"sid": 374857257804992,
+					"parameters": {
+						"tag": "\"PlayerGauntletStop\""
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "PlayerHitbox",
+					"sid": 191111479325714,
+					"parameters": {
+						"instance-variable": "charges",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BreakableWall",
+					"sid": 468095979625139,
+					"parameters": {
+						"instance-variable": "virtuallyDestroyed"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "pick-children",
+					"objectClass": "BreakableWall",
+					"sid": 618166298678201,
+					"parameters": {
+						"child": "Battery",
+						"which": "own"
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "Battery",
+					"sid": 183934069894678,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Battery",
+					"sid": 862406485082620,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 701264201067778
 		}
 	],
 	"sid": 751179936968468
