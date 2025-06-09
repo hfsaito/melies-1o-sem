@@ -6,6 +6,10 @@
 			"includeSheet": "Controls"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "Audio"
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "player.setup",
@@ -645,6 +649,13 @@
 									"parameters": {
 										"control": "jump"
 									}
+								},
+								{
+									"callFunction": "audioPlayEffect",
+									"sid": 381427037124600,
+									"parameters": [
+										"\"Player/Jump\""
+									]
 								}
 							],
 							"sid": 414749211514699
@@ -695,6 +706,13 @@
 											"parameters": {
 												"tag": "\"shoot\""
 											}
+										},
+										{
+											"callFunction": "audioPlayEffect",
+											"sid": 145136308176814,
+											"parameters": [
+												"\"Player/Shooting\""
+											]
 										}
 									],
 									"sid": 776827014569709
@@ -792,6 +810,13 @@
 									"parameters": [
 										"-1"
 									]
+								},
+								{
+									"callFunction": "audioPlayEffect",
+									"sid": 849517138460347,
+									"parameters": [
+										"\"Player/Dashing\""
+									]
 								}
 							],
 							"sid": 255421351889619,
@@ -817,6 +842,78 @@
 										}
 									],
 									"sid": 724315430369043
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-children",
+											"objectClass": "PlayerHitbox",
+											"sid": 340534166146028,
+											"parameters": {
+												"child": "PlayerWallChecker",
+												"which": "own"
+											}
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "PlayerWallChecker",
+											"sid": 241662384554856,
+											"parameters": {
+												"object": "BreakableWall"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "instance-signal",
+											"objectClass": "BreakableWall",
+											"sid": 887210135596259,
+											"parameters": {
+												"tag": "\"break\""
+											}
+										},
+										{
+											"callFunction": "playerStopGauntlet",
+											"sid": 574655334857635,
+											"parameters": [
+												true
+											]
+										}
+									],
+									"sid": 477535953144687
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-children",
+											"objectClass": "PlayerHitbox",
+											"sid": 272806666936248,
+											"parameters": {
+												"child": "PlayerWallChecker",
+												"which": "own"
+											}
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "PlayerWallChecker",
+											"sid": 527436079545035,
+											"parameters": {
+												"object": "PlatformsTilemap"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "playerStopGauntlet",
+											"sid": 148013864188108,
+											"parameters": [
+												true
+											]
+										}
+									],
+									"sid": 627735037360327
 								}
 							]
 						}
@@ -1356,26 +1453,87 @@
 					],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [
+					"actions": [],
+					"sid": 612395703167228,
+					"children": [
 						{
-							"id": "set-instvar-value",
-							"objectClass": "PlayerHitbox",
-							"sid": 798340098881833,
-							"parameters": {
-								"instance-variable": "charges",
-								"value": "min(max(newValue, 0), 4)"
-							}
+							"eventType": "variable",
+							"name": "newValidValue",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 525093091605735
 						},
 						{
-							"id": "instance-signal",
-							"objectClass": "PlayerHitbox",
-							"sid": 464077140408365,
-							"parameters": {
-								"tag": "\"chargesUpdated\""
-							}
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 661971739418082,
+									"parameters": {
+										"variable": "newValidValue",
+										"value": "min(max(newValue, 0), 4)"
+									}
+								}
+							],
+							"sid": 603683739051213,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 103172512267164,
+											"parameters": {
+												"first-value": "newValidValue",
+												"comparison": 4,
+												"second-value": "PlayerHitbox.charges"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "audioPlayEffect",
+											"sid": 353533819183156,
+											"parameters": [
+												"\"Player/Charging\""
+											]
+										}
+									],
+									"sid": 490888001812714
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PlayerHitbox",
+									"sid": 970718578828215,
+									"parameters": {
+										"instance-variable": "charges",
+										"value": "newValidValue"
+									}
+								},
+								{
+									"id": "instance-signal",
+									"objectClass": "PlayerHitbox",
+									"sid": 813506881722496,
+									"parameters": {
+										"tag": "\"chargesUpdated\""
+									}
+								}
+							],
+							"sid": 301610219111236
 						}
-					],
-					"sid": 612395703167228
+					]
 				},
 				{
 					"eventType": "block",
@@ -1474,7 +1632,10 @@
 					"actions": [
 						{
 							"callFunction": "playerStopGauntlet",
-							"sid": 337089790459862
+							"sid": 337089790459862,
+							"parameters": [
+								false
+							]
 						}
 					],
 					"sid": 376624261980264
@@ -1508,7 +1669,10 @@
 						},
 						{
 							"callFunction": "playerStopGauntlet",
-							"sid": 525602674826105
+							"sid": 413381668748295,
+							"parameters": [
+								true
+							]
 						}
 					],
 					"sid": 158797993211787
@@ -1534,7 +1698,10 @@
 					"actions": [
 						{
 							"callFunction": "playerStopGauntlet",
-							"sid": 926927512764056
+							"sid": 882409619525482,
+							"parameters": [
+								true
+							]
 						}
 					],
 					"sid": 742171052935515
@@ -1546,7 +1713,15 @@
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
-					"functionParameters": [],
+					"functionParameters": [
+						{
+							"name": "blockedByObject",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"sid": 201480853410514
+						}
+					],
 					"eventType": "function-block",
 					"conditions": [],
 					"actions": [
@@ -1571,9 +1746,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 151616521757446,
+							"sid": 765350283192376,
 							"parameters": {
-								"seconds": ".1",
+								"seconds": "dt",
 								"use-timescale": false
 							}
 						},
@@ -1586,7 +1761,32 @@
 							}
 						}
 					],
-					"sid": 224240303568512
+					"sid": 224240303568512,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 345211741790313,
+									"parameters": {
+										"variable": "blockedByObject"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "audioPlayEffect",
+									"sid": 319532567783280,
+									"parameters": [
+										"\"Player/Impact\""
+									]
+								}
+							],
+							"sid": 929075899841972
+						}
+					]
 				}
 			],
 			"sid": 569564616599682

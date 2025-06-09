@@ -2107,7 +2107,7 @@
 						"live-preview": false
 					},
 					"uid": 81,
-					"sid": 470746597054160,
+					"sid": 398734326129303,
 					"tags": "",
 					"instanceVariables": {
 						"parentUniqueID": 0,
@@ -2149,7 +2149,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 470746597054160,
+						"sid": 398734326129303,
 						"expanded": true
 					},
 					"showing": true,
@@ -2181,7 +2181,7 @@
 						"live-preview": false
 					},
 					"uid": 82,
-					"sid": 930205033801672,
+					"sid": 341020341772076,
 					"tags": "",
 					"instanceVariables": {
 						"parentUniqueID": 0
@@ -2222,7 +2222,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 930205033801672,
+						"sid": 341020341772076,
 						"expanded": true
 					},
 					"showing": true,
@@ -2254,7 +2254,7 @@
 						"live-preview": false
 					},
 					"uid": 83,
-					"sid": 533316786245993,
+					"sid": 428080235658968,
 					"tags": "",
 					"instanceVariables": {
 						"parentUniqueID": 0
@@ -2295,7 +2295,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 533316786245993,
+						"sid": 428080235658968,
 						"expanded": true
 					},
 					"showing": true,
@@ -2327,7 +2327,7 @@
 						"live-preview": false
 					},
 					"uid": 84,
-					"sid": 408184894624184,
+					"sid": 701378999870454,
 					"tags": "",
 					"instanceVariables": {
 						"parentUniqueID": 0
@@ -2368,7 +2368,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 408184894624184,
+						"sid": 701378999870454,
 						"expanded": true
 					},
 					"showing": true,
@@ -2400,7 +2400,7 @@
 						"live-preview": false
 					},
 					"uid": 85,
-					"sid": 274740717980178,
+					"sid": 489286860139295,
 					"tags": "",
 					"instanceVariables": {
 						"parentUniqueID": 0
@@ -2441,7 +2441,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 274740717980178,
+						"sid": 489286860139295,
 						"expanded": true
 					},
 					"showing": true,
@@ -2453,6 +2453,124 @@
 						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlayerCamera",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 89,
+					"sid": 375488399670890,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 56,
+						"uid": 89,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": true,
+							"w": false,
+							"h": false,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 375488399670890,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 63.161361950670994,
+						"y": 174.36146427558728,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BackgroundUnderground",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0,
+						"enable-tile-randomization": false,
+						"x-random": 1,
+						"y-random": 1,
+						"angle-random": 1,
+						"blend-margin-x": 0.1,
+						"blend-margin-y": 0.1
+					},
+					"uid": 96,
+					"sid": 328857422666566,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 328857422666566,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 268,
+						"width": 1500,
+						"height": 32,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -2515,7 +2633,7 @@
 						"mode": "replica",
 						"templateName": "",
 						"sourceTemplateName": "root",
-						"replicaHierarchyInSyncWithTemplate": false,
+						"replicaHierarchyInSyncWithTemplate": true,
 						"templatePropagateHierarchyChanges": true,
 						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
@@ -2852,6 +2970,21 @@
 									"d": true,
 									"sm": "normal"
 								}
+							},
+							{
+								"uid": 146,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
 							}
 						],
 						"flags": {
@@ -2903,7 +3036,7 @@
 					}
 				},
 				{
-					"type": "PlayerCamera",
+					"type": "PlayerWallChecker",
 					"properties": {
 						"initially-visible": false,
 						"initial-animation": "Animation 1",
@@ -2911,26 +3044,20 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 89,
-					"sid": 413804320517484,
+					"uid": 146,
+					"sid": 227514644283925,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {
-						"ScrollTo": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
+					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 56,
-						"uid": 89,
+						"uid": 146,
 						"flags": {
-							"x": false,
-							"y": false,
+							"x": true,
+							"y": true,
 							"z": true,
-							"w": false,
-							"h": false,
+							"w": true,
+							"h": true,
 							"a": true,
 							"o": false,
 							"v": false,
@@ -2951,65 +3078,18 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 413804320517484,
+						"sid": 227514644283925,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
 						"x": 63.161361950670994,
-						"y": 174.36146427558728,
-						"width": 16,
-						"height": 16,
+						"y": 209.36146427558728,
+						"width": 96,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "BackgroundUnderground",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0,
-						"enable-tile-randomization": false,
-						"x-random": 1,
-						"y-random": 1,
-						"angle-random": 1,
-						"blend-margin-x": 0.1,
-						"blend-margin-y": 0.1
-					},
-					"uid": 96,
-					"sid": 328857422666566,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 328857422666566,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 0,
-						"y": 268,
-						"width": 1500,
-						"height": 32,
-						"originX": 0,
-						"originY": 0,
 						"color": [
 							1,
 							1,

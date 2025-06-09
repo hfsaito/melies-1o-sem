@@ -228,7 +228,8 @@
 					"PlayerGun",
 					"PlayerLegs",
 					"PlayerSpawnPoint",
-					"PlayerCamera"
+					"PlayerCamera",
+					"PlayerWallChecker"
 				],
 				"subfolders": [],
 				"name": "Player"
@@ -517,14 +518,6 @@
 					}
 				},
 				{
-					"name": "Jump.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 830957907235552,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
 					"name": "PickUp.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 804204834527383,
@@ -549,41 +542,9 @@
 					}
 				},
 				{
-					"name": "Shooting.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 788298587109803,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
 					"name": "Damage.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 937157392392909,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Charging.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 675422115722410,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Dashing.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 184793699053327,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Impact.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 938627699889690,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -597,7 +558,54 @@
 					}
 				}
 			],
-			"subfolders": []
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "Jump.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 830957907235552,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Charging.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 675422115722410,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Dashing.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 184793699053327,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Impact.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 938627699889690,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Shooting.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 788298587109803,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Player"
+				}
+			]
 		},
 		"music": {
 			"items": [
