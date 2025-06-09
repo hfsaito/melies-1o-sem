@@ -273,6 +273,105 @@
 								}
 							],
 							"sid": 256054447451384
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 521631081308393,
+									"parameters": {
+										"tag": "\"AudioMasterVolumeChanged\""
+									}
+								},
+								{
+									"id": "layer-is-interactive",
+									"objectClass": "System",
+									"sid": 662282153533707,
+									"parameters": {
+										"layer": "MenuAudioLayerName"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-value",
+									"objectClass": "MenuAudioControlMaster",
+									"sid": 953832840198766,
+									"parameters": {
+										"value": "Functions.audioDbToLinear(Audio.MasterVolume)"
+									}
+								}
+							],
+							"sid": 292196234525210
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 377922718811864,
+									"parameters": {
+										"tag": "\"AudioBgmVolumeChanged\""
+									}
+								},
+								{
+									"id": "layer-is-interactive",
+									"objectClass": "System",
+									"sid": 657990185653375,
+									"parameters": {
+										"layer": "MenuAudioLayerName"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-value",
+									"objectClass": "MenuAudioControlBgm",
+									"sid": 759910670255129,
+									"parameters": {
+										"value": "Functions.audioDbToLinear(AudioVolumeBgm)"
+									}
+								}
+							],
+							"sid": 515195516169987
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 707891831610350,
+									"parameters": {
+										"tag": "\"AudioEffectsVolumeChanged\""
+									}
+								},
+								{
+									"id": "layer-is-interactive",
+									"objectClass": "System",
+									"sid": 482083651890176,
+									"parameters": {
+										"layer": "MenuAudioLayerName"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-value",
+									"objectClass": "MenuAudioControlEffects",
+									"sid": 302352307134481,
+									"parameters": {
+										"value": "Functions.audioDbToLinear(AudioVolumeEffects)"
+									}
+								}
+							],
+							"sid": 831588509472009
 						}
 					],
 					"sid": 415998673765764

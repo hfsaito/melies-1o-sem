@@ -22,6 +22,16 @@
 			"sid": 378275447408188
 		},
 		{
+			"eventType": "variable",
+			"name": "AudioLoadedFromStorage",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 652387346082873
+		},
+		{
 			"functionName": "audioPlayBgm",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -43,11 +53,11 @@
 				{
 					"id": "play-by-name",
 					"objectClass": "Audio",
-					"sid": 884614281639081,
+					"sid": 553163545040157,
 					"parameters": {
-						"folder": "sounds",
+						"folder": "music",
 						"audio-file-name": "soundName",
-						"loop": "not-looping",
+						"loop": "looping",
 						"volume": "AudioVolumeBgm",
 						"stereo-pan": "0",
 						"tag-optional": "\"bgm\""
@@ -117,9 +127,41 @@
 					"parameters": {
 						"db": "Functions.audioLinearToDb(volumeLinear)"
 					}
+				},
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 673393793308456,
+					"parameters": {
+						"tag": "\"AudioMasterVolumeChanged\""
+					}
 				}
 			],
-			"sid": 798478830551220
+			"sid": 798478830551220,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-persistent",
+							"objectClass": "LocalStorage",
+							"sid": 973823677112466
+						}
+					],
+					"actions": [
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 997867865379991,
+							"parameters": {
+								"key": "\"AudioVolumeMasterLinear\"",
+								"value": "volumeLinear"
+							}
+						}
+					],
+					"sid": 733086660103113
+				}
+			]
 		},
 		{
 			"functionName": "audioChangeBgmVolume",
@@ -143,9 +185,9 @@
 				{
 					"id": "set-volume",
 					"objectClass": "Audio",
-					"sid": 807505842606842,
+					"sid": 921318867394231,
 					"parameters": {
-						"tag": "\"effects\"",
+						"tag": "\"bgm\"",
 						"db": "Functions.audioLinearToDb(volumeLinear)"
 					}
 				},
@@ -157,9 +199,41 @@
 						"variable": "AudioVolumeBgm",
 						"value": "Functions.audioLinearToDb(volumeLinear)"
 					}
+				},
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 298402003959441,
+					"parameters": {
+						"tag": "\"AudioBgmVolumeChanged\""
+					}
 				}
 			],
-			"sid": 637375259906833
+			"sid": 637375259906833,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-persistent",
+							"objectClass": "LocalStorage",
+							"sid": 824665786458757
+						}
+					],
+					"actions": [
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 103073013393775,
+							"parameters": {
+								"key": "\"AudioVolumeBgmLinear\"",
+								"value": "volumeLinear"
+							}
+						}
+					],
+					"sid": 594470752865919
+				}
+			]
 		},
 		{
 			"functionName": "audioChangeEffectsVolume",
@@ -197,9 +271,41 @@
 						"variable": "AudioVolumeEffects",
 						"value": "Functions.audioLinearToDb(volumeLinear)"
 					}
+				},
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 324553401561413,
+					"parameters": {
+						"tag": "\"AudioEffectsVolumeChanged\""
+					}
 				}
 			],
-			"sid": 185125324589023
+			"sid": 185125324589023,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-persistent",
+							"objectClass": "LocalStorage",
+							"sid": 700635452979387
+						}
+					],
+					"actions": [
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 615289643626392,
+							"parameters": {
+								"key": "\"AudioVolumeEffectsLinear\"",
+								"value": "volumeLinear"
+							}
+						}
+					],
+					"sid": 523922652192489
+				}
+			]
 		},
 		{
 			"functionName": "audioLinearToDb",
@@ -230,6 +336,36 @@
 				}
 			],
 			"sid": 165949667964461
+		},
+		{
+			"functionName": "audioDbToLinear",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "volumeDb",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 619017457268876
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-function-return-value",
+					"objectClass": "Functions",
+					"sid": 889822996280088,
+					"parameters": {
+						"value": "100 * 10 ^ (volumeDb / 33)"
+					}
+				}
+			],
+			"sid": 690897687850040
 		},
 		{
 			"eventType": "group",
@@ -265,6 +401,281 @@
 				}
 			],
 			"sid": 316035553419819
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 552910306646045
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 831499658320247,
+					"parameters": {
+						"variable": "AudioLoadedFromStorage"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 971475385119669,
+					"parameters": {
+						"variable": "AudioLoadedFromStorage",
+						"value": "true"
+					}
+				},
+				{
+					"id": "log",
+					"objectClass": "Browser",
+					"sid": 850023093833085,
+					"parameters": {
+						"type": "log",
+						"message": "\"Load?\""
+					}
+				},
+				{
+					"id": "request-persistent",
+					"objectClass": "LocalStorage",
+					"sid": 454207961629267
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 768078648170245
+				}
+			],
+			"sid": 544986038562710,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-persistent",
+							"objectClass": "LocalStorage",
+							"sid": 737430510225064
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 926857461432129,
+							"parameters": {
+								"key": "\"AudioVolumeMasterLinear\""
+							}
+						},
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 493375439619640,
+							"parameters": {
+								"key": "\"AudioVolumeBgmLinear\""
+							}
+						},
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 964375414736367,
+							"parameters": {
+								"key": "\"AudioVolumeEffectsLinear\""
+							}
+						}
+					],
+					"sid": 789988544873147
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 379916170712066,
+					"parameters": {
+						"key": "\"AudioVolumeMasterLinear\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 397714296506025,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 226421348026441,
+							"parameters": {
+								"comparison": 0,
+								"value": "\"\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "audioChangeMasterVolume",
+							"sid": 803890002400010,
+							"parameters": [
+								"LocalStorage.ItemValue"
+							]
+						}
+					],
+					"sid": 325722747107034
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 829186574428615
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "audioChangeMasterVolume",
+							"sid": 724817980322442,
+							"parameters": [
+								"100"
+							]
+						}
+					],
+					"sid": 914805440701223
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 301742137687785,
+					"parameters": {
+						"key": "\"AudioVolumeBgmLinear\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 567467066138110,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 860347841826399,
+							"parameters": {
+								"comparison": 0,
+								"value": "\"\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "audioChangeBgmVolume",
+							"sid": 303958096890013,
+							"parameters": [
+								"LocalStorage.ItemValue"
+							]
+						}
+					],
+					"sid": 500971971914448
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 628591159800229
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "audioChangeBgmVolume",
+							"sid": 503040806802598,
+							"parameters": [
+								"100"
+							]
+						}
+					],
+					"sid": 717994337214585
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 493460154384491,
+					"parameters": {
+						"key": "\"AudioVolumeEffectsLinear\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 271104947932105,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 537911541119181,
+							"parameters": {
+								"comparison": 0,
+								"value": "\"\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "audioChangeEffectsVolume",
+							"sid": 721772922117142,
+							"parameters": [
+								"LocalStorage.ItemValue"
+							]
+						}
+					],
+					"sid": 545187471642996
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 312220543304205
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "audioChangeEffectsVolume",
+							"sid": 536632036104108,
+							"parameters": [
+								"100"
+							]
+						}
+					],
+					"sid": 250496843350381
+				}
+			]
 		}
 	],
 	"sid": 933361279488387

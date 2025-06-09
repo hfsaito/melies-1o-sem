@@ -17,6 +17,26 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 569472137809740
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "audioPlayBgm",
+					"sid": 597136161662219,
+					"parameters": [
+						"\"MenuBGM\""
+					]
+				}
+			],
+			"sid": 163081492196689
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "layer-is-interactive",
 					"objectClass": "System",
 					"sid": 901090550064376,
