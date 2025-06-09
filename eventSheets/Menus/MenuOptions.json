@@ -1,0 +1,537 @@
+{
+	"name": "MenuOptions",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Audio"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "MenuControls"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "MenuAudio"
+		},
+		{
+			"eventType": "variable",
+			"name": "MenuOptionsLayerName",
+			"type": "string",
+			"initialValue": "MenuOptions",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 849349518411962
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "menuOptions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuOptions.check",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 448996166321563
+								},
+								{
+									"id": "layer-name-exists",
+									"objectClass": "System",
+									"sid": 544557260048511,
+									"parameters": {
+										"layer": "MenuOptionsLayerName"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 229031993462436,
+									"parameters": {
+										"group-name": "\"menuOptions\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 203524015273803,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-in-preview",
+											"objectClass": "System",
+											"sid": 454336758751907
+										}
+									],
+									"actions": [
+										{
+											"id": "alert",
+											"objectClass": "Browser",
+											"sid": 523084329076136,
+											"parameters": {
+												"message": "\"Missing \" & MenuOptionsLayerName & \" layer in layout \" & LayoutName &  \"\nMenuOptions event sheet imported but the layer is missing\""
+											}
+										}
+									],
+									"sid": 891470990194648
+								}
+							]
+						}
+					],
+					"sid": 701411189285897
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuOptions.setup",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 354652446713874
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 662573195605407,
+									"parameters": {
+										"layer": "MenuOptionsLayerName",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 411986565066572,
+									"parameters": {
+										"layer": "MenuOptionsLayerName",
+										"interactive": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 278627502066032,
+									"parameters": {
+										"object-to-create": "MenuOptionsOverlay",
+										"layer": "MenuOptionsLayerName",
+										"x": "ViewportLeft(MenuOptionsLayerName)",
+										"y": "ViewportTop(MenuOptionsLayerName)",
+										"create-hierarchy": true,
+										"template-name": "\"default\""
+									}
+								}
+							],
+							"sid": 748592071100784
+						}
+					],
+					"sid": 215435741123827
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuOptions.functions",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "menuOptionsOpen",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 113713826240758,
+									"parameters": {
+										"layer": "MenuOptionsLayerName",
+										"visibility": "visible"
+									}
+								},
+								{
+									"callFunction": "menuOptionsShow",
+									"sid": 626743876216331
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 830323759829491,
+									"parameters": {
+										"tag": "\"MenuOptionsOpen\""
+									}
+								}
+							],
+							"sid": 984558946103355
+						},
+						{
+							"functionName": "menuOptionsClose",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 402769976143390,
+									"parameters": {
+										"layer": "MenuOptionsLayerName",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"callFunction": "menuOptionsHide",
+									"sid": 392607315135132
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 323213345622860,
+									"parameters": {
+										"tag": "\"MenuOptionsClose\""
+									}
+								}
+							],
+							"sid": 677943131391313
+						},
+						{
+							"functionName": "menuOptionsShow",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 702812927665261,
+									"parameters": {
+										"seconds": "dt",
+										"use-timescale": false
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 708294437224300,
+									"parameters": {
+										"layer": "MenuOptionsLayerName",
+										"interactive": true
+									}
+								}
+							],
+							"sid": 406726992431228,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 740962623393677,
+											"parameters": {
+												"object": "MenuOptionsItems"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "MenuOptionsItems",
+											"sid": 428474768746150,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 934932174196469
+								}
+							]
+						},
+						{
+							"functionName": "menuOptionsHide",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 166452429926085,
+									"parameters": {
+										"layer": "MenuOptionsLayerName",
+										"interactive": false
+									}
+								}
+							],
+							"sid": 399058238766415,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 537611290839376,
+											"parameters": {
+												"object": "MenuOptionsItems"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "MenuOptionsItems",
+											"sid": 113347079297498,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 207528712130171
+								}
+							]
+						}
+					],
+					"sid": 113431164874064
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuOptions.open",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 601848866664667,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "MenuOptionsButtonBack"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuOptionsClose",
+									"sid": 573721817596459
+								}
+							],
+							"sid": 228512268591135
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 365311104442269,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "MenuOptionsButtonControls"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuControlsOpen",
+									"sid": 705336084552705,
+									"parameters": [
+										false
+									]
+								}
+							],
+							"sid": 597959456045572
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 548110077911803,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "MenuOptionsButtonAudio"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuAudioOpen",
+									"sid": 874622282717326,
+									"parameters": [
+										false
+									]
+								}
+							],
+							"sid": 279229893545532
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 945112094811971,
+									"parameters": {
+										"tag": "\"MenuControlsOpen\""
+									}
+								},
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 396594143150992,
+									"parameters": {
+										"tag": "\"MenuAudioOpen\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuOptionsHide",
+									"sid": 867815935590917
+								}
+							],
+							"sid": 768966119615424,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 574453062523235,
+									"parameters": {
+										"tag": "\"MenuControlsClose\""
+									}
+								},
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 163925730215812,
+									"parameters": {
+										"tag": "\"MenuAudioClose\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 833501978254033,
+									"parameters": {
+										"seconds": "dt",
+										"use-timescale": false
+									}
+								},
+								{
+									"callFunction": "menuOptionsShow",
+									"sid": 753608142034514
+								}
+							],
+							"sid": 422348246017903,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 308745468493137,
+									"parameters": {
+										"object": "MenuOptionsButtons"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "MenuOptionsButtons",
+									"sid": 455846352517897,
+									"parameters": {
+										"color": "rgbEx(70, 70, 70)"
+									}
+								}
+							],
+							"sid": 920327218350299
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 938911611685862
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "MenuOptionsButtons",
+									"sid": 575789718907311,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 410056239562429
+						}
+					],
+					"sid": 943450243693448
+				}
+			],
+			"sid": 526864509542757
+		}
+	],
+	"sid": 674447866358387
+}

@@ -9,6 +9,7 @@
 		"MainMenuButtonCredits",
 		"MainMenuButtonOptions",
 		"MainMenuButtonPlay",
-		"MenuPauseButtonControls"
+		"MenuPauseButtonControls",
+		"MenuOptionsButtonControls"
 	]
 }

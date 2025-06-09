@@ -313,6 +313,17 @@
 						],
 						"subfolders": [],
 						"name": "Audio"
+					},
+					{
+						"items": [
+							"MenuOptionsButtonAudio",
+							"MenuOptionsButtonControls",
+							"MenuOptionsOverlay",
+							"MenuOptionsTitle",
+							"MenuOptionsButtonBack"
+						],
+						"subfolders": [],
+						"name": "Options"
 					}
 				],
 				"name": "Menus"
@@ -363,6 +374,14 @@
 						],
 						"subfolders": [],
 						"name": "MainMenu"
+					},
+					{
+						"items": [
+							"MenuOptionsItems",
+							"MenuOptionsButtons"
+						],
+						"subfolders": [],
+						"name": "Options"
 					}
 				],
 				"name": "Menus"
@@ -396,7 +415,8 @@
 						"items": [
 							"Template.MenuControls",
 							"Template.MenuPause",
-							"Template.MenuAudio"
+							"Template.MenuAudio",
+							"Template.MenuOptions"
 						],
 						"subfolders": [],
 						"name": "Menus"
@@ -435,7 +455,8 @@
 					"MainMenu",
 					"MenuPause",
 					"MenuControls",
-					"MenuAudio"
+					"MenuAudio",
+					"MenuOptions"
 				],
 				"subfolders": [],
 				"name": "Menus"

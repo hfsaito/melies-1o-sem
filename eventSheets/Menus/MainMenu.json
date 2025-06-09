@@ -7,17 +7,7 @@
 		},
 		{
 			"eventType": "include",
-			"includeSheet": "MenuControls"
-		},
-		{
-			"eventType": "variable",
-			"name": "menuEnabled",
-			"type": "boolean",
-			"initialValue": "true",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 299933101045289
+			"includeSheet": "MenuOptions"
 		},
 		{
 			"eventType": "block",
@@ -76,11 +66,8 @@
 					],
 					"actions": [
 						{
-							"callFunction": "menuControlsOpen",
-							"sid": 482112523450732,
-							"parameters": [
-								true
-							]
+							"callFunction": "menuOptionsOpen",
+							"sid": 584443071956657
 						}
 					],
 					"sid": 735042403500806
@@ -179,22 +166,13 @@
 				{
 					"id": "on-signal",
 					"objectClass": "System",
-					"sid": 790665193663093,
+					"sid": 578293852050531,
 					"parameters": {
-						"tag": "\"MenuControlsOpen\""
+						"tag": "\"MenuOptionsOpen\""
 					}
 				}
 			],
 			"actions": [
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 709745286766009,
-					"parameters": {
-						"variable": "menuEnabled",
-						"value": "false"
-					}
-				},
 				{
 					"id": "set-layer-interactive",
 					"objectClass": "System",
@@ -213,28 +191,19 @@
 				{
 					"id": "on-signal",
 					"objectClass": "System",
-					"sid": 956644886651615,
+					"sid": 993186360067716,
 					"parameters": {
-						"tag": "\"MenuControlsClose\""
+						"tag": "\"MenuOptionsClose\""
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 494857603294286,
-					"parameters": {
-						"variable": "menuEnabled",
-						"value": "true"
-					}
-				},
-				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 353347774683647,
+					"sid": 385958207668832,
 					"parameters": {
-						"seconds": "0.1",
+						"seconds": "dt",
 						"use-timescale": false
 					}
 				},
