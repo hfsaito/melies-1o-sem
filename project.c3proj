@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 44002,
-	"name": "New project",
+	"name": "Iron Fist",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -266,7 +266,8 @@
 							"BackgroundMountains2",
 							"BackgroundUnderground",
 							"BackgroundTower",
-							"Sprite"
+							"BackgroundBridge",
+							"BackgroundSun"
 						],
 						"subfolders": [],
 						"name": "Backgrounds"
@@ -466,6 +467,7 @@
 			},
 			{
 				"items": [
+					"Level0",
 					"Level0Olc",
 					"Level1Old",
 					"Level2Old"
@@ -769,7 +771,7 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "1.0.0.0",
+		"version": "1.3.0.0",
 		"autoIncrementVersion": false,
 		"author": "",
 		"authorEmail": "",

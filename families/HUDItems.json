@@ -13,7 +13,6 @@
 	"effectTypes": [],
 	"members": [
 		"HUDLife",
-		"HUDBatteryEffect",
 		"HUDBattery"
 	]
 }

@@ -20,6 +20,55 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-created",
+							"objectClass": "PlayerHitbox",
+							"sid": 715798742562410
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 333352497034275,
+							"parameters": {
+								"seconds": "dt",
+								"use-timescale": false
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerHitbox",
+							"sid": 493010812968607,
+							"parameters": {
+								"instance-variable": "shootingDelay",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerHitbox",
+							"sid": 711853658275869,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "Self.maxLife"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerHitbox",
+							"sid": 945793660585148,
+							"parameters": {
+								"instance-variable": "anchorAnimation",
+								"value": "\"idle\""
+							}
+						}
+					],
+					"sid": 503484075418804
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-start-of-layout",
 							"objectClass": "System",
 							"sid": 346182724390403
@@ -32,190 +81,9 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 333969222671094,
-									"parameters": {
-										"first-value": "PlayerSpawnPoint.Count",
-										"comparison": 4,
-										"second-value": "0"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 423168272118843,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 149433397682633,
-											"parameters": {
-												"first-value": "PlayerHitbox.Count",
-												"comparison": 4,
-												"second-value": "0"
-											}
-										},
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "PlayerHitbox",
-											"sid": 478666475873788,
-											"parameters": {
-												"instance-variable": "createdThisTurn"
-											},
-											"isInverted": true
-										}
-									],
-									"actions": [
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 294052028573704,
-											"parameters": {
-												"seconds": ".1",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-position-to-another-object",
-											"objectClass": "PlayerHitbox",
-											"sid": 198579639114044,
-											"parameters": {
-												"object": "PlayerSpawnPoint",
-												"image-point-optional": "0"
-											}
-										},
-										{
-											"id": "destroy",
-											"objectClass": "PlayerSpawnPoint",
-											"sid": 341635416048765
-										}
-									],
-									"sid": 458139631711058,
-									"children": [
-										{
-											"eventType": "comment",
-											"text": "Revive/Respawn"
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "PlayerHitbox",
-													"sid": 227517011603730,
-													"parameters": {
-														"instance-variable": "life",
-														"comparison": 0,
-														"value": "0"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 393929691599247,
-													"parameters": {
-														"seconds": ".1",
-														"use-timescale": true
-													}
-												},
-												{
-													"callFunction": "playerUpdateLife",
-													"sid": 582272738787994,
-													"parameters": [
-														"6"
-													]
-												},
-												{
-													"callFunction": "playerUpdateBattery",
-													"sid": 102182510008321,
-													"parameters": [
-														"0"
-													]
-												},
-												{
-													"callFunction": "playerSetAnimation",
-													"sid": 523985118416280,
-													"parameters": [
-														"\"idle\""
-													]
-												}
-											],
-											"sid": 257327715534669
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 628554145649893,
-											"parameters": {
-												"first-value": "PlayerHitbox.Count",
-												"comparison": 0,
-												"second-value": "0"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "spawn-another-object",
-											"objectClass": "PlayerSpawnPoint",
-											"sid": 733570463402659,
-											"parameters": {
-												"object": "PlayerHitbox",
-												"layer": "\"Player\"",
-												"image-point": "0",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "destroy",
-											"objectClass": "PlayerSpawnPoint",
-											"sid": 587678537175252
-										},
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 692803464323085,
-											"parameters": {
-												"seconds": ".1",
-												"use-timescale": true
-											}
-										},
-										{
-											"callFunction": "playerUpdateLife",
-											"sid": 391450589616142,
-											"parameters": [
-												"6"
-											]
-										},
-										{
-											"callFunction": "playerUpdateBattery",
-											"sid": 981429644536042,
-											"parameters": [
-												"0"
-											]
-										}
-									],
-									"sid": 730453813745986
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "PlayerHitbox",
-									"sid": 935600507575227,
+									"sid": 504585566091021,
 									"parameters": {
 										"instance-variable": "createdThisTurn"
 									}
@@ -225,65 +93,105 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "PlayerHitbox",
-									"sid": 777180803691034,
+									"sid": 767695049413466,
 									"parameters": {
 										"instance-variable": "createdThisTurn",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 605923480525958
+							"sid": 426475893046179
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 212645338234869
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 108397456213990,
+									"parameters": {
+										"seconds": "dt",
+										"use-timescale": false
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "PlayerHitbox",
+									"sid": 456164444448972,
+									"parameters": {
+										"object": "PlayerSpawnPoint",
+										"image-point-optional": "0"
+									}
+								}
+							],
+							"sid": 522687546398364,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "PlayerHitbox",
+											"sid": 581705960354596,
+											"parameters": {
+												"instance-variable": "life",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 201327802713672,
+											"parameters": {
+												"seconds": "dt",
+												"use-timescale": false
+											}
+										},
+										{
+											"callFunction": "playerUpdateLife",
+											"sid": 336374646135061,
+											"parameters": [
+												"6"
+											]
+										},
+										{
+											"callFunction": "playerUpdateBattery",
+											"sid": 240761489045071,
+											"parameters": [
+												"0"
+											]
+										},
+										{
+											"callFunction": "playerSetAnimation",
+											"sid": 708198709270834,
+											"parameters": [
+												"\"idle\""
+											]
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "PlayerHitbox",
+											"sid": 886958160613191,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										}
+									],
+									"sid": 844252415932941
+								}
+							]
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-created",
-							"objectClass": "PlayerHitbox",
-							"sid": 367996398049975
-						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "PlayerHitbox",
-							"sid": 998527045098150,
-							"parameters": {
-								"instance-variable": "shootingDelay",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "PlayerHitbox",
-							"sid": 715954975910949,
-							"parameters": {
-								"instance-variable": "life",
-								"value": "Self.maxLife"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "PlayerHitbox",
-							"sid": 292702286246847,
-							"parameters": {
-								"instance-variable": "anchorAnimation",
-								"value": "\"idle\""
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "PlayerHitbox",
-							"sid": 835814783784600,
-							"parameters": {
-								"instance-variable": "createdThisTurn",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 786630010886021
 				}
 			],
 			"sid": 294180998688316
@@ -1320,6 +1228,42 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"functionName": "playerInstantKill",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerHitbox",
+							"sid": 298890300485551,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "0"
+							}
+						},
+						{
+							"id": "instance-signal",
+							"objectClass": "PlayerHitbox",
+							"sid": 561483645572598,
+							"parameters": {
+								"tag": "\"lifeUpdated\""
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 738175299431678
+						}
+					],
+					"sid": 981117276916481
+				},
+				{
 					"functionName": "playerTookDamage",
 					"functionDescription": "",
 					"functionCategory": "",
@@ -1404,7 +1348,35 @@
 							}
 						}
 					],
-					"sid": 604314102392044
+					"sid": 604314102392044,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PlayerHitbox",
+									"sid": 413300103864700,
+									"parameters": {
+										"instance-variable": "life",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "instance-signal",
+									"objectClass": "PlayerHitbox",
+									"sid": 585452503698740,
+									"parameters": {
+										"tag": "\"dead\""
+									}
+								}
+							],
+							"sid": 480756491909150
+						}
+					]
 				},
 				{
 					"functionName": "playerUpdateBatteryDelta",
@@ -1534,40 +1506,6 @@
 							"sid": 301610219111236
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-instance-signal",
-							"objectClass": "PlayerHitbox",
-							"sid": 871556600144032,
-							"parameters": {
-								"tag": "\"lifeUpdated\""
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "PlayerHitbox",
-							"sid": 926318332032158,
-							"parameters": {
-								"instance-variable": "life",
-								"comparison": 0,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "instance-signal",
-							"objectClass": "PlayerHitbox",
-							"sid": 980245927313170,
-							"parameters": {
-								"tag": "\"dead\""
-							}
-						}
-					],
-					"sid": 335876013314370
 				},
 				{
 					"eventType": "block",
@@ -1741,6 +1679,15 @@
 							"behaviorType": "Platform",
 							"parameters": {
 								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-vector-y",
+							"objectClass": "PlayerHitbox",
+							"sid": 420917626487990,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "0"
 							}
 						},
 						{

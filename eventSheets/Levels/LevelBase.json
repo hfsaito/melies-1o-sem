@@ -338,9 +338,8 @@
 			],
 			"actions": [
 				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 548185211631879
+					"callFunction": "playerInstantKill",
+					"sid": 575467571805377
 				}
 			],
 			"sid": 247769087202527

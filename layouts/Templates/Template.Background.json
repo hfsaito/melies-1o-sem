@@ -247,6 +247,21 @@
 									"d": true,
 									"sm": "normal"
 								}
+							},
+							{
+								"uid": 183,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
 							}
 						],
 						"flags": {
@@ -298,10 +313,75 @@
 					}
 				},
 				{
+					"type": "BackgroundSun",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 183,
+					"sid": 936551563772742,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 47,
+						"uid": 183,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 936551563772742,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1208,
+						"y": 142,
+						"width": 495,
+						"height": 141,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "BackgroundMountains1",
 					"properties": {
 						"initially-visible": true,
-						"origin": "top-left",
+						"origin": "bottom-left",
 						"wrap-horizontal": "repeat",
 						"wrap-vertical": "repeat",
 						"image-offset-x": 0,
@@ -357,11 +437,11 @@
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 50,
+						"y": 350,
 						"width": 2000,
-						"height": 300,
+						"height": 203,
 						"originX": 0,
-						"originY": 0,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -376,7 +456,7 @@
 					"type": "BackgroundMountains2",
 					"properties": {
 						"initially-visible": true,
-						"origin": "top-left",
+						"origin": "bottom-left",
 						"wrap-horizontal": "repeat",
 						"wrap-vertical": "repeat",
 						"image-offset-x": 0,
@@ -432,11 +512,11 @@
 					"locked": false,
 					"world": {
 						"x": 50,
-						"y": 50,
+						"y": 350,
 						"width": 2000,
-						"height": 300,
+						"height": 148,
 						"originX": 0,
-						"originY": 0,
+						"originY": 1,
 						"color": [
 							1,
 							1,

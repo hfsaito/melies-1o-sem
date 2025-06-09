@@ -172,9 +172,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-created",
+									"id": "on-instance-signal",
 									"objectClass": "HUDBatteryEffect",
-									"sid": 469894179173209
+									"sid": 677123918583320,
+									"parameters": {
+										"tag": "\"play\""
+									}
 								}
 							],
 							"actions": [
@@ -239,9 +242,12 @@
 									}
 								},
 								{
-									"id": "destroy",
+									"id": "set-visible",
 									"objectClass": "HUDBatteryEffect",
-									"sid": 911214552113646
+									"sid": 156437932961250,
+									"parameters": {
+										"visibility": "invisible"
+									}
 								}
 							],
 							"sid": 414683162858727
@@ -335,19 +341,24 @@
 												"instance-variable": "alreadyTriggeredEffect"
 											},
 											"isInverted": true
+										},
+										{
+											"id": "pick-children",
+											"objectClass": "HUDBattery",
+											"sid": 232174711344608,
+											"parameters": {
+												"child": "HUDBatteryEffect",
+												"which": "own"
+											}
 										}
 									],
 									"actions": [
 										{
-											"id": "spawn-another-object",
-											"objectClass": "HUDBattery",
-											"sid": 921758831529984,
+											"id": "set-visible",
+											"objectClass": "HUDBatteryEffect",
+											"sid": 953619587325910,
 											"parameters": {
-												"object": "HUDBatteryEffect",
-												"layer": "\"HUD\"",
-												"image-point": "0",
-												"create-hierarchy": false,
-												"template-name": "\"\""
+												"visibility": "visible"
 											}
 										},
 										{
@@ -357,6 +368,14 @@
 											"parameters": {
 												"instance-variable": "alreadyTriggeredEffect",
 												"value": "true"
+											}
+										},
+										{
+											"id": "instance-signal",
+											"objectClass": "HUDBatteryEffect",
+											"sid": 218511839013556,
+											"parameters": {
+												"tag": "\"play\""
 											}
 										}
 									],

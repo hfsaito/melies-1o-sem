@@ -1,0 +1,60 @@
+{
+	"name": "BackgroundBridge",
+	"plugin-id": "Sprite",
+	"sid": 596771809297158,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1302,
+						"height": 238,
+						"originX": 0.5,
+						"originY": 0.36554621848739494,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7788692,
+						"collisionPoly": {
+							"points": [
+								0.8847926267281107,
+								0.004201680672268907,
+								0.9930875576036866,
+								0.07563025210084033,
+								0.999231950844854,
+								0.23109243697478993,
+								0.7526881720430108,
+								0.9957983193277311,
+								0.2465437788018433,
+								0.9957983193277311,
+								0.0007680491551459293,
+								0.23529411764705882,
+								0.021505376344086023,
+								0.037815126050420166,
+								0.1152073732718894,
+								0.008403361344537815
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 110699627912855,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
