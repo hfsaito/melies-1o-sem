@@ -18,6 +18,10 @@
 			"includeSheet": "MenuPause"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "Audio"
+		},
+		{
 			"eventType": "variable",
 			"name": "level",
 			"type": "number",

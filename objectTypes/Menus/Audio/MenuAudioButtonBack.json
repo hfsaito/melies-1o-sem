@@ -1,0 +1,52 @@
+{
+	"name": "MenuAudioButtonBack",
+	"plugin-id": "Sprite",
+	"sid": 113736970834745,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 307,
+						"height": 159,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5670572,
+						"collisionPoly": {
+							"points": [
+								0.9837133550488599,
+								0.018867924528301886,
+								0.9837133550488599,
+								0.8679245283018868,
+								0.006514657980456026,
+								0.9874213836477987,
+								0.009771986970684038,
+								0.0440251572327044
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 161122490999119,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

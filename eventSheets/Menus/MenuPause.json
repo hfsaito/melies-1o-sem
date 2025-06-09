@@ -3,11 +3,19 @@
 	"events": [
 		{
 			"eventType": "include",
-			"includeSheet": "MenuControls"
+			"includeSheet": "Audio"
 		},
 		{
 			"eventType": "include",
 			"includeSheet": "Controls"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "MenuControls"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "MenuAudio"
 		},
 		{
 			"eventType": "variable",
@@ -476,11 +484,44 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 445335724317816,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "MenuPauseButtonAudio"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuAudioOpen",
+									"sid": 392261781248199,
+									"parameters": [
+										false
+									]
+								}
+							],
+							"sid": 394085687425438
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "on-signal",
 									"objectClass": "System",
 									"sid": 796878523111828,
 									"parameters": {
 										"tag": "\"MenuControlsOpen\""
+									}
+								},
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 752473457262734,
+									"parameters": {
+										"tag": "\"MenuAudioOpen\""
 									}
 								}
 							],
@@ -490,7 +531,8 @@
 									"sid": 341737222434587
 								}
 							],
-							"sid": 558146954161755
+							"sid": 558146954161755,
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
@@ -502,6 +544,14 @@
 									"parameters": {
 										"tag": "\"MenuControlsClose\""
 									}
+								},
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 559458325426852,
+									"parameters": {
+										"tag": "\"MenuAudioClose\""
+									}
 								}
 							],
 							"actions": [
@@ -510,7 +560,8 @@
 									"sid": 894210916228919
 								}
 							],
-							"sid": 601842736086591
+							"sid": 601842736086591,
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
@@ -559,64 +610,6 @@
 						}
 					],
 					"sid": 452771342975074
-				},
-				{
-					"eventType": "group",
-					"disabled": true,
-					"title": "pause.audio",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-start-of-layout",
-									"objectClass": "System",
-									"sid": 488893113089415
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 414456015767411,
-									"parameters": {
-										"audio-file": "battleThemeA",
-										"loop": "looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"bg\""
-									}
-								}
-							],
-							"sid": 897070998941521,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 942150327494708
-								}
-							],
-							"actions": [
-								{
-									"id": "set-master-volume",
-									"objectClass": "Audio",
-									"sid": 767981184588367,
-									"parameters": {
-										"db": "33 * log10(PauseVolumeControl.Value/100)"
-									}
-								}
-							],
-							"sid": 720814883437068,
-							"disabled": true
-						}
-					],
-					"sid": 371768254088635
 				}
 			],
 			"sid": 752801569441350

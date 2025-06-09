@@ -945,12 +945,6 @@
 					}
 				},
 				{
-					"id": "wait-for-previous-actions",
-					"objectClass": "System",
-					"sid": 558907814068160,
-					"disabled": true
-				},
-				{
 					"id": "signal",
 					"objectClass": "System",
 					"sid": 501599745346072,
@@ -1036,12 +1030,6 @@
 						"layer": "\"MenuControls\"",
 						"interactive": false
 					}
-				},
-				{
-					"id": "wait-for-previous-actions",
-					"objectClass": "System",
-					"sid": 669257170619542,
-					"disabled": true
 				},
 				{
 					"id": "signal",

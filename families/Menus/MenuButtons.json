@@ -1,0 +1,19 @@
+{
+	"name": "MenuButtons",
+	"plugin-id": "Sprite",
+	"sid": 714198040533142,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"MenuPauseButtonResume",
+		"MenuPauseButtonControls",
+		"MenuPauseButtonAudio",
+		"MenuControlsButtonChange",
+		"MenuControlsButtonBack",
+		"MenuAudioButtonBack",
+		"MainMenuButtonPlay",
+		"MainMenuButtonOptions",
+		"MainMenuButtonCredits"
+	]
+}

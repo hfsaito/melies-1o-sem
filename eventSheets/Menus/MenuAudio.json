@@ -2,58 +2,428 @@
 	"name": "MenuAudio",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 931433800711166
-				},
-				{
-					"id": "layer-name-exists",
-					"objectClass": "System",
-					"sid": 613831867666545,
-					"parameters": {
-						"layer": "\"MenuAudio\""
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "set-group-active",
-					"objectClass": "System",
-					"sid": 590440615278355,
-					"parameters": {
-						"group-name": "\"menuAudio\"",
-						"state": "deactivated"
-					}
-				}
-			],
-			"sid": 745716588629322,
+			"eventType": "include",
+			"includeSheet": "Audio"
+		},
+		{
+			"eventType": "variable",
+			"name": "MenuAudioLayerName",
+			"type": "string",
+			"initialValue": "MenuAudio",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 734315081164542
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "menuAudio",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuAudio.check",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "is-in-preview",
-							"objectClass": "System",
-							"sid": 298708955639872
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 458254734986687
+								},
+								{
+									"id": "layer-name-exists",
+									"objectClass": "System",
+									"sid": 931209473961374,
+									"parameters": {
+										"layer": "\"MenuAudio\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 533010768415489,
+									"parameters": {
+										"group-name": "\"menuAudio\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 450258661793060,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-in-preview",
+											"objectClass": "System",
+											"sid": 460621777193641
+										}
+									],
+									"actions": [
+										{
+											"id": "alert",
+											"objectClass": "Browser",
+											"sid": 459564429815146,
+											"parameters": {
+												"message": "\"Missing \" & MenuAudioLayerName & \" layer in layout \" & LayoutName &  \"\nMenuAudio event sheet imported but the layer is missing\""
+											}
+										}
+									],
+									"sid": 921951728097314
+								}
+							]
 						}
 					],
-					"actions": [
+					"sid": 291945890532669
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuAudio.setup",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "alert",
-							"objectClass": "Browser",
-							"sid": 367990507511087,
-							"parameters": {
-								"message": "\"Missing MenuAudio layer in layout \" & LayoutName &  \"\nMenuAudio event sheet imported but there is no MenuAudio layer\""
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 528194318593937
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 707682058580237,
+									"parameters": {
+										"layer": "MenuAudioLayerName",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 233759282694416,
+									"parameters": {
+										"layer": "MenuAudioLayerName",
+										"interactive": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 604737115751193,
+									"parameters": {
+										"object-to-create": "MenuAudioOverlay",
+										"layer": "MenuAudioLayerName",
+										"x": "ViewportLeft(MenuAudioLayerName)",
+										"y": "ViewportTop(MenuAudioLayerName)",
+										"create-hierarchy": true,
+										"template-name": "\"default\""
+									}
+								}
+							],
+							"sid": 401341491126318
 						}
 					],
-					"sid": 391213815479743
+					"sid": 972284935525782
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuAudio.controls",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-changed",
+									"objectClass": "MenuAudioControlMaster",
+									"sid": 237240004016573
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "audioChangeMasterVolume",
+									"sid": 765182035488473,
+									"parameters": [
+										"MenuAudioControlMaster.Value"
+									]
+								}
+							],
+							"sid": 967476076081201
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-changed",
+									"objectClass": "MenuAudioControlBgm",
+									"sid": 561217098637547
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "audioChangeBgmVolume",
+									"sid": 991312819517943,
+									"parameters": [
+										"MenuAudioControlBgm.Value"
+									]
+								}
+							],
+							"sid": 156223800196685
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-changed",
+									"objectClass": "MenuAudioControlEffects",
+									"sid": 706093462431466
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "audioChangeEffectsVolume",
+									"sid": 977554392599319,
+									"parameters": [
+										"MenuAudioControlEffects.Value"
+									]
+								}
+							],
+							"sid": 602381322657622
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 257834499983768,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "MenuAudioButtonBack"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "menuAudioClose",
+									"sid": 997922573646235
+								}
+							],
+							"sid": 647239957622096
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 174381763074679,
+									"parameters": {
+										"object": "MenuAudioButtonBack"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "MenuAudioButtonBack",
+									"sid": 207371179596467,
+									"parameters": {
+										"color": "rgbEx(70, 70, 70)"
+									}
+								}
+							],
+							"sid": 856935237399700
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 366431658614682
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "MenuAudioButtonBack",
+									"sid": 104574015638800,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 256054447451384
+						}
+					],
+					"sid": 415998673765764
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuAudio.functions",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "menuAudioOpen",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "withOverlay",
+									"type": "boolean",
+									"initialValue": "false",
+									"comment": "",
+									"sid": 839977177495779
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 423264992882202,
+									"parameters": {
+										"layer": "MenuAudioLayerName",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 129791281838284,
+									"parameters": {
+										"layer": "MenuAudioLayerName",
+										"interactive": true
+									}
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 853560664328671,
+									"parameters": {
+										"tag": "\"MenuAudioOpen\""
+									}
+								}
+							],
+							"sid": 102245780731685,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 842683899795342,
+											"parameters": {
+												"variable": "withOverlay"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "MenuAudioOverlay",
+											"sid": 576250631407224,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 742216740974495
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 842877014690550
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "MenuAudioOverlay",
+											"sid": 318292530208550,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 659599259729241
+								}
+							]
+						},
+						{
+							"functionName": "menuAudioClose",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 299002913746625,
+									"parameters": {
+										"layer": "MenuAudioLayerName",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 594347230545133,
+									"parameters": {
+										"layer": "MenuAudioLayerName",
+										"interactive": false
+									}
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 689950932069083,
+									"parameters": {
+										"tag": "\"MenuAudioClose\""
+									}
+								}
+							],
+							"sid": 703333258589894
+						}
+					],
+					"sid": 318763819102459
 				}
-			]
+			],
+			"sid": 924056836998695
 		}
 	],
 	"sid": 981002479009657

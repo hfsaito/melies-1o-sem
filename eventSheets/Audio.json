@@ -1,0 +1,271 @@
+{
+	"name": "Audio",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "AudioVolumeBgm",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 866605672487753
+		},
+		{
+			"eventType": "variable",
+			"name": "AudioVolumeEffects",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 378275447408188
+		},
+		{
+			"functionName": "audioPlayBgm",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "soundName",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 909492422753479
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 884614281639081,
+					"parameters": {
+						"folder": "sounds",
+						"audio-file-name": "soundName",
+						"loop": "not-looping",
+						"volume": "AudioVolumeBgm",
+						"stereo-pan": "0",
+						"tag-optional": "\"bgm\""
+					}
+				}
+			],
+			"sid": 741899754994119
+		},
+		{
+			"functionName": "audioPlayEffect",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "soundName",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 812222854607227
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 207137522821130,
+					"parameters": {
+						"folder": "sounds",
+						"audio-file-name": "soundName",
+						"loop": "not-looping",
+						"volume": "AudioVolumeEffects",
+						"stereo-pan": "0",
+						"tag-optional": "\"effects\""
+					}
+				}
+			],
+			"sid": 279976824144392
+		},
+		{
+			"functionName": "audioChangeMasterVolume",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "volumeLinear",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 425364863727257
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-master-volume",
+					"objectClass": "Audio",
+					"sid": 801154894146908,
+					"parameters": {
+						"db": "Functions.audioLinearToDb(volumeLinear)"
+					}
+				}
+			],
+			"sid": 798478830551220
+		},
+		{
+			"functionName": "audioChangeBgmVolume",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "volumeLinear",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 305371245202379
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 807505842606842,
+					"parameters": {
+						"tag": "\"effects\"",
+						"db": "Functions.audioLinearToDb(volumeLinear)"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 906451829822841,
+					"parameters": {
+						"variable": "AudioVolumeBgm",
+						"value": "Functions.audioLinearToDb(volumeLinear)"
+					}
+				}
+			],
+			"sid": 637375259906833
+		},
+		{
+			"functionName": "audioChangeEffectsVolume",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "volumeLinear",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 978496331939660
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 580631025177684,
+					"parameters": {
+						"tag": "\"effects\"",
+						"db": "Functions.audioLinearToDb(volumeLinear)"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 698919319027712,
+					"parameters": {
+						"variable": "AudioVolumeEffects",
+						"value": "Functions.audioLinearToDb(volumeLinear)"
+					}
+				}
+			],
+			"sid": 185125324589023
+		},
+		{
+			"functionName": "audioLinearToDb",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "volumeLinear",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 664075796602018
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-function-return-value",
+					"objectClass": "Functions",
+					"sid": 768362045710052,
+					"parameters": {
+						"value": "33 * log10(volumeLinear/100)"
+					}
+				}
+			],
+			"sid": 165949667964461
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "audio.ui",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 161636878289486,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "MenuButtons"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "audioPlayEffect",
+							"sid": 429786520278165,
+							"parameters": [
+								"\"click\""
+							]
+						}
+					],
+					"sid": 537399522826302
+				}
+			],
+			"sid": 316035553419819
+		}
+	],
+	"sid": 933361279488387
+}

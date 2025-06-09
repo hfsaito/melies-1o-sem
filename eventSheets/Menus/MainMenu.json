@@ -3,6 +3,10 @@
 	"events": [
 		{
 			"eventType": "include",
+			"includeSheet": "Audio"
+		},
+		{
+			"eventType": "include",
 			"includeSheet": "MenuControls"
 		},
 		{

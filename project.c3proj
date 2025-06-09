@@ -280,7 +280,6 @@
 					},
 					{
 						"items": [
-							"PauseVolumeControl",
 							"MenuPauseOverlay",
 							"MenuPauseTitle",
 							"MenuPauseButtonResume",
@@ -299,6 +298,21 @@
 						],
 						"subfolders": [],
 						"name": "MainMenu"
+					},
+					{
+						"items": [
+							"MenuAudioOverlay",
+							"MenuAudioTitle",
+							"MenuAudioLabelMaster",
+							"MenuAudioLabelEffects",
+							"MenuAudioLabelBgm",
+							"MenuAudioButtonBack",
+							"MenuAudioControlMaster",
+							"MenuAudioControlBgm",
+							"MenuAudioControlEffects"
+						],
+						"subfolders": [],
+						"name": "Audio"
 					}
 				],
 				"name": "Menus"
@@ -324,7 +338,9 @@
 				"name": "Characters"
 			},
 			{
-				"items": [],
+				"items": [
+					"MenuButtons"
+				],
 				"subfolders": [
 					{
 						"items": [
@@ -410,7 +426,8 @@
 		"items": [
 			"ConstructTests",
 			"Controls",
-			"HUD"
+			"HUD",
+			"Audio"
 		],
 		"subfolders": [
 			{
@@ -461,7 +478,104 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Dying.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 543075662036839,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Explosion.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 940042956290451,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Jump.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 830957907235552,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PickUp.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 804204834527383,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PowerDown.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 167525623547018,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PowerUp.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 426033616522004,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Shooting.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 788298587109803,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Damage.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 937157392392909,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Charging.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 675422115722410,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Dashing.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 184793699053327,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Impact.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 938627699889690,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "click.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 559049189348128,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

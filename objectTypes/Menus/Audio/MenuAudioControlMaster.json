@@ -1,0 +1,9 @@
+{
+	"name": "MenuAudioControlMaster",
+	"plugin-id": "sliderbar",
+	"sid": 855973305187247,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

@@ -1,7 +1,7 @@
 {
-	"name": "PauseVolumeControl",
+	"name": "MenuAudioControlBgm",
 	"plugin-id": "sliderbar",
-	"sid": 855973305187247,
+	"sid": 395886490390748,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
