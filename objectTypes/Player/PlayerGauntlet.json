@@ -78,7 +78,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 2
 			},
 			{
 				"frames": [
@@ -714,7 +714,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 9
 			}
 		],
 		"subfolders": []

@@ -360,7 +360,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "PlayerSpawnPoint",
+					"type": "PlayerRespawnPoint",
 					"properties": {
 						"initially-visible": false,
 						"initial-animation": "Animation 1",

@@ -242,9 +242,10 @@
 					"PlayerGauntlet",
 					"PlayerGun",
 					"PlayerLegs",
-					"PlayerSpawnPoint",
+					"PlayerRespawnPoint",
 					"PlayerCamera",
-					"PlayerWallChecker"
+					"PlayerWallChecker",
+					"PlayerSpawnPoint"
 				],
 				"subfolders": [],
 				"name": "Player"
@@ -255,8 +256,7 @@
 					"LevelFinishZone",
 					"PlatformsTilemap",
 					"LevelDeathZone",
-					"deprecated",
-					"ThanksForPlaying"
+					"deprecated"
 				],
 				"subfolders": [
 					{
@@ -271,6 +271,14 @@
 						],
 						"subfolders": [],
 						"name": "Backgrounds"
+					},
+					{
+						"items": [
+							"ThanksForPlaying",
+							"Sprite"
+						],
+						"subfolders": [],
+						"name": "FinalLevel"
 					}
 				],
 				"name": "Level"
@@ -431,8 +439,7 @@
 	"layouts": {
 		"items": [
 			"TestBox",
-			"ContructTests",
-			"Level3"
+			"ContructTests"
 		],
 		"subfolders": [
 			{
@@ -468,6 +475,8 @@
 			{
 				"items": [
 					"Level0",
+					"Level1",
+					"Level2",
 					"Level0Olc",
 					"Level1Old",
 					"Level2Old"
@@ -544,30 +553,6 @@
 		"sound": {
 			"items": [
 				{
-					"name": "Dying.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 543075662036839,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Explosion.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 940042956290451,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "PickUp.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 804204834527383,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
 					"name": "PowerDown.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 167525623547018,
@@ -584,17 +569,17 @@
 					}
 				},
 				{
-					"name": "Damage.webm",
+					"name": "click.webm",
 					"type": "audio/webm; codecs=opus",
-					"sid": 937157392392909,
+					"sid": 559049189348128,
 					"file-info": {
 						"purpose": "none"
 					}
 				},
 				{
-					"name": "click.webm",
+					"name": "PickUp.webm",
 					"type": "audio/webm; codecs=opus",
-					"sid": 559049189348128,
+					"sid": 804204834527383,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -642,10 +627,46 @@
 							"file-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "Damage.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 937157392392909,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Dying.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 543075662036839,
+							"file-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],
 					"name": "Player"
+				},
+				{
+					"items": [],
+					"subfolders": [
+						{
+							"items": [
+								{
+									"name": "Explosion.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 940042956290451,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "Enemy01"
+						}
+					],
+					"name": "Enemies"
 				}
 			]
 		},

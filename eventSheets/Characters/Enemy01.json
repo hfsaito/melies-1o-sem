@@ -1752,6 +1752,13 @@
 											"parameters": {
 												"speed": "14"
 											}
+										},
+										{
+											"callFunction": "audioPlayEffect",
+											"sid": 428499685007962,
+											"parameters": [
+												"\"Enemies/Enemy01/Explosion\""
+											]
 										}
 									],
 									"sid": 355398713597523

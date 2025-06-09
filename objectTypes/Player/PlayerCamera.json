@@ -2,7 +2,7 @@
 	"name": "PlayerCamera",
 	"plugin-id": "Sprite",
 	"sid": 344839817280645,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [

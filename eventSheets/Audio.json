@@ -51,14 +51,22 @@
 			"conditions": [],
 			"actions": [
 				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 215957632068489,
+					"parameters": {
+						"tag": "\"bgm\""
+					}
+				},
+				{
 					"id": "play-by-name",
 					"objectClass": "Audio",
-					"sid": 553163545040157,
+					"sid": 833783659670795,
 					"parameters": {
 						"folder": "music",
 						"audio-file-name": "soundName",
 						"loop": "looping",
-						"volume": "AudioVolumeBgm",
+						"volume": "AudioVolumeBgm - 10",
 						"stereo-pan": "0",
 						"tag-optional": "\"bgm\""
 					}
@@ -185,10 +193,10 @@
 				{
 					"id": "set-volume",
 					"objectClass": "Audio",
-					"sid": 921318867394231,
+					"sid": 602207822688008,
 					"parameters": {
 						"tag": "\"bgm\"",
-						"db": "Functions.audioLinearToDb(volumeLinear)"
+						"db": "Functions.audioLinearToDb(volumeLinear) - 10"
 					}
 				},
 				{

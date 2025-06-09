@@ -2,16 +2,6 @@
 	"name": "ConstructTests",
 	"events": [
 		{
-			"eventType": "variable",
-			"name": "asdsdfsa",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 475303036281319
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "key test",
@@ -49,17 +39,7 @@
 							"sid": 962170415093379
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 374975544036317,
-							"parameters": {
-								"variable": "asdsdfsa",
-								"value": "time"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 240205214892257,
 					"disabled": true
 				},

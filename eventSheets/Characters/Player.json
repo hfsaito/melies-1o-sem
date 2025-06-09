@@ -74,7 +74,48 @@
 							"sid": 346182724390403
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "PlayerRespawnPoint",
+							"sid": 925031221324991,
+							"parameters": {
+								"object": "PlayerSpawnPoint",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "PlayerHitbox",
+							"sid": 785930122397537,
+							"parameters": {
+								"object": "PlayerSpawnPoint",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "PlayerCamera",
+							"sid": 692864690244603,
+							"parameters": {
+								"object": "PlayerSpawnPoint",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "PlayerSpawnPoint",
+							"sid": 659274708202943,
+							"disabled": true,
+							"parameters": {
+								"object": "PlayerHitbox",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": true,
+								"template-name": "\"root\""
+							}
+						}
+					],
 					"sid": 996158221580644,
 					"children": [
 						{
@@ -126,7 +167,7 @@
 									"objectClass": "PlayerHitbox",
 									"sid": 456164444448972,
 									"parameters": {
-										"object": "PlayerSpawnPoint",
+										"object": "PlayerRespawnPoint",
 										"image-point-optional": "0"
 									}
 								}
@@ -1213,6 +1254,13 @@
 							"parameters": [
 								"\"dying\""
 							]
+						},
+						{
+							"callFunction": "audioPlayEffect",
+							"sid": 421922708772065,
+							"parameters": [
+								"\"Player/Dying\""
+							]
 						}
 					],
 					"sid": 771843419561284
@@ -1304,6 +1352,13 @@
 									"sid": 781836705170841,
 									"parameters": [
 										"PlayerHitbox.life - damage"
+									]
+								},
+								{
+									"callFunction": "audioPlayEffect",
+									"sid": 946528788089753,
+									"parameters": [
+										"\"Player/Damage\""
 									]
 								}
 							],

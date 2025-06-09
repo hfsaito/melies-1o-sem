@@ -134,12 +134,9 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-x-seconds",
+									"id": "every-tick",
 									"objectClass": "System",
-									"sid": 779078405871906,
-									"parameters": {
-										"interval-seconds": ".1"
-									}
+									"sid": 166525456508086
 								},
 								{
 									"id": "compare-instance-variable",
@@ -183,11 +180,12 @@
 													"isInverted": true
 												},
 												{
-													"id": "pick-by-unique-id",
-													"objectClass": "Enemy02",
-													"sid": 102289869323585,
+													"id": "pick-parent",
+													"objectClass": "Enemy02SightToChase",
+													"sid": 844398614292289,
 													"parameters": {
-														"unique-id": "Enemy02SightToChase.ParentUID"
+														"parent": "Enemy02",
+														"which": "own"
 													}
 												}
 											],
@@ -245,11 +243,12 @@
 											}
 										},
 										{
-											"id": "pick-by-unique-id",
-											"objectClass": "Enemy02",
-											"sid": 152880931097435,
+											"id": "pick-parent",
+											"objectClass": "Enemy02SightToChase",
+											"sid": 401078323874328,
 											"parameters": {
-												"unique-id": "Enemy02SightToChase.ParentUID"
+												"parent": "Enemy02",
+												"which": "own"
 											}
 										}
 									],
@@ -375,6 +374,14 @@
 									"parameters": {
 										"instance-variable": "playerInSight",
 										"value": "false"
+									}
+								},
+								{
+									"id": "instance-signal",
+									"objectClass": "Enemy02",
+									"sid": 124814951002933,
+									"parameters": {
+										"tag": "\"running\""
 									}
 								}
 							],
@@ -1413,15 +1420,6 @@
 							"parameters": {
 								"tag": "\"running\""
 							}
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "Enemy02",
-							"sid": 897671650916138,
-							"parameters": {
-								"animation": "\"shooting\""
-							},
-							"isInverted": true
 						},
 						{
 							"id": "is-animation-playing",

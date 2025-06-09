@@ -2,7 +2,7 @@
 	"name": "PlayerWallChecker",
 	"plugin-id": "Sprite",
 	"sid": 621124352560278,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],

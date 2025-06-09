@@ -343,6 +343,36 @@
 				}
 			],
 			"sid": 247769087202527
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 605011858739762
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 952666960361573,
+					"parameters": {
+						"variable": "level",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "audioPlayBgm",
+					"sid": 672292811351754,
+					"parameters": [
+						"\"LevelBGM\""
+					]
+				}
+			],
+			"sid": 392461279967303
 		}
 	],
 	"sid": 194953318407231

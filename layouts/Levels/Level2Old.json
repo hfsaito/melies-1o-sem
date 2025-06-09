@@ -458,7 +458,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "PlayerSpawnPoint",
+					"type": "PlayerRespawnPoint",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",

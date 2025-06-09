@@ -2622,8 +2622,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 960,
-						"y": 188,
+						"x": 944,
+						"y": 156,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -2674,7 +2674,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "PlayerSpawnPoint",
+					"type": "PlayerRespawnPoint",
 					"properties": {
 						"initially-visible": false,
 						"initial-animation": "Animation 1",
@@ -2682,8 +2682,8 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 191,
-					"sid": 307316080978528,
+					"uid": 174,
+					"sid": 547270034624997,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
@@ -2829,7 +2829,7 @@
 					},
 					"sceneGraphData": {
 						"parent-uid": 180,
-						"uid": 191,
+						"uid": 174,
 						"flags": {
 							"x": false,
 							"y": false,
@@ -2856,7 +2856,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 307316080978528,
+						"sid": 547270034624997,
 						"expanded": true
 					},
 					"showing": true,
@@ -2887,85 +2887,12 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 174,
-					"sid": 750890360522869,
+					"uid": 175,
+					"sid": 378700820996733,
 					"tags": "",
 					"instanceVariables": {
 						"parentUniqueID": 0,
 						"shooting": false
-					},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 180,
-						"uid": 174,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 750890360522869,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 53.831214346476344,
-						"y": 215.4260602183138,
-						"width": 96,
-						"height": 96,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "PlayerLegs",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "idle",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 175,
-					"sid": 728612111388669,
-					"tags": "",
-					"instanceVariables": {
-						"parentUniqueID": 0
 					},
 					"behaviors": {
 						"Pin": {
@@ -3003,7 +2930,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 728612111388669,
+						"sid": 378700820996733,
 						"expanded": true
 					},
 					"showing": true,
@@ -3026,7 +2953,7 @@
 					}
 				},
 				{
-					"type": "PlayerChest",
+					"type": "PlayerLegs",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "idle",
@@ -3035,7 +2962,7 @@
 						"live-preview": false
 					},
 					"uid": 176,
-					"sid": 898484424172322,
+					"sid": 189661374912165,
 					"tags": "",
 					"instanceVariables": {
 						"parentUniqueID": 0
@@ -3076,7 +3003,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 898484424172322,
+						"sid": 189661374912165,
 						"expanded": true
 					},
 					"showing": true,
@@ -3099,7 +3026,7 @@
 					}
 				},
 				{
-					"type": "PlayerHead",
+					"type": "PlayerChest",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "idle",
@@ -3108,7 +3035,7 @@
 						"live-preview": false
 					},
 					"uid": 177,
-					"sid": 839014038547216,
+					"sid": 678242184951814,
 					"tags": "",
 					"instanceVariables": {
 						"parentUniqueID": 0
@@ -3149,7 +3076,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 839014038547216,
+						"sid": 678242184951814,
 						"expanded": true
 					},
 					"showing": true,
@@ -3172,7 +3099,7 @@
 					}
 				},
 				{
-					"type": "PlayerGauntlet",
+					"type": "PlayerHead",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "idle",
@@ -3181,7 +3108,7 @@
 						"live-preview": false
 					},
 					"uid": 178,
-					"sid": 352902216261841,
+					"sid": 857707826304481,
 					"tags": "",
 					"instanceVariables": {
 						"parentUniqueID": 0
@@ -3222,7 +3149,80 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 352902216261841,
+						"sid": 857707826304481,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 53.831214346476344,
+						"y": 215.4260602183138,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlayerGauntlet",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 179,
+					"sid": 343626506180012,
+					"tags": "",
+					"instanceVariables": {
+						"parentUniqueID": 0
+					},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 180,
+						"uid": 179,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 343626506180012,
 						"expanded": true
 					},
 					"showing": true,
@@ -3253,8 +3253,8 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 179,
-					"sid": 464394039236154,
+					"uid": 181,
+					"sid": 840398582130371,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
@@ -3266,7 +3266,7 @@
 					},
 					"sceneGraphData": {
 						"parent-uid": 180,
-						"uid": 179,
+						"uid": 181,
 						"flags": {
 							"x": false,
 							"y": false,
@@ -3293,7 +3293,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 464394039236154,
+						"sid": 840398582130371,
 						"expanded": true
 					},
 					"showing": true,
@@ -3324,14 +3324,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 181,
-					"sid": 621395914976633,
+					"uid": 191,
+					"sid": 580661710226218,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 180,
-						"uid": 181,
+						"uid": 191,
 						"flags": {
 							"x": true,
 							"y": true,
@@ -3358,7 +3358,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 621395914976633,
+						"sid": 580661710226218,
 						"expanded": true
 					},
 					"showing": true,
@@ -3683,12 +3683,12 @@
 							{
 								"uid": 174,
 								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
 									"o": false,
 									"v": false,
 									"d": true,
@@ -3758,21 +3758,6 @@
 							{
 								"uid": 179,
 								"flags": {
-									"x": false,
-									"y": false,
-									"z": true,
-									"w": false,
-									"h": false,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 181,
-								"flags": {
 									"x": true,
 									"y": true,
 									"z": true,
@@ -3786,14 +3771,29 @@
 								}
 							},
 							{
-								"uid": 191,
+								"uid": 181,
 								"flags": {
 									"x": false,
 									"y": false,
-									"z": false,
+									"z": true,
 									"w": false,
 									"h": false,
-									"a": false,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 191,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
 									"o": false,
 									"v": false,
 									"d": true,
@@ -4029,5 +4029,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Level0"
+	"eventSheet": "LevelBase"
 }
