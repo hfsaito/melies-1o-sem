@@ -212,7 +212,6 @@
 													"id": "instance-signal",
 													"objectClass": "Enemy02",
 													"sid": 640096478558597,
-													"breakpoint": true,
 													"parameters": {
 														"tag": "\"running\""
 													}
@@ -1762,6 +1761,15 @@
 							"parameters": {
 								"tag": "\"hit\""
 							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Enemy02",
+							"sid": 336900875511397,
+							"parameters": {
+								"animation": "\"dying\""
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [

@@ -2052,7 +2052,7 @@
 					"sid": 770575653159992,
 					"tags": "",
 					"instanceVariables": {
-						"initiallyMirrored": false,
+						"initiallyMirrored": true,
 						"patrolEnabled": true,
 						"lastShootAt": 0,
 						"sawPlayerAt": 0,
@@ -2119,7 +2119,7 @@
 										"state": [
 											{
 												"iv": "initiallyMirrored",
-												"state": true
+												"state": false
 											},
 											{
 												"iv": "patrolEnabled",
