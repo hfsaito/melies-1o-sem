@@ -1,0 +1,60 @@
+{
+	"name": "MeliesLogo",
+	"plugin-id": "Sprite",
+	"sid": 202468821999822,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 300,
+						"height": 131,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3176529,
+						"collisionPoly": {
+							"points": [
+								0.3,
+								0.007633587786259542,
+								0.9233333333333333,
+								0.0916030534351145,
+								0.9966666666666667,
+								0.183206106870229,
+								0.9733333333333334,
+								0.6870229007633588,
+								0.056666666666666664,
+								0.9389312977099237,
+								0,
+								0.8549618320610687,
+								0.0033333333333333335,
+								0.22137404580152673,
+								0.16,
+								0.030534351145038167
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 516560099728285,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,7 +1,7 @@
 {
-	"name": "Sprite",
+	"name": "CreditsDevGabriela",
 	"plugin-id": "Sprite",
-	"sid": 608736415462163,
+	"sid": 403651851900695,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,33 +12,25 @@
 			{
 				"frames": [
 					{
-						"width": 1031,
-						"height": 978,
-						"originX": 0.5,
+						"width": 432,
+						"height": 68,
+						"originX": 0,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4962359,
+						"imageSpriteId": 57402,
 						"collisionPoly": {
 							"points": [
-								0.1930164888457808,
-								0.003067484662576687,
-								0.9815712900096993,
-								0.25766871165644173,
-								0.9980601357904947,
-								0.607361963190184,
-								0.8700290979631425,
-								0.9079754601226994,
-								0.7972841901066925,
-								0.9662576687116564,
-								0.3831231813773036,
-								0.9979550102249489,
-								0.0533462657613967,
-								0.9171779141104295,
-								0.0009699321047526673,
-								0.6676891615541922
+								0.7685185185185185,
+								0.029411764705882353,
+								0.9768518518518519,
+								0.8529411764705882,
+								0.4976851851851852,
+								0.9852941176470589,
+								0.05555555555555555,
+								0.19117647058823528
 							]
 						},
 						"useCollisionPoly": true,
@@ -46,7 +38,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 496598152668331,
+				"sid": 949524084838130,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

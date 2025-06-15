@@ -120,9 +120,9 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 740268341110195,
+									"sid": 357208808279800,
 									"parameters": {
-										"object-to-create": "MenuCreditsOverlay",
+										"object-to-create": "MenuCreditsAnchorSpawn",
 										"layer": "MenuCreditsLayerName",
 										"x": "ViewportLeft(MenuCreditsLayerName)",
 										"y": "ViewportTop(MenuCreditsLayerName)",
@@ -131,21 +131,52 @@
 									}
 								}
 							],
-							"sid": 276750769047906
+							"sid": 276750769047906,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "layer-name-exists",
+											"objectClass": "System",
+											"sid": 811426618676584,
+											"parameters": {
+												"layer": "\"Template\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 337655642531053,
+											"parameters": {
+												"seconds": "dt",
+												"use-timescale": false
+											}
+										},
+										{
+											"callFunction": "menuCreditsOpen",
+											"sid": 568025739480470
+										}
+									],
+									"sid": 563998893596510
+								}
+							]
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "on-created",
-									"objectClass": "MenuCreditsAnchor",
+									"objectClass": "MenuCreditsAnchorScroll",
 									"sid": 503209885697948
 								}
 							],
 							"actions": [
 								{
 									"id": "set-angle-of-motion",
-									"objectClass": "MenuCreditsAnchor",
+									"objectClass": "MenuCreditsAnchorScroll",
 									"sid": 628298683797695,
 									"behaviorType": "Bullet",
 									"parameters": {
@@ -154,7 +185,7 @@
 								},
 								{
 									"id": "set-enabled",
-									"objectClass": "MenuCreditsAnchor",
+									"objectClass": "MenuCreditsAnchorScroll",
 									"sid": 847075100991698,
 									"behaviorType": "Bullet",
 									"parameters": {
@@ -213,7 +244,7 @@
 								},
 								{
 									"id": "set-position",
-									"objectClass": "MenuCreditsAnchor",
+									"objectClass": "MenuCreditsAnchorScroll",
 									"sid": 138537107311227,
 									"parameters": {
 										"x": "ViewportLeft(MenuCreditsLayerName)",
@@ -222,7 +253,7 @@
 								},
 								{
 									"id": "set-enabled",
-									"objectClass": "MenuCreditsAnchor",
+									"objectClass": "MenuCreditsAnchorScroll",
 									"sid": 729098447521683,
 									"behaviorType": "Bullet",
 									"parameters": {
@@ -271,7 +302,7 @@
 								},
 								{
 									"id": "set-enabled",
-									"objectClass": "MenuCreditsAnchor",
+									"objectClass": "MenuCreditsAnchorScroll",
 									"sid": 193311850095648,
 									"behaviorType": "Bullet",
 									"parameters": {

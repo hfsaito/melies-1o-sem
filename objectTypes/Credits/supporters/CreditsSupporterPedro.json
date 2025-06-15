@@ -1,7 +1,7 @@
 {
-	"name": "MenuCreditsThanks",
+	"name": "CreditsSupporterPedro",
 	"plugin-id": "Sprite",
-	"sid": 426842090266047,
+	"sid": 401778898574853,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,23 +12,25 @@
 			{
 				"frames": [
 					{
-						"width": 298,
-						"height": 74,
+						"width": 316,
+						"height": 79,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7450219,
+						"imageSpriteId": 3041595,
 						"collisionPoly": {
 							"points": [
-								0.1040268456375839,
-								0.02702702702702703,
-								0.9563758389261748,
-								0.9324324324324325,
-								0.006711409395973154,
-								0.8108108108108109
+								0.3449367088607595,
+								0.012658227848101266,
+								0.620253164556962,
+								0.012658227848101266,
+								0.924050632911392,
+								0.9873417721518988,
+								0.022151898734177215,
+								0.0759493670886076
 							]
 						},
 						"useCollisionPoly": true,
@@ -36,7 +38,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 807848487503435,
+				"sid": 994751453991495,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -18,6 +18,7 @@
 		"MenuOptionsButtonControls",
 		"MenuOptionsButtonAudio",
 		"MenuOptionsButtonBack",
-		"MenuCreditsButtonBack"
+		"MenuCreditsButtonBack",
+		"MenuEndButtonBack"
 	]
 }

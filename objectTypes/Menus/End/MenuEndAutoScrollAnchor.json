@@ -1,42 +1,43 @@
 {
-	"name": "MenuCreditsDevHadryan",
+	"name": "MenuEndAutoScrollAnchor",
 	"plugin-id": "Sprite",
-	"sid": 449303119723061,
+	"sid": 761608148282644,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 693926176417296
+		},
+		{
+			"behaviorId": "wrap",
+			"name": "Wrap",
+			"sid": 719212342312489
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 400,
-						"height": 64,
+						"width": 500,
+						"height": 300,
 						"originX": 0,
-						"originY": 0.5,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3091649,
-						"collisionPoly": {
-							"points": [
-								0.9925,
-								0.875,
-								0.2425,
-								0.96875,
-								0.015,
-								0.1875
-							]
-						},
+						"imageSpriteId": 8323743,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 595141892635275,
+				"sid": 925080423740577,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

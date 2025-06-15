@@ -4,6 +4,28 @@
 		{
 			"eventType": "include",
 			"includeSheet": "LevelBase"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 143693995726147
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 613736996699645,
+					"parameters": {
+						"variable": "level",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 896039394123584
 		}
 	],
 	"sid": 631108751167960

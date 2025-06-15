@@ -1,7 +1,7 @@
 {
-	"name": "MenuCreditsProfDanilo",
+	"name": "CreditsSupporterDenner",
 	"plugin-id": "Sprite",
-	"sid": 849362930125764,
+	"sid": 944187267914200,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,33 @@
 			{
 				"frames": [
 					{
-						"width": 295,
-						"height": 66,
+						"width": 420,
+						"height": 82,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3426392,
+						"imageSpriteId": 9222066,
+						"collisionPoly": {
+							"points": [
+								0.2619047619047619,
+								0.012195121951219513,
+								0.5785714285714286,
+								0.06097560975609756,
+								0.8214285714285714,
+								0.9878048780487805,
+								0.016666666666666666,
+								0.06097560975609756
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 765860241027542,
+				"sid": 908687625173790,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

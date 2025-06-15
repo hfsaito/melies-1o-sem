@@ -9,6 +9,7 @@
 		"MenuControlsButtonChange",
 		"MenuControlsButtonBack",
 		"MenuOptionsButtonBack",
-		"MenuCreditsButtonBack"
+		"MenuCreditsButtonBack",
+		"MenuEndButtonBack"
 	]
 }

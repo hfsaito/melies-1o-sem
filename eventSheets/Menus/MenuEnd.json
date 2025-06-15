@@ -1,0 +1,279 @@
+{
+	"name": "MenuEnd",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "MenuEndLayerName",
+			"type": "string",
+			"initialValue": "MenuEnd",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 889171332146400
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "menuEnd",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": true,
+					"title": "menuEnd.check",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 738115026851001
+								},
+								{
+									"id": "layer-name-exists",
+									"objectClass": "System",
+									"sid": 732015953921610,
+									"parameters": {
+										"layer": "MenuEndLayerName"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 352037546870981,
+									"parameters": {
+										"group-name": "\"menuEnd\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 666575867408112,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-in-preview",
+											"objectClass": "System",
+											"sid": 283615619220342
+										}
+									],
+									"actions": [
+										{
+											"id": "alert",
+											"objectClass": "Browser",
+											"sid": 461766372450689,
+											"parameters": {
+												"message": "\"Missing \" & MenuEndLayerName & \" layer in layout \" & LayoutName &  \"\nMenuEnd event sheet imported but the layer is missing\""
+											}
+										}
+									],
+									"sid": 377163533474930,
+									"disabled": true
+								}
+							]
+						}
+					],
+					"sid": 653899261464990
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuEnd.setup",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 764250567639896
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 747280818265556,
+									"disabled": true,
+									"parameters": {
+										"layer": "MenuEndLayerName",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 457550225797219,
+									"disabled": true,
+									"parameters": {
+										"layer": "MenuEndLayerName",
+										"interactive": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 181260986632422,
+									"parameters": {
+										"object-to-create": "MenuEndSpawnAnchor",
+										"layer": "MenuEndLayerName",
+										"x": "ViewportLeft(MenuEndLayerName)",
+										"y": "ViewportTop(MenuEndLayerName)",
+										"create-hierarchy": true,
+										"template-name": "\"default\""
+									}
+								}
+							],
+							"sid": 255251653661082,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "MenuEndAutoScrollAnchor",
+									"sid": 831255353318933
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 398291830876463,
+									"parameters": {
+										"seconds": "2",
+										"use-timescale": false
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "MenuEndAutoScrollAnchor",
+									"sid": 493906006464256,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "50"
+									}
+								},
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "MenuEndAutoScrollAnchor",
+									"sid": 975323501853061,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "-90"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "MenuEndAutoScrollAnchor",
+									"sid": 984914663851818,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 373739965284333
+						}
+					],
+					"sid": 661385434546588
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menuEnd.button",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 723560530105502,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "MenuEndButtonBack"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 795793289964737,
+									"parameters": {
+										"layout": "MainMenu"
+									}
+								}
+							],
+							"sid": 513987167418283
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 134787355820932,
+									"parameters": {
+										"object": "MenuEndButtonBack"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "MenuEndButtonBack",
+									"sid": 901283930278215,
+									"parameters": {
+										"color": "rgbEx(70, 70, 70)"
+									}
+								}
+							],
+							"sid": 111964760114216
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 286810035758476
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "MenuEndButtonBack",
+									"sid": 605609110017015,
+									"parameters": {
+										"color": "rgbEx(100, 100, 100)"
+									}
+								}
+							],
+							"sid": 507698843821171
+						}
+					],
+					"sid": 275009706254629
+				}
+			],
+			"sid": 983572150008279
+		}
+	],
+	"sid": 966658065593826
+}

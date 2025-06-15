@@ -1,7 +1,7 @@
 {
-	"name": "MenuCreditsProfLia",
+	"name": "MenuOptionsAnchorSpawn",
 	"plugin-id": "Sprite",
-	"sid": 798122798986035,
+	"sid": 379903921215547,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,33 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 280,
-						"height": 81,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 500,
+						"height": 300,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7629917,
-						"collisionPoly": {
-							"points": [
-								0.3821428571428571,
-								0.024691358024691357,
-								0.6428571428571432,
-								0.06172839506172839,
-								0.95,
-								0.9753086419753086,
-								0.025,
-								0.037037037037037035
-							]
-						},
+						"imageSpriteId": 6986695,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 251377435550963,
+				"sid": 109882032820053,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

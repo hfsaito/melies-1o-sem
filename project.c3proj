@@ -271,20 +271,16 @@
 						],
 						"subfolders": [],
 						"name": "Backgrounds"
-					},
-					{
-						"items": [
-							"ThanksForPlaying",
-							"Sprite"
-						],
-						"subfolders": [],
-						"name": "FinalLevel"
 					}
 				],
 				"name": "Level"
 			},
 			{
-				"items": [],
+				"items": [
+					"GameTitle",
+					"MenuBackground",
+					"MeliesLogo"
+				],
 				"subfolders": [
 					{
 						"items": [
@@ -316,7 +312,6 @@
 					},
 					{
 						"items": [
-							"MainMenuBackground",
 							"MainMenuButtonPlay",
 							"MainMenuButtonOptions",
 							"MainMenuButtonCredits"
@@ -345,36 +340,73 @@
 							"MenuOptionsButtonControls",
 							"MenuOptionsOverlay",
 							"MenuOptionsTitle",
-							"MenuOptionsButtonBack"
+							"MenuOptionsButtonBack",
+							"MenuOptionsAnchorSpawn"
 						],
 						"subfolders": [],
 						"name": "Options"
 					},
 					{
 						"items": [
-							"MenuCreditsTitle",
-							"MenuCreditsPositionDev",
-							"MenuCreditsPosition2DArtist",
-							"MenuCreditsPositionPixelArtist",
-							"MenuCreditsPositionSound",
-							"MenuCreditsDevBruno",
-							"MenuCreditsDevGabi",
-							"MenuCreditsDevHadryan",
-							"MenuCreditsDevHiroshi",
-							"MenuCreditsThanks",
-							"MenuCreditsProfDanilo",
-							"MenuCreditsProfLia",
-							"MenuCreditsProfPedro",
-							"MenuCreditsProfDenner",
 							"MenuCreditsButtonBack",
 							"MenuCreditsOverlay",
-							"MenuCreditsAnchor"
+							"MenuCreditsAnchorScroll",
+							"MenuCreditsAnchorSpawn"
 						],
 						"subfolders": [],
 						"name": "Credits"
+					},
+					{
+						"items": [
+							"MenuEndAutoScrollAnchor",
+							"MenuEndThanksForPlaying",
+							"MenuEndButtonBack",
+							"MenuEndSpawnAnchor"
+						],
+						"subfolders": [],
+						"name": "End"
 					}
 				],
 				"name": "Menus"
+			},
+			{
+				"items": [
+					"CreditsTitle",
+					"CreditsThanks"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"CreditsDevBruno",
+							"CreditsDevGabriela",
+							"CreditsDevHadryan",
+							"CreditsDevHiroshi"
+						],
+						"subfolders": [],
+						"name": "developers"
+					},
+					{
+						"items": [
+							"CreditsPosition2DArtist",
+							"CreditsPositionDev",
+							"CreditsPositionPixelArtist",
+							"CreditsPositionSound"
+						],
+						"subfolders": [],
+						"name": "positions"
+					},
+					{
+						"items": [
+							"CreditsSupporterDanilo",
+							"CreditsSupporterDenner",
+							"CreditsSupporterLia",
+							"CreditsSupporterPedro"
+						],
+						"subfolders": [],
+						"name": "supporters"
+					}
+				],
+				"name": "Credits"
 			}
 		]
 	},
@@ -447,7 +479,8 @@
 					"Template.HUD",
 					"Template.Background",
 					"Template.Items",
-					"Template.Level"
+					"Template.Level",
+					"Credits"
 				],
 				"subfolders": [
 					{
@@ -475,18 +508,15 @@
 			{
 				"items": [
 					"Level0",
-					"Level1",
-					"Level2",
-					"Level0Olc",
-					"Level1Old",
-					"Level2Old"
+					"Level1"
 				],
 				"subfolders": [],
 				"name": "Levels"
 			},
 			{
 				"items": [
-					"MainMenu"
+					"MainMenu",
+					"MenuEnd"
 				],
 				"subfolders": [],
 				"name": "Menus"
@@ -508,7 +538,8 @@
 					"MenuControls",
 					"MenuAudio",
 					"MenuOptions",
-					"MenuCredits"
+					"MenuCredits",
+					"MenuEnd"
 				],
 				"subfolders": [],
 				"name": "Menus"

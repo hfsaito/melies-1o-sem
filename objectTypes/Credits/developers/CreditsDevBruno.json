@@ -1,7 +1,7 @@
 {
-	"name": "MenuCreditsPositionPixelArtist",
+	"name": "CreditsDevBruno",
 	"plugin-id": "Sprite",
-	"sid": 672552951662533,
+	"sid": 546214846858011,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 211,
-						"height": 64,
-						"originX": 1,
+						"width": 496,
+						"height": 65,
+						"originX": 0,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4414817,
+						"imageSpriteId": 6711950,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 698344886287609,
+				"sid": 606221956620968,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

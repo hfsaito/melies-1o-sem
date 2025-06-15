@@ -1,43 +1,42 @@
 {
-	"name": "MenuCreditsAnchor",
+	"name": "CreditsDevHadryan",
 	"plugin-id": "Sprite",
-	"sid": 313615044293832,
+	"sid": 449303119723061,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Bullet",
-			"name": "Bullet",
-			"sid": 841746605859207
-		},
-		{
-			"behaviorId": "wrap",
-			"name": "Wrap",
-			"sid": 932077364825521
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 500,
-						"height": 500,
+						"width": 400,
+						"height": 64,
 						"originX": 0,
-						"originY": 0,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4525102,
+						"imageSpriteId": 3091649,
+						"collisionPoly": {
+							"points": [
+								0.9925,
+								0.875,
+								0.2425,
+								0.96875,
+								0.015,
+								0.1875
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 828937914039621,
+				"sid": 595141892635275,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

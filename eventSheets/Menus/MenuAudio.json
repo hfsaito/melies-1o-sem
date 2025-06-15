@@ -203,6 +203,13 @@
 									"parameters": [
 										"MenuAudioControlEffects.Value"
 									]
+								},
+								{
+									"callFunction": "audioPlayEffect",
+									"sid": 486115907305021,
+									"parameters": [
+										"\"click\""
+									]
 								}
 							],
 							"sid": 602381322657622

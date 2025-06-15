@@ -32,6 +32,16 @@
 			"sid": 584417951187678
 		},
 		{
+			"eventType": "variable",
+			"name": "LAST_LEVEL",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 191993411314267
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -303,26 +313,66 @@
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 325181094888477,
+			"children": [
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 616273622850488,
-					"parameters": {
-						"variable": "level",
-						"value": "1"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 575622793672072,
+							"parameters": {
+								"first-value": "level",
+								"comparison": 0,
+								"second-value": "LAST_LEVEL"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 379991344314619,
+							"parameters": {
+								"layout": "\"MenuEnd\""
+							}
+						}
+					],
+					"sid": 417290745431396
 				},
 				{
-					"id": "go-to-layout-by-name",
-					"objectClass": "System",
-					"sid": 483452107799488,
-					"parameters": {
-						"layout": "\"Level\" & str(level)"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 240666119759217
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 366403531471879,
+							"parameters": {
+								"variable": "level",
+								"value": "1"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 895531640355658,
+							"parameters": {
+								"layout": "\"Level\" & str(level)"
+							}
+						}
+					],
+					"sid": 553263102144749
 				}
-			],
-			"sid": 325181094888477
+			]
 		},
 		{
 			"eventType": "block",

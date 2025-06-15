@@ -1,7 +1,7 @@
 {
-	"name": "MenuCreditsPositionDev",
+	"name": "CreditsPositionPixelArtist",
 	"plugin-id": "Sprite",
-	"sid": 322322914044400,
+	"sid": 672552951662533,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,31 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 234,
-						"height": 71,
+						"width": 211,
+						"height": 64,
 						"originX": 1,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8623396,
-						"collisionPoly": {
-							"points": [
-								0.02564102564102564,
-								0.014084507042253521,
-								0.82051282051282,
-								0.9859154929577465,
-								0.017094017094017096,
-								0.971830985915493
-							]
-						},
+						"imageSpriteId": 4414817,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 629569764387564,
+				"sid": 698344886287609,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

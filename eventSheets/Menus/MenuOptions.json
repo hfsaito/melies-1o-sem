@@ -132,9 +132,9 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 278627502066032,
+									"sid": 953462553983357,
 									"parameters": {
-										"object-to-create": "MenuOptionsOverlay",
+										"object-to-create": "MenuOptionsAnchorSpawn",
 										"layer": "MenuOptionsLayerName",
 										"x": "ViewportLeft(MenuOptionsLayerName)",
 										"y": "ViewportTop(MenuOptionsLayerName)",
